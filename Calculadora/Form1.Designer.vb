@@ -33,7 +33,7 @@ Partial Class Form1
         '
         Me.lbligual.AutoSize = True
         Me.lbligual.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbligual.Location = New System.Drawing.Point(362, 121)
+        Me.lbligual.Location = New System.Drawing.Point(423, 193)
         Me.lbligual.Name = "lbligual"
         Me.lbligual.Size = New System.Drawing.Size(25, 25)
         Me.lbligual.TabIndex = 42
@@ -42,16 +42,16 @@ Partial Class Form1
         'btnGenerar
         '
         Me.btnGenerar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGenerar.Location = New System.Drawing.Point(300, 375)
+        Me.btnGenerar.Location = New System.Drawing.Point(231, 270)
         Me.btnGenerar.Name = "btnGenerar"
-        Me.btnGenerar.Size = New System.Drawing.Size(154, 63)
+        Me.btnGenerar.Size = New System.Drawing.Size(137, 73)
         Me.btnGenerar.TabIndex = 40
         Me.btnGenerar.Text = "GENERAR"
         Me.btnGenerar.UseVisualStyleBackColor = True
         '
         'txttabla
         '
-        Me.txttabla.Location = New System.Drawing.Point(300, 96)
+        Me.txttabla.Location = New System.Drawing.Point(231, 66)
         Me.txttabla.Name = "txttabla"
         Me.txttabla.Size = New System.Drawing.Size(137, 22)
         Me.txttabla.TabIndex = 32
@@ -59,7 +59,7 @@ Partial Class Form1
         'lbltabla
         '
         Me.lbltabla.AutoSize = True
-        Me.lbltabla.Location = New System.Drawing.Point(349, 76)
+        Me.lbltabla.Location = New System.Drawing.Point(277, 46)
         Me.lbltabla.Name = "lbltabla"
         Me.lbltabla.Size = New System.Drawing.Size(51, 17)
         Me.lbltabla.TabIndex = 30
@@ -69,9 +69,9 @@ Partial Class Form1
         '
         Me.lstTablas.FormattingEnabled = True
         Me.lstTablas.ItemHeight = 16
-        Me.lstTablas.Location = New System.Drawing.Point(300, 149)
+        Me.lstTablas.Location = New System.Drawing.Point(508, 66)
         Me.lstTablas.Name = "lstTablas"
-        Me.lstTablas.Size = New System.Drawing.Size(154, 196)
+        Me.lstTablas.Size = New System.Drawing.Size(227, 308)
         Me.lstTablas.TabIndex = 43
         '
         'Form1
