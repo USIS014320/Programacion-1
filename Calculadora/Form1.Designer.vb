@@ -36,6 +36,7 @@ Partial Class Form1
         Me.lblnum2 = New System.Windows.Forms.Label()
         Me.lblnum1 = New System.Windows.Forms.Label()
         Me.optSuma = New System.Windows.Forms.CheckBox()
+        Me.cboOperaciones = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'lbligual
@@ -167,12 +168,23 @@ Partial Class Form1
         Me.optSuma.Text = "+"
         Me.optSuma.UseVisualStyleBackColor = True
         '
+        'cboOperaciones
+        '
+        Me.cboOperaciones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboOperaciones.FormattingEnabled = True
+        Me.cboOperaciones.Items.AddRange(New Object() {"Suma", "Resta", "Multiplicacion", "Division", "Mod", "Porcentaje", "Exponenciacion"})
+        Me.cboOperaciones.Location = New System.Drawing.Point(615, 154)
+        Me.cboOperaciones.Name = "cboOperaciones"
+        Me.cboOperaciones.Size = New System.Drawing.Size(121, 24)
+        Me.cboOperaciones.TabIndex = 43
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.cboOperaciones)
         Me.Controls.Add(Me.lbligual)
         Me.Controls.Add(Me.txtrespuesta)
         Me.Controls.Add(Me.btncalcular)
@@ -210,4 +222,5 @@ Partial Class Form1
     Friend WithEvents lblnum2 As Label
     Friend WithEvents lblnum1 As Label
     Friend WithEvents optSuma As CheckBox
+    Friend WithEvents cboOperaciones As ComboBox
 End Class
