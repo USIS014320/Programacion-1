@@ -36,7 +36,7 @@ Partial Class Form1
         'btnMediaAritmetica
         '
         Me.btnMediaAritmetica.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMediaAritmetica.Location = New System.Drawing.Point(267, 379)
+        Me.btnMediaAritmetica.Location = New System.Drawing.Point(267, 365)
         Me.btnMediaAritmetica.Name = "btnMediaAritmetica"
         Me.btnMediaAritmetica.Size = New System.Drawing.Size(143, 59)
         Me.btnMediaAritmetica.TabIndex = 0
