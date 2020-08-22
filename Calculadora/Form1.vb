@@ -1,7 +1,7 @@
 ﻿Public Class Form1
 
     Private Sub btnConvertir_Click(sender As Object, e As EventArgs) Handles btnConvertir.Click
-        Dim m1, m2, m3, m4 As Int64
+        Dim m1, m2, m3, m4, m5, m6 As Int64
 
         m1 = cboDe.SelectedIndex
         m2 = cboA.SelectedIndex
@@ -9,6 +9,8 @@
         m3 = cboDe1.SelectedIndex
         m4 = cboA1.SelectedIndex
 
+        m5 = cboDe2.SelectedIndex
+        m6 = cboA2.SelectedIndex
 
 
         If m1 = 0 And m2 = 1 Then
@@ -714,6 +716,365 @@
             End If
         End If
 
+        If m5 = 0 And m6 = 1 Then
+            txtrespuesta.Text = txtEntradab.Text * 0.85
+        Else
+            If m5 = 0 And m6 = 2 Then
+                txtrespuesta.Text = txtEntradab.Text * 105.8
+            Else
+                If m5 = 0 And m6 = 3 Then
+                    txtrespuesta.Text = txtEntradab.Text * 74.82
+                Else
+                    If m5 = 0 And m6 = 4 Then
+                        txtrespuesta.Text = txtEntradab.Text * 21.98
+                    Else
+                        If m5 = 0 And m6 = 5 Then
+                            txtrespuesta.Text = txtEntradab.Text * 1192.22
+                        Else
+                            If m5 = 0 And m6 = 6 Then
+                                txtrespuesta.Text = txtEntradab.Text * 3.67
+                            Else
+                                If m5 = 0 And m6 = 7 Then
+                                    txtrespuesta.Text = txtEntradab.Text * 74.93
+                                Else
+                                    If m5 = 0 And m6 = 8 Then
+                                        txtrespuesta.Text = txtEntradab.Text * 3.58
+                                    Else
+                                        If m5 = 0 And m6 = 9 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 6.92
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
+
+        If m5 = 1 And m6 = 0 Then
+            txtrespuesta.Text = txtEntradab.Text * 1.18
+        Else
+            If m5 = 1 And m6 = 2 Then
+                txtrespuesta.Text = txtEntradab.Text * 124.8
+            Else
+                If m5 = 1 And m6 = 3 Then
+                    txtrespuesta.Text = txtEntradab.Text * 88.25
+                Else
+                    If m5 = 1 And m6 = 4 Then
+                        txtrespuesta.Text = txtEntradab.Text * 25.92
+                    Else
+                        If m5 = 1 And m6 = 5 Then
+                            txtrespuesta.Text = txtEntradab.Text * 1406.22
+                        Else
+                            If m5 = 1 And m6 = 6 Then
+                                txtrespuesta.Text = txtEntradab.Text * 4.33
+                            Else
+                                If m5 = 1 And m6 = 7 Then
+                                    txtrespuesta.Text = txtEntradab.Text * 88.38
+                                Else
+                                    If m5 = 1 And m6 = 8 Then
+                                        txtrespuesta.Text = txtEntradab.Text * 4.22
+                                    Else
+                                        If m5 = 1 And m6 = 9 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 8.16
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
+
+        If m5 = 2 And m6 = 0 Then
+            txtrespuesta.Text = txtEntradab.Text * 0.0095
+        Else
+            If m5 = 2 And m6 = 1 Then
+                txtrespuesta.Text = txtEntradab.Text * 0.008
+            Else
+                If m5 = 2 And m6 = 3 Then
+                    txtrespuesta.Text = txtEntradab.Text * 0.71
+                Else
+                    If m5 = 2 And m6 = 4 Then
+                        txtrespuesta.Text = txtEntradab.Text * 0.21
+                    Else
+                        If m5 = 2 And m6 = 5 Then
+                            txtrespuesta.Text = txtEntradab.Text * 11.26
+                        Else
+                            If m5 = 2 And m6 = 6 Then
+                                txtrespuesta.Text = txtEntradab.Text * 0.035
+                            Else
+                                If m5 = 2 And m6 = 7 Then
+                                    txtrespuesta.Text = txtEntradab.Text * 0.71
+                                Else
+                                    If m5 = 2 And m6 = 8 Then
+                                        txtrespuesta.Text = txtEntradab.Text * 0.034
+                                    Else
+                                        If m5 = 2 And m6 = 9 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 0.065
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
+
+        If m5 = 3 And m6 = 0 Then
+            txtrespuesta.Text = txtEntradab.Text * 0.013
+        Else
+            If m5 = 3 And m6 = 1 Then
+                txtrespuesta.Text = txtEntradab.Text * 0.011
+            Else
+                If m5 = 3 And m6 = 2 Then
+                    txtrespuesta.Text = txtEntradab.Text * 1.41
+                Else
+                    If m5 = 3 And m6 = 4 Then
+                        txtrespuesta.Text = txtEntradab.Text * 0.29
+                    Else
+                        If m5 = 3 And m6 = 5 Then
+                            txtrespuesta.Text = txtEntradab.Text * 15.93
+                        Else
+                            If m5 = 3 And m6 = 6 Then
+                                txtrespuesta.Text = txtEntradab.Text * 0.049
+                            Else
+                                If m5 = 3 And m6 = 7 Then
+                                    txtrespuesta.Text = txtEntradab.Text * 1
+                                Else
+                                    If m5 = 3 And m6 = 8 Then
+                                        txtrespuesta.Text = txtEntradab.Text * 0.048
+                                    Else
+                                        If m5 = 3 And m6 = 9 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 0.092
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
+
+        If m5 = 4 And m6 = 0 Then
+            txtrespuesta.Text = txtEntradab.Text * 0.046
+        Else
+            If m5 = 4 And m6 = 1 Then
+                txtrespuesta.Text = txtEntradab.Text * 0.039
+            Else
+                If m5 = 4 And m6 = 2 Then
+                    txtrespuesta.Text = txtEntradab.Text * 4.81
+                Else
+                    If m5 = 4 And m6 = 3 Then
+                        txtrespuesta.Text = txtEntradab.Text * 3.4
+                    Else
+                        If m5 = 4 And m6 = 5 Then
+                            txtrespuesta.Text = txtEntradab.Text * 54.25
+                        Else
+                            If m5 = 4 And m6 = 6 Then
+                                txtrespuesta.Text = txtEntradab.Text * 0.17
+                            Else
+                                If m5 = 4 And m6 = 7 Then
+                                    txtrespuesta.Text = txtEntradab.Text * 3.41
+                                Else
+                                    If m5 = 4 And m6 = 8 Then
+                                        txtrespuesta.Text = txtEntradab.Text * 0.16
+                                    Else
+                                        If m5 = 4 And m6 = 9 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 0.31
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
+
+        If m5 = 5 And m6 = 0 Then
+            txtrespuesta.Text = txtEntradab.Text * 0.00084
+        Else
+            If m5 = 5 And m6 = 1 Then
+                txtrespuesta.Text = txtEntradab.Text * 0.00071
+            Else
+                If m5 = 5 And m6 = 2 Then
+                    txtrespuesta.Text = txtEntradab.Text * 0.089
+                Else
+                    If m5 = 5 And m6 = 3 Then
+                        txtrespuesta.Text = txtEntradab.Text * 0.063
+                    Else
+                        If m5 = 5 And m6 = 4 Then
+                            txtrespuesta.Text = txtEntradab.Text * 0.018
+                        Else
+                            If m5 = 5 And m6 = 6 Then
+                                txtrespuesta.Text = txtEntradab.Text * 0.0031
+                            Else
+                                If m5 = 5 And m6 = 7 Then
+                                    txtrespuesta.Text = txtEntradab.Text * 0.063
+                                Else
+                                    If m5 = 5 And m6 = 8 Then
+                                        txtrespuesta.Text = txtEntradab.Text * 0.003
+                                    Else
+                                        If m5 = 5 And m6 = 9 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 0.0058
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
+
+        If m5 = 6 And m6 = 0 Then
+            txtrespuesta.Text = txtEntradab.Text * 0.27
+        Else
+            If m5 = 6 And m6 = 1 Then
+                txtrespuesta.Text = txtEntradab.Text * 0.23
+            Else
+                If m5 = 6 And m6 = 2 Then
+                    txtrespuesta.Text = txtEntradab.Text * 28.8
+                Else
+                    If m5 = 6 And m6 = 3 Then
+                        txtrespuesta.Text = txtEntradab.Text * 20.37
+                    Else
+                        If m5 = 6 And m6 = 4 Then
+                            txtrespuesta.Text = txtEntradab.Text * 5.98
+                        Else
+                            If m5 = 6 And m6 = 5 Then
+                                txtrespuesta.Text = txtEntradab.Text * 324.6
+                            Else
+                                If m5 = 6 And m6 = 7 Then
+                                    txtrespuesta.Text = txtEntradab.Text * 20.4
+                                Else
+                                    If m5 = 6 And m6 = 8 Then
+                                        txtrespuesta.Text = txtEntradab.Text * 0.97
+                                    Else
+                                        If m5 = 6 And m6 = 9 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 1.88
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
+
+        If m5 = 7 And m6 = 0 Then
+            txtrespuesta.Text = txtEntradab.Text * 0.013
+        Else
+            If m5 = 7 And m6 = 1 Then
+                txtrespuesta.Text = txtEntradab.Text * 0.011
+            Else
+                If m5 = 7 And m6 = 2 Then
+                    txtrespuesta.Text = txtEntradab.Text * 1.41
+                Else
+                    If m5 = 7 And m6 = 3 Then
+                        txtrespuesta.Text = txtEntradab.Text * 1
+                    Else
+                        If m5 = 7 And m6 = 4 Then
+                            txtrespuesta.Text = txtEntradab.Text * 0.29
+                        Else
+                            If m5 = 7 And m6 = 5 Then
+                                txtrespuesta.Text = txtEntradab.Text * 15.91
+                            Else
+                                If m5 = 7 And m6 = 6 Then
+                                    txtrespuesta.Text = txtEntradab.Text * 0.049
+                                Else
+                                    If m5 = 7 And m6 = 8 Then
+                                        txtrespuesta.Text = txtEntradab.Text * 0.048
+                                    Else
+                                        If m5 = 7 And m6 = 9 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 0.092
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
+
+        If m5 = 8 And m6 = 0 Then
+            txtrespuesta.Text = txtEntradab.Text * 0.28
+        Else
+            If m5 = 8 And m6 = 1 Then
+                txtrespuesta.Text = txtEntradab.Text * 0.24
+            Else
+                If m5 = 8 And m6 = 2 Then
+                    txtrespuesta.Text = txtEntradab.Text * 29.57
+                Else
+                    If m5 = 8 And m6 = 3 Then
+                        txtrespuesta.Text = txtEntradab.Text * 20.91
+                    Else
+                        If m5 = 8 And m6 = 4 Then
+                            txtrespuesta.Text = txtEntradab.Text * 6.14
+                        Else
+                            If m5 = 8 And m6 = 5 Then
+                                txtrespuesta.Text = txtEntradab.Text * 333.21
+                            Else
+                                If m5 = 8 And m6 = 6 Then
+                                    txtrespuesta.Text = txtEntradab.Text * 1.03
+                                Else
+                                    If m5 = 8 And m6 = 7 Then
+                                        txtrespuesta.Text = txtEntradab.Text * 20.94
+                                    Else
+                                        If m5 = 8 And m6 = 9 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 1.93
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
+
+        If m5 = 9 And m6 = 0 Then
+            txtrespuesta.Text = txtEntradab.Text * 0.14
+        Else
+            If m5 = 9 And m6 = 1 Then
+                txtrespuesta.Text = txtEntradab.Text * 0.12
+            Else
+                If m5 = 9 And m6 = 2 Then
+                    txtrespuesta.Text = txtEntradab.Text * 15.29
+                Else
+                    If m5 = 9 And m6 = 3 Then
+                        txtrespuesta.Text = txtEntradab.Text * 10.81
+                    Else
+                        If m5 = 9 And m6 = 4 Then
+                            txtrespuesta.Text = txtEntradab.Text * 3.18
+                        Else
+                            If m5 = 9 And m6 = 5 Then
+                                txtrespuesta.Text = txtEntradab.Text * 172.3
+                            Else
+                                If m5 = 9 And m6 = 6 Then
+                                    txtrespuesta.Text = txtEntradab.Text * 0.53
+                                Else
+                                    If m5 = 9 And m6 = 7 Then
+                                        txtrespuesta.Text = txtEntradab.Text * 10.83
+                                    Else
+                                        If m5 = 9 And m6 = 8 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 0.52
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
     End Sub
 
 End Class
