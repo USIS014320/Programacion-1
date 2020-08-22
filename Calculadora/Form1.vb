@@ -1,19 +1,56 @@
 ﻿Public Class Form1
-    Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
-        Dim ntabla, i As Byte
-        ntabla = txttabla.Text
+    Private Sub btncalcular_Click(sender As Object, e As EventArgs) Handles btncalcular.Click
+        Dim Num1, Num2, respuesta As Double
+        Num1 = txtnum1.Text
+        Num2 = txtnum1.Text
+        respuesta = txtrespuesta.Text
 
-        lstTablas.Items.Clear()
-
-        If ntabla <= 12 Then
-            For i = 1 To 10
-                lstTablas.Items.Add(ntabla.ToString() + "x" + i.ToString() + "=" + (ntabla * i).ToString())
-            Next
-        Else
-            lstTablas.Items.Add("Solo tablas menores o iguales a 12.")
+        If optSuma.Checked Then
+            txtrespuesta.Text = Num1 + Num2
         End If
 
+        If optResta.Checked Then
+            txtrespuesta.Text = Num1 - Num2
+        End If
 
+        If optMultiplicacion.Checked Then
+            txtrespuesta.Text = Num1 * Num2
+        End If
+
+        If optDivision.Checked Then
+            txtrespuesta.Text = Num1 / Num2
+        End If
+
+        If optMod.Checked Then
+            txtrespuesta.Text = Num1 Mod Num2
+        End If
+
+        If optPorcentaje.Checked Then
+            txtrespuesta.Text = Num1 * Num2 / 100
+        End If
+
+        If optExponenciacion.Checked Then
+            txtrespuesta.Text = Num1 ^ Num2
+        End If
+
+        Select Case cboOperaciones.SelectedIndex
+            Case 0
+                txtrespuesta.Text = Num1 + Num2
+            Case 1
+                txtrespuesta.Text = Num1 - Num2
+            Case 2
+                txtrespuesta.Text = Num1 * Num2
+            Case 3
+                txtrespuesta.Text = Num1 / Num2
+            Case 4
+                txtrespuesta.Text = Num1 Mod Num2
+            Case 5
+                txtrespuesta.Text = Num1 * Num2 / 100
+            Case 6
+                txtrespuesta.Text = Num1 ^ Num2
+
+        End Select
 
     End Sub
 End Class
+
