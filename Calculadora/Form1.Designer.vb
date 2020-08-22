@@ -42,13 +42,23 @@ Partial Class Form1
         Me.lblde3 = New System.Windows.Forms.Label()
         Me.cboDe2 = New System.Windows.Forms.ComboBox()
         Me.cboA2 = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cbo2 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cbo1 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblalmacenamiento = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.cboalmacenamientoentrada = New System.Windows.Forms.ComboBox()
+        Me.cboalmacenamientosalida = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'lblvalor
         '
         Me.lblvalor.AutoSize = True
         Me.lblvalor.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblvalor.Location = New System.Drawing.Point(387, 34)
+        Me.lblvalor.Location = New System.Drawing.Point(390, 9)
         Me.lblvalor.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblvalor.Name = "lblvalor"
         Me.lblvalor.Size = New System.Drawing.Size(79, 24)
@@ -108,8 +118,8 @@ Partial Class Form1
         'btnConvertir
         '
         Me.btnConvertir.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConvertir.Location = New System.Drawing.Point(364, 401)
-        Me.btnConvertir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnConvertir.Location = New System.Drawing.Point(364, 434)
+        Me.btnConvertir.Margin = New System.Windows.Forms.Padding(2)
         Me.btnConvertir.Name = "btnConvertir"
         Me.btnConvertir.Size = New System.Drawing.Size(132, 37)
         Me.btnConvertir.TabIndex = 38
@@ -120,7 +130,7 @@ Partial Class Form1
         '
         Me.lblIgual.AutoSize = True
         Me.lblIgual.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIgual.Location = New System.Drawing.Point(418, 320)
+        Me.lblIgual.Location = New System.Drawing.Point(417, 373)
         Me.lblIgual.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblIgual.Name = "lblIgual"
         Me.lblIgual.Size = New System.Drawing.Size(22, 24)
@@ -129,14 +139,14 @@ Partial Class Form1
         '
         'txtrespuesta
         '
-        Me.txtrespuesta.Location = New System.Drawing.Point(378, 347)
+        Me.txtrespuesta.Location = New System.Drawing.Point(378, 409)
         Me.txtrespuesta.Name = "txtrespuesta"
         Me.txtrespuesta.Size = New System.Drawing.Size(100, 20)
         Me.txtrespuesta.TabIndex = 36
         '
         'txtEntradab
         '
-        Me.txtEntradab.Location = New System.Drawing.Point(378, 61)
+        Me.txtEntradab.Location = New System.Drawing.Point(378, 45)
         Me.txtEntradab.Name = "txtEntradab"
         Me.txtEntradab.Size = New System.Drawing.Size(100, 20)
         Me.txtEntradab.TabIndex = 35
@@ -246,12 +256,127 @@ Partial Class Form1
         Me.cboA2.Size = New System.Drawing.Size(121, 21)
         Me.cboA2.TabIndex = 45
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(603, 320)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(26, 19)
+        Me.Label1.TabIndex = 51
+        Me.Label1.Text = "A:"
+        '
+        'cbo2
+        '
+        Me.cbo2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo2.FormattingEnabled = True
+        Me.cbo2.Items.AddRange(New Object() {"Centimetro", "Metro", "Kilometro", "Milimetro", "Milla", "Yarda", "Pie", "Pulgada", "Micrómetro", "Milla náutica"})
+        Me.cbo2.Location = New System.Drawing.Point(554, 346)
+        Me.cbo2.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbo2.Name = "cbo2"
+        Me.cbo2.Size = New System.Drawing.Size(121, 21)
+        Me.cbo2.TabIndex = 50
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(211, 320)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(38, 23)
+        Me.Label2.TabIndex = 53
+        Me.Label2.Text = "De:"
+        '
+        'cbo1
+        '
+        Me.cbo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo1.FormattingEnabled = True
+        Me.cbo1.Items.AddRange(New Object() {"Centimetro", "Metro", "Kilometro", "Milimetro", "Milla", "Yarda", "Pie", "Pulgada", "Micrómetro", "Milla náutica"})
+        Me.cbo1.Location = New System.Drawing.Point(175, 346)
+        Me.cbo1.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbo1.Name = "cbo1"
+        Me.cbo1.Size = New System.Drawing.Size(121, 21)
+        Me.cbo1.TabIndex = 52
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(60, 344)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(100, 20)
+        Me.Label3.TabIndex = 54
+        Me.Label3.Text = "LONGITUD"
+        '
+        'lblalmacenamiento
+        '
+        Me.lblalmacenamiento.AutoSize = True
+        Me.lblalmacenamiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblalmacenamiento.Location = New System.Drawing.Point(-3, 69)
+        Me.lblalmacenamiento.Name = "lblalmacenamiento"
+        Me.lblalmacenamiento.Size = New System.Drawing.Size(172, 20)
+        Me.lblalmacenamiento.TabIndex = 59
+        Me.lblalmacenamiento.Text = "ALMACENAMIENTO"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(603, 47)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(26, 19)
+        Me.Label5.TabIndex = 58
+        Me.Label5.Text = "A:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(211, 44)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(38, 23)
+        Me.Label6.TabIndex = 57
+        Me.Label6.Text = "De:"
+        '
+        'cboalmacenamientoentrada
+        '
+        Me.cboalmacenamientoentrada.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboalmacenamientoentrada.FormattingEnabled = True
+        Me.cboalmacenamientoentrada.Items.AddRange(New Object() {"Bit", "Byte", "Kilobyte", "Kibibyte", "Megabyte", "Mebibyte", "Gigabyte", "Gibibyte", "Terabyte", "Petabyte"})
+        Me.cboalmacenamientoentrada.Location = New System.Drawing.Point(175, 69)
+        Me.cboalmacenamientoentrada.Name = "cboalmacenamientoentrada"
+        Me.cboalmacenamientoentrada.Size = New System.Drawing.Size(121, 21)
+        Me.cboalmacenamientoentrada.TabIndex = 56
+        '
+        'cboalmacenamientosalida
+        '
+        Me.cboalmacenamientosalida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboalmacenamientosalida.FormattingEnabled = True
+        Me.cboalmacenamientosalida.Items.AddRange(New Object() {"Bit", "Byte", "Kilobyte", "Kibibyte", "Megabyte", "Mebibyte", "Gigabyte", "Gibibyte", "Terabyte", "Petabyte"})
+        Me.cboalmacenamientosalida.Location = New System.Drawing.Point(554, 68)
+        Me.cboalmacenamientosalida.Name = "cboalmacenamientosalida"
+        Me.cboalmacenamientosalida.Size = New System.Drawing.Size(121, 21)
+        Me.cboalmacenamientosalida.TabIndex = 55
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
         Me.ClientSize = New System.Drawing.Size(852, 482)
+        Me.Controls.Add(Me.lblalmacenamiento)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.cboalmacenamientoentrada)
+        Me.Controls.Add(Me.cboalmacenamientosalida)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.cbo1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.cbo2)
         Me.Controls.Add(Me.lblmonedas)
         Me.Controls.Add(Me.lbla3)
         Me.Controls.Add(Me.lblde3)
@@ -273,7 +398,7 @@ Partial Class Form1
         Me.Controls.Add(Me.cboDe)
         Me.Controls.Add(Me.cboA)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "Sistemas de Conversión"
@@ -302,4 +427,14 @@ Partial Class Form1
     Friend WithEvents lblde3 As Label
     Friend WithEvents cboDe2 As ComboBox
     Friend WithEvents cboA2 As ComboBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents cbo2 As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents cbo1 As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents lblalmacenamiento As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents cboalmacenamientoentrada As ComboBox
+    Friend WithEvents cboalmacenamientosalida As ComboBox
 End Class
