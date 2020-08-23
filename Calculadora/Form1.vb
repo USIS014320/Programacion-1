@@ -4,7 +4,7 @@
         Dim m1, m2, m3, m4, m5, m6 As Int64
         Dim tipo1, tipo2 As Int64
         Dim almacenamiento1, almacenamiento2 As Int64
-
+        Dim Num1, Num2 As Int64
 
         m1 = cboDe.SelectedIndex
         m2 = cboA.SelectedIndex
@@ -21,6 +21,8 @@
         almacenamiento1 = cboalmacenamientoentrada.SelectedIndex
         almacenamiento2 = cboalmacenamientosalida.SelectedIndex
 
+        Num1 = cboOpcion1.SelectedIndex
+        Num2 = cboOpcion2.SelectedIndex
 
         Select Case cbo1.SelectedIndex
             Case 0
@@ -2094,6 +2096,456 @@
                 End If
             End If
         End If
+
+        Select Case cboOpcion1.SelectedIndex
+            Case 0
+                If txtEntradab.Text = "" Or txtEntradab.Text = "." Then
+                    txtrespuesta.Text = 0
+                Else
+                    If num1 = 0 And num2 = 0 Then
+                        txtrespuesta.Text = txtEntradab.Text * 1
+                    Else
+                        If num1 = 0 And num2 = 1 Then
+                            txtrespuesta.Text = txtEntradab.Text * 1000
+                        Else
+                            If num1 = 0 And num2 = 2 Then
+                                txtrespuesta.Text = txtEntradab.Text * 1000
+                            Else
+                                If num1 = 0 And num2 = 3 Then
+                                    txtrespuesta.Text = txtEntradab.Text / 1000
+                                Else
+                                    If num1 = 0 And num2 = 4 Then
+                                        txtrespuesta.Text = txtEntradab.Text * 10
+                                    Else
+                                        If num1 = 0 And num2 = 5 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 0.035315
+                                        Else
+                                            If num1 = 0 And num2 = 6 Then
+                                                txtrespuesta.Text = txtEntradab.Text * 1000000
+                                            Else
+                                                If num1 = 0 And num2 = 7 Then
+                                                    txtrespuesta.Text = txtEntradab.Text * 1000000000000
+                                                Else
+                                                    If num1 = 0 And num2 = 8 Then
+                                                        txtrespuesta.Text = txtEntradab.Text * 100
+                                                    Else
+                                                        If num1 = 0 And num2 = 9 Then
+                                                            txtrespuesta.Text = txtEntradab.Text / 10
+                                                        End If
+                                                    End If
+                                                End If
+                                            End If
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            Case 1
+                If txtEntradab.Text = "" Or txtEntradab.Text = "." Then
+                    txtrespuesta.Text = 0
+                Else
+                    If num1 = 1 And num2 = 0 Then
+                        txtrespuesta.Text = txtEntradab.Text / 1000
+                    Else
+                        If num1 = 1 And num2 = 1 Then
+                            txtrespuesta.Text = txtEntradab.Text * 1
+                        Else
+                            If num1 = 1 And num2 = 2 Then
+                                txtrespuesta.Text = txtEntradab.Text * 1
+                            Else
+                                If num1 = 1 And num2 = 3 Then
+                                    txtrespuesta.Text = txtEntradab.Text / 1000000
+                                Else
+                                    If num1 = 1 And num2 = 4 Then
+                                        txtrespuesta.Text = txtEntradab.Text / 100
+                                    Else
+                                        If num1 = 1 And num2 = 5 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 0.0000353147
+                                        Else
+                                            If num1 = 1 And num2 = 6 Then
+                                                txtrespuesta.Text = txtEntradab.Text * 1000
+                                            Else
+                                                If num1 = 1 And num2 = 7 Then
+                                                    txtrespuesta.Text = txtEntradab.Text / 1000000000000000
+                                                Else
+                                                    If num1 = 1 And num2 = 8 Then
+                                                        txtrespuesta.Text = txtEntradab.Text / 10
+                                                    Else
+                                                        If num1 = 1 And num2 = 9 Then
+                                                            txtrespuesta.Text = txtEntradab.Text / 10000
+                                                        End If
+                                                    End If
+                                                End If
+                                            End If
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+
+            Case 2
+                If txtEntradab.Text = "" Or txtEntradab.Text = "." Then
+                    txtrespuesta.Text = 0
+                Else
+                    If num1 = 2 And num2 = 0 Then
+                        txtrespuesta.Text = txtEntradab.Text / 1000
+                    Else
+                        If num1 = 2 And num2 = 1 Then
+                            txtrespuesta.Text = txtEntradab.Text / 1
+                        Else
+                            If num1 = 2 And num2 = 2 Then
+                                txtrespuesta.Text = txtEntradab.Text * 1
+                            Else
+                                If num1 = 2 And num2 = 3 Then
+                                    txtrespuesta.Text = txtEntradab.Text / 1000000
+                                Else
+                                    If num1 = 2 And num2 = 4 Then
+                                        txtrespuesta.Text = txtEntradab.Text / 100
+                                    Else
+                                        If num1 = 2 And num2 = 5 Then
+                                            txtrespuesta.Text = txtEntradab.Text / 28317
+                                        Else
+                                            If num1 = 2 And num2 = 6 Then
+                                                txtrespuesta.Text = txtEntradab.Text * 1000
+                                            Else
+                                                If num1 = 2 And num2 = 7 Then
+                                                    txtrespuesta.Text = txtEntradab.Text / 1000000000000000
+                                                Else
+                                                    If num1 = 2 And num2 = 8 Then
+                                                        txtrespuesta.Text = txtEntradab.Text / 10
+                                                    Else
+                                                        If num1 = 2 And num2 = 9 Then
+                                                            txtrespuesta.Text = txtEntradab.Text / 10000
+                                                        End If
+                                                    End If
+                                                End If
+                                            End If
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+
+            Case 3
+                If txtEntradab.Text = "" Or txtEntradab.Text = "." Then
+                    txtrespuesta.Text = 0
+                Else
+                    If num1 = 3 And num2 = 0 Then
+                        txtrespuesta.Text = txtEntradab.Text / 1000000
+                    Else
+                        If num1 = 3 And num2 = 1 Then
+                            txtrespuesta.Text = txtEntradab.Text / 1000
+                        Else
+                            If num1 = 3 And num2 = 2 Then
+                                txtrespuesta.Text = txtEntradab.Text / 1000
+                            Else
+                                If num1 = 3 And num2 = 3 Then
+                                    txtrespuesta.Text = txtEntradab.Text * 1
+                                Else
+                                    If num1 = 3 And num2 = 4 Then
+                                        txtrespuesta.Text = txtEntradab.Text / 10000000000
+                                    Else
+                                        If num1 = 3 And num2 = 5 Then
+                                            txtrespuesta.Text = txtEntradab.Text / 28.317
+                                        Else
+                                            If num1 = 3 And num2 = 6 Then
+                                                txtrespuesta.Text = txtEntradab.Text / 1000000000000000000
+                                            Else
+                                                If num1 = 3 And num2 = 7 Then
+                                                    txtrespuesta.Text = txtEntradab.Text / 10000
+                                                Else
+                                                    If num1 = 3 And num2 = 8 Then
+                                                        txtrespuesta.Text = txtEntradab.Text / 10000000
+                                                    Else
+                                                        If num1 = 3 And num2 = 9 Then
+                                                            txtrespuesta.Text = txtEntradab.Text / 10000000
+                                                        End If
+                                                    End If
+                                                End If
+                                            End If
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+
+            Case 4
+                If txtEntradab.Text = "" Or txtEntradab.Text = "." Then
+                    txtrespuesta.Text = 0
+                Else
+                    If num1 = 4 And num2 = 0 Then
+                        txtrespuesta.Text = txtEntradab.Text * 28.3168
+                    Else
+                        If num1 = 4 And num2 = 1 Then
+                            txtrespuesta.Text = txtEntradab.Text * 28316.84
+                        Else
+                            If num1 = 4 And num2 = 2 Then
+                                txtrespuesta.Text = txtEntradab.Text * 28316.84
+                                If num1 = 4 And num2 = 3 Then
+                                    txtrespuesta.Text = txtEntradab.Text * 0.028317
+                                Else
+                                    If num1 = 4 And num2 = 4 Then
+                                        txtrespuesta.Text = txtEntradab.Text * 283.17
+                                    Else
+                                        If num1 = 4 And num2 = 5 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 1
+                                        Else
+                                            If num1 = 4 And num2 = 6 Then
+                                                txtrespuesta.Text = txtEntradab.Text * 28316835.94
+                                            Else
+                                                If num1 = 4 And num2 = 7 Then
+                                                    txtrespuesta.Text = txtEntradab.Text * 2.8316835944711944
+                                                Else
+                                                    If num1 = 4 And num2 = 8 Then
+                                                        txtrespuesta.Text = txtEntradab.Text * 2831.68
+                                                    Else
+                                                        If num1 = 4 And num2 = 9 Then
+                                                            txtrespuesta.Text = txtEntradab.Text * 2.8317
+                                                        End If
+                                                    End If
+                                                End If
+                                            End If
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+
+            Case 5
+                If txtEntradab.Text = "" Or txtEntradab.Text = "." Then
+                    txtrespuesta.Text = 0
+                Else
+                    If num1 = 5 And num2 = 0 Then
+                        txtrespuesta.Text = txtEntradab.Text / 1000000
+                    Else
+                        If num1 = 5 And num2 = 1 Then
+                            txtrespuesta.Text = txtEntradab.Text / 1000
+                        Else
+                            If num1 = 5 And num2 = 2 Then
+                                txtrespuesta.Text = txtEntradab.Text / 1000
+                            Else
+                                If num1 = 5 And num2 = 3 Then
+                                    txtrespuesta.Text = txtEntradab.Text / 1000000000
+                                Else
+                                    If num1 = 5 And num2 = 4 Then
+                                        txtrespuesta.Text = txtEntradab.Text / 100000
+                                    Else
+                                        If num1 = 5 And num2 = 5 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 3.531468
+                                        Else
+                                            If num1 = 5 And num2 = 6 Then
+                                                txtrespuesta.Text = txtEntradab.Text * 1
+                                            Else
+                                                If num1 = 5 And num2 = 7 Then
+                                                    txtrespuesta.Text = txtEntradab.Text * 9.9999999999999982
+                                                Else
+                                                    If num1 = 5 And num2 = 8 Then
+                                                        txtrespuesta.Text = txtEntradab.Text / 10000
+                                                    Else
+                                                        If num1 = 5 And num2 = 9 Then
+                                                            txtrespuesta.Text = txtEntradab.Text * 10000000
+                                                        End If
+                                                    End If
+                                                End If
+                                            End If
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+
+            Case 6
+                If txtEntradab.Text = "" Or txtEntradab.Text = "." Then
+                    txtrespuesta.Text = 0
+                Else
+                    If Num1 = 6 And Num2 = 0 Then
+                        txtrespuesta.Text = txtEntradab.Text / 1000000
+                    Else
+                        If Num1 = 6 And Num2 = 1 Then
+                            txtrespuesta.Text = txtEntradab.Text / 1000
+                        Else
+                            If Num1 = 6 And Num2 = 2 Then
+                                txtrespuesta.Text = txtEntradab.Text / 1000
+                            Else
+                                If Num1 = 6 And Num2 = 3 Then
+                                    txtrespuesta.Text = txtEntradab.Text / 1000000000
+                                Else
+                                    If Num1 = 6 And Num2 = 4 Then
+                                        txtrespuesta.Text = txtEntradab.Text / 100000
+                                    Else
+                                        If Num1 = 6 And Num2 = 5 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 3.531468
+                                        Else
+                                            If Num1 = 6 And Num2 = 6 Then
+                                                txtrespuesta.Text = txtEntradab.Text * 1
+                                            Else
+                                                If Num1 = 6 And Num2 = 7 Then
+                                                    txtrespuesta.Text = txtEntradab.Text * 9.9999999999999982
+                                                Else
+                                                    If Num1 = 6 And Num2 = 8 Then
+                                                        txtrespuesta.Text = txtEntradab.Text / 10000
+                                                    Else
+                                                        If Num1 = 6 And Num2 = 9 Then
+                                                            txtrespuesta.Text = txtEntradab.Text * 10000000
+                                                        End If
+                                                    End If
+                                                End If
+                                            End If
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+
+            Case 7
+                If txtEntradab.Text = "" Or txtEntradab.Text = "." Then
+                    txtrespuesta.Text = 0
+                Else
+                    If num1 = 7 And num2 = 0 Then
+                        txtrespuesta.Text = txtEntradab.Text / 100
+                    Else
+                        If num1 = 7 And num2 = 1 Then
+                            txtrespuesta.Text = txtEntradab.Text * 10
+                        Else
+                            If num1 = 7 And num2 = 2 Then
+                                txtrespuesta.Text = txtEntradab.Text * 10
+                            Else
+                                If num1 = 7 And num2 = 3 Then
+                                    txtrespuesta.Text = txtEntradab.Text / 100000
+                                Else
+                                    If num1 = 7 And num2 = 4 Then
+                                        txtrespuesta.Text = txtEntradab.Text / 10
+                                    Else
+                                        If num1 = 7 And num2 = 5 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 0.00035315
+                                        Else
+                                            If num1 = 7 And num2 = 6 Then
+                                                txtrespuesta.Text = txtEntradab.Text * 10000
+                                            Else
+                                                If num1 = 7 And num2 = 7 Then
+                                                    txtrespuesta.Text = txtEntradab.Text * 100000000000000
+                                                Else
+                                                    If num1 = 7 And num2 = 8 Then
+                                                        txtrespuesta.Text = txtEntradab.Text * 1
+                                                    Else
+                                                        If num1 = 7 And num2 = 9 Then
+                                                            txtrespuesta.Text = txtEntradab.Text * 1000
+                                                        End If
+                                                    End If
+                                                End If
+                                            End If
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+
+            Case 8
+                If txtEntradab.Text = "" Or txtEntradab.Text = "." Then
+                    txtrespuesta.Text = 0
+                Else
+                    If num1 = 8 And num2 = 0 Then
+                        txtrespuesta.Text = txtEntradab.Text / 1000000
+                    Else
+                        If num1 = 8 And num2 = 1 Then
+                            txtrespuesta.Text = txtEntradab.Text / 1000
+                        Else
+                            If num1 = 8 And num2 = 2 Then
+                                txtrespuesta.Text = txtEntradab.Text / 1000
+                            Else
+                                If num1 = 8 And num2 = 3 Then
+                                    txtrespuesta.Text = txtEntradab.Text * 1
+                                Else
+                                    If num1 = 8 And num2 = 4 Then
+                                        txtrespuesta.Text = txtEntradab.Text / 10000000000
+                                    Else
+                                        If num1 = 8 And num2 = 5 Then
+                                            txtrespuesta.Text = txtEntradab.Text / 28.317
+                                        Else
+                                            If num1 = 8 And num2 = 6 Then
+                                                txtrespuesta.Text = txtEntradab.Text / 1000000000000000000
+                                            Else
+                                                If num1 = 8 And num2 = 7 Then
+                                                    txtrespuesta.Text = txtEntradab.Text / 10000
+                                                Else
+                                                    If num1 = 8 And num2 = 8 Then
+                                                        txtrespuesta.Text = txtEntradab.Text / 10000000
+                                                    Else
+                                                        If num1 = 8 And num2 = 9 Then
+                                                            txtrespuesta.Text = txtEntradab.Text / 10000000
+                                                        End If
+                                                    End If
+                                                End If
+                                            End If
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+
+            Case 9
+                If txtEntradab.Text = "" Or txtEntradab.Text = "." Then
+                    txtrespuesta.Text = 0
+                Else
+                    If num1 = 9 And num2 = 0 Then
+                        txtrespuesta.Text = txtEntradab.Text * 10
+                    Else
+                        If num1 = 9 And num2 = 1 Then
+                            txtrespuesta.Text = txtEntradab.Text * 10000
+                        Else
+                            If num1 = 9 And num2 = 2 Then
+                                txtrespuesta.Text = txtEntradab.Text * 10000
+                            Else
+                                If num1 = 9 And num2 = 3 Then
+                                    txtrespuesta.Text = txtEntradab.Text / 100
+                                Else
+                                    If num1 = 9 And num2 = 4 Then
+                                        txtrespuesta.Text = txtEntradab.Text * 100
+                                    Else
+                                        If num1 = 9 And num2 = 5 Then
+                                            txtrespuesta.Text = txtEntradab.Text * 0.353147
+                                        Else
+                                            If num1 = 9 And num2 = 6 Then
+                                                txtrespuesta.Text = txtEntradab.Text * 10000000
+                                            Else
+                                                If num1 = 9 And num2 = 7 Then
+                                                    txtrespuesta.Text = txtEntradab.Text * 100000000000
+                                                Else
+                                                    If num1 = 9 And num2 = 8 Then
+                                                        txtrespuesta.Text = txtEntradab.Text * 1000
+                                                    Else
+                                                        If num1 = 9 And num2 = 9 Then
+                                                            txtrespuesta.Text = txtEntradab.Text * 1
+                                                        End If
+                                                    End If
+                                                End If
+                                            End If
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+        End Select
     End Sub
 
 
