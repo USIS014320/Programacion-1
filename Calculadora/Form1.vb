@@ -1,27 +1,28 @@
 ﻿Public Class Form1
-    Dim objromanos = New conversor_romanos
 
-    Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
-        txtRespuesta.Text = objromanos.convertir(txtNúmero.Text)
+    Dim objdirecciones = New direcciones()
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cboDep.Items.AddRange(objdirecciones.depto)
+    End Sub
+
+    Private Sub cboDep_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboDep.SelectedIndexChanged
+        cboMun.Items.Clear()
+        cboMun.Text = ""
+        cboMun.Items.AddRange(objdirecciones.mun(cboDep.SelectedIndex))
     End Sub
 End Class
 
-Class conversor_romanos
-    Dim romanos()() As String = {
-        New String() {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"},
-        New String() {"", "X", "XX", "XXX", "XL", "LV", "LXX", "LXXX", "XC"},
-        New String() {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"}
-    }
+Class direcciones
 
-    Dim u, d, c, temp As Integer
+    Public depto() As String = {"Selccione un departamento", "Usulután",
+        "San Miguel", "La Unión", "Morazán", “Ahuachapán”, “Cabañas”, “Chalatenango”, “Cuscatlán”,
+        “La Libertad”, “La Paz”, “San Salvador”, “San Vicente”, “Santa Ana”, “Sonsonate”}
 
-    Public Function convertir(ByVal num As Integer)
-
-        u = num Mod 10
-        c = num \ 100
-        temp = num Mod 100
-        d = temp \ 10
-        Return romanos(2)(c) + romanos(1)(d) + romanos(0)(u)
-
-    End Function
+    Public mun()() As String = {
+        New String() {"Selccione un departamento"},
+        New String() {"Seleccione un municipio", "Usulután", "Jiquilisco", "Santa Ana", "Santa Maria"}, '0->Usulutan
+        New String() {"Seleccione un municipio", "San Miguel", "El Tránsito", "San Rafael", "San Jorge"},'0->San Miguel
+        New String() {"Seleccione un municipio", "La Unión", "SRL", "Anamoros", "Bolivar"}, '0->La Unión
+        New String() {"Seleccione un municipio", "Arambala", "Perquin", "Corinto", "Cacaopera"} '0->Morazán
+        }
 End Class

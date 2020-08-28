@@ -22,78 +22,66 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btnCalcular = New System.Windows.Forms.Button()
-        Me.lblNúmero = New System.Windows.Forms.Label()
-        Me.txtNúmero = New System.Windows.Forms.TextBox()
-        Me.txtRespuesta = New System.Windows.Forms.TextBox()
-        Me.lblres = New System.Windows.Forms.Label()
+        Me.lblDepto = New System.Windows.Forms.Label()
+        Me.lblMunicipio = New System.Windows.Forms.Label()
+        Me.cboDep = New System.Windows.Forms.ComboBox()
+        Me.cboMun = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
-        'btnCalcular
+        'lblDepto
         '
-        Me.btnCalcular.Location = New System.Drawing.Point(190, 322)
-        Me.btnCalcular.Name = "btnCalcular"
-        Me.btnCalcular.Size = New System.Drawing.Size(215, 69)
-        Me.btnCalcular.TabIndex = 0
-        Me.btnCalcular.Text = "CALCULAR"
-        Me.btnCalcular.UseVisualStyleBackColor = True
+        Me.lblDepto.AutoSize = True
+        Me.lblDepto.Location = New System.Drawing.Point(135, 108)
+        Me.lblDepto.Name = "lblDepto"
+        Me.lblDepto.Size = New System.Drawing.Size(123, 17)
+        Me.lblDepto.TabIndex = 1
+        Me.lblDepto.Text = "DEPARTAMENTO"
         '
-        'lblNúmero
+        'lblMunicipio
         '
-        Me.lblNúmero.AutoSize = True
-        Me.lblNúmero.Location = New System.Drawing.Point(261, 63)
-        Me.lblNúmero.Name = "lblNúmero"
-        Me.lblNúmero.Size = New System.Drawing.Size(69, 17)
-        Me.lblNúmero.TabIndex = 1
-        Me.lblNúmero.Text = "NUMERO"
+        Me.lblMunicipio.AutoSize = True
+        Me.lblMunicipio.Location = New System.Drawing.Point(482, 108)
+        Me.lblMunicipio.Name = "lblMunicipio"
+        Me.lblMunicipio.Size = New System.Drawing.Size(77, 17)
+        Me.lblMunicipio.TabIndex = 5
+        Me.lblMunicipio.Text = "MUNICIPIO"
         '
-        'txtNúmero
+        'cboDep
         '
-        Me.txtNúmero.Location = New System.Drawing.Point(243, 83)
-        Me.txtNúmero.Name = "txtNúmero"
-        Me.txtNúmero.Size = New System.Drawing.Size(100, 22)
-        Me.txtNúmero.TabIndex = 2
+        Me.cboDep.FormattingEnabled = True
+        Me.cboDep.Location = New System.Drawing.Point(113, 128)
+        Me.cboDep.Name = "cboDep"
+        Me.cboDep.Size = New System.Drawing.Size(173, 24)
+        Me.cboDep.TabIndex = 6
         '
-        'txtRespuesta
+        'cboMun
         '
-        Me.txtRespuesta.Location = New System.Drawing.Point(204, 194)
-        Me.txtRespuesta.Name = "txtRespuesta"
-        Me.txtRespuesta.Size = New System.Drawing.Size(201, 22)
-        Me.txtRespuesta.TabIndex = 4
-        Me.txtRespuesta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'lblres
-        '
-        Me.lblres.AutoSize = True
-        Me.lblres.Location = New System.Drawing.Point(261, 174)
-        Me.lblres.Name = "lblres"
-        Me.lblres.Size = New System.Drawing.Size(91, 17)
-        Me.lblres.TabIndex = 5
-        Me.lblres.Text = "RESPUESTA"
+        Me.cboMun.FormattingEnabled = True
+        Me.cboMun.Location = New System.Drawing.Point(430, 128)
+        Me.cboMun.Name = "cboMun"
+        Me.cboMun.Size = New System.Drawing.Size(173, 24)
+        Me.cboMun.TabIndex = 7
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(590, 454)
-        Me.Controls.Add(Me.lblres)
-        Me.Controls.Add(Me.txtRespuesta)
-        Me.Controls.Add(Me.txtNúmero)
-        Me.Controls.Add(Me.lblNúmero)
-        Me.Controls.Add(Me.btnCalcular)
+        Me.ClientSize = New System.Drawing.Size(704, 383)
+        Me.Controls.Add(Me.cboMun)
+        Me.Controls.Add(Me.cboDep)
+        Me.Controls.Add(Me.lblMunicipio)
+        Me.Controls.Add(Me.lblDepto)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximizeBox = False
         Me.Name = "Form1"
-        Me.Text = "DECIMALES A ROMANOS"
+        Me.Text = "COMBO DINAMICO"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btnCalcular As Button
-    Friend WithEvents lblNúmero As Label
-    Friend WithEvents txtNúmero As TextBox
-    Friend WithEvents txtRespuesta As TextBox
-    Friend WithEvents lblres As Label
+    Friend WithEvents lblDepto As Label
+    Friend WithEvents lblMunicipio As Label
+    Friend WithEvents cboDep As ComboBox
+    Friend WithEvents cboMun As ComboBox
 End Class
