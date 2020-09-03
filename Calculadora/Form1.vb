@@ -2,7 +2,7 @@
 
     Dim objromanos = New conversor_romanos
 
-    Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
+    Private Sub btnCalcular_Click(sender As Object, e As EventArgs) 
         txtRespuestaC.Text = objromanos.convertir(txtNúmero.Text)
     End Sub
 
