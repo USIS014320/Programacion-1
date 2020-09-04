@@ -202,5 +202,15 @@
 
     End Sub
 
+    Private Sub btbConvertirU_Click(sender As Object, e As EventArgs) Handles btbConvertirU.Click
+        Dim libras, conver, i, cont As Int64
+        libras = txtNúmero.Text
+        conver = txtUnidad.Text
 
+        If i = 0 Then
+            i = libras \ conver
+            cont = libras Mod conver
+        End If
+        txtRespuestaU.Text = i & "/" & cont
+    End Sub
 End Class
