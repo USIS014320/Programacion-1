@@ -1,34 +1,5 @@
 ﻿Public Class Form1
 
-    Dim objromanos = New conversor_romanos
-
-    Private Sub btnCalcular_Click(sender As Object, e As EventArgs) 
-        txtRespuestaC.Text = objromanos.convertir(txtNúmero.Text)
-    End Sub
-
-
-    Class conversor_romanos
-        Dim romanos()() As String = {
-        New String() {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"},
-        New String() {"", "X", "XX", "XXX", "XL", "LV", "LXX", "LXXX", "XC"},
-        New String() {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"}
-    }
-
-        Dim u, d, c, temp As Integer
-
-        Public Function convertir(ByVal num As Integer)
-
-            u = num Mod 10
-            c = num \ 100
-            temp = num Mod 100
-            d = temp \ 10
-            Return romanos(2)(c) + romanos(1)(d) + romanos(0)(u)
-
-        End Function
-    End Class
-
-
-
     Private Sub btnConvertir_Click_1(sender As Object, e As EventArgs) Handles btnConvertir.Click
         Dim m1, m2 As Int64
 
@@ -120,22 +91,22 @@
             txtRespuesta.Text = txtEntradab.Text * 10.764
         Else
             If m1 = 3 And m2 = 1 Then
-                txtRespuesta.Text = txtEntradab.Text * 0
+                txtRespuesta.Text = txtEntradab.Text * 0.698896
             Else
                 If m1 = 3 And m2 = 2 Then
-                    txtRespuesta.Text = txtEntradab.Text * 1.196
+                    txtRespuesta.Text = txtEntradab.Text * 1.19599
                 Else
                     If m1 = 3 And m2 = 3 Then
                         txtRespuesta.Text = txtEntradab.Text * 1
                     Else
                         If m1 = 3 And m2 = 4 Then
-                            txtRespuesta.Text = txtEntradab.Text / 0
+                            txtRespuesta.Text = txtEntradab.Text / 628.86
                         Else
                             If m1 = 3 And m2 = 5 Then
-                                txtRespuesta.Text = txtEntradab.Text / 0
+                                txtRespuesta.Text = txtEntradab.Text / 6988
                             Else
                                 If m1 = 3 And m2 = 6 Then
-                                    txtRespuesta.Text = txtEntradab.Text / 10.0
+                                    txtRespuesta.Text = txtEntradab.Text / 10000
                                 End If
                             End If
                         End If
@@ -144,25 +115,26 @@
             End If
         End If
         If m1 = 4 And m2 = 0 Then
-            txtRespuesta.Text = txtEntradab.Text * 0
+            txtRespuesta.Text = txtEntradab.Text * 6768.34687
         Else
             If m1 = 4 And m2 = 1 Then
-                txtRespuesta.Text = txtEntradab.Text * 0
+                txtRespuesta.Text = txtEntradab.Text * 877.174247
             Else
                 If m1 = 4 And m2 = 2 Then
-                    txtRespuesta.Text = txtEntradab.Text * 0
+                    txtRespuesta.Text = txtEntradab.Text * 752.038
                 Else
                     If m1 = 4 And m2 = 3 Then
-                        txtRespuesta.Text = txtEntradab.Text * 0
+                        txtRespuesta.Text = txtEntradab.Text * 628.86
                     Else
                         If m1 = 4 And m2 = 4 Then
-                            txtRespuesta.Text = txtEntradab.Text / 0
+                            txtRespuesta.Text = txtEntradab.Text / 1
                         Else
                             If m1 = 4 And m2 = 5 Then
-                                txtRespuesta.Text = txtEntradab.Text / 0
+                                txtRespuesta.Text = txtEntradab.Text * 0.08926746167
+
                             Else
                                 If m1 = 4 And m2 = 6 Then
-                                    txtRespuesta.Text = txtEntradab.Text / 0
+                                    txtRespuesta.Text = txtEntradab.Text * 0.06288
                                 End If
                             End If
                         End If
@@ -170,26 +142,27 @@
                 End If
             End If
         End If
+
         If m1 = 5 And m2 = 0 Then
-            txtRespuesta.Text = txtEntradab.Text * 0
+            txtRespuesta.Text = txtEntradab.Text * 75820.984975
         Else
             If m1 = 5 And m2 = 1 Then
-                txtRespuesta.Text = txtEntradab.Text * 0
+                txtRespuesta.Text = txtEntradab.Text * 10000
             Else
                 If m1 = 5 And m2 = 2 Then
-                    txtRespuesta.Text = txtEntradab.Text * 0
+                    txtRespuesta.Text = txtEntradab.Text * 8424.5538861
                 Else
                     If m1 = 5 And m2 = 3 Then
-                        txtRespuesta.Text = txtEntradab.Text * 0
+                        txtRespuesta.Text = txtEntradab.Text * 7044
                     Else
                         If m1 = 5 And m2 = 4 Then
-                            txtRespuesta.Text = txtEntradab.Text * 0
+                            txtRespuesta.Text = txtEntradab.Text * 10000 / 628.8634
                         Else
                             If m1 = 5 And m2 = 5 Then
-                                txtRespuesta.Text = txtEntradab.Text / 0
+                                txtRespuesta.Text = txtEntradab.Text
                             Else
                                 If m1 = 5 And m2 = 6 Then
-                                    txtRespuesta.Text = txtEntradab.Text / 0
+                                    txtRespuesta.Text = txtEntradab.Text / 0.7044
                                 End If
                             End If
                         End If
@@ -197,6 +170,7 @@
                 End If
             End If
         End If
+
         If m1 = 6 And m2 = 0 Then
             txtRespuesta.Text = txtEntradab.Text * 107.639
         Else
@@ -227,4 +201,6 @@
         End If
 
     End Sub
+
+
 End Class
