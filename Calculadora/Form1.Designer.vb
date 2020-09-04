@@ -80,7 +80,7 @@ Partial Class Form1
         '
         Me.btnConvertir.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConvertir.Location = New System.Drawing.Point(160, 286)
-        Me.btnConvertir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnConvertir.Margin = New System.Windows.Forms.Padding(2)
         Me.btnConvertir.Name = "btnConvertir"
         Me.btnConvertir.Size = New System.Drawing.Size(132, 37)
         Me.btnConvertir.TabIndex = 70
@@ -139,7 +139,7 @@ Partial Class Form1
         Me.TabControl1.Controls.Add(Me.tcConver)
         Me.TabControl1.Controls.Add(Me.tcArea)
         Me.TabControl1.Location = New System.Drawing.Point(59, 32)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(453, 411)
@@ -156,9 +156,9 @@ Partial Class Form1
         Me.tcConver.Controls.Add(Me.txtUnidad)
         Me.tcConver.Controls.Add(Me.lblUnidad)
         Me.tcConver.Location = New System.Drawing.Point(4, 22)
-        Me.tcConver.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tcConver.Margin = New System.Windows.Forms.Padding(2)
         Me.tcConver.Name = "tcConver"
-        Me.tcConver.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tcConver.Padding = New System.Windows.Forms.Padding(2)
         Me.tcConver.Size = New System.Drawing.Size(445, 385)
         Me.tcConver.TabIndex = 0
         Me.tcConver.Text = "CONVERSOR"
@@ -166,7 +166,7 @@ Partial Class Form1
         'txtRespuestaU
         '
         Me.txtRespuestaU.Location = New System.Drawing.Point(150, 201)
-        Me.txtRespuestaU.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtRespuestaU.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRespuestaU.Name = "txtRespuestaU"
         Me.txtRespuestaU.Size = New System.Drawing.Size(148, 20)
         Me.txtRespuestaU.TabIndex = 13
@@ -195,7 +195,7 @@ Partial Class Form1
         'btbConvertirU
         '
         Me.btbConvertirU.Location = New System.Drawing.Point(150, 249)
-        Me.btbConvertirU.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btbConvertirU.Margin = New System.Windows.Forms.Padding(2)
         Me.btbConvertirU.Name = "btbConvertirU"
         Me.btbConvertirU.Size = New System.Drawing.Size(147, 56)
         Me.btbConvertirU.TabIndex = 8
@@ -205,7 +205,7 @@ Partial Class Form1
         'txtNúmero
         '
         Me.txtNúmero.Location = New System.Drawing.Point(150, 99)
-        Me.txtNúmero.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNúmero.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNúmero.Name = "txtNúmero"
         Me.txtNúmero.Size = New System.Drawing.Size(148, 20)
         Me.txtNúmero.TabIndex = 10
@@ -213,7 +213,7 @@ Partial Class Form1
         'txtUnidad
         '
         Me.txtUnidad.Location = New System.Drawing.Point(150, 145)
-        Me.txtUnidad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtUnidad.Margin = New System.Windows.Forms.Padding(2)
         Me.txtUnidad.Name = "txtUnidad"
         Me.txtUnidad.Size = New System.Drawing.Size(148, 20)
         Me.txtUnidad.TabIndex = 11
@@ -242,9 +242,9 @@ Partial Class Form1
         Me.tcArea.Controls.Add(Me.btnConvertir)
         Me.tcArea.Controls.Add(Me.cboA)
         Me.tcArea.Location = New System.Drawing.Point(4, 22)
-        Me.tcArea.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tcArea.Margin = New System.Windows.Forms.Padding(2)
         Me.tcArea.Name = "tcArea"
-        Me.tcArea.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tcArea.Padding = New System.Windows.Forms.Padding(2)
         Me.tcArea.Size = New System.Drawing.Size(445, 385)
         Me.tcArea.TabIndex = 1
         Me.tcArea.Text = "AREA"
@@ -257,7 +257,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(549, 488)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "CONVERSOR"
