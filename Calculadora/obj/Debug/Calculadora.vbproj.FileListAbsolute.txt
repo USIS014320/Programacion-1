@@ -34,3 +34,15 @@ C:\Users\DELL\Source\Repos\Palcial nuevo\Calculadora\obj\Debug\Calculadora.vbpro
 C:\Users\DELL\Source\Repos\Palcial nuevo\Calculadora\obj\Debug\Calculadora.exe
 C:\Users\DELL\Source\Repos\Palcial nuevo\Calculadora\obj\Debug\Calculadora.xml
 C:\Users\DELL\Source\Repos\Palcial nuevo\Calculadora\obj\Debug\Calculadora.pdb
+C:\Users\Wilbert Ruth\Source\Repos\Programacion.1\Calculadora\bin\Debug\Calculadora.exe.config
+C:\Users\Wilbert Ruth\Source\Repos\Programacion.1\Calculadora\bin\Debug\Calculadora.exe
+C:\Users\Wilbert Ruth\Source\Repos\Programacion.1\Calculadora\bin\Debug\Calculadora.pdb
+C:\Users\Wilbert Ruth\Source\Repos\Programacion.1\Calculadora\bin\Debug\Calculadora.xml
+C:\Users\Wilbert Ruth\Source\Repos\Programacion.1\Calculadora\obj\Debug\Calculadora.vbprojAssemblyReference.cache
+C:\Users\Wilbert Ruth\Source\Repos\Programacion.1\Calculadora\obj\Debug\Calculadora.Form1.resources
+C:\Users\Wilbert Ruth\Source\Repos\Programacion.1\Calculadora\obj\Debug\Calculadora.Resources.resources
+C:\Users\Wilbert Ruth\Source\Repos\Programacion.1\Calculadora\obj\Debug\Calculadora.vbproj.GenerateResource.cache
+C:\Users\Wilbert Ruth\Source\Repos\Programacion.1\Calculadora\obj\Debug\Calculadora.vbproj.CoreCompileInputs.cache
+C:\Users\Wilbert Ruth\Source\Repos\Programacion.1\Calculadora\obj\Debug\Calculadora.exe
+C:\Users\Wilbert Ruth\Source\Repos\Programacion.1\Calculadora\obj\Debug\Calculadora.xml
+C:\Users\Wilbert Ruth\Source\Repos\Programacion.1\Calculadora\obj\Debug\Calculadora.pdb

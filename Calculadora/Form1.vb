@@ -175,19 +175,19 @@
             txtRespuesta.Text = txtEntradab.Text * 107.639
         Else
             If m1 = 6 And m2 = 1 Then
-                txtRespuesta.Text = txtEntradab.Text * 0
+                txtRespuesta.Text = txtEntradab.Text * 14285.71
             Else
                 If m1 = 6 And m2 = 2 Then
-                    txtRespuesta.Text = txtEntradab.Text * 11.96
+                    txtRespuesta.Text = txtEntradab.Text * 11959.9
                 Else
                     If m1 = 6 And m2 = 3 Then
-                        txtRespuesta.Text = txtEntradab.Text * 10.0
+                        txtRespuesta.Text = txtEntradab.Text * 10000
                     Else
                         If m1 = 6 And m2 = 4 Then
-                            txtRespuesta.Text = txtEntradab.Text * 0
+                            txtRespuesta.Text = txtEntradab.Text * 22.88
                         Else
                             If m1 = 6 And m2 = 5 Then
-                                txtRespuesta.Text = txtEntradab.Text * 0
+                                txtRespuesta.Text = txtEntradab.Text * 1.43
                             Else
                                 If m1 = 6 And m2 = 6 Then
                                     txtRespuesta.Text = txtEntradab.Text * 1
