@@ -26,12 +26,14 @@ Partial Class Form1
         Me.lblMunicipio = New System.Windows.Forms.Label()
         Me.cboDep = New System.Windows.Forms.ComboBox()
         Me.cboMun = New System.Windows.Forms.ComboBox()
+        Me.cboCantón = New System.Windows.Forms.ComboBox()
+        Me.lblCantón = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lblDepto
         '
         Me.lblDepto.AutoSize = True
-        Me.lblDepto.Location = New System.Drawing.Point(135, 108)
+        Me.lblDepto.Location = New System.Drawing.Point(77, 92)
         Me.lblDepto.Name = "lblDepto"
         Me.lblDepto.Size = New System.Drawing.Size(123, 17)
         Me.lblDepto.TabIndex = 1
@@ -40,7 +42,7 @@ Partial Class Form1
         'lblMunicipio
         '
         Me.lblMunicipio.AutoSize = True
-        Me.lblMunicipio.Location = New System.Drawing.Point(482, 108)
+        Me.lblMunicipio.Location = New System.Drawing.Point(394, 92)
         Me.lblMunicipio.Name = "lblMunicipio"
         Me.lblMunicipio.Size = New System.Drawing.Size(77, 17)
         Me.lblMunicipio.TabIndex = 5
@@ -49,7 +51,7 @@ Partial Class Form1
         'cboDep
         '
         Me.cboDep.FormattingEnabled = True
-        Me.cboDep.Location = New System.Drawing.Point(113, 128)
+        Me.cboDep.Location = New System.Drawing.Point(55, 112)
         Me.cboDep.Name = "cboDep"
         Me.cboDep.Size = New System.Drawing.Size(173, 24)
         Me.cboDep.TabIndex = 6
@@ -57,17 +59,36 @@ Partial Class Form1
         'cboMun
         '
         Me.cboMun.FormattingEnabled = True
-        Me.cboMun.Location = New System.Drawing.Point(430, 128)
+        Me.cboMun.Location = New System.Drawing.Point(342, 112)
         Me.cboMun.Name = "cboMun"
         Me.cboMun.Size = New System.Drawing.Size(173, 24)
         Me.cboMun.TabIndex = 7
+        '
+        'cboCantón
+        '
+        Me.cboCantón.FormattingEnabled = True
+        Me.cboCantón.Location = New System.Drawing.Point(602, 112)
+        Me.cboCantón.Name = "cboCantón"
+        Me.cboCantón.Size = New System.Drawing.Size(173, 24)
+        Me.cboCantón.TabIndex = 9
+        '
+        'lblCantón
+        '
+        Me.lblCantón.AutoSize = True
+        Me.lblCantón.Location = New System.Drawing.Point(654, 92)
+        Me.lblCantón.Name = "lblCantón"
+        Me.lblCantón.Size = New System.Drawing.Size(66, 17)
+        Me.lblCantón.TabIndex = 8
+        Me.lblCantón.Text = "CANTON"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(704, 383)
+        Me.ClientSize = New System.Drawing.Size(820, 253)
+        Me.Controls.Add(Me.cboCantón)
+        Me.Controls.Add(Me.lblCantón)
         Me.Controls.Add(Me.cboMun)
         Me.Controls.Add(Me.cboDep)
         Me.Controls.Add(Me.lblMunicipio)
@@ -84,4 +105,6 @@ Partial Class Form1
     Friend WithEvents lblMunicipio As Label
     Friend WithEvents cboDep As ComboBox
     Friend WithEvents cboMun As ComboBox
+    Friend WithEvents cboCantón As ComboBox
+    Friend WithEvents lblCantón As Label
 End Class
