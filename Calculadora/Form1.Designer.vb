@@ -29,11 +29,11 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(590, 589)
+        Me.ClientSize = New System.Drawing.Size(603, 464)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximizeBox = False
         Me.Name = "Form1"
-        Me.Text = "EJERCICIOS"
+        Me.Text = "Sistema de Inventario y Facturacion"
         Me.ResumeLayout(False)
 
     End Sub
