@@ -33,7 +33,7 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximizeBox = False
         Me.Name = "Form1"
-        Me.Text = "Sistema de Inventario y Facturacion"
+        Me.Text = "Sistema Informático SIGAC"
         Me.ResumeLayout(False)
 
     End Sub

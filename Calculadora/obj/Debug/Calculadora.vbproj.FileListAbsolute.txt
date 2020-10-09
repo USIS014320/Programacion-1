@@ -38,3 +38,7 @@ C:\Users\Eraldo\source\repos\progra\Calculadora\obj\Debug\Calculadora.exe
 C:\Users\Eraldo\source\repos\progra\Calculadora\obj\Debug\Calculadora.xml
 C:\Users\Eraldo\source\repos\progra\Calculadora\obj\Debug\Calculadora.pdb
 C:\Users\Eraldo\source\repos\progra\Calculadora\obj\Debug\Calculadora.frmBuscarClientes.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarProveedores.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmProveedores.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\bin\Debug\db_sigac.mdf
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\bin\Debug\db_sigac_log.ldf
