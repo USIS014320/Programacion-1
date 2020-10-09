@@ -37,3 +37,4 @@ C:\Users\Eraldo\source\repos\progra\Calculadora\obj\Debug\Calculadora.vbproj.Cor
 C:\Users\Eraldo\source\repos\progra\Calculadora\obj\Debug\Calculadora.exe
 C:\Users\Eraldo\source\repos\progra\Calculadora\obj\Debug\Calculadora.xml
 C:\Users\Eraldo\source\repos\progra\Calculadora\obj\Debug\Calculadora.pdb
+C:\Users\Eraldo\source\repos\progra\Calculadora\obj\Debug\Calculadora.frmBuscarClientes.resources
