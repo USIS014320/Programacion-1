@@ -31,7 +31,6 @@ Partial Class frmBuscarProveedores
         Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombreempresa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombrepropietario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.email = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.website = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,6 +38,7 @@ Partial Class frmBuscarProveedores
         Me.pais = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.departamento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.municipio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.canton = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.grdBuscarProveedor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -75,7 +75,7 @@ Partial Class frmBuscarProveedores
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grdBuscarProveedor.BackgroundColor = System.Drawing.SystemColors.Control
         Me.grdBuscarProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdBuscarProveedor.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idCliente, Me.codigo, Me.nombreempresa, Me.nombrepropietario, Me.direccion, Me.telefono, Me.email, Me.website, Me.fechaproveedor, Me.pais, Me.departamento, Me.municipio})
+        Me.grdBuscarProveedor.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idCliente, Me.codigo, Me.nombreempresa, Me.nombrepropietario, Me.telefono, Me.email, Me.website, Me.fechaproveedor, Me.pais, Me.departamento, Me.municipio, Me.canton})
         Me.grdBuscarProveedor.Location = New System.Drawing.Point(107, 70)
         Me.grdBuscarProveedor.Margin = New System.Windows.Forms.Padding(1)
         Me.grdBuscarProveedor.Name = "grdBuscarProveedor"
@@ -140,15 +140,6 @@ Partial Class frmBuscarProveedores
         Me.nombrepropietario.ReadOnly = True
         Me.nombrepropietario.Width = 125
         '
-        'direccion
-        '
-        Me.direccion.DataPropertyName = "direccion"
-        Me.direccion.HeaderText = "DIRECCION"
-        Me.direccion.MinimumWidth = 12
-        Me.direccion.Name = "direccion"
-        Me.direccion.ReadOnly = True
-        Me.direccion.Width = 150
-        '
         'telefono
         '
         Me.telefono.DataPropertyName = "telefono"
@@ -207,6 +198,14 @@ Partial Class frmBuscarProveedores
         Me.municipio.ReadOnly = True
         Me.municipio.Width = 125
         '
+        'canton
+        '
+        Me.canton.HeaderText = "CANTON"
+        Me.canton.MinimumWidth = 6
+        Me.canton.Name = "canton"
+        Me.canton.ReadOnly = True
+        Me.canton.Width = 125
+        '
         'frmBuscarProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -235,7 +234,6 @@ Partial Class frmBuscarProveedores
     Friend WithEvents codigo As DataGridViewTextBoxColumn
     Friend WithEvents nombreempresa As DataGridViewTextBoxColumn
     Friend WithEvents nombrepropietario As DataGridViewTextBoxColumn
-    Friend WithEvents direccion As DataGridViewTextBoxColumn
     Friend WithEvents telefono As DataGridViewTextBoxColumn
     Friend WithEvents email As DataGridViewTextBoxColumn
     Friend WithEvents website As DataGridViewTextBoxColumn
@@ -243,4 +241,5 @@ Partial Class frmBuscarProveedores
     Friend WithEvents pais As DataGridViewTextBoxColumn
     Friend WithEvents departamento As DataGridViewTextBoxColumn
     Friend WithEvents municipio As DataGridViewTextBoxColumn
+    Friend WithEvents canton As DataGridViewTextBoxColumn
 End Class

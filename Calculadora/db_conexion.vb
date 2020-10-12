@@ -10,26 +10,68 @@ Public Class db_conexion
         cadenaConexion = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_sigac.mdf;Integrated Security=True"
         miConexion.ConnectionString = cadenaConexion
         miConexion.Open()
+
+        parametrizacion()
     End Sub
+
+    Private Sub parametrizacion()
+        miCommand.Parameters.Add("@id", SqlDbType.Int).Value = 0
+        miCommand.Parameters.Add("@cod", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@nomem", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@nompro", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@tel", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@ema", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@web", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@fecha", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@pais", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@dep", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@mun", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@cant", SqlDbType.Char).Value = ""
+    End Sub
+
+
     Public Function obtenerDatos()
         ds.Clear()
+
         miCommand.Connection = miConexion
         miCommand.CommandText = "select * from proveedores"
         miAdapter.SelectCommand = miCommand
+
         miAdapter.Fill(ds, "proveedores")
+
         Return ds
     End Function
+
     Public Function mantenimientoDatosProveedor(ByVal datos As String(), ByVal accion As String)
         Dim sql, msg As String
         Select Case accion
             Case "nuevo"
-                sql = "INSERT INTO proveedores (codigo,nombreempresa,nombrepropietario,direccion,telefono,email,website,fechaproveedor,pais,departamento,municipio) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "','" + datos(7) + "','" + datos(8) + "','" + datos(9) + "','" + datos(10) + datos(11) + "')"
+                sql = "INSERT INTO proveedores (codigo,nombreempresa,nombrepropietario,telefono,email,website,fechaproveedor,pais,departamento,muninicpio,canton) VALUES (@cod,@nomem,@nompro,@tel,@ema,@web,@fecha,@pais,@dep,@mun,@cant)"
             Case "modificar"
-                sql = "UPDATE clientes SET codigo='" + datos(1) + "',nombreempresa='" + datos(2) + "',nombrepropietario='" + datos(3) + "',direccion='" + datos(4) + "',telefono='" + datos(5) + "',email='" + datos(6) + "',website='" + datos(7) + "',fechaproveedor='" + datos(8) + "',pais='" + datos(9) + "',departamento='" + datos(10) + "',municipio='" + datos(11) + "' WHERE idProveedor='" + datos(0) + "'"
+                sql = "UPDATE proveedores SET codigo=@cod,nombreempresa=@nomem,nombrepropietario=@nompro,telefono=@tel,email=@ema,website=@web,fechaproveedor=@fecha,pais=@pais,departamento=@dep,muninicpio=@mun,canton=@cant WHERE idProveedor=@id"
             Case "eliminar"
-                sql = "DELETE FROM proveedores WHERE idProveedor='" + datos(0) + "'"
+                sql = "DELETE FROM proveedoress WHERE idProveedor=@id"
         End Select
-        If (executeSql(sql) > 0) Then
+        miCommand.Parameters("@id").Value = datos(0)
+        If accion IsNot "eliminar" Then
+            miCommand.Parameters("@cod").Value = datos(1)
+            miCommand.Parameters("@nomem").Value = datos(2)
+            miCommand.Parameters("@nompro").Value = datos(3)
+            miCommand.Parameters("@tel").Value = datos(4)
+            miCommand.Parameters("@ema").Value = datos(5)
+            miCommand.Parameters("@web").Value = datos(6)
+            miCommand.Parameters("@fecha").Value = datos(7)
+            miCommand.Parameters("@pais").Value = datos(8)
+            miCommand.Parameters("@dep").Value = datos(9)
+            miCommand.Parameters("@mun").Value = datos(10)
+            miCommand.Parameters("@cant").Value = datos(11)
+        Else 'Accion es eliminar
+            mantenimientoDatosProveedor(datos, accion)
+        End If
+        If executeSql(sql) > 0 Then
+            If accion IsNot "eliminar" Then
+                mantenimientoDatosProveedor(datos, accion)
+            End If
             msg = "exito"
         Else
             msg = "error"

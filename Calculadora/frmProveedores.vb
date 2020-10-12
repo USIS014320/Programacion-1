@@ -22,15 +22,14 @@
             txtCodigoProveedor.Text = dataTable.Rows(posicion).ItemArray(1).ToString()
             txtNombreEmpresaProveedor.Text = dataTable.Rows(posicion).ItemArray(2).ToString()
             txtNombrePropietarioProveedor.Text = dataTable.Rows(posicion).ItemArray(3).ToString()
-            txtDireccionProveedor.Text = dataTable.Rows(posicion).ItemArray(4).ToString()
-            txtTelefonoProveedor.Text = dataTable.Rows(posicion).ItemArray(5).ToString()
-            txtEmailProveedor.Text = dataTable.Rows(posicion).ItemArray(6).ToString()
-            txtWebSiteProveedor.Text = dataTable.Rows(posicion).ItemArray(7).ToString()
-            dtpFechaProveedor.Text = dataTable.Rows(posicion).ItemArray(8).ToString()
-            txtPaisProveedor.Text = dataTable.Rows(posicion).ItemArray(9).ToString()
-            txtDepartamentoProveedor.Text = dataTable.Rows(posicion).ItemArray(10).ToString()
-            txtDepartamentoProveedor.Text = dataTable.Rows(posicion).ItemArray(10).ToString()
-            txtMunicipioProveedor.Text = dataTable.Rows(posicion).ItemArray(11).ToString()
+            txtTelefonoProveedor.Text = dataTable.Rows(posicion).ItemArray(4).ToString()
+            txtEmailProveedor.Text = dataTable.Rows(posicion).ItemArray(5).ToString()
+            txtWebSiteProveedor.Text = dataTable.Rows(posicion).ItemArray(6).ToString()
+            dtpFechaProveedor.Text = dataTable.Rows(posicion).ItemArray(7).ToString()
+            cboPaísProveedor.Text = dataTable.Rows(posicion).ItemArray(8).ToString()
+            cboDepartamentoProveedor.Text = dataTable.Rows(posicion).ItemArray(9).ToString()
+            cboMunicipioProveedor.Text = dataTable.Rows(posicion).ItemArray(10).ToString()
+            cboCantónProveedor.Text = dataTable.Rows(posicion).ItemArray(11).ToString()
 
             lblRegistrosProveedor.Text = posicion + 1 & " de " & dataTable.Rows.Count
         Else
@@ -77,7 +76,7 @@
             limpiarDatosProveedor()
         Else 'Guardar
             Dim msg = objConexion.mantenimientoDatosProveedor(New String() {
-                Me.Tag, txtCodigoProveedor.Text, txtNombreEmpresaProveedor.Text, txtDireccionProveedor.Text, txtTelefonoProveedor.Text, txtEmailProveedor.Text
+                Me.Tag, txtCodigoProveedor.Text, txtNombreEmpresaProveedor.Text, txtNombrePropietarioProveedor.Text, txtTelefonoProveedor.Text, txtEmailProveedor.Text, txtWebSiteProveedor.Text, dtpFechaProveedor.Text, cboPaísProveedor.Text, cboDepartamentoProveedor.Text, cboMunicipioProveedor.Text, cboCantónProveedor.Text
             }, accion)
 
             If msg = "error" Then
@@ -102,14 +101,14 @@
         txtCodigoProveedor.Text = ""
         txtNombreEmpresaProveedor.Text = ""
         txtNombrePropietarioProveedor.Text = ""
-        txtDireccionProveedor.Text = ""
         txtTelefonoProveedor.Text = ""
         txtEmailProveedor.Text = ""
         txtWebSiteProveedor.Text = ""
         dtpFechaProveedor.Text = ""
-        txtPaisProveedor.Text = ""
-        txtDepartamentoProveedor.Text = ""
-        txtMunicipioProveedor.Text = ""
+        cboPaísProveedor.Text = ""
+        cboDepartamentoProveedor.Text = ""
+        cboMunicipioProveedor.Text = ""
+        cboCantónProveedor.Text = ""
     End Sub
 
     Private Sub btnModificarProveedor_Click(sender As Object, e As EventArgs) Handles btnModificarProveedor.Click
@@ -148,6 +147,58 @@
         End If
     End Sub
 
+
+    Dim objdirecciones = New direcciones()
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cboDepartamentoProveedor.Items.AddRange(objdirecciones.dept)
+    End Sub
+
+    Private Sub cboPaísProveedor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboPaísProveedor.SelectedIndexChanged
+        cboDepartamentoProveedor.Items.Clear()
+        cboDepartamentoProveedor.Text = ""
+        cboDepartamentoProveedor.Items.AddRange(objdirecciones.dept(cboPaísProveedor.SelectedIndex))
+    End Sub
+
+    Private Sub cboDepartamentoProveedor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboDepartamentoProveedor.SelectedIndexChanged
+        cboMunicipioProveedor.Items.Clear()
+        cboMunicipioProveedor.Text = ""
+        cboMunicipioProveedor.Items.AddRange(objdirecciones.mun(cboDepartamentoProveedor.SelectedIndex))
+    End Sub
+
+    Private Sub cboMunicipioProveedor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMunicipioProveedor.SelectedIndexChanged
+        cboCantónProveedor.Items.Clear()
+        cboCantónProveedor.Text = ""
+        cboCantónProveedor.Items.AddRange(objdirecciones.cant(cboMunicipioProveedor.SelectedIndex))
+    End Sub
+    Class direcciones
+
+        Public pais() As String = {"Seleccione un pais.", "El Salvador"}
+
+        Public dept() As String = {"Seleccione un depto.", "Usulutan", "San Miguel", "La Union", "Morazan", "San Salvador", "La Libertad", "Chalatenango", "San Vicente", "Cabañas"}
+
+        Public mun()() As String = {
+            New String() {"Seleccione un depto."},
+            New String() {"Seleccione un municipio", "Usulutan", "Jiquilisco", "Santa Elena", "Santa Maria", "Concepción Batres"},  '0->Usulutan
+            New String() {"Seleccione un municipio", "San Miguel", "El Transito", "San Rafael Ote", "San Jorge"},'1->San Miguel
+            New String() {"Seleccione un municipio", "La Union", "SRL", "Anamoros", "Bolivar"},                  '2->La Union
+            New String() {"Seleccione un municipio", "Arambala", "Perquin", "Corinto", "Cacaopera"},              '3->Morazan
+            New String() {"Seleccione un municipio", "San Salvador", "Apopa", "Aguilares", "Ilopango", "El Paisnal"}, '4->San Salvador
+            New String() {"Seleccione un municipio", "Santa Tecla", "Antiguo Cuscatlan", "Cuidad Arce", "Colón", "Comasagua"}, '5->La libertad
+            New String() {"Seleccione un municipio", "Agua Caliente", "Arcatao", "Chalatenango", "Dulce Nombre de Maria", "Concepción Quezaltepeque"}, '6->Chalatenango
+            New String() {"Seleccione un municipio", "San Vicente", "Apastepeque", "Guadalupe", "San Sebastián", "Santo Domingo"} '7->San Vicente
+            }
+        Public cant()() As String = {
+          New String() {"Selecione un mun."},
+          New String() {"selecione un cantón"},
+          New String() {"selecione un cantón"},
+          New String() {"selecione un cantón"},
+           New String() {"selecione un cantón"},
+          New String() {"selecione un cantón", "El Cañal", "El paraisal", "El Porvenir", "Hacienda Nueva", "San Ildefonso", "La Anchila", "La Danta", "San Antonio", "San Felipe", "B.º. La Parroquia", "B.º. Candelaria", "B.º. San Antonio", "El Calvario", "Col. Amaya", "Col. El Progeso"} '4>-Concepción Batres
+          }
+
+
+
+    End Class
 
 
 End Class
