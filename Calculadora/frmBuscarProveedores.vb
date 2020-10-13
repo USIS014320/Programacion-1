@@ -2,16 +2,16 @@
     Dim objConexion As New db_conexion
     Public _idP As Integer
 
-    Private Sub btnSeleccionarProveedor_Click(sender As Object, e As EventArgs) Handles btnSeleccionarProveedor.Click
+    Private Sub btnSeleccionarProveedor_Click(sender As Object, e As EventArgs)
         seleccionarProveedor()
     End Sub
 
-    Private Sub frmBuscarProveedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmBuscarpROVEEDOR_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         grdBuscarProveedor.DataSource = objConexion.obtenerDatos().Tables("proveedores").DefaultView
     End Sub
 
-    Private Sub txtBuscarProveedor_KeyUp(sender As Object, e As KeyEventArgs) Handles txtBuscarProveedor.KeyUp
-        filtrarDatosProveedores(txtBuscarProveedor.Text)
+    Private Sub txtBuscarProveedor_KeyUp(sender As Object, e As KeyEventArgs)
+        filtrarDatosProveedor(txtBuscarProveedor.Text)
         If e.KeyCode = 13 Then
             seleccionarProveedor()
         End If
@@ -20,14 +20,14 @@
         _idP = grdBuscarProveedor.CurrentRow.Cells("idProveedor").Value.ToString()
         Close()
     End Sub
-    Private Sub filtrarDatosProveedores(ByVal valor As String)
+    Private Sub filtrarDatosProveedor(ByVal valor As String)
         Dim bs As New BindingSource()
         bs.DataSource = grdBuscarProveedor.DataSource
-        bs.Filter = "codigo like '%" & valor & "%' or  nombre like '%" & valor & "%'"
+        bs.Filter = "codigo like '%" & valor & "%' or  nombreempresa like '%" & valor & "%' Or  nombreempresa like '%" & valor & "%'"
         grdBuscarProveedor.DataSource = bs
     End Sub
 
-    Private Sub btnCancelarPorveedor_Click(sender As Object, e As EventArgs) Handles btnCancelarProveedor.Click
+    Private Sub btnCancelarProveedor_Click(sender As Object, e As EventArgs) Handles btnCancelarProveedor.Click
         _idP = 0
         Close()
     End Sub

@@ -45,17 +45,17 @@ Partial Class frmProveedores
         Me.lblNombrePropietarioEmpresaProveedor = New System.Windows.Forms.Label()
         Me.lblWebSiteProveedor = New System.Windows.Forms.Label()
         Me.txtWebSiteProveedor = New System.Windows.Forms.TextBox()
-        Me.lblFechaProveedor = New System.Windows.Forms.Label()
         Me.grbDatos = New System.Windows.Forms.GroupBox()
-        Me.cboPaísProveedor = New System.Windows.Forms.ComboBox()
-        Me.cboCantónProveedor = New System.Windows.Forms.ComboBox()
-        Me.cboMunicipioProveedor = New System.Windows.Forms.ComboBox()
-        Me.cboDepartamentoProveedor = New System.Windows.Forms.ComboBox()
-        Me.dtpFechaProveedor = New System.Windows.Forms.DateTimePicker()
+        Me.txtDepartamentoProveedor = New System.Windows.Forms.TextBox()
+        Me.txtMunicipioProveedor = New System.Windows.Forms.TextBox()
+        Me.txtCantónProveedor = New System.Windows.Forms.TextBox()
+        Me.txtPaísProveedor = New System.Windows.Forms.TextBox()
         Me.lblPaísProveedor = New System.Windows.Forms.Label()
         Me.lblCantónProveedor = New System.Windows.Forms.Label()
         Me.lblMunicipioProveedor = New System.Windows.Forms.Label()
         Me.lblDepartamentoProveedor = New System.Windows.Forms.Label()
+        Me.lblFechaProveedor = New System.Windows.Forms.Label()
+        Me.txtFechaProveedor = New System.Windows.Forms.TextBox()
         Me.grbEdicion.SuspendLayout()
         Me.grbNavegacion.SuspendLayout()
         Me.grbDatos.SuspendLayout()
@@ -104,7 +104,7 @@ Partial Class frmProveedores
         Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
         Me.grbEdicion.Name = "grbEdicion"
         Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbEdicion.Size = New System.Drawing.Size(843, 84)
+        Me.grbEdicion.Size = New System.Drawing.Size(421, 84)
         Me.grbEdicion.TabIndex = 5
         Me.grbEdicion.TabStop = False
         Me.grbEdicion.Text = "Edicion"
@@ -306,25 +306,13 @@ Partial Class frmProveedores
         Me.txtWebSiteProveedor.Size = New System.Drawing.Size(443, 22)
         Me.txtWebSiteProveedor.TabIndex = 14
         '
-        'lblFechaProveedor
-        '
-        Me.lblFechaProveedor.AccessibleName = ""
-        Me.lblFechaProveedor.AutoSize = True
-        Me.lblFechaProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFechaProveedor.Location = New System.Drawing.Point(20, 390)
-        Me.lblFechaProveedor.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblFechaProveedor.Name = "lblFechaProveedor"
-        Me.lblFechaProveedor.Size = New System.Drawing.Size(199, 20)
-        Me.lblFechaProveedor.TabIndex = 15
-        Me.lblFechaProveedor.Text = "FECHA PROVEEDOR:"
-        '
         'grbDatos
         '
-        Me.grbDatos.Controls.Add(Me.cboPaísProveedor)
-        Me.grbDatos.Controls.Add(Me.cboCantónProveedor)
-        Me.grbDatos.Controls.Add(Me.cboMunicipioProveedor)
-        Me.grbDatos.Controls.Add(Me.cboDepartamentoProveedor)
-        Me.grbDatos.Controls.Add(Me.dtpFechaProveedor)
+        Me.grbDatos.Controls.Add(Me.txtFechaProveedor)
+        Me.grbDatos.Controls.Add(Me.txtDepartamentoProveedor)
+        Me.grbDatos.Controls.Add(Me.txtMunicipioProveedor)
+        Me.grbDatos.Controls.Add(Me.txtCantónProveedor)
+        Me.grbDatos.Controls.Add(Me.txtPaísProveedor)
         Me.grbDatos.Controls.Add(Me.lblPaísProveedor)
         Me.grbDatos.Controls.Add(Me.lblCantónProveedor)
         Me.grbDatos.Controls.Add(Me.lblMunicipioProveedor)
@@ -352,91 +340,104 @@ Partial Class frmProveedores
         Me.grbDatos.TabStop = False
         Me.grbDatos.Text = "Datos de Proveedores"
         '
-        'cboPaísProveedor
+        'txtDepartamentoProveedor
         '
-        Me.cboPaísProveedor.FormattingEnabled = True
-        Me.cboPaísProveedor.Location = New System.Drawing.Point(282, 432)
-        Me.cboPaísProveedor.Name = "cboPaísProveedor"
-        Me.cboPaísProveedor.Size = New System.Drawing.Size(173, 24)
-        Me.cboPaísProveedor.TabIndex = 43
+        Me.txtDepartamentoProveedor.Location = New System.Drawing.Point(282, 495)
+        Me.txtDepartamentoProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtDepartamentoProveedor.Name = "txtDepartamentoProveedor"
+        Me.txtDepartamentoProveedor.Size = New System.Drawing.Size(147, 22)
+        Me.txtDepartamentoProveedor.TabIndex = 66
         '
-        'cboCantónProveedor
+        'txtMunicipioProveedor
         '
-        Me.cboCantónProveedor.FormattingEnabled = True
-        Me.cboCantónProveedor.Location = New System.Drawing.Point(282, 589)
-        Me.cboCantónProveedor.Name = "cboCantónProveedor"
-        Me.cboCantónProveedor.Size = New System.Drawing.Size(173, 24)
-        Me.cboCantónProveedor.TabIndex = 42
+        Me.txtMunicipioProveedor.Location = New System.Drawing.Point(282, 544)
+        Me.txtMunicipioProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtMunicipioProveedor.Name = "txtMunicipioProveedor"
+        Me.txtMunicipioProveedor.Size = New System.Drawing.Size(147, 22)
+        Me.txtMunicipioProveedor.TabIndex = 65
         '
-        'cboMunicipioProveedor
+        'txtCantónProveedor
         '
-        Me.cboMunicipioProveedor.FormattingEnabled = True
-        Me.cboMunicipioProveedor.Location = New System.Drawing.Point(282, 532)
-        Me.cboMunicipioProveedor.Name = "cboMunicipioProveedor"
-        Me.cboMunicipioProveedor.Size = New System.Drawing.Size(173, 24)
-        Me.cboMunicipioProveedor.TabIndex = 41
+        Me.txtCantónProveedor.Location = New System.Drawing.Point(282, 599)
+        Me.txtCantónProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtCantónProveedor.Name = "txtCantónProveedor"
+        Me.txtCantónProveedor.Size = New System.Drawing.Size(147, 22)
+        Me.txtCantónProveedor.TabIndex = 64
         '
-        'cboDepartamentoProveedor
+        'txtPaísProveedor
         '
-        Me.cboDepartamentoProveedor.FormattingEnabled = True
-        Me.cboDepartamentoProveedor.Location = New System.Drawing.Point(282, 483)
-        Me.cboDepartamentoProveedor.Name = "cboDepartamentoProveedor"
-        Me.cboDepartamentoProveedor.Size = New System.Drawing.Size(173, 24)
-        Me.cboDepartamentoProveedor.TabIndex = 40
-        '
-        'dtpFechaProveedor
-        '
-        Me.dtpFechaProveedor.Location = New System.Drawing.Point(283, 388)
-        Me.dtpFechaProveedor.Name = "dtpFechaProveedor"
-        Me.dtpFechaProveedor.Size = New System.Drawing.Size(247, 22)
-        Me.dtpFechaProveedor.TabIndex = 39
+        Me.txtPaísProveedor.Location = New System.Drawing.Point(283, 444)
+        Me.txtPaísProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtPaísProveedor.Name = "txtPaísProveedor"
+        Me.txtPaísProveedor.Size = New System.Drawing.Size(147, 22)
+        Me.txtPaísProveedor.TabIndex = 63
         '
         'lblPaísProveedor
         '
         Me.lblPaísProveedor.AutoSize = True
         Me.lblPaísProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPaísProveedor.Location = New System.Drawing.Point(20, 436)
+        Me.lblPaísProveedor.Location = New System.Drawing.Point(20, 444)
         Me.lblPaísProveedor.Name = "lblPaísProveedor"
         Me.lblPaísProveedor.Size = New System.Drawing.Size(56, 20)
-        Me.lblPaísProveedor.TabIndex = 32
+        Me.lblPaísProveedor.TabIndex = 58
         Me.lblPaísProveedor.Text = "PAIS:"
         '
         'lblCantónProveedor
         '
         Me.lblCantónProveedor.AutoSize = True
         Me.lblCantónProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCantónProveedor.Location = New System.Drawing.Point(20, 593)
+        Me.lblCantónProveedor.Location = New System.Drawing.Point(20, 601)
         Me.lblCantónProveedor.Name = "lblCantónProveedor"
         Me.lblCantónProveedor.Size = New System.Drawing.Size(91, 20)
-        Me.lblCantónProveedor.TabIndex = 30
+        Me.lblCantónProveedor.TabIndex = 57
         Me.lblCantónProveedor.Text = "CANTON:"
         '
         'lblMunicipioProveedor
         '
         Me.lblMunicipioProveedor.AutoSize = True
         Me.lblMunicipioProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMunicipioProveedor.Location = New System.Drawing.Point(20, 536)
+        Me.lblMunicipioProveedor.Location = New System.Drawing.Point(20, 544)
         Me.lblMunicipioProveedor.Name = "lblMunicipioProveedor"
         Me.lblMunicipioProveedor.Size = New System.Drawing.Size(110, 20)
-        Me.lblMunicipioProveedor.TabIndex = 28
+        Me.lblMunicipioProveedor.TabIndex = 56
         Me.lblMunicipioProveedor.Text = "MUNICIPIO:"
         '
         'lblDepartamentoProveedor
         '
         Me.lblDepartamentoProveedor.AutoSize = True
         Me.lblDepartamentoProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDepartamentoProveedor.Location = New System.Drawing.Point(20, 487)
+        Me.lblDepartamentoProveedor.Location = New System.Drawing.Point(20, 495)
         Me.lblDepartamentoProveedor.Name = "lblDepartamentoProveedor"
         Me.lblDepartamentoProveedor.Size = New System.Drawing.Size(166, 20)
-        Me.lblDepartamentoProveedor.TabIndex = 26
+        Me.lblDepartamentoProveedor.TabIndex = 55
         Me.lblDepartamentoProveedor.Text = "DEPARTAMENTO:"
+        '
+        'lblFechaProveedor
+        '
+        Me.lblFechaProveedor.AccessibleName = ""
+        Me.lblFechaProveedor.AutoSize = True
+        Me.lblFechaProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFechaProveedor.Location = New System.Drawing.Point(20, 398)
+        Me.lblFechaProveedor.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblFechaProveedor.Name = "lblFechaProveedor"
+        Me.lblFechaProveedor.Size = New System.Drawing.Size(199, 20)
+        Me.lblFechaProveedor.TabIndex = 54
+        Me.lblFechaProveedor.Text = "FECHA PROVEEDOR:"
+        '
+        'txtFechaProveedor
+        '
+        Me.txtFechaProveedor.Location = New System.Drawing.Point(282, 396)
+        Me.txtFechaProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtFechaProveedor.Name = "txtFechaProveedor"
+        Me.txtFechaProveedor.Size = New System.Drawing.Size(147, 22)
+        Me.txtFechaProveedor.TabIndex = 67
         '
         'frmProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(872, 748)
+        Me.ClientSize = New System.Drawing.Size(839, 764)
         Me.Controls.Add(Me.grbEdicion)
         Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.grbDatos)
@@ -474,15 +475,15 @@ Partial Class frmProveedores
     Friend WithEvents lblNombrePropietarioEmpresaProveedor As Label
     Friend WithEvents lblWebSiteProveedor As Label
     Friend WithEvents txtWebSiteProveedor As TextBox
-    Friend WithEvents lblFechaProveedor As Label
     Friend WithEvents grbDatos As GroupBox
     Friend WithEvents lblPaísProveedor As Label
     Friend WithEvents lblCantónProveedor As Label
     Friend WithEvents lblMunicipioProveedor As Label
     Friend WithEvents lblDepartamentoProveedor As Label
-    Friend WithEvents cboPaísProveedor As ComboBox
-    Friend WithEvents cboCantónProveedor As ComboBox
-    Friend WithEvents cboMunicipioProveedor As ComboBox
-    Friend WithEvents cboDepartamentoProveedor As ComboBox
-    Friend WithEvents dtpFechaProveedor As DateTimePicker
+    Friend WithEvents lblFechaProveedor As Label
+    Friend WithEvents txtDepartamentoProveedor As TextBox
+    Friend WithEvents txtMunicipioProveedor As TextBox
+    Friend WithEvents txtCantónProveedor As TextBox
+    Friend WithEvents txtPaísProveedor As TextBox
+    Friend WithEvents txtFechaProveedor As TextBox
 End Class

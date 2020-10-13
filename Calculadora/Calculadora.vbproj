@@ -158,12 +158,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="db_sigac.mdf">
+    <Content Include="bd_sigac.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="db_sigac_log.ldf">
+    <Content Include="bd_sigac_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>db_sigac.mdf</DependentUpon>
+      <DependentUpon>bd_sigac.mdf</DependentUpon>
     </Content>
     <Content Include="icono.ico" />
   </ItemGroup>

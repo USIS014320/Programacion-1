@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmBuscarProveedores
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,14 @@ Partial Class frmBuscarProveedores
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btnCancelarProveedor = New System.Windows.Forms.Button()
         Me.btnSeleccionarProveedor = New System.Windows.Forms.Button()
         Me.grdBuscarProveedor = New System.Windows.Forms.DataGridView()
         Me.lblBuscarProveedor = New System.Windows.Forms.Label()
         Me.txtBuscarProveedor = New System.Windows.Forms.TextBox()
-        Me.idCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.idProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombreempresa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombrepropietario = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -46,7 +46,7 @@ Partial Class frmBuscarProveedores
         '
         Me.btnCancelarProveedor.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCancelarProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarProveedor.Location = New System.Drawing.Point(588, 564)
+        Me.btnCancelarProveedor.Location = New System.Drawing.Point(816, 577)
         Me.btnCancelarProveedor.Margin = New System.Windows.Forms.Padding(1)
         Me.btnCancelarProveedor.Name = "btnCancelarProveedor"
         Me.btnCancelarProveedor.Size = New System.Drawing.Size(160, 41)
@@ -58,12 +58,12 @@ Partial Class frmBuscarProveedores
         '
         Me.btnSeleccionarProveedor.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSeleccionarProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionarProveedor.Location = New System.Drawing.Point(252, 564)
+        Me.btnSeleccionarProveedor.Location = New System.Drawing.Point(499, 577)
         Me.btnSeleccionarProveedor.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSeleccionarProveedor.Name = "btnSeleccionarProveedor"
         Me.btnSeleccionarProveedor.Size = New System.Drawing.Size(315, 41)
         Me.btnSeleccionarProveedor.TabIndex = 8
-        Me.btnSeleccionarProveedor.Text = "Seleccionar Proveedor"
+        Me.btnSeleccionarProveedor.Text = "Seleccionar Cliente"
         Me.btnSeleccionarProveedor.UseVisualStyleBackColor = True
         '
         'grdBuscarProveedor
@@ -73,22 +73,21 @@ Partial Class frmBuscarProveedores
         Me.grdBuscarProveedor.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.grdBuscarProveedor.BackgroundColor = System.Drawing.SystemColors.Control
         Me.grdBuscarProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdBuscarProveedor.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idCliente, Me.codigo, Me.nombreempresa, Me.nombrepropietario, Me.telefono, Me.email, Me.website, Me.fechaproveedor, Me.pais, Me.departamento, Me.municipio, Me.canton})
-        Me.grdBuscarProveedor.Location = New System.Drawing.Point(107, 70)
+        Me.grdBuscarProveedor.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idProveedor, Me.codigo, Me.nombreempresa, Me.nombrepropietario, Me.telefono, Me.email, Me.website, Me.fechaproveedor, Me.pais, Me.departamento, Me.municipio, Me.canton})
+        Me.grdBuscarProveedor.Location = New System.Drawing.Point(35, 93)
         Me.grdBuscarProveedor.Margin = New System.Windows.Forms.Padding(1)
         Me.grdBuscarProveedor.Name = "grdBuscarProveedor"
         Me.grdBuscarProveedor.ReadOnly = True
         Me.grdBuscarProveedor.RowHeadersWidth = 102
         Me.grdBuscarProveedor.RowTemplate.Height = 40
-        Me.grdBuscarProveedor.Size = New System.Drawing.Size(641, 474)
+        Me.grdBuscarProveedor.Size = New System.Drawing.Size(941, 474)
         Me.grdBuscarProveedor.TabIndex = 7
         '
         'lblBuscarProveedor
         '
         Me.lblBuscarProveedor.AutoSize = True
-        Me.lblBuscarProveedor.Location = New System.Drawing.Point(35, 34)
+        Me.lblBuscarProveedor.Location = New System.Drawing.Point(31, 42)
         Me.lblBuscarProveedor.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.lblBuscarProveedor.Name = "lblBuscarProveedor"
         Me.lblBuscarProveedor.Size = New System.Drawing.Size(68, 17)
@@ -99,21 +98,20 @@ Partial Class frmBuscarProveedores
         '
         Me.txtBuscarProveedor.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtBuscarProveedor.Location = New System.Drawing.Point(107, 29)
+        Me.txtBuscarProveedor.Location = New System.Drawing.Point(104, 42)
         Me.txtBuscarProveedor.Margin = New System.Windows.Forms.Padding(1)
         Me.txtBuscarProveedor.Name = "txtBuscarProveedor"
-        Me.txtBuscarProveedor.Size = New System.Drawing.Size(541, 22)
+        Me.txtBuscarProveedor.Size = New System.Drawing.Size(871, 22)
         Me.txtBuscarProveedor.TabIndex = 5
         '
-        'idCliente
+        'idProveedor
         '
-        Me.idCliente.DataPropertyName = "idCliente"
-        Me.idCliente.HeaderText = "ID"
-        Me.idCliente.MinimumWidth = 12
-        Me.idCliente.Name = "idCliente"
-        Me.idCliente.ReadOnly = True
-        Me.idCliente.Visible = False
-        Me.idCliente.Width = 350
+        Me.idProveedor.HeaderText = "ID"
+        Me.idProveedor.MinimumWidth = 6
+        Me.idProveedor.Name = "idProveedor"
+        Me.idProveedor.ReadOnly = True
+        Me.idProveedor.Visible = False
+        Me.idProveedor.Width = 125
         '
         'codigo
         '
@@ -126,15 +124,17 @@ Partial Class frmBuscarProveedores
         '
         'nombreempresa
         '
-        Me.nombreempresa.HeaderText = "NombreEmpresa"
-        Me.nombreempresa.MinimumWidth = 6
+        Me.nombreempresa.DataPropertyName = "nombreempresa"
+        Me.nombreempresa.HeaderText = "EMPRESA"
+        Me.nombreempresa.MinimumWidth = 12
         Me.nombreempresa.Name = "nombreempresa"
         Me.nombreempresa.ReadOnly = True
-        Me.nombreempresa.Width = 125
+        Me.nombreempresa.Width = 150
         '
         'nombrepropietario
         '
-        Me.nombrepropietario.HeaderText = "NOMBREPROPIETARIO"
+        Me.nombrepropietario.DataPropertyName = "nombrepropietario"
+        Me.nombrepropietario.HeaderText = "PROPIERTARIO"
         Me.nombrepropietario.MinimumWidth = 6
         Me.nombrepropietario.Name = "nombrepropietario"
         Me.nombrepropietario.ReadOnly = True
@@ -160,11 +160,12 @@ Partial Class frmBuscarProveedores
         '
         'website
         '
-        Me.website.HeaderText = "WESITE"
-        Me.website.MinimumWidth = 6
+        Me.website.DataPropertyName = "website"
+        Me.website.HeaderText = "WEB"
+        Me.website.MinimumWidth = 12
         Me.website.Name = "website"
         Me.website.ReadOnly = True
-        Me.website.Width = 125
+        Me.website.Width = 150
         '
         'fechaproveedor
         '
@@ -211,7 +212,7 @@ Partial Class frmBuscarProveedores
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(775, 635)
+        Me.ClientSize = New System.Drawing.Size(1006, 661)
         Me.Controls.Add(Me.btnCancelarProveedor)
         Me.Controls.Add(Me.btnSeleccionarProveedor)
         Me.Controls.Add(Me.grdBuscarProveedor)
@@ -230,7 +231,7 @@ Partial Class frmBuscarProveedores
     Friend WithEvents grdBuscarProveedor As DataGridView
     Friend WithEvents lblBuscarProveedor As Label
     Friend WithEvents txtBuscarProveedor As TextBox
-    Friend WithEvents idCliente As DataGridViewTextBoxColumn
+    Friend WithEvents idProveedor As DataGridViewTextBoxColumn
     Friend WithEvents codigo As DataGridViewTextBoxColumn
     Friend WithEvents nombreempresa As DataGridViewTextBoxColumn
     Friend WithEvents nombrepropietario As DataGridViewTextBoxColumn
