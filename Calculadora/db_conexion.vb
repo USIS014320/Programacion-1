@@ -24,9 +24,9 @@ Public Class db_conexion
         Dim sql, msg As String
         Select Case accion
             Case "nuevo"
-                sql = "INSERT INTO proveedores (codigo,nombreempresa,nombrepropietario,telefono,email,website) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "')"
+                sql = "INSERT INTO proveedores (idProveedorcodigo,nombreempresa,nombrepropietario,telefono,email,website,fechaproveedor,pais,departamento,municipio,canton) VALUES('" + datos(0) + "','" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "','" + datos(7) + "','" + datos(8) + "','" + datos(9) + "','" + datos(10) + "','" + datos(11) + "')"
             Case "modificar"
-                sql = "UPDATE clientes SET codigo='" + datos(1) + "',nombreempresa='" + datos(2) + "',nombrepropietario='" + datos(3) + "',telefono='" + datos(4) + "',email='" + datos(5) + "',website='" + datos(6) + "' WHERE idProveedor='" + datos(0) + "'"
+                sql = "UPDATE proveedores SET codigo='" + datos(1) + "',nombreempresa='" + datos(2) + "',nombrepropietario='" + datos(3) + "',telefono='" + datos(4) + "',email='" + datos(5) + "',website='" + datos(6) + "',fechaproveedor='" + datos(7) + "',pais='" + datos(8) + "',departamento='" + datos(9) + "',municipio='" + datos(10) + "',canton='" + datos(11) + "' WHERE idProveedor='" + datos(0) + "'"
             Case "eliminar"
                 sql = "DELETE FROM proveedores WHERE idProveedor='" + datos(0) + "'"
 
