@@ -6,7 +6,7 @@
         seleccionarProveedor()
     End Sub
 
-    Private Sub frmBuscarpROVEEDOR_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmBuscarProveedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         grdBuscarProveedor.DataSource = objConexion.obtenerDatos().Tables("proveedores").DefaultView
     End Sub
 

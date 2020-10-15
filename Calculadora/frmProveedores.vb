@@ -22,10 +22,6 @@
             txtEmailProveedor.Text = dataTable.Rows(posicion).ItemArray(5).ToString()
             txtWebSiteProveedor.Text = dataTable.Rows(posicion).ItemArray(6).ToString()
             txtFechaProveedor.Text = dataTable.Rows(posicion).ItemArray(7).ToString()
-            txtPaísProveedor.Text = dataTable.Rows(posicion).ItemArray(8).ToString()
-            txtDepartamentoProveedor.Text = dataTable.Rows(posicion).ItemArray(9).ToString()
-            txtMunicipioProveedor.Text = dataTable.Rows(posicion).ItemArray(10).ToString()
-            txtCantónProveedor.Text = dataTable.Rows(posicion).ItemArray(11).ToString()
 
             lblRegistrosProveedor.Text = posicion + 1 & " de " & dataTable.Rows.Count
         Else
@@ -66,7 +62,7 @@
             limpiarDatosProveedor()
         Else 'Guardar
             Dim msg = objConexion.mantenimientoDatosProveedor(New String() {
-                Me.Tag, txtCodigoProveedor.Text, txtNombreEmpresaProveedor.Text, txtNombrePropietarioProveedor.Text, txtTelefonoProveedor.Text, txtEmailProveedor.Text, txtWebSiteProveedor.Text, txtFechaProveedor.Text, txtPaísProveedor.Text, txtMunicipioProveedor.Text, txtCantónProveedor.Text
+                Me.Tag, txtCodigoProveedor.Text, txtNombreEmpresaProveedor.Text, txtNombrePropietarioProveedor.Text, txtTelefonoProveedor.Text, txtEmailProveedor.Text, txtWebSiteProveedor.Text, txtFechaProveedor.Text
             }, accion)
 
             obtenerDatos()
@@ -101,10 +97,7 @@
         txtEmailProveedor.Text = ""
         txtWebSiteProveedor.Text = ""
         txtFechaProveedor.Text = ""
-        txtPaísProveedor.Text = ""
-        txtDepartamentoProveedor.Text = ""
-        txtMunicipioProveedor.Text = ""
-        txtCantónProveedor.Text = ""
+
     End Sub
     Private Sub btnModificarProveedor_Click(sender As Object, e As EventArgs) Handles btnModificarProveedor.Click
         If btnModificarProveedor.Text = "Modificar" Then 'Modificar

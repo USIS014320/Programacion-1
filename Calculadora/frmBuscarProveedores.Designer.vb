@@ -25,8 +25,6 @@ Partial Class frmBuscarProveedores
         Me.btnCancelarProveedor = New System.Windows.Forms.Button()
         Me.btnSeleccionarProveedor = New System.Windows.Forms.Button()
         Me.grdBuscarProveedor = New System.Windows.Forms.DataGridView()
-        Me.lblBuscarProveedor = New System.Windows.Forms.Label()
-        Me.txtBuscarProveedor = New System.Windows.Forms.TextBox()
         Me.idProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombreempresa = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,6 +37,8 @@ Partial Class frmBuscarProveedores
         Me.departamento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.municipio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.canton = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblBuscarProveedor = New System.Windows.Forms.Label()
+        Me.txtBuscarProveedor = New System.Windows.Forms.TextBox()
         CType(Me.grdBuscarProveedor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,7 +63,7 @@ Partial Class frmBuscarProveedores
         Me.btnSeleccionarProveedor.Name = "btnSeleccionarProveedor"
         Me.btnSeleccionarProveedor.Size = New System.Drawing.Size(315, 41)
         Me.btnSeleccionarProveedor.TabIndex = 8
-        Me.btnSeleccionarProveedor.Text = "Seleccionar Cliente"
+        Me.btnSeleccionarProveedor.Text = "Seleccionar Proveedor"
         Me.btnSeleccionarProveedor.UseVisualStyleBackColor = True
         '
         'grdBuscarProveedor
@@ -83,26 +83,6 @@ Partial Class frmBuscarProveedores
         Me.grdBuscarProveedor.RowTemplate.Height = 40
         Me.grdBuscarProveedor.Size = New System.Drawing.Size(941, 474)
         Me.grdBuscarProveedor.TabIndex = 7
-        '
-        'lblBuscarProveedor
-        '
-        Me.lblBuscarProveedor.AutoSize = True
-        Me.lblBuscarProveedor.Location = New System.Drawing.Point(31, 42)
-        Me.lblBuscarProveedor.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblBuscarProveedor.Name = "lblBuscarProveedor"
-        Me.lblBuscarProveedor.Size = New System.Drawing.Size(68, 17)
-        Me.lblBuscarProveedor.TabIndex = 6
-        Me.lblBuscarProveedor.Text = "BUSCAR:"
-        '
-        'txtBuscarProveedor
-        '
-        Me.txtBuscarProveedor.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtBuscarProveedor.Location = New System.Drawing.Point(104, 42)
-        Me.txtBuscarProveedor.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtBuscarProveedor.Name = "txtBuscarProveedor"
-        Me.txtBuscarProveedor.Size = New System.Drawing.Size(871, 22)
-        Me.txtBuscarProveedor.TabIndex = 5
         '
         'idProveedor
         '
@@ -206,6 +186,26 @@ Partial Class frmBuscarProveedores
         Me.canton.Name = "canton"
         Me.canton.ReadOnly = True
         Me.canton.Width = 125
+        '
+        'lblBuscarProveedor
+        '
+        Me.lblBuscarProveedor.AutoSize = True
+        Me.lblBuscarProveedor.Location = New System.Drawing.Point(31, 42)
+        Me.lblBuscarProveedor.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblBuscarProveedor.Name = "lblBuscarProveedor"
+        Me.lblBuscarProveedor.Size = New System.Drawing.Size(68, 17)
+        Me.lblBuscarProveedor.TabIndex = 6
+        Me.lblBuscarProveedor.Text = "BUSCAR:"
+        '
+        'txtBuscarProveedor
+        '
+        Me.txtBuscarProveedor.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtBuscarProveedor.Location = New System.Drawing.Point(104, 42)
+        Me.txtBuscarProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtBuscarProveedor.Name = "txtBuscarProveedor"
+        Me.txtBuscarProveedor.Size = New System.Drawing.Size(871, 22)
+        Me.txtBuscarProveedor.TabIndex = 5
         '
         'frmBuscarProveedores
         '
