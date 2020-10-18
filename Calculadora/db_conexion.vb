@@ -33,6 +33,12 @@ Public Class db_conexion
         miAdapter.SelectCommand = miCommand
         miAdapter.Fill(ds, "productos")
 
+        miCommand.Connection = myConexion
+
+        miCommand.CommandText = "select * from empleados"
+        miAdapter.SelectCommand = miCommand
+        miAdapter.Fill(ds, "empleados")
+
         Return ds
     End Function
     Private Sub parametrizacion()
@@ -90,7 +96,24 @@ Public Class db_conexion
 
         Return msg
     End Function
+    Public Function mantenimientoDatosEmpleados(ByVal datos As String(), ByVal accion As String)
+        Dim sql, msg As String
+        Select Case accion
+            Case "nuevo"
+                sql = "INSERT INTO empleados (nombre,usuario,clave,direccion,telefono) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "')"
+            Case "modificar"
+                sql = "UPDATE empleados SET nombre='" + datos(1) + "',usuario='" + datos(2) + "',clave='" + datos(3) + "',direccion='" + datos(4) + "',telefono='" + datos(5) + "' WHERE idEmpleado='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM empleados WHERE idEmpleado='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
 
+        Return msg
+    End Function
     Private Function executeSql(ByVal sql As String)
         miCommand.Connection = myConexion
         miCommand.CommandText = sql
