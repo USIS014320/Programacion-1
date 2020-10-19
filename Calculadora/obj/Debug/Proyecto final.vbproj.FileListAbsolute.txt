@@ -1,0 +1,20 @@
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\bin\Debug\bd_sigac.mdf
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\bin\Debug\bd_sigac_log.ldf
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\bin\Debug\Calculadora.exe.config
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\bin\Debug\Calculadora.exe
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\bin\Debug\Calculadora.pdb
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\bin\Debug\Calculadora.xml
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.Form1.resources
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.frmBuscarEmpleados.resources
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.frmBuscarProductos.resources
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.frmBuscarProveedores.resources
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.frmEmpleados.resources
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.frmProductos.resources
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.frmProveedores.resources
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.Resources.resources
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Proyecto final.vbproj.GenerateResource.cache
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Proyecto final.vbproj.CoreCompileInputs.cache
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.exe
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.xml
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.pdb
+C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Proyecto final.vbprojAssemblyReference.cache
