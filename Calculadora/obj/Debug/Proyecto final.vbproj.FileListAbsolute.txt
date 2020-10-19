@@ -18,3 +18,23 @@ C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.exe
 C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.xml
 C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Calculadora.pdb
 C:\Users\DELL\Source\Repos\Proyecto\Calculadora\obj\Debug\Proyecto final.vbprojAssemblyReference.cache
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\bin\Debug\bd_sigac.mdf
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\bin\Debug\bd_sigac_log.ldf
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\bin\Debug\Calculadora.exe.config
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\bin\Debug\Calculadora.exe
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\bin\Debug\Calculadora.pdb
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\bin\Debug\Calculadora.xml
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Proyecto final.vbprojAssemblyReference.cache
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.Form1.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarEmpleados.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarProductos.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarProveedores.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmEmpleados.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmProductos.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmProveedores.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.Resources.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Proyecto final.vbproj.GenerateResource.cache
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Proyecto final.vbproj.CoreCompileInputs.cache
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.exe
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.xml
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.pdb
