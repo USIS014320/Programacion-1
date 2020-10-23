@@ -22,18 +22,17 @@ Partial Class frmUsuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lblNombredeUsuario = New System.Windows.Forms.Label()
-        Me.lblCargoUsuario = New System.Windows.Forms.Label()
-        Me.lblClaveUsuario = New System.Windows.Forms.Label()
-        Me.txtMarcaProducto = New System.Windows.Forms.TextBox()
-        Me.lblTelefonoUsuario = New System.Windows.Forms.Label()
-        Me.txtTelefonoUsuario = New System.Windows.Forms.TextBox()
-        Me.txtNombreUsuario = New System.Windows.Forms.TextBox()
-        Me.lblNombreUsuario = New System.Windows.Forms.Label()
-        Me.txtNombredeUsuario = New System.Windows.Forms.TextBox()
-        Me.lblDireccionUsuario = New System.Windows.Forms.Label()
+        Me.grbDatos = New System.Windows.Forms.GroupBox()
         Me.txtDireccionUsuario = New System.Windows.Forms.TextBox()
-        Me.cboCargoUsuario = New System.Windows.Forms.ComboBox()
+        Me.lblNombreUsuario = New System.Windows.Forms.Label()
+        Me.txtNombreUsuario = New System.Windows.Forms.TextBox()
+        Me.txtTelefonoUsuario = New System.Windows.Forms.TextBox()
+        Me.lblDireccionUsuario = New System.Windows.Forms.Label()
+        Me.lblTelefonoUsuario = New System.Windows.Forms.Label()
+        Me.txtClaveUsuario = New System.Windows.Forms.TextBox()
+        Me.txtNombredeUsuario = New System.Windows.Forms.TextBox()
+        Me.lblClaveUsuario = New System.Windows.Forms.Label()
+        Me.lblNombredeUsuario = New System.Windows.Forms.Label()
         Me.grbEdicion = New System.Windows.Forms.GroupBox()
         Me.btnBuscarUsuario = New System.Windows.Forms.Button()
         Me.btnEliminarUsuario = New System.Windows.Forms.Button()
@@ -45,127 +44,132 @@ Partial Class frmUsuario
         Me.btnSiguienteUsuario = New System.Windows.Forms.Button()
         Me.btnAnteriorUsuario = New System.Windows.Forms.Button()
         Me.btnPrimeroUsuario = New System.Windows.Forms.Button()
-        Me.grbDatos = New System.Windows.Forms.GroupBox()
+        Me.cboCargoUsuario = New System.Windows.Forms.ComboBox()
+        Me.lblCargoUsuario = New System.Windows.Forms.Label()
+        Me.grbDatos.SuspendLayout()
         Me.grbEdicion.SuspendLayout()
         Me.grbNavegacion.SuspendLayout()
-        Me.grbDatos.SuspendLayout()
         Me.SuspendLayout()
         '
-        'lblNombredeUsuario
+        'grbDatos
         '
-        Me.lblNombredeUsuario.AutoSize = True
-        Me.lblNombredeUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombredeUsuario.Location = New System.Drawing.Point(24, 48)
-        Me.lblNombredeUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblNombredeUsuario.Name = "lblNombredeUsuario"
-        Me.lblNombredeUsuario.Size = New System.Drawing.Size(97, 20)
-        Me.lblNombredeUsuario.TabIndex = 19
-        Me.lblNombredeUsuario.Text = "USUARIO:"
-        '
-        'lblCargoUsuario
-        '
-        Me.lblCargoUsuario.AutoSize = True
-        Me.lblCargoUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCargoUsuario.Location = New System.Drawing.Point(18, 517)
-        Me.lblCargoUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblCargoUsuario.Name = "lblCargoUsuario"
-        Me.lblCargoUsuario.Size = New System.Drawing.Size(81, 20)
-        Me.lblCargoUsuario.TabIndex = 18
-        Me.lblCargoUsuario.Text = "CARGO:"
-        '
-        'lblClaveUsuario
-        '
-        Me.lblClaveUsuario.AutoSize = True
-        Me.lblClaveUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblClaveUsuario.Location = New System.Drawing.Point(24, 279)
-        Me.lblClaveUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblClaveUsuario.Name = "lblClaveUsuario"
-        Me.lblClaveUsuario.Size = New System.Drawing.Size(75, 20)
-        Me.lblClaveUsuario.TabIndex = 16
-        Me.lblClaveUsuario.Text = "CLAVE:"
-        '
-        'txtMarcaProducto
-        '
-        Me.txtMarcaProducto.Location = New System.Drawing.Point(181, 275)
-        Me.txtMarcaProducto.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtMarcaProducto.Name = "txtMarcaProducto"
-        Me.txtMarcaProducto.Size = New System.Drawing.Size(253, 22)
-        Me.txtMarcaProducto.TabIndex = 15
-        '
-        'lblTelefonoUsuario
-        '
-        Me.lblTelefonoUsuario.AutoSize = True
-        Me.lblTelefonoUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefonoUsuario.Location = New System.Drawing.Point(24, 202)
-        Me.lblTelefonoUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblTelefonoUsuario.Name = "lblTelefonoUsuario"
-        Me.lblTelefonoUsuario.Size = New System.Drawing.Size(107, 20)
-        Me.lblTelefonoUsuario.TabIndex = 14
-        Me.lblTelefonoUsuario.Text = "TELEFONO"
-        '
-        'txtTelefonoUsuario
-        '
-        Me.txtTelefonoUsuario.Location = New System.Drawing.Point(181, 200)
-        Me.txtTelefonoUsuario.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtTelefonoUsuario.Name = "txtTelefonoUsuario"
-        Me.txtTelefonoUsuario.Size = New System.Drawing.Size(198, 22)
-        Me.txtTelefonoUsuario.TabIndex = 13
-        '
-        'txtNombreUsuario
-        '
-        Me.txtNombreUsuario.Location = New System.Drawing.Point(181, 129)
-        Me.txtNombreUsuario.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtNombreUsuario.Name = "txtNombreUsuario"
-        Me.txtNombreUsuario.Size = New System.Drawing.Size(125, 22)
-        Me.txtNombreUsuario.TabIndex = 12
-        '
-        'lblNombreUsuario
-        '
-        Me.lblNombreUsuario.AutoSize = True
-        Me.lblNombreUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombreUsuario.Location = New System.Drawing.Point(24, 129)
-        Me.lblNombreUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblNombreUsuario.Name = "lblNombreUsuario"
-        Me.lblNombreUsuario.Size = New System.Drawing.Size(95, 20)
-        Me.lblNombreUsuario.TabIndex = 11
-        Me.lblNombreUsuario.Text = "NOMBRE:"
-        '
-        'txtNombredeUsuario
-        '
-        Me.txtNombredeUsuario.Location = New System.Drawing.Point(181, 46)
-        Me.txtNombredeUsuario.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtNombredeUsuario.Name = "txtNombredeUsuario"
-        Me.txtNombredeUsuario.Size = New System.Drawing.Size(180, 22)
-        Me.txtNombredeUsuario.TabIndex = 20
-        '
-        'lblDireccionUsuario
-        '
-        Me.lblDireccionUsuario.AutoSize = True
-        Me.lblDireccionUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDireccionUsuario.Location = New System.Drawing.Point(24, 373)
-        Me.lblDireccionUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblDireccionUsuario.Name = "lblDireccionUsuario"
-        Me.lblDireccionUsuario.Size = New System.Drawing.Size(117, 20)
-        Me.lblDireccionUsuario.TabIndex = 22
-        Me.lblDireccionUsuario.Text = "DIRECCION:"
+        Me.grbDatos.Controls.Add(Me.cboCargoUsuario)
+        Me.grbDatos.Controls.Add(Me.lblCargoUsuario)
+        Me.grbDatos.Controls.Add(Me.txtDireccionUsuario)
+        Me.grbDatos.Controls.Add(Me.lblNombreUsuario)
+        Me.grbDatos.Controls.Add(Me.txtNombreUsuario)
+        Me.grbDatos.Controls.Add(Me.txtTelefonoUsuario)
+        Me.grbDatos.Controls.Add(Me.lblDireccionUsuario)
+        Me.grbDatos.Controls.Add(Me.lblTelefonoUsuario)
+        Me.grbDatos.Controls.Add(Me.txtClaveUsuario)
+        Me.grbDatos.Controls.Add(Me.txtNombredeUsuario)
+        Me.grbDatos.Controls.Add(Me.lblClaveUsuario)
+        Me.grbDatos.Controls.Add(Me.lblNombredeUsuario)
+        Me.grbDatos.Enabled = False
+        Me.grbDatos.Location = New System.Drawing.Point(10, 10)
+        Me.grbDatos.Margin = New System.Windows.Forms.Padding(1)
+        Me.grbDatos.Name = "grbDatos"
+        Me.grbDatos.Padding = New System.Windows.Forms.Padding(1)
+        Me.grbDatos.Size = New System.Drawing.Size(780, 557)
+        Me.grbDatos.TabIndex = 29
+        Me.grbDatos.TabStop = False
+        Me.grbDatos.Text = "Datos de Usuarios"
         '
         'txtDireccionUsuario
         '
-        Me.txtDireccionUsuario.Location = New System.Drawing.Point(181, 328)
+        Me.txtDireccionUsuario.Location = New System.Drawing.Point(177, 402)
         Me.txtDireccionUsuario.Margin = New System.Windows.Forms.Padding(1)
         Me.txtDireccionUsuario.Multiline = True
         Me.txtDireccionUsuario.Name = "txtDireccionUsuario"
         Me.txtDireccionUsuario.Size = New System.Drawing.Size(443, 126)
         Me.txtDireccionUsuario.TabIndex = 21
         '
-        'cboCargoUsuario
+        'lblNombreUsuario
         '
-        Me.cboCargoUsuario.FormattingEnabled = True
-        Me.cboCargoUsuario.Location = New System.Drawing.Point(181, 513)
-        Me.cboCargoUsuario.Margin = New System.Windows.Forms.Padding(4)
-        Me.cboCargoUsuario.Name = "cboCargoUsuario"
-        Me.cboCargoUsuario.Size = New System.Drawing.Size(253, 24)
-        Me.cboCargoUsuario.TabIndex = 23
+        Me.lblNombreUsuario.AutoSize = True
+        Me.lblNombreUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombreUsuario.Location = New System.Drawing.Point(14, 204)
+        Me.lblNombreUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblNombreUsuario.Name = "lblNombreUsuario"
+        Me.lblNombreUsuario.Size = New System.Drawing.Size(95, 20)
+        Me.lblNombreUsuario.TabIndex = 11
+        Me.lblNombreUsuario.Text = "NOMBRE:"
+        '
+        'txtNombreUsuario
+        '
+        Me.txtNombreUsuario.Location = New System.Drawing.Point(177, 204)
+        Me.txtNombreUsuario.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtNombreUsuario.Name = "txtNombreUsuario"
+        Me.txtNombreUsuario.Size = New System.Drawing.Size(125, 22)
+        Me.txtNombreUsuario.TabIndex = 12
+        '
+        'txtTelefonoUsuario
+        '
+        Me.txtTelefonoUsuario.Location = New System.Drawing.Point(177, 273)
+        Me.txtTelefonoUsuario.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtTelefonoUsuario.Name = "txtTelefonoUsuario"
+        Me.txtTelefonoUsuario.Size = New System.Drawing.Size(198, 22)
+        Me.txtTelefonoUsuario.TabIndex = 13
+        '
+        'lblDireccionUsuario
+        '
+        Me.lblDireccionUsuario.AutoSize = True
+        Me.lblDireccionUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDireccionUsuario.Location = New System.Drawing.Point(14, 443)
+        Me.lblDireccionUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblDireccionUsuario.Name = "lblDireccionUsuario"
+        Me.lblDireccionUsuario.Size = New System.Drawing.Size(117, 20)
+        Me.lblDireccionUsuario.TabIndex = 22
+        Me.lblDireccionUsuario.Text = "DIRECCION:"
+        '
+        'lblTelefonoUsuario
+        '
+        Me.lblTelefonoUsuario.AutoSize = True
+        Me.lblTelefonoUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelefonoUsuario.Location = New System.Drawing.Point(14, 275)
+        Me.lblTelefonoUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblTelefonoUsuario.Name = "lblTelefonoUsuario"
+        Me.lblTelefonoUsuario.Size = New System.Drawing.Size(107, 20)
+        Me.lblTelefonoUsuario.TabIndex = 14
+        Me.lblTelefonoUsuario.Text = "TELEFONO"
+        '
+        'txtClaveUsuario
+        '
+        Me.txtClaveUsuario.Location = New System.Drawing.Point(177, 348)
+        Me.txtClaveUsuario.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtClaveUsuario.Name = "txtClaveUsuario"
+        Me.txtClaveUsuario.Size = New System.Drawing.Size(253, 22)
+        Me.txtClaveUsuario.TabIndex = 15
+        '
+        'txtNombredeUsuario
+        '
+        Me.txtNombredeUsuario.Location = New System.Drawing.Point(177, 119)
+        Me.txtNombredeUsuario.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtNombredeUsuario.Name = "txtNombredeUsuario"
+        Me.txtNombredeUsuario.Size = New System.Drawing.Size(180, 22)
+        Me.txtNombredeUsuario.TabIndex = 20
+        '
+        'lblClaveUsuario
+        '
+        Me.lblClaveUsuario.AutoSize = True
+        Me.lblClaveUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblClaveUsuario.Location = New System.Drawing.Point(14, 350)
+        Me.lblClaveUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblClaveUsuario.Name = "lblClaveUsuario"
+        Me.lblClaveUsuario.Size = New System.Drawing.Size(75, 20)
+        Me.lblClaveUsuario.TabIndex = 16
+        Me.lblClaveUsuario.Text = "CLAVE:"
+        '
+        'lblNombredeUsuario
+        '
+        Me.lblNombredeUsuario.AutoSize = True
+        Me.lblNombredeUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombredeUsuario.Location = New System.Drawing.Point(14, 121)
+        Me.lblNombredeUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblNombredeUsuario.Name = "lblNombredeUsuario"
+        Me.lblNombredeUsuario.Size = New System.Drawing.Size(97, 20)
+        Me.lblNombredeUsuario.TabIndex = 19
+        Me.lblNombredeUsuario.Text = "USUARIO:"
         '
         'grbEdicion
         '
@@ -173,12 +177,12 @@ Partial Class frmUsuario
         Me.grbEdicion.Controls.Add(Me.btnEliminarUsuario)
         Me.grbEdicion.Controls.Add(Me.btnModificarUsuario)
         Me.grbEdicion.Controls.Add(Me.btnAgregarUsuario)
-        Me.grbEdicion.Location = New System.Drawing.Point(373, 580)
+        Me.grbEdicion.Location = New System.Drawing.Point(370, 580)
         Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
         Me.grbEdicion.Name = "grbEdicion"
         Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
         Me.grbEdicion.Size = New System.Drawing.Size(420, 84)
-        Me.grbEdicion.TabIndex = 25
+        Me.grbEdicion.TabIndex = 28
         Me.grbEdicion.TabStop = False
         Me.grbEdicion.Text = "Edicion"
         '
@@ -233,12 +237,12 @@ Partial Class frmUsuario
         Me.grbNavegacion.Controls.Add(Me.btnSiguienteUsuario)
         Me.grbNavegacion.Controls.Add(Me.btnAnteriorUsuario)
         Me.grbNavegacion.Controls.Add(Me.btnPrimeroUsuario)
-        Me.grbNavegacion.Location = New System.Drawing.Point(10, 580)
+        Me.grbNavegacion.Location = New System.Drawing.Point(7, 580)
         Me.grbNavegacion.Margin = New System.Windows.Forms.Padding(1)
         Me.grbNavegacion.Name = "grbNavegacion"
         Me.grbNavegacion.Padding = New System.Windows.Forms.Padding(1)
         Me.grbNavegacion.Size = New System.Drawing.Size(360, 84)
-        Me.grbNavegacion.TabIndex = 24
+        Me.grbNavegacion.TabIndex = 27
         Me.grbNavegacion.TabStop = False
         Me.grbNavegacion.Text = "Navegacion"
         '
@@ -296,62 +300,57 @@ Partial Class frmUsuario
         Me.btnPrimeroUsuario.Text = "|<"
         Me.btnPrimeroUsuario.UseVisualStyleBackColor = True
         '
-        'grbDatos
+        'cboCargoUsuario
         '
-        Me.grbDatos.Controls.Add(Me.txtDireccionUsuario)
-        Me.grbDatos.Controls.Add(Me.lblNombreUsuario)
-        Me.grbDatos.Controls.Add(Me.txtNombreUsuario)
-        Me.grbDatos.Controls.Add(Me.cboCargoUsuario)
-        Me.grbDatos.Controls.Add(Me.txtTelefonoUsuario)
-        Me.grbDatos.Controls.Add(Me.lblDireccionUsuario)
-        Me.grbDatos.Controls.Add(Me.lblTelefonoUsuario)
-        Me.grbDatos.Controls.Add(Me.txtMarcaProducto)
-        Me.grbDatos.Controls.Add(Me.txtNombredeUsuario)
-        Me.grbDatos.Controls.Add(Me.lblClaveUsuario)
-        Me.grbDatos.Controls.Add(Me.lblNombredeUsuario)
-        Me.grbDatos.Controls.Add(Me.lblCargoUsuario)
-        Me.grbDatos.Enabled = False
-        Me.grbDatos.Location = New System.Drawing.Point(13, 10)
-        Me.grbDatos.Margin = New System.Windows.Forms.Padding(1)
-        Me.grbDatos.Name = "grbDatos"
-        Me.grbDatos.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbDatos.Size = New System.Drawing.Size(780, 557)
-        Me.grbDatos.TabIndex = 26
-        Me.grbDatos.TabStop = False
-        Me.grbDatos.Text = "Datos de Usuarios"
+        Me.cboCargoUsuario.FormattingEnabled = True
+        Me.cboCargoUsuario.Location = New System.Drawing.Point(177, 54)
+        Me.cboCargoUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboCargoUsuario.Name = "cboCargoUsuario"
+        Me.cboCargoUsuario.Size = New System.Drawing.Size(253, 24)
+        Me.cboCargoUsuario.TabIndex = 25
+        '
+        'lblCargoUsuario
+        '
+        Me.lblCargoUsuario.AutoSize = True
+        Me.lblCargoUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.900001!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCargoUsuario.Location = New System.Drawing.Point(14, 58)
+        Me.lblCargoUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblCargoUsuario.Name = "lblCargoUsuario"
+        Me.lblCargoUsuario.Size = New System.Drawing.Size(81, 20)
+        Me.lblCargoUsuario.TabIndex = 24
+        Me.lblCargoUsuario.Text = "CARGO:"
         '
         'frmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(807, 684)
+        Me.ClientSize = New System.Drawing.Size(805, 682)
         Me.Controls.Add(Me.grbDatos)
         Me.Controls.Add(Me.grbEdicion)
         Me.Controls.Add(Me.grbNavegacion)
         Me.Name = "frmUsuario"
-        Me.Text = "Registro de Usuarios"
+        Me.Text = "Registros de Usuario"
+        Me.grbDatos.ResumeLayout(False)
+        Me.grbDatos.PerformLayout()
         Me.grbEdicion.ResumeLayout(False)
         Me.grbNavegacion.ResumeLayout(False)
         Me.grbNavegacion.PerformLayout()
-        Me.grbDatos.ResumeLayout(False)
-        Me.grbDatos.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents lblNombredeUsuario As Label
-    Friend WithEvents lblCargoUsuario As Label
-    Friend WithEvents lblClaveUsuario As Label
-    Friend WithEvents txtMarcaProducto As TextBox
-    Friend WithEvents lblTelefonoUsuario As Label
-    Friend WithEvents txtTelefonoUsuario As TextBox
-    Friend WithEvents txtNombreUsuario As TextBox
-    Friend WithEvents lblNombreUsuario As Label
-    Friend WithEvents txtNombredeUsuario As TextBox
-    Friend WithEvents lblDireccionUsuario As Label
+    Friend WithEvents grbDatos As GroupBox
     Friend WithEvents txtDireccionUsuario As TextBox
-    Friend WithEvents cboCargoUsuario As ComboBox
+    Friend WithEvents lblNombreUsuario As Label
+    Friend WithEvents txtNombreUsuario As TextBox
+    Friend WithEvents txtTelefonoUsuario As TextBox
+    Friend WithEvents lblDireccionUsuario As Label
+    Friend WithEvents lblTelefonoUsuario As Label
+    Friend WithEvents txtClaveUsuario As TextBox
+    Friend WithEvents txtNombredeUsuario As TextBox
+    Friend WithEvents lblClaveUsuario As Label
+    Friend WithEvents lblNombredeUsuario As Label
     Friend WithEvents grbEdicion As GroupBox
     Friend WithEvents btnBuscarUsuario As Button
     Friend WithEvents btnEliminarUsuario As Button
@@ -363,5 +362,6 @@ Partial Class frmUsuario
     Friend WithEvents btnSiguienteUsuario As Button
     Friend WithEvents btnAnteriorUsuario As Button
     Friend WithEvents btnPrimeroUsuario As Button
-    Friend WithEvents grbDatos As GroupBox
+    Friend WithEvents cboCargoUsuario As ComboBox
+    Friend WithEvents lblCargoUsuario As Label
 End Class

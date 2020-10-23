@@ -30,6 +30,7 @@ Partial Class Form1
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.INVENTARIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,12 +57,12 @@ Partial Class Form1
         Me.SalirToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(174, 26)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'EMPRESAToolStripMenuItem
         '
-        Me.EMPRESAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem, Me.ProveedoresToolStripMenuItem})
+        Me.EMPRESAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.UsuariosToolStripMenuItem})
         Me.EMPRESAToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.EMPRESAToolStripMenuItem.Name = "EMPRESAToolStripMenuItem"
         Me.EMPRESAToolStripMenuItem.Size = New System.Drawing.Size(87, 24)
@@ -96,6 +97,13 @@ Partial Class Form1
         Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ProductosToolStripMenuItem.Text = "Productos"
         '
+        'UsuariosToolStripMenuItem
+        '
+        Me.UsuariosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.UsuariosToolStripMenuItem.Text = "Usuarios"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -126,4 +134,5 @@ Partial Class Form1
     Friend WithEvents ProveedoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents INVENTARIOToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UsuariosToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -38,3 +38,7 @@ C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Proyecto final
 C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.exe
 C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.xml
 C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.pdb
+C:\Users\Eraldo\source\repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarCargos.resources
+C:\Users\Eraldo\source\repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarUsuario.resources
+C:\Users\Eraldo\source\repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmCargos.resources
+C:\Users\Eraldo\source\repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmUsuario.resources

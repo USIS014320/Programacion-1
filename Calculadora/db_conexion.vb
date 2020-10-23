@@ -13,16 +13,52 @@ Public Class db_conexion
         parametrizacion()
     End Sub
 
+    Private Sub parametrizacion()
+        miCommand.Parameters.Add("@id", SqlDbType.Int).Value = 0
+        miCommand.Parameters.Add("@idCategoria", SqlDbType.Int).Value = 0
+        miCommand.Parameters.Add("@idCargo", SqlDbType.Int).Value = 0
+        miCommand.Parameters.Add("@cod", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@nom", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@mar", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@med", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@us", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@tel", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@cla", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@direc", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@car", SqlDbType.Char).Value = ""
+
+    End Sub
+
     Public Function obtenerDatos()
         ds.Clear()
+
         miCommand.Connection = myConexion
-        miCommand.CommandText = "select * from proveedores"
+
+        miCommand.CommandText = "select * from cargos"
         miAdapter.SelectCommand = miCommand
-        miAdapter.Fill(ds, "proveedores")
+        miAdapter.Fill(ds, "cargos")
+
+        miCommand.CommandText = "
+            select usuarios.idUsuario, usuarios.idCargo, usuarios.usuario, usuarios.nombre, usuarios.telefono,
+                usuarios.clave, usuarios.direccion, cargos.cargo
+            from usuarios
+                inner join cargos on(cargos.idCargo=usuarios.idCargo)
+        "
+        miAdapter.SelectCommand = miCommand
+        miAdapter.Fill(ds, "usuarios")
 
         miCommand.CommandText = "select * from categorias"
         miAdapter.SelectCommand = miCommand
         miAdapter.Fill(ds, "categorias")
+
+        miCommand.CommandText = "select * from empleados"
+        miAdapter.SelectCommand = miCommand
+        miAdapter.Fill(ds, "empleados")
+
+        miCommand.CommandText = "select * from proveedores"
+        miAdapter.SelectCommand = miCommand
+        miAdapter.Fill(ds, "proveedores")
+
 
         miCommand.CommandText = "
             select productos.idProducto, productos.idCategoria, productos.codigo, productos.descripcion, productos.marca,
@@ -33,22 +69,10 @@ Public Class db_conexion
         miAdapter.SelectCommand = miCommand
         miAdapter.Fill(ds, "productos")
 
-        miCommand.Connection = myConexion
-
-        miCommand.CommandText = "select * from empleados"
-        miAdapter.SelectCommand = miCommand
-        miAdapter.Fill(ds, "empleados")
 
         Return ds
     End Function
-    Private Sub parametrizacion()
-        miCommand.Parameters.Add("@id", SqlDbType.Int).Value = 0
-        miCommand.Parameters.Add("@idCategoria", SqlDbType.Int).Value = 0
-        miCommand.Parameters.Add("@cod", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@nom", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@mar", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@med", SqlDbType.Char).Value = ""
-    End Sub
+
     Public Function mantenimientoDatosProveedor(ByVal datos As String(), ByVal accion As String)
         Dim sql, msg As String
         Select Case accion
@@ -87,6 +111,7 @@ Public Class db_conexion
             miCommand.Parameters("@nom").Value = datos(3)
             miCommand.Parameters("@mar").Value = datos(4)
             miCommand.Parameters("@med").Value = datos(5)
+
         End If
         If executeSql(sql) > 0 Then
             msg = "exito"
@@ -114,9 +139,64 @@ Public Class db_conexion
 
         Return msg
     End Function
+
+    Public Function mantenimientoDatosUsuario(ByVal datos As String(), ByVal accion As String)
+        Dim sql, msg As String
+        Select Case accion
+            Case "nuevo"
+                sql = "INSERT INTO usuarios (idCargo,usuario,nombre,telefono,clave,direccion) VALUES(@idCargo,@us,@nom,@tel,@cla,@direc)"
+            Case "modificar"
+                sql = "UPDATE usuarios SET idCargo=@idCargo,usuario=@us,nombre=@nom,telefono=@tel,clave=@cla,direccion=@direc WHERE idUsuario=@id"
+            Case "eliminar"
+                sql = "DELETE FROM usuarios WHERE idUsuario=@id"
+        End Select
+        miCommand.Parameters("@id").Value = datos(0)
+        If accion IsNot "eliminar" Then
+            miCommand.Parameters("@idCargo").Value = datos(1)
+            miCommand.Parameters("@us").Value = datos(2)
+            miCommand.Parameters("@nom").Value = datos(3)
+            miCommand.Parameters("@tel").Value = datos(4)
+            miCommand.Parameters("@cla").Value = datos(5)
+            miCommand.Parameters("@direc").Value = datos(6)
+
+        End If
+        If executeSql(sql) > 0 Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
+
+    Public Function mantenimientoDatosCargo(ByVal datos As String(), ByVal accion As String)
+        Dim sql, msg As String
+        Select Case accion
+            Case "nuevo"
+                sql = "INSERT INTO cargos (cargo) VALUES(@car)"
+            Case "modificar"
+                sql = "UPDATE cargos SET cargo=@car WHERE idCargo=@id"
+            Case "eliminar"
+                sql = "DELETE FROM cargos WHERE idCargo=@id"
+        End Select
+        miCommand.Parameters("@id").Value = datos(0)
+        If accion IsNot "eliminar" Then
+            miCommand.Parameters("@car").Value = datos(1)
+        End If
+        If executeSql(sql) > 0 Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+        Return msg
+    End Function
     Private Function executeSql(ByVal sql As String)
-        miCommand.Connection = myConexion
-        miCommand.CommandText = sql
-        Return miCommand.ExecuteNonQuery()
+        Try
+            miCommand.Connection = myConexion
+            miCommand.CommandText = sql
+            Return miCommand.ExecuteNonQuery()
+        Catch ex As Exception
+            Return 0
+        End Try
     End Function
 End Class
