@@ -25,8 +25,6 @@ Partial Class frmBuscarUsuario
         Me.btnCancelarUsuario = New System.Windows.Forms.Button()
         Me.btnSeleccionarUsuario = New System.Windows.Forms.Button()
         Me.grdBuscarUsuario = New System.Windows.Forms.DataGridView()
-        Me.lblBuscarUsuario = New System.Windows.Forms.Label()
-        Me.txtBuscarUsuario = New System.Windows.Forms.TextBox()
         Me.idUsuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.usuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -34,6 +32,8 @@ Partial Class frmBuscarUsuario
         Me.clave = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cargo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblBuscarUsuario = New System.Windows.Forms.Label()
+        Me.txtBuscarUsuario = New System.Windows.Forms.TextBox()
         CType(Me.grdBuscarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -78,26 +78,6 @@ Partial Class frmBuscarUsuario
         Me.grdBuscarUsuario.RowTemplate.Height = 40
         Me.grdBuscarUsuario.Size = New System.Drawing.Size(941, 474)
         Me.grdBuscarUsuario.TabIndex = 12
-        '
-        'lblBuscarUsuario
-        '
-        Me.lblBuscarUsuario.AutoSize = True
-        Me.lblBuscarUsuario.Location = New System.Drawing.Point(35, 31)
-        Me.lblBuscarUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblBuscarUsuario.Name = "lblBuscarUsuario"
-        Me.lblBuscarUsuario.Size = New System.Drawing.Size(68, 17)
-        Me.lblBuscarUsuario.TabIndex = 11
-        Me.lblBuscarUsuario.Text = "BUSCAR:"
-        '
-        'txtBuscarUsuario
-        '
-        Me.txtBuscarUsuario.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtBuscarUsuario.Location = New System.Drawing.Point(108, 28)
-        Me.txtBuscarUsuario.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtBuscarUsuario.Name = "txtBuscarUsuario"
-        Me.txtBuscarUsuario.Size = New System.Drawing.Size(871, 22)
-        Me.txtBuscarUsuario.TabIndex = 10
         '
         'idUsuario
         '
@@ -163,6 +143,26 @@ Partial Class frmBuscarUsuario
         Me.cargo.ReadOnly = True
         Me.cargo.Width = 125
         '
+        'lblBuscarUsuario
+        '
+        Me.lblBuscarUsuario.AutoSize = True
+        Me.lblBuscarUsuario.Location = New System.Drawing.Point(35, 31)
+        Me.lblBuscarUsuario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblBuscarUsuario.Name = "lblBuscarUsuario"
+        Me.lblBuscarUsuario.Size = New System.Drawing.Size(68, 17)
+        Me.lblBuscarUsuario.TabIndex = 11
+        Me.lblBuscarUsuario.Text = "BUSCAR:"
+        '
+        'txtBuscarUsuario
+        '
+        Me.txtBuscarUsuario.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtBuscarUsuario.Location = New System.Drawing.Point(108, 28)
+        Me.txtBuscarUsuario.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtBuscarUsuario.Name = "txtBuscarUsuario"
+        Me.txtBuscarUsuario.Size = New System.Drawing.Size(871, 22)
+        Me.txtBuscarUsuario.TabIndex = 10
+        '
         'frmBuscarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -175,7 +175,7 @@ Partial Class frmBuscarUsuario
         Me.Controls.Add(Me.lblBuscarUsuario)
         Me.Controls.Add(Me.txtBuscarUsuario)
         Me.Name = "frmBuscarUsuario"
-        Me.Text = "frmBuscarUsuario"
+        Me.Text = "Busqueda de Usuario"
         CType(Me.grdBuscarUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

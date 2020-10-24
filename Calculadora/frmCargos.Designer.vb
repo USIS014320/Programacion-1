@@ -213,7 +213,7 @@ Partial Class frmCargos
         Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.grbDatos)
         Me.Name = "frmCargos"
-        Me.Text = "Resgistro de Cargos"
+        Me.Text = "Registro de Cargos"
         Me.grbDatos.ResumeLayout(False)
         Me.grbDatos.PerformLayout()
         Me.grbEdicion.ResumeLayout(False)

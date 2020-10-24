@@ -22,11 +22,7 @@ Public Class db_conexion
         miCommand.Parameters.Add("@nom", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@mar", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@med", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@us", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@tel", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@cla", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@direc", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@car", SqlDbType.Char).Value = ""
+
         miCommand.Parameters.Add("@codigo", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@tipro", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@nufa", SqlDbType.Char).Value = ""
@@ -38,6 +34,7 @@ Public Class db_conexion
         miCommand.Parameters.Add("@tela", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@clav", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@directi", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@carg", SqlDbType.Char).Value = ""
 
     End Sub
 
@@ -189,15 +186,15 @@ Public Class db_conexion
         Dim sql, msg As String
         Select Case accion
             Case "nuevo"
-                sql = "INSERT INTO cargos (cargo) VALUES(@car)"
+                sql = "INSERT INTO cargos (cargo) VALUES(@carg)"
             Case "modificar"
-                sql = "UPDATE cargos SET cargo=@car WHERE idCargo=@id"
+                sql = "UPDATE cargos SET cargo=@carg WHERE idCargo=@id"
             Case "eliminar"
                 sql = "DELETE FROM cargos WHERE idCargo=@id"
         End Select
         miCommand.Parameters("@id").Value = datos(0)
         If accion IsNot "eliminar" Then
-            miCommand.Parameters("@car").Value = datos(1)
+            miCommand.Parameters("@carg").Value = datos(1)
         End If
         If executeSql(sql) > 0 Then
             msg = "exito"

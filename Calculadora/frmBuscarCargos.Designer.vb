@@ -25,10 +25,10 @@ Partial Class frmBuscarCargos
         Me.btnCancelarCargo = New System.Windows.Forms.Button()
         Me.btnSeleccionarCargo = New System.Windows.Forms.Button()
         Me.grdBuscarCargo = New System.Windows.Forms.DataGridView()
-        Me.lblBuscarCargo = New System.Windows.Forms.Label()
-        Me.txtBuscarCargo = New System.Windows.Forms.TextBox()
         Me.idCargo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cargo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblBuscarCargo = New System.Windows.Forms.Label()
+        Me.txtBuscarCargo = New System.Windows.Forms.TextBox()
         CType(Me.grdBuscarCargo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -74,6 +74,25 @@ Partial Class frmBuscarCargos
         Me.grdBuscarCargo.Size = New System.Drawing.Size(941, 474)
         Me.grdBuscarCargo.TabIndex = 17
         '
+        'idCargo
+        '
+        Me.idCargo.DataPropertyName = "idCargo"
+        Me.idCargo.HeaderText = "ID"
+        Me.idCargo.MinimumWidth = 6
+        Me.idCargo.Name = "idCargo"
+        Me.idCargo.ReadOnly = True
+        Me.idCargo.Visible = False
+        Me.idCargo.Width = 125
+        '
+        'cargo
+        '
+        Me.cargo.DataPropertyName = "cargo"
+        Me.cargo.HeaderText = "CARGO"
+        Me.cargo.MinimumWidth = 6
+        Me.cargo.Name = "cargo"
+        Me.cargo.ReadOnly = True
+        Me.cargo.Width = 125
+        '
         'lblBuscarCargo
         '
         Me.lblBuscarCargo.AutoSize = True
@@ -93,25 +112,6 @@ Partial Class frmBuscarCargos
         Me.txtBuscarCargo.Name = "txtBuscarCargo"
         Me.txtBuscarCargo.Size = New System.Drawing.Size(871, 22)
         Me.txtBuscarCargo.TabIndex = 15
-        '
-        'idCargo
-        '
-        Me.idCargo.DataPropertyName = "idCargo"
-        Me.idCargo.HeaderText = "ID"
-        Me.idCargo.MinimumWidth = 6
-        Me.idCargo.Name = "idCargo"
-        Me.idCargo.ReadOnly = True
-        Me.idCargo.Visible = False
-        Me.idCargo.Width = 125
-        '
-        'cargo
-        '
-        Me.cargo.DataPropertyName = "cargo"
-        Me.cargo.HeaderText = "CARGO"
-        Me.cargo.MinimumWidth = 6
-        Me.cargo.Name = "cargo"
-        Me.cargo.ReadOnly = True
-        Me.cargo.Width = 125
         '
         'frmBuscarCargos
         '

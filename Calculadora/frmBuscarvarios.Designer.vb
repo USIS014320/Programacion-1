@@ -25,14 +25,14 @@ Partial Class frmBuscarvarios
         Me.btnCancelarvarios = New System.Windows.Forms.Button()
         Me.btnSeleccionarvarios = New System.Windows.Forms.Button()
         Me.grdBuscarvarios = New System.Windows.Forms.DataGridView()
-        Me.lblBuscarvarios = New System.Windows.Forms.Label()
-        Me.txtBuscarvarios = New System.Windows.Forms.TextBox()
         Me.idVarios = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tipoproducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nfactura = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblBuscarvarios = New System.Windows.Forms.Label()
+        Me.txtBuscarvarios = New System.Windows.Forms.TextBox()
         CType(Me.grdBuscarvarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -40,10 +40,10 @@ Partial Class frmBuscarvarios
         '
         Me.btnCancelarvarios.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCancelarvarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarvarios.Location = New System.Drawing.Point(625, 488)
+        Me.btnCancelarvarios.Location = New System.Drawing.Point(833, 601)
         Me.btnCancelarvarios.Margin = New System.Windows.Forms.Padding(1)
         Me.btnCancelarvarios.Name = "btnCancelarvarios"
-        Me.btnCancelarvarios.Size = New System.Drawing.Size(120, 33)
+        Me.btnCancelarvarios.Size = New System.Drawing.Size(160, 41)
         Me.btnCancelarvarios.TabIndex = 22
         Me.btnCancelarvarios.Text = "Cancelar"
         Me.btnCancelarvarios.UseVisualStyleBackColor = True
@@ -52,10 +52,10 @@ Partial Class frmBuscarvarios
         '
         Me.btnSeleccionarvarios.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSeleccionarvarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionarvarios.Location = New System.Drawing.Point(387, 488)
+        Me.btnSeleccionarvarios.Location = New System.Drawing.Point(516, 601)
         Me.btnSeleccionarvarios.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSeleccionarvarios.Name = "btnSeleccionarvarios"
-        Me.btnSeleccionarvarios.Size = New System.Drawing.Size(236, 33)
+        Me.btnSeleccionarvarios.Size = New System.Drawing.Size(315, 41)
         Me.btnSeleccionarvarios.TabIndex = 21
         Me.btnSeleccionarvarios.Text = "Seleccionar"
         Me.btnSeleccionarvarios.UseVisualStyleBackColor = True
@@ -69,34 +69,14 @@ Partial Class frmBuscarvarios
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grdBuscarvarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdBuscarvarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idVarios, Me.codigo, Me.tipoproducto, Me.nfactura, Me.descripcion, Me.cantidad})
-        Me.grdBuscarvarios.Location = New System.Drawing.Point(14, 41)
+        Me.grdBuscarvarios.Location = New System.Drawing.Point(19, 50)
         Me.grdBuscarvarios.Margin = New System.Windows.Forms.Padding(1)
         Me.grdBuscarvarios.Name = "grdBuscarvarios"
         Me.grdBuscarvarios.ReadOnly = True
         Me.grdBuscarvarios.RowHeadersWidth = 102
         Me.grdBuscarvarios.RowTemplate.Height = 40
-        Me.grdBuscarvarios.Size = New System.Drawing.Size(731, 435)
+        Me.grdBuscarvarios.Size = New System.Drawing.Size(975, 535)
         Me.grdBuscarvarios.TabIndex = 20
-        '
-        'lblBuscarvarios
-        '
-        Me.lblBuscarvarios.AutoSize = True
-        Me.lblBuscarvarios.Location = New System.Drawing.Point(11, 13)
-        Me.lblBuscarvarios.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblBuscarvarios.Name = "lblBuscarvarios"
-        Me.lblBuscarvarios.Size = New System.Drawing.Size(54, 13)
-        Me.lblBuscarvarios.TabIndex = 19
-        Me.lblBuscarvarios.Text = "BUSCAR:"
-        '
-        'txtBuscarvarios
-        '
-        Me.txtBuscarvarios.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtBuscarvarios.Location = New System.Drawing.Point(66, 10)
-        Me.txtBuscarvarios.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtBuscarvarios.Name = "txtBuscarvarios"
-        Me.txtBuscarvarios.Size = New System.Drawing.Size(641, 20)
-        Me.txtBuscarvarios.TabIndex = 18
         '
         'idVarios
         '
@@ -115,6 +95,7 @@ Partial Class frmBuscarvarios
         Me.codigo.MinimumWidth = 12
         Me.codigo.Name = "codigo"
         Me.codigo.ReadOnly = True
+        Me.codigo.Width = 125
         '
         'tipoproducto
         '
@@ -123,6 +104,7 @@ Partial Class frmBuscarvarios
         Me.tipoproducto.MinimumWidth = 12
         Me.tipoproducto.Name = "tipoproducto"
         Me.tipoproducto.ReadOnly = True
+        Me.tipoproducto.Width = 125
         '
         'nfactura
         '
@@ -149,17 +131,40 @@ Partial Class frmBuscarvarios
         Me.cantidad.MinimumWidth = 12
         Me.cantidad.Name = "cantidad"
         Me.cantidad.ReadOnly = True
+        Me.cantidad.Width = 125
+        '
+        'lblBuscarvarios
+        '
+        Me.lblBuscarvarios.AutoSize = True
+        Me.lblBuscarvarios.Location = New System.Drawing.Point(15, 16)
+        Me.lblBuscarvarios.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblBuscarvarios.Name = "lblBuscarvarios"
+        Me.lblBuscarvarios.Size = New System.Drawing.Size(68, 17)
+        Me.lblBuscarvarios.TabIndex = 19
+        Me.lblBuscarvarios.Text = "BUSCAR:"
+        '
+        'txtBuscarvarios
+        '
+        Me.txtBuscarvarios.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtBuscarvarios.Location = New System.Drawing.Point(88, 12)
+        Me.txtBuscarvarios.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtBuscarvarios.Name = "txtBuscarvarios"
+        Me.txtBuscarvarios.Size = New System.Drawing.Size(853, 22)
+        Me.txtBuscarvarios.TabIndex = 18
         '
         'frmBuscarvarios
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(762, 527)
+        Me.BackColor = System.Drawing.Color.OrangeRed
+        Me.ClientSize = New System.Drawing.Size(1016, 649)
         Me.Controls.Add(Me.btnCancelarvarios)
         Me.Controls.Add(Me.btnSeleccionarvarios)
         Me.Controls.Add(Me.grdBuscarvarios)
         Me.Controls.Add(Me.lblBuscarvarios)
         Me.Controls.Add(Me.txtBuscarvarios)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmBuscarvarios"
         Me.Text = "Buscar pagos varios"
         CType(Me.grdBuscarvarios, System.ComponentModel.ISupportInitialize).EndInit()

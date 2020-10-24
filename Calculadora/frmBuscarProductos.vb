@@ -23,4 +23,8 @@
             seleccionarProducto()
         End If
     End Sub
+
+    Private Sub btnCancelarProducto_Click(sender As Object, e As EventArgs) Handles btnCancelarProducto.Click
+        Close()
+    End Sub
 End Class

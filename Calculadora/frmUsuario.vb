@@ -137,4 +137,15 @@
     End Sub
 
 
+
+    Private Sub btnBuscarCargoUsuario_Click(sender As Object, e As EventArgs) Handles btnBuscarCargoUsuario.Click
+        Dim objBuscarCargoUsuario As New frmBuscarCargos
+        objBuscarCargoUsuario.ShowDialog()
+        If objBuscarCargoUsuario._idC > 0 Then
+            cboCargoUsuario.SelectedValue = objBuscarCargoUsuario._idC
+        End If
+    End Sub
+
+
+
 End Class

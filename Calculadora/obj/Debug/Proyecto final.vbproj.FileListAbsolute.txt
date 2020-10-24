@@ -94,3 +94,5 @@ C:\Users\DENIS\Source\Repos\Programacion\Calculadora\obj\Debug\Proyecto final.vb
 C:\Users\DENIS\Source\Repos\Programacion\Calculadora\obj\Debug\Calculadora.exe
 C:\Users\DENIS\Source\Repos\Programacion\Calculadora\obj\Debug\Calculadora.xml
 C:\Users\DENIS\Source\Repos\Programacion\Calculadora\obj\Debug\Calculadora.pdb
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarvarios.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmPagosVarios.resources

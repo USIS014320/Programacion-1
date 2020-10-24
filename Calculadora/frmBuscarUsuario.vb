@@ -23,4 +23,8 @@
             seleccionarUsuario()
         End If
     End Sub
+
+    Private Sub btnCancelarUsuario_Click(sender As Object, e As EventArgs) Handles btnCancelarUsuario.Click
+        Close()
+    End Sub
 End Class

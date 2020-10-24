@@ -41,10 +41,10 @@ Partial Class frmBuscarProductos
         '
         Me.btnCancelarProducto.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCancelarProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarProducto.Location = New System.Drawing.Point(591, 547)
+        Me.btnCancelarProducto.Location = New System.Drawing.Point(788, 673)
         Me.btnCancelarProducto.Margin = New System.Windows.Forms.Padding(1)
         Me.btnCancelarProducto.Name = "btnCancelarProducto"
-        Me.btnCancelarProducto.Size = New System.Drawing.Size(120, 33)
+        Me.btnCancelarProducto.Size = New System.Drawing.Size(160, 41)
         Me.btnCancelarProducto.TabIndex = 17
         Me.btnCancelarProducto.Text = "Cancelar"
         Me.btnCancelarProducto.UseVisualStyleBackColor = True
@@ -53,10 +53,10 @@ Partial Class frmBuscarProductos
         '
         Me.btnSeleccionarProductos.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSeleccionarProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionarProductos.Location = New System.Drawing.Point(353, 547)
+        Me.btnSeleccionarProductos.Location = New System.Drawing.Point(471, 673)
         Me.btnSeleccionarProductos.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSeleccionarProductos.Name = "btnSeleccionarProductos"
-        Me.btnSeleccionarProductos.Size = New System.Drawing.Size(236, 33)
+        Me.btnSeleccionarProductos.Size = New System.Drawing.Size(315, 41)
         Me.btnSeleccionarProductos.TabIndex = 16
         Me.btnSeleccionarProductos.Text = "Seleccionar Producto"
         Me.btnSeleccionarProductos.UseVisualStyleBackColor = True
@@ -70,13 +70,13 @@ Partial Class frmBuscarProductos
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grdBuscarProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdBuscarProducto.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idProducto, Me.idCategoria, Me.categoria, Me.codigo, Me.nombre, Me.marca, Me.medidas})
-        Me.grdBuscarProducto.Location = New System.Drawing.Point(16, 54)
+        Me.grdBuscarProducto.Location = New System.Drawing.Point(21, 66)
         Me.grdBuscarProducto.Margin = New System.Windows.Forms.Padding(1)
         Me.grdBuscarProducto.Name = "grdBuscarProducto"
         Me.grdBuscarProducto.ReadOnly = True
         Me.grdBuscarProducto.RowHeadersWidth = 102
         Me.grdBuscarProducto.RowTemplate.Height = 40
-        Me.grdBuscarProducto.Size = New System.Drawing.Size(731, 478)
+        Me.grdBuscarProducto.Size = New System.Drawing.Size(975, 588)
         Me.grdBuscarProducto.TabIndex = 15
         '
         'idProducto
@@ -93,9 +93,11 @@ Partial Class frmBuscarProductos
         '
         Me.idCategoria.DataPropertyName = "idCategoria"
         Me.idCategoria.HeaderText = "IDCAT"
+        Me.idCategoria.MinimumWidth = 6
         Me.idCategoria.Name = "idCategoria"
         Me.idCategoria.ReadOnly = True
         Me.idCategoria.Visible = False
+        Me.idCategoria.Width = 125
         '
         'categoria
         '
@@ -104,6 +106,7 @@ Partial Class frmBuscarProductos
         Me.categoria.MinimumWidth = 12
         Me.categoria.Name = "categoria"
         Me.categoria.ReadOnly = True
+        Me.categoria.Width = 125
         '
         'codigo
         '
@@ -112,6 +115,7 @@ Partial Class frmBuscarProductos
         Me.codigo.MinimumWidth = 12
         Me.codigo.Name = "codigo"
         Me.codigo.ReadOnly = True
+        Me.codigo.Width = 125
         '
         'nombre
         '
@@ -138,14 +142,15 @@ Partial Class frmBuscarProductos
         Me.medidas.MinimumWidth = 12
         Me.medidas.Name = "medidas"
         Me.medidas.ReadOnly = True
+        Me.medidas.Width = 125
         '
         'lblBuscarProducto
         '
         Me.lblBuscarProducto.AutoSize = True
-        Me.lblBuscarProducto.Location = New System.Drawing.Point(13, 16)
+        Me.lblBuscarProducto.Location = New System.Drawing.Point(17, 20)
         Me.lblBuscarProducto.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.lblBuscarProducto.Name = "lblBuscarProducto"
-        Me.lblBuscarProducto.Size = New System.Drawing.Size(54, 13)
+        Me.lblBuscarProducto.Size = New System.Drawing.Size(68, 17)
         Me.lblBuscarProducto.TabIndex = 14
         Me.lblBuscarProducto.Text = "BUSCAR:"
         '
@@ -153,23 +158,24 @@ Partial Class frmBuscarProductos
         '
         Me.txtBuscarProducto.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtBuscarProducto.Location = New System.Drawing.Point(68, 13)
+        Me.txtBuscarProducto.Location = New System.Drawing.Point(91, 16)
         Me.txtBuscarProducto.Margin = New System.Windows.Forms.Padding(1)
         Me.txtBuscarProducto.Name = "txtBuscarProducto"
-        Me.txtBuscarProducto.Size = New System.Drawing.Size(641, 20)
+        Me.txtBuscarProducto.Size = New System.Drawing.Size(853, 22)
         Me.txtBuscarProducto.TabIndex = 13
         '
         'frmBuscarProductos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(764, 598)
+        Me.ClientSize = New System.Drawing.Size(1019, 736)
         Me.Controls.Add(Me.btnCancelarProducto)
         Me.Controls.Add(Me.btnSeleccionarProductos)
         Me.Controls.Add(Me.grdBuscarProducto)
         Me.Controls.Add(Me.lblBuscarProducto)
         Me.Controls.Add(Me.txtBuscarProducto)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmBuscarProductos"
         Me.Text = "Buscador de productos"
         CType(Me.grdBuscarProducto, System.ComponentModel.ISupportInitialize).EndInit()

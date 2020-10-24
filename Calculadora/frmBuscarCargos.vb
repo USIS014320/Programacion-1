@@ -25,4 +25,7 @@
         seleccionarCargos()
     End Sub
 
+    Private Sub btnCancelarCargo_Click(sender As Object, e As EventArgs) Handles btnCancelarCargo.Click
+        Close()
+    End Sub
 End Class

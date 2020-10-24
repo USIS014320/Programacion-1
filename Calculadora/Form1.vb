@@ -32,4 +32,10 @@
         objPagosVarios.MdiParent = Me
         objPagosVarios.Show()
     End Sub
+
+    Private Sub RegistroDeCargosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroDeCargosToolStripMenuItem.Click
+        Dim objCargos As New frmCargos
+        objCargos.MdiParent = Me
+        objCargos.Show()
+    End Sub
 End Class
