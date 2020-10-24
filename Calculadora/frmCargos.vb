@@ -21,11 +21,11 @@
 
             lblRegistrosCargo.Text = posicion + 1 & " de " & dataTable.Rows.Count
         Else
-            limpiarDatosCategoria()
+            limpiarDatosCargo()
             MessageBox.Show("No hay registros que mostrar", "Registro de Uusarios", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
-    Private Sub limpiarDatosCategoria()
+    Private Sub limpiarDatosCargo()
         txtDescripcionCargo.Text = ""
     End Sub
     Private Sub btnPrimeroCargo_Click(sender As Object, e As EventArgs) Handles btnPrimeroCargo.Click
@@ -37,7 +37,7 @@
             posicion -= 1
             mostrarDatos()
         Else
-            MessageBox.Show("Ya te encuentras en el primer registro.", "Registro de Categorias", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Ya te encuentras en el primer registro.", "Registro de Cargos", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
     Private Sub btnSiguienteCargo_Click(sender As Object, e As EventArgs) Handles btnSiguienteCargo.Click
@@ -45,7 +45,7 @@
             posicion += 1
             mostrarDatos()
         Else
-            MessageBox.Show("Ya te encuentras en el ultimo registro.", "Registro de Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Ya te encuentras en el ultimo registro.", "Registro de Cargos", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
     Private Sub btnUltimoCategoria_Click(sender As Object, e As EventArgs) Handles btnUltimoCargo.Click
@@ -65,7 +65,7 @@
             accion = "nuevo"
 
             HabDescontroles(False)
-            limpiarDatosCategoria()
+            limpiarDatosCargo()
         Else 'Guardar
             Dim msg = objConexion.mantenimientoDatosCargo(New String() {
                 Me.Tag, txtDescripcionCargo.Text
