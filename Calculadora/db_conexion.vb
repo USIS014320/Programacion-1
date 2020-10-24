@@ -17,6 +17,7 @@ Public Class db_conexion
         miCommand.Parameters.Add("@id", SqlDbType.Int).Value = 0
         miCommand.Parameters.Add("@idCategoria", SqlDbType.Int).Value = 0
         miCommand.Parameters.Add("@idCargo", SqlDbType.Int).Value = 0
+        miCommand.Parameters.Add("@idVarios", SqlDbType.Int).Value = 0
         miCommand.Parameters.Add("@cod", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@nom", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@mar", SqlDbType.Char).Value = ""
@@ -26,7 +27,11 @@ Public Class db_conexion
         miCommand.Parameters.Add("@cla", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@direc", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@car", SqlDbType.Char).Value = ""
-
+        miCommand.Parameters.Add("@codigo", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@tipro", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@nufa", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@tides", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@tican", SqlDbType.Char).Value = ""
     End Sub
 
     Public Function obtenerDatos()
@@ -69,6 +74,10 @@ Public Class db_conexion
         miAdapter.SelectCommand = miCommand
         miAdapter.Fill(ds, "productos")
 
+
+        miCommand.CommandText = "select * from pagosvarios"
+        miAdapter.SelectCommand = miCommand
+        miAdapter.Fill(ds, "pagosvarios")
 
         Return ds
     End Function
@@ -146,9 +155,9 @@ Public Class db_conexion
             Case "nuevo"
                 sql = "INSERT INTO usuarios (idCargo,usuario,nombre,telefono,clave,direccion) VALUES(@idCargo,@us,@nom,@tel,@cla,@direc)"
             Case "modificar"
-                sql = "UPDATE usuarios SET idCargo=@idCargo,usuario=@us,nombre=@nom,telefono=@tel,clave=@cla,direccion=@direc WHERE idUsuario=@id"
+                sql = "UPDATE usuarios SET idCargo=@idCargo,usuario=@us,nombre=@nom,telefono=@tel,clave=@cla,direccion=@direc WHERE idUsuario=@idVarios"
             Case "eliminar"
-                sql = "DELETE FROM usuarios WHERE idUsuario=@id"
+                sql = "DELETE FROM usuarios WHERE idUsuario=@idVarios"
         End Select
         miCommand.Parameters("@id").Value = datos(0)
         If accion IsNot "eliminar" Then
@@ -190,6 +199,35 @@ Public Class db_conexion
         End If
         Return msg
     End Function
+
+
+    Public Function mantenimientoPagosvarios(ByVal datos As String(), ByVal accion As String)
+        Dim sql, msg As String
+        Select Case accion
+            Case "nuevo"
+                sql = "INSERT INTO pagosvarios (codigo,tipoproducto,nfactura,descripcion,cantidad) VALUES(@codigo,@tipro,@nufa,@tides,@tican)"
+            Case "modificar"
+                sql = "UPDATE pagosvarios SET codigo=@codigo,tipoproducto=@tipro,nfactura=@nufa,descripcion=@tides,cantidad=@tican WHERE idVarios=@id"
+            Case "eliminar"
+                sql = "DELETE FROM pagosvarios WHERE idVarios=@id"
+        End Select
+        miCommand.Parameters("@id").Value = datos(0)
+        If accion IsNot "eliminar" Then
+            miCommand.Parameters("@codigo").Value = datos(1)
+            miCommand.Parameters("@tipro").Value = datos(2)
+            miCommand.Parameters("@nufa").Value = datos(3)
+            miCommand.Parameters("@tides").Value = datos(4)
+            miCommand.Parameters("@tican").Value = datos(5)
+        End If
+        If executeSql(sql) > 0 Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
+
     Private Function executeSql(ByVal sql As String)
         Try
             miCommand.Connection = myConexion
@@ -199,4 +237,5 @@ Public Class db_conexion
             Return 0
         End Try
     End Function
+
 End Class

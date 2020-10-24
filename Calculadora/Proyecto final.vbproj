@@ -131,6 +131,12 @@
     <Compile Include="frmBuscarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBuscarvarios.Designer.vb">
+      <DependentUpon>frmBuscarvarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarvarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCargos.Designer.vb">
       <DependentUpon>frmCargos.vb</DependentUpon>
     </Compile>
@@ -141,6 +147,12 @@
       <DependentUpon>frmEmpleados.vb</DependentUpon>
     </Compile>
     <Compile Include="frmEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagos varios.Designer.vb">
+      <DependentUpon>frmPagos varios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPagos varios.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmProductos.Designer.vb">
@@ -197,11 +209,17 @@
     <EmbeddedResource Include="frmBuscarUsuario.resx">
       <DependentUpon>frmBuscarUsuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarvarios.resx">
+      <DependentUpon>frmBuscarvarios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCargos.resx">
       <DependentUpon>frmCargos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagos varios.resx">
+      <DependentUpon>frmPagos varios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.vb</DependentUpon>
