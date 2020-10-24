@@ -26,4 +26,10 @@
         objUsuario.MdiParent = Me
         objUsuario.Show()
     End Sub
+
+    Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
+        Dim objPagosVarios As New frmPagosVarios
+        objPagosVarios.MdiParent = Me
+        objPagosVarios.Show()
+    End Sub
 End Class
