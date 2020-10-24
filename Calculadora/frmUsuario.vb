@@ -22,12 +22,12 @@
     Sub mostrarDatos()
         If dataTable.Rows.Count > 0 Then
             Me.Tag = dataTable.Rows(posicion).ItemArray(0).ToString() 'ID de Usuario
-
-            txtNombredeUsuario.Text = dataTable.Rows(posicion).ItemArray(1).ToString()
-            txtNombreUsuario.Text = dataTable.Rows(posicion).ItemArray(2).ToString()
-            txtTelefonoUsuario.Text = dataTable.Rows(posicion).ItemArray(3).ToString()
-            txtClaveUsuario.Text = dataTable.Rows(posicion).ItemArray(4).ToString()
-            txtDireccionUsuario.Text = dataTable.Rows(posicion).ItemArray(5).ToString()
+            cboCargoUsuario.SelectedValue = dataTable.Rows(posicion).ItemArray(1).ToString()
+            txtUsuario.Text = dataTable.Rows(posicion).ItemArray(2).ToString()
+            txtNombreUsuario.Text = dataTable.Rows(posicion).ItemArray(3).ToString()
+            txtTelefonoUsuario.Text = dataTable.Rows(posicion).ItemArray(4).ToString()
+            txtClaveUsuario.Text = dataTable.Rows(posicion).ItemArray(5).ToString()
+            txtDireccionUsuario.Text = dataTable.Rows(posicion).ItemArray(6).ToString()
 
 
             lblRegistrosUsuario.Text = posicion + 1 & " de " & dataTable.Rows.Count
@@ -37,7 +37,7 @@
         End If
     End Sub
     Private Sub limpiarDatosUsuario()
-        txtNombredeUsuario.Text = ""
+        txtUsuario.Text = ""
         txtNombreUsuario.Text = ""
         txtTelefonoUsuario.Text = ""
         txtClaveUsuario.Text = ""
@@ -88,7 +88,7 @@
             limpiarDatosUsuario()
         Else 'Guardar
             Dim msg = objConexion.mantenimientoDatosUsuario(New String() {
-                Me.Tag, cboCargoUsuario.SelectedValue, txtNombredeUsuario.Text, txtNombreUsuario.Text, txtTelefonoUsuario.Text, txtClaveUsuario.Text, txtDireccionUsuario.Text
+                Me.Tag, cboCargoUsuario.SelectedValue, txtUsuario.Text, txtNombreUsuario.Text, txtTelefonoUsuario.Text, txtClaveUsuario.Text, txtDireccionUsuario.Text
             }, accion)
             If msg = "error" Then
                 MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro de Usuarios",
