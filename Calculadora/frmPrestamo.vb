@@ -23,7 +23,7 @@
     End Sub
     Sub obtenerDatos()
         dataTable = objConexion.obtenerDatos().Tables("prestamos")
-        dataTable.PrimaryKey = New DataColumn() {dataTable.Columns("iPrestamo")}
+        dataTable.PrimaryKey = New DataColumn() {dataTable.Columns("idPrestamo")}
 
         cboNombreEmpleado.DataSource = objConexion.obtenerDatos().Tables("empleados").DefaultView()
         cboNombreEmpleado.DisplayMember = "nombre"

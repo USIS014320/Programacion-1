@@ -10,7 +10,7 @@
     End Sub
     Sub obtenerDatos()
         dataTable = objConexion.obtenerDatos().Tables("empleados")
-        dataTable.PrimaryKey = New DataColumn() {dataTable.Columns("idEmpleados")}
+        dataTable.PrimaryKey = New DataColumn() {dataTable.Columns("idEmpleado")}
         mostrarDatos()
     End Sub
     Sub mostrarDatos()
