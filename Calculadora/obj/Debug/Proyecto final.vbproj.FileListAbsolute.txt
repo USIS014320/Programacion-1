@@ -96,3 +96,32 @@ C:\Users\DENIS\Source\Repos\Programacion\Calculadora\obj\Debug\Calculadora.xml
 C:\Users\DENIS\Source\Repos\Programacion\Calculadora\obj\Debug\Calculadora.pdb
 C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarvarios.resources
 C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmPagosVarios.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\bin\Debug\bd_sigac.mdf
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\bin\Debug\bd_sigac_log.ldf
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\bin\Debug\Calculadora.exe.config
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\bin\Debug\Calculadora.exe
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\bin\Debug\Calculadora.pdb
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\bin\Debug\Calculadora.xml
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Proyecto final.vbprojAssemblyReference.cache
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.Form1.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmBuscarCargos.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmBuscarEmpleados.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmBuscarProductos.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmBuscarProductosDeuda.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmBuscarProveedores.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmBuscarUsuario.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmBuscarvarios.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmCargos.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmEmpleados.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmPagosVarios.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmProductos.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmProductosDeuda.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmProveedores.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmUsuario.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.Resources.resources
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Proyecto final.vbproj.GenerateResource.cache
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Proyecto final.vbproj.CoreCompileInputs.cache
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.exe
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.xml
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.pdb
+C:\Users\Wilbert Ruth\Dropbox\Mi PC (DESKTOP-VG9C71C)\Desktop\A\Calculadora\obj\Debug\Calculadora.frmSalario.resources
