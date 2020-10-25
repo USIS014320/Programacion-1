@@ -34,6 +34,9 @@ Partial Class Form1
         Me.INVENTARIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosDeudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InventarioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductosExsitentesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductosFaltantesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
@@ -78,39 +81,40 @@ Partial Class Form1
         '
         Me.EmpleadosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'UsuariosToolStripMenuItem
         '
         Me.UsuariosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
         'RegistroDeCargosToolStripMenuItem
         '
         Me.RegistroDeCargosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
         Me.RegistroDeCargosToolStripMenuItem.Name = "RegistroDeCargosToolStripMenuItem"
-        Me.RegistroDeCargosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RegistroDeCargosToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.RegistroDeCargosToolStripMenuItem.Text = "Registro de Cargos"
         '
         'ToolStripMenuItem3
         '
+        Me.ToolStripMenuItem3.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(173, 22)
         Me.ToolStripMenuItem3.Text = "Salarios"
         '
         'INVENTARIOToolStripMenuItem
         '
-        Me.INVENTARIOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductosToolStripMenuItem, Me.ProductosDeudaToolStripMenuItem})
+        Me.INVENTARIOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductosToolStripMenuItem, Me.ProductosDeudaToolStripMenuItem, Me.InventarioToolStripMenuItem1})
         Me.INVENTARIOToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.INVENTARIOToolStripMenuItem.Name = "INVENTARIOToolStripMenuItem"
         Me.INVENTARIOToolStripMenuItem.Size = New System.Drawing.Size(85, 20)
@@ -120,14 +124,37 @@ Partial Class Form1
         '
         Me.ProductosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ProductosToolStripMenuItem.Text = "Productos"
         '
         'ProductosDeudaToolStripMenuItem
         '
+        Me.ProductosDeudaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ProductosDeudaToolStripMenuItem.Name = "ProductosDeudaToolStripMenuItem"
-        Me.ProductosDeudaToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.ProductosDeudaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ProductosDeudaToolStripMenuItem.Text = "ProductosDeuda"
+        '
+        'InventarioToolStripMenuItem1
+        '
+        Me.InventarioToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.InventarioToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductosExsitentesToolStripMenuItem, Me.ProductosFaltantesToolStripMenuItem})
+        Me.InventarioToolStripMenuItem1.Name = "InventarioToolStripMenuItem1"
+        Me.InventarioToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.InventarioToolStripMenuItem1.Text = "Inventario"
+        '
+        'ProductosExsitentesToolStripMenuItem
+        '
+        Me.ProductosExsitentesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ProductosExsitentesToolStripMenuItem.Name = "ProductosExsitentesToolStripMenuItem"
+        Me.ProductosExsitentesToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.ProductosExsitentesToolStripMenuItem.Text = "Productos exsitentes"
+        '
+        'ProductosFaltantesToolStripMenuItem
+        '
+        Me.ProductosFaltantesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ProductosFaltantesToolStripMenuItem.Name = "ProductosFaltantesToolStripMenuItem"
+        Me.ProductosFaltantesToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.ProductosFaltantesToolStripMenuItem.Text = "Productos faltantes"
         '
         'ToolStripMenuItem1
         '
@@ -180,4 +207,7 @@ Partial Class Form1
     Friend WithEvents RegistroDeCargosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductosDeudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents InventarioToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ProductosExsitentesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProductosFaltantesToolStripMenuItem As ToolStripMenuItem
 End Class
