@@ -25,8 +25,6 @@ Partial Class frmBuscarProductofaltante
         Me.btnCancelarfaltante = New System.Windows.Forms.Button()
         Me.btnSeleccionarfaltante = New System.Windows.Forms.Button()
         Me.grdBuscarfaltante = New System.Windows.Forms.DataGridView()
-        Me.lblBuscarfaltante = New System.Windows.Forms.Label()
-        Me.txtBuscarfaltante = New System.Windows.Forms.TextBox()
         Me.idFaltante = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.idCategoriafaltante = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.categoriafalta = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -35,6 +33,8 @@ Partial Class frmBuscarProductofaltante
         Me.marcafalta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.medidasfalta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cantidadfalta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblBuscarfaltante = New System.Windows.Forms.Label()
+        Me.txtBuscarfaltante = New System.Windows.Forms.TextBox()
         CType(Me.grdBuscarfaltante, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,10 +42,10 @@ Partial Class frmBuscarProductofaltante
         '
         Me.btnCancelarfaltante.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCancelarfaltante.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarfaltante.Location = New System.Drawing.Point(636, 543)
+        Me.btnCancelarfaltante.Location = New System.Drawing.Point(848, 668)
         Me.btnCancelarfaltante.Margin = New System.Windows.Forms.Padding(1)
         Me.btnCancelarfaltante.Name = "btnCancelarfaltante"
-        Me.btnCancelarfaltante.Size = New System.Drawing.Size(120, 33)
+        Me.btnCancelarfaltante.Size = New System.Drawing.Size(160, 41)
         Me.btnCancelarfaltante.TabIndex = 22
         Me.btnCancelarfaltante.Text = "Cancelar"
         Me.btnCancelarfaltante.UseVisualStyleBackColor = True
@@ -54,10 +54,10 @@ Partial Class frmBuscarProductofaltante
         '
         Me.btnSeleccionarfaltante.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSeleccionarfaltante.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionarfaltante.Location = New System.Drawing.Point(398, 543)
+        Me.btnSeleccionarfaltante.Location = New System.Drawing.Point(531, 668)
         Me.btnSeleccionarfaltante.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSeleccionarfaltante.Name = "btnSeleccionarfaltante"
-        Me.btnSeleccionarfaltante.Size = New System.Drawing.Size(236, 33)
+        Me.btnSeleccionarfaltante.Size = New System.Drawing.Size(315, 41)
         Me.btnSeleccionarfaltante.TabIndex = 21
         Me.btnSeleccionarfaltante.Text = "Seleccionar Producto"
         Me.btnSeleccionarfaltante.UseVisualStyleBackColor = True
@@ -71,34 +71,14 @@ Partial Class frmBuscarProductofaltante
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grdBuscarfaltante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdBuscarfaltante.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idFaltante, Me.idCategoriafaltante, Me.categoriafalta, Me.codigofalta, Me.descripcionfalta, Me.marcafalta, Me.medidasfalta, Me.cantidadfalta})
-        Me.grdBuscarfaltante.Location = New System.Drawing.Point(21, 50)
+        Me.grdBuscarfaltante.Location = New System.Drawing.Point(28, 62)
         Me.grdBuscarfaltante.Margin = New System.Windows.Forms.Padding(1)
         Me.grdBuscarfaltante.Name = "grdBuscarfaltante"
         Me.grdBuscarfaltante.ReadOnly = True
         Me.grdBuscarfaltante.RowHeadersWidth = 102
         Me.grdBuscarfaltante.RowTemplate.Height = 40
-        Me.grdBuscarfaltante.Size = New System.Drawing.Size(738, 478)
+        Me.grdBuscarfaltante.Size = New System.Drawing.Size(984, 588)
         Me.grdBuscarfaltante.TabIndex = 20
-        '
-        'lblBuscarfaltante
-        '
-        Me.lblBuscarfaltante.AutoSize = True
-        Me.lblBuscarfaltante.Location = New System.Drawing.Point(18, 12)
-        Me.lblBuscarfaltante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblBuscarfaltante.Name = "lblBuscarfaltante"
-        Me.lblBuscarfaltante.Size = New System.Drawing.Size(54, 13)
-        Me.lblBuscarfaltante.TabIndex = 19
-        Me.lblBuscarfaltante.Text = "BUSCAR:"
-        '
-        'txtBuscarfaltante
-        '
-        Me.txtBuscarfaltante.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtBuscarfaltante.Location = New System.Drawing.Point(73, 9)
-        Me.txtBuscarfaltante.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtBuscarfaltante.Name = "txtBuscarfaltante"
-        Me.txtBuscarfaltante.Size = New System.Drawing.Size(658, 20)
-        Me.txtBuscarfaltante.TabIndex = 18
         '
         'idFaltante
         '
@@ -169,21 +149,45 @@ Partial Class frmBuscarProductofaltante
         '
         Me.cantidadfalta.DataPropertyName = "cantidadfalta"
         Me.cantidadfalta.HeaderText = "CANTIDAD FALTANTE"
+        Me.cantidadfalta.MinimumWidth = 6
         Me.cantidadfalta.Name = "cantidadfalta"
         Me.cantidadfalta.ReadOnly = True
+        Me.cantidadfalta.Width = 125
+        '
+        'lblBuscarfaltante
+        '
+        Me.lblBuscarfaltante.AutoSize = True
+        Me.lblBuscarfaltante.Location = New System.Drawing.Point(24, 15)
+        Me.lblBuscarfaltante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblBuscarfaltante.Name = "lblBuscarfaltante"
+        Me.lblBuscarfaltante.Size = New System.Drawing.Size(68, 17)
+        Me.lblBuscarfaltante.TabIndex = 19
+        Me.lblBuscarfaltante.Text = "BUSCAR:"
+        '
+        'txtBuscarfaltante
+        '
+        Me.txtBuscarfaltante.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtBuscarfaltante.Location = New System.Drawing.Point(97, 11)
+        Me.txtBuscarfaltante.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtBuscarfaltante.Name = "txtBuscarfaltante"
+        Me.txtBuscarfaltante.Size = New System.Drawing.Size(876, 22)
+        Me.txtBuscarfaltante.TabIndex = 18
         '
         'frmBuscarProductofaltante
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 584)
+        Me.BackColor = System.Drawing.Color.OrangeRed
+        Me.ClientSize = New System.Drawing.Size(1045, 719)
         Me.Controls.Add(Me.btnCancelarfaltante)
         Me.Controls.Add(Me.btnSeleccionarfaltante)
         Me.Controls.Add(Me.grdBuscarfaltante)
         Me.Controls.Add(Me.lblBuscarfaltante)
         Me.Controls.Add(Me.txtBuscarfaltante)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmBuscarProductofaltante"
-        Me.Text = "Producto faltante"
+        Me.Text = "Producto Faltante"
         CType(Me.grdBuscarfaltante, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -62,4 +62,10 @@
         objProductofaltante.MdiParent = Me
         objProductofaltante.Show()
     End Sub
+
+    Private Sub ResgistrosDePrestamosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResgistrosDePrestamosToolStripMenuItem.Click
+        Dim objPrestamo As New frmPrestamo
+        objPrestamo.MdiParent = Me
+        objPrestamo.Show()
+    End Sub
 End Class

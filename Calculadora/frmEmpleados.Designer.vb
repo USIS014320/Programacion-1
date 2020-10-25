@@ -66,7 +66,7 @@ Partial Class frmEmpleados
         Me.grbDatos.Margin = New System.Windows.Forms.Padding(1)
         Me.grbDatos.Name = "grbDatos"
         Me.grbDatos.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbDatos.Size = New System.Drawing.Size(635, 553)
+        Me.grbDatos.Size = New System.Drawing.Size(779, 553)
         Me.grbDatos.TabIndex = 2
         Me.grbDatos.TabStop = False
         Me.grbDatos.Text = "Empleados"
@@ -305,7 +305,7 @@ Partial Class frmEmpleados
         Me.Controls.Add(Me.grbEdicion)
         Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.grbDatos)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmEmpleados"
         Me.Text = "Sistema Empleados"
         Me.grbDatos.ResumeLayout(False)

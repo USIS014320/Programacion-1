@@ -3,6 +3,7 @@
     Dim dataTable As New DataTable
     Dim posicion As Integer
     Dim accion As String = "nuevo"
+
     Private Sub frmUsuarior_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         posicion = 0
         obtenerDatos()

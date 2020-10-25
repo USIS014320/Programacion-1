@@ -22,6 +22,7 @@
             txtDireccionEmpleados.Text = dataTable.Rows(posicion).ItemArray(4).ToString()
             txtTelefonoEmpleados.Text = dataTable.Rows(posicion).ItemArray(5).ToString()
 
+
             lblRegistrosEmpleado.Text = posicion + 1 & " de " & dataTable.Rows.Count
         Else
             limpiarDatosEmpleado()
@@ -90,10 +91,10 @@
         btnBuscarEmpleados.Enabled = estado
     End Sub
     Private Sub limpiarDatosEmpleado()
-        txtUsuarioEmpleados.Text = ""
         txtNombreEmpleados.Text = ""
-        txtDireccionEmpleados.Text = ""
+        txtUsuarioEmpleados.Text = ""
         txtClaveEmpleados.Text = ""
+        txtDireccionEmpleados.Text = ""
         txtTelefonoEmpleados.Text = ""
     End Sub
 
