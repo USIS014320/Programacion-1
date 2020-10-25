@@ -119,6 +119,12 @@
     <Compile Include="frmBuscarProductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBuscarProductosDeuda.Designer.vb">
+      <DependentUpon>frmBuscarProductosDeuda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarProductosDeuda.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBuscarProveedores.Designer.vb">
       <DependentUpon>frmBuscarProveedores.vb</DependentUpon>
     </Compile>
@@ -161,10 +167,22 @@
     <Compile Include="frmProductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmProductosDeuda.Designer.vb">
+      <DependentUpon>frmProductosDeuda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductosDeuda.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmProveedores.Designer.vb">
       <DependentUpon>frmProveedores.vb</DependentUpon>
     </Compile>
     <Compile Include="frmProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalario.Designer.vb">
+      <DependentUpon>frmSalario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUsuario.Designer.vb">
@@ -203,6 +221,9 @@
     <EmbeddedResource Include="frmBuscarProductos.resx">
       <DependentUpon>frmBuscarProductos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarProductosDeuda.resx">
+      <DependentUpon>frmBuscarProductosDeuda.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarProveedores.resx">
       <DependentUpon>frmBuscarProveedores.vb</DependentUpon>
     </EmbeddedResource>
@@ -224,8 +245,14 @@
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmProductosDeuda.resx">
+      <DependentUpon>frmProductosDeuda.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalario.resx">
+      <DependentUpon>frmSalario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuario.resx">
       <DependentUpon>frmUsuario.vb</DependentUpon>
