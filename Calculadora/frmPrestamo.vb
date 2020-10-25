@@ -140,7 +140,7 @@
         End If
     End Sub
 
-    Private Sub btnBuscarPrestamoo_Click(sender As Object, e As EventArgs) Handles btnBuscarPrestamo.Click
+    Private Sub btnBuscarPrestamo_Click(sender As Object, e As EventArgs) Handles btnBuscarPrestamo.Click
         Dim objBuscarPrestamo As New frmBuscarPrestamo
         objBuscarPrestamo.ShowDialog()
         If objBuscarPrestamo._idPt > 0 Then

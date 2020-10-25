@@ -124,7 +124,7 @@
         End If
     End Sub
 
-    Private Sub btnBuscarEmpleados_Click(sender As Object, e As EventArgs) Handles btnBuscarEmpleados.Click
+    Private Sub btnBuscarEmpleado_Click(sender As Object, e As EventArgs) Handles btnBuscarEmpleados.Click
         Dim objBuscarEmpleado As New frmBuscarEmpleados
         objBuscarEmpleado.ShowDialog()
         If objBuscarEmpleado._idE > 0 Then

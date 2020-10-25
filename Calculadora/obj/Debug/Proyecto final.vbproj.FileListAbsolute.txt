@@ -189,3 +189,10 @@ C:\Users\Eraldo\Source\Repos\Programacion_Proyecto_Final\Calculadora\obj\Debug\P
 C:\Users\Eraldo\Source\Repos\Programacion_Proyecto_Final\Calculadora\obj\Debug\Calculadora.exe
 C:\Users\Eraldo\Source\Repos\Programacion_Proyecto_Final\Calculadora\obj\Debug\Calculadora.xml
 C:\Users\Eraldo\Source\Repos\Programacion_Proyecto_Final\Calculadora\obj\Debug\Calculadora.pdb
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarPrestamo.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarProductofaltante.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarProductosDeuda.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmPrestamo.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmProductosDeuda.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmProductosfaltantes.resources
+C:\Users\Eraldo\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmSalario.resources
