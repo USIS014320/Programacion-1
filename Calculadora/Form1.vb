@@ -32,4 +32,15 @@
         objPagosVarios.MdiParent = Me
         objPagosVarios.Show()
     End Sub
+    Private Sub ProductosDeudaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosDeudaToolStripMenuItem.Click
+        Dim objProductosDeuda As New frmProductosDeudas
+        objProductosDeuda.MdiParent = Me
+        objProductosDeuda.Show()
+    End Sub
+    Private Sub SalariosToolStripMenuItem_click(sender As Object, e As EventArgs) Handles SalariosToolStripMenuItem.Click
+        Dim objSalarios As New frmSalariosvb
+        objSalarios.MdiParent = Me
+        objSalarios.Show()
+    End Sub
 End Class
+

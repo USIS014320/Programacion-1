@@ -29,8 +29,10 @@ Partial Class Form1
         Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.INVENTARIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductosDeudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
@@ -60,12 +62,12 @@ Partial Class Form1
         Me.SalirToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'EMPRESAToolStripMenuItem
         '
-        Me.EMPRESAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.UsuariosToolStripMenuItem})
+        Me.EMPRESAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.UsuariosToolStripMenuItem, Me.SalariosToolStripMenuItem})
         Me.EMPRESAToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.EMPRESAToolStripMenuItem.Name = "EMPRESAToolStripMenuItem"
         Me.EMPRESAToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
@@ -75,26 +77,32 @@ Partial Class Form1
         '
         Me.EmpleadosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'UsuariosToolStripMenuItem
         '
         Me.UsuariosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
+        '
+        'SalariosToolStripMenuItem
+        '
+        Me.SalariosToolStripMenuItem.Name = "SalariosToolStripMenuItem"
+        Me.SalariosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SalariosToolStripMenuItem.Text = "Salarios"
         '
         'INVENTARIOToolStripMenuItem
         '
-        Me.INVENTARIOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductosToolStripMenuItem})
+        Me.INVENTARIOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductosToolStripMenuItem, Me.ProductosDeudaToolStripMenuItem})
         Me.INVENTARIOToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.INVENTARIOToolStripMenuItem.Name = "INVENTARIOToolStripMenuItem"
         Me.INVENTARIOToolStripMenuItem.Size = New System.Drawing.Size(85, 20)
@@ -104,8 +112,14 @@ Partial Class Form1
         '
         Me.ProductosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ProductosToolStripMenuItem.Text = "Productos"
+        '
+        'ProductosDeudaToolStripMenuItem
+        '
+        Me.ProductosDeudaToolStripMenuItem.Name = "ProductosDeudaToolStripMenuItem"
+        Me.ProductosDeudaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ProductosDeudaToolStripMenuItem.Text = "Productos Deuda"
         '
         'ToolStripMenuItem1
         '
@@ -155,4 +169,6 @@ Partial Class Form1
     Friend WithEvents UsuariosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents ProductosDeudaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SalariosToolStripMenuItem As ToolStripMenuItem
 End Class

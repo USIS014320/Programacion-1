@@ -79,6 +79,14 @@ Public Class db_conexion
         miAdapter.SelectCommand = miCommand
         miAdapter.Fill(ds, "pagosvarios")
 
+        miCommand.CommandText = "select * from ProductosDeuda"
+        miAdapter.SelectCommand = miCommand
+        miAdapter.Fill(ds, "ProductosDeuda")
+
+        miCommand.CommandText = "select * from Descuentos"
+        miAdapter.SelectCommand = miCommand
+        miAdapter.Fill(ds, "Descuentos")
+
         Return ds
     End Function
 
@@ -227,7 +235,60 @@ Public Class db_conexion
 
         Return msg
     End Function
+    Public Function mantenimientoDatosProductosDeuda(ByVal datos As String(), ByVal accion As String)
+        Dim sql, msg As String
+        Select Case accion
+            Case "nuevo"
+                sql = "INSERT INTO ProductosDeuda (nombre, direccion, codigo, telefono, departamento, municipio ) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + datos(6) + "')"
+            Case "modificar"
+                sql = "UPDATE ProductosDeuda SET nombre='" + datos(1) + "',direccion='" + datos(2) + "',codigo='" + datos(3) + "',telefono='" + datos(4) + "',departamento='" + datos(5) + "',municipio='" + datos(6) + "' WHERE idProductoDeuda='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM ProductosDeuda WHERE idProductoDeuda='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
 
+        Return msg
+    End Function
+    Public Function mantenimientoDatosDescuentos(ByVal datos As String(), ByVal accion As String)
+        Dim sql, msg As String
+        Select Case accion
+            Case "nuevo"
+                sql = "INSERT INTO Descuentos (Descuento) VALUES('" + datos(1) + "')"
+            Case "modificar"
+                sql = "UPDATE Descuentos SET Descuento='" + datos(1) + "' WHERE idDescuento='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM Descuentos WHERE idDescuento='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
+    Public Function mantenimientoDatosSalarios(ByVal datos As String(), ByVal accion As String)
+        Dim sql, msg As String
+        Select Case accion
+            Case "nuevo"
+                sql = "INSERT INTO Salarios (Salarios) VALUES('" + datos(1) + "')"
+            Case "modificar"
+                sql = "UPDATE Descuentos SET salarios='" + datos(1) + "' WHERE idsalarios='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM Descuentos WHERE idsalarios='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
     Private Function executeSql(ByVal sql As String)
         Try
             miCommand.Connection = myConexion
