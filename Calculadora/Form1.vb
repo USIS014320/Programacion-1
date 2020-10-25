@@ -50,4 +50,16 @@
         objSalarios.MdiParent = Me
         objSalarios.Show()
     End Sub
+
+    Private Sub ProductosExsitentesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosExsitentesToolStripMenuItem.Click
+        Dim objProductos As New frmProductos
+        objProductos.MdiParent = Me
+        objProductos.Show()
+    End Sub
+
+    Private Sub ProductosFaltantesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosFaltantesToolStripMenuItem.Click
+        Dim objProductofaltante As New frmProductosfaltantes
+        objProductofaltante.MdiParent = Me
+        objProductofaltante.Show()
+    End Sub
 End Class
