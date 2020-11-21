@@ -68,4 +68,10 @@
         objPrestamo.MdiParent = Me
         objPrestamo.Show()
     End Sub
+
+    Private Sub ComprasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ComprasToolStripMenuItem.Click
+        Dim objCompra As New frmComprasproducto
+        objCompra.MdiParent = Me
+        objCompra.Show()
+    End Sub
 End Class
