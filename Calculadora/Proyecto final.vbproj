@@ -93,6 +93,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bd_sigacDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_sigacDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_sigacDataSet.vb">
+      <DependentUpon>bd_sigacDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="db_conexion.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -159,6 +167,12 @@
       <DependentUpon>frmCargos.vb</DependentUpon>
     </Compile>
     <Compile Include="frmCargos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComprasproducto.Designer.vb">
+      <DependentUpon>frmComprasproducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmComprasproducto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEmpleados.Designer.vb">
@@ -266,6 +280,9 @@
     <EmbeddedResource Include="frmCargos.resx">
       <DependentUpon>frmCargos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmComprasproducto.resx">
+      <DependentUpon>frmComprasproducto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.vb</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +318,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bd_sigacDataSet.xsc">
+      <DependentUpon>bd_sigacDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bd_sigacDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_sigacDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_sigacDataSet.xss">
+      <DependentUpon>bd_sigacDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

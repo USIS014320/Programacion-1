@@ -229,3 +229,37 @@ C:\Users\DENIS\Source\Repos\Brandi\Calculadora\obj\Debug\Proyecto final.vbproj.C
 C:\Users\DENIS\Source\Repos\Brandi\Calculadora\obj\Debug\Calculadora.exe
 C:\Users\DENIS\Source\Repos\Brandi\Calculadora\obj\Debug\Calculadora.xml
 C:\Users\DENIS\Source\Repos\Brandi\Calculadora\obj\Debug\Calculadora.pdb
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\bin\Debug\bd_sigac.mdf
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\bin\Debug\bd_sigac_log.ldf
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\bin\Debug\Calculadora.exe.config
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\bin\Debug\Calculadora.exe
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\bin\Debug\Calculadora.pdb
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\bin\Debug\Calculadora.xml
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Proyecto final.vbprojAssemblyReference.cache
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.Form1.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarCargos.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarEmpleados.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarPrestamo.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarProductofaltante.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarProductos.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarProductosDeuda.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarProveedores.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarUsuario.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarvarios.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmCargos.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmComprasproducto.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmEmpleados.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmPagosVarios.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmPrestamo.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmProductos.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmProductosDeuda.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmProductosfaltantes.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmProveedores.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmSalario.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmUsuario.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.Resources.resources
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Proyecto final.vbproj.GenerateResource.cache
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Proyecto final.vbproj.CoreCompileInputs.cache
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.exe
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.xml
+C:\Users\DENIS\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.pdb
