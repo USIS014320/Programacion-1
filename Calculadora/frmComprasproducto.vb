@@ -22,5 +22,32 @@
 
     End Sub
 
+    Private Sub totalizar()
+        Try
+            Dim fila As DataGridViewRow
+            Dim nfilas As Integer = DcomprasProductosDataGridView.Rows.Count - 1
+            Dim subtotal, sumas, iva, total As Double
 
+            For i As Integer = 0 To nfilas
+                fila = DcomprasProductosDataGridView.Rows(i)
+                subtotal = Double.Parse(fila.Cells("cantidad").Value.ToString()) * Double.Parse(fila.Cells("precio").Value.ToString())
+
+                fila.Cells("subtotal").Value = subtotal.ToString()
+                sumas += subtotal
+            Next
+            iva = If(IdTipofacturaComboBox.SelectedValue = 2, sumas * 0.13, 0)
+            total = sumas + iva
+
+            lblrespuestasumacompra.Text = "$ " + Math.Round(sumas, 2).ToString()
+            lblrespuestaivacompra.Text = "$ " + Math.Round(iva, 2).ToString()
+            lblrespuestatotalcompra.Text = "$ " + Math.Round(total, 2).ToString()
+
+        Catch ex As Exception
+            MessageBox.Show("Error " + ex.Message)
+        End Try
+    End Sub
+
+    Private Sub ComprasBindingNavigator_RefreshItems(sender As Object, e As EventArgs) Handles ComprasBindingNavigator.RefreshItems
+        totalizar()
+    End Sub
 End Class

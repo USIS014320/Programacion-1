@@ -63,16 +63,23 @@ Partial Class frmComprasproducto
         Me.DcomprasTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.dcomprasTableAdapter()
         Me.DcomprasProductosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DcomprasProductosDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.idDetalle = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.idCompra = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.idProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.marca = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.medidas = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblsumacompra = New System.Windows.Forms.Label()
+        Me.lblivacompra = New System.Windows.Forms.Label()
+        Me.lbltotalcompra = New System.Windows.Forms.Label()
+        Me.lblrespuestasumacompra = New System.Windows.Forms.Label()
+        Me.lblrespuestaivacompra = New System.Windows.Forms.Label()
+        Me.lblrespuestatotalcompra = New System.Windows.Forms.Label()
         NfacturaLabel = New System.Windows.Forms.Label()
         IdTipofacturaLabel = New System.Windows.Forms.Label()
         IdPagoLabel = New System.Windows.Forms.Label()
@@ -89,6 +96,7 @@ Partial Class frmComprasproducto
         CType(Me.DcomprasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DcomprasProductosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DcomprasProductosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'NfacturaLabel
@@ -337,6 +345,7 @@ Partial Class frmComprasproducto
         Me.TableAdapterManager.comprasTableAdapter = Me.ComprasTableAdapter
         Me.TableAdapterManager.dcomprasTableAdapter = Nothing
         Me.TableAdapterManager.DescuentosTableAdapter = Nothing
+        Me.TableAdapterManager.DeudaTableAdapter = Nothing
         Me.TableAdapterManager.empleadosTableAdapter = Nothing
         Me.TableAdapterManager.faltanteproductoTableAdapter = Nothing
         Me.TableAdapterManager.pagosTableAdapter = Nothing
@@ -394,7 +403,7 @@ Partial Class frmComprasproducto
         Me.DcomprasProductosDataGridView.AllowUserToDeleteRows = False
         Me.DcomprasProductosDataGridView.AutoGenerateColumns = False
         Me.DcomprasProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DcomprasProductosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.subtotal, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
+        Me.DcomprasProductosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idDetalle, Me.idCompra, Me.idProducto, Me.codigo, Me.descripcion, Me.cantidad, Me.precio, Me.subtotal, Me.marca, Me.medidas})
         Me.DcomprasProductosDataGridView.DataSource = Me.DcomprasProductosBindingSource1
         Me.DcomprasProductosDataGridView.Location = New System.Drawing.Point(15, 126)
         Me.DcomprasProductosDataGridView.Name = "DcomprasProductosDataGridView"
@@ -402,58 +411,58 @@ Partial Class frmComprasproducto
         Me.DcomprasProductosDataGridView.Size = New System.Drawing.Size(742, 304)
         Me.DcomprasProductosDataGridView.TabIndex = 15
         '
-        'DataGridViewTextBoxColumn1
+        'idDetalle
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "idDetalle"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "idDetalle"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
+        Me.idDetalle.DataPropertyName = "idDetalle"
+        Me.idDetalle.HeaderText = "idDetalle"
+        Me.idDetalle.Name = "idDetalle"
+        Me.idDetalle.ReadOnly = True
+        Me.idDetalle.Visible = False
         '
-        'DataGridViewTextBoxColumn2
+        'idCompra
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "idCompra"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "idCompra"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Visible = False
+        Me.idCompra.DataPropertyName = "idCompra"
+        Me.idCompra.HeaderText = "idCompra"
+        Me.idCompra.Name = "idCompra"
+        Me.idCompra.ReadOnly = True
+        Me.idCompra.Visible = False
         '
-        'DataGridViewTextBoxColumn3
+        'idProducto
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "idProducto"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "idProducto"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Visible = False
+        Me.idProducto.DataPropertyName = "idProducto"
+        Me.idProducto.HeaderText = "idProducto"
+        Me.idProducto.Name = "idProducto"
+        Me.idProducto.ReadOnly = True
+        Me.idProducto.Visible = False
         '
-        'DataGridViewTextBoxColumn6
+        'codigo
         '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "codigo"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "CODIGO"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.codigo.DataPropertyName = "codigo"
+        Me.codigo.HeaderText = "CODIGO"
+        Me.codigo.Name = "codigo"
+        Me.codigo.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn7
+        'descripcion
         '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "descripcion"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "DESCRIPCION"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Width = 250
+        Me.descripcion.DataPropertyName = "descripcion"
+        Me.descripcion.HeaderText = "DESCRIPCION"
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.ReadOnly = True
+        Me.descripcion.Width = 250
         '
-        'DataGridViewTextBoxColumn4
+        'cantidad
         '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "cantidad"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "CANTIDAD"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.cantidad.DataPropertyName = "cantidad"
+        Me.cantidad.HeaderText = "CANTIDAD"
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn5
+        'precio
         '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "precio"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "PRECIO"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.precio.DataPropertyName = "precio"
+        Me.precio.HeaderText = "PRECIO"
+        Me.precio.Name = "precio"
+        Me.precio.ReadOnly = True
         '
         'subtotal
         '
@@ -462,27 +471,101 @@ Partial Class frmComprasproducto
         Me.subtotal.ReadOnly = True
         Me.subtotal.Width = 150
         '
-        'DataGridViewTextBoxColumn8
+        'marca
         '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "marca"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "marca"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Visible = False
+        Me.marca.DataPropertyName = "marca"
+        Me.marca.HeaderText = "marca"
+        Me.marca.Name = "marca"
+        Me.marca.ReadOnly = True
+        Me.marca.Visible = False
         '
-        'DataGridViewTextBoxColumn9
+        'medidas
         '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "medidas"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "medidas"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Visible = False
+        Me.medidas.DataPropertyName = "medidas"
+        Me.medidas.HeaderText = "medidas"
+        Me.medidas.Name = "medidas"
+        Me.medidas.ReadOnly = True
+        Me.medidas.Visible = False
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.lblrespuestatotalcompra)
+        Me.Panel1.Controls.Add(Me.lblrespuestaivacompra)
+        Me.Panel1.Controls.Add(Me.lblrespuestasumacompra)
+        Me.Panel1.Controls.Add(Me.lbltotalcompra)
+        Me.Panel1.Controls.Add(Me.lblivacompra)
+        Me.Panel1.Controls.Add(Me.lblsumacompra)
+        Me.Panel1.Location = New System.Drawing.Point(538, 436)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(219, 120)
+        Me.Panel1.TabIndex = 16
+        '
+        'lblsumacompra
+        '
+        Me.lblsumacompra.AutoSize = True
+        Me.lblsumacompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblsumacompra.Location = New System.Drawing.Point(7, 15)
+        Me.lblsumacompra.Name = "lblsumacompra"
+        Me.lblsumacompra.Size = New System.Drawing.Size(65, 20)
+        Me.lblsumacompra.TabIndex = 0
+        Me.lblsumacompra.Text = "SUMA:"
+        '
+        'lblivacompra
+        '
+        Me.lblivacompra.AutoSize = True
+        Me.lblivacompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblivacompra.Location = New System.Drawing.Point(7, 52)
+        Me.lblivacompra.Name = "lblivacompra"
+        Me.lblivacompra.Size = New System.Drawing.Size(44, 20)
+        Me.lblivacompra.TabIndex = 1
+        Me.lblivacompra.Text = "IVA:"
+        '
+        'lbltotalcompra
+        '
+        Me.lbltotalcompra.AutoSize = True
+        Me.lbltotalcompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbltotalcompra.Location = New System.Drawing.Point(7, 91)
+        Me.lbltotalcompra.Name = "lbltotalcompra"
+        Me.lbltotalcompra.Size = New System.Drawing.Size(69, 20)
+        Me.lbltotalcompra.TabIndex = 2
+        Me.lbltotalcompra.Text = "TOTAL:"
+        '
+        'lblrespuestasumacompra
+        '
+        Me.lblrespuestasumacompra.AutoSize = True
+        Me.lblrespuestasumacompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblrespuestasumacompra.Location = New System.Drawing.Point(122, 15)
+        Me.lblrespuestasumacompra.Name = "lblrespuestasumacompra"
+        Me.lblrespuestasumacompra.Size = New System.Drawing.Size(44, 20)
+        Me.lblrespuestasumacompra.TabIndex = 3
+        Me.lblrespuestasumacompra.Text = "0.00"
+        '
+        'lblrespuestaivacompra
+        '
+        Me.lblrespuestaivacompra.AutoSize = True
+        Me.lblrespuestaivacompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblrespuestaivacompra.Location = New System.Drawing.Point(122, 52)
+        Me.lblrespuestaivacompra.Name = "lblrespuestaivacompra"
+        Me.lblrespuestaivacompra.Size = New System.Drawing.Size(44, 20)
+        Me.lblrespuestaivacompra.TabIndex = 4
+        Me.lblrespuestaivacompra.Text = "0.00"
+        '
+        'lblrespuestatotalcompra
+        '
+        Me.lblrespuestatotalcompra.AutoSize = True
+        Me.lblrespuestatotalcompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblrespuestatotalcompra.Location = New System.Drawing.Point(122, 91)
+        Me.lblrespuestatotalcompra.Name = "lblrespuestatotalcompra"
+        Me.lblrespuestatotalcompra.Size = New System.Drawing.Size(44, 20)
+        Me.lblrespuestatotalcompra.TabIndex = 5
+        Me.lblrespuestatotalcompra.Text = "0.00"
         '
         'frmComprasproducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(777, 450)
+        Me.ClientSize = New System.Drawing.Size(777, 568)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DcomprasProductosDataGridView)
         Me.Controls.Add(Fecha_vtaLabel)
         Me.Controls.Add(Me.Fecha_vtaDateTimePicker)
@@ -509,6 +592,8 @@ Partial Class frmComprasproducto
         CType(Me.DcomprasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DcomprasProductosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DcomprasProductosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -548,14 +633,21 @@ Partial Class frmComprasproducto
     Friend WithEvents DcomprasTableAdapter As bd_sigacDataSetTableAdapters.dcomprasTableAdapter
     Friend WithEvents DcomprasProductosBindingSource1 As BindingSource
     Friend WithEvents DcomprasProductosDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents idDetalle As DataGridViewTextBoxColumn
+    Friend WithEvents idCompra As DataGridViewTextBoxColumn
+    Friend WithEvents idProducto As DataGridViewTextBoxColumn
+    Friend WithEvents codigo As DataGridViewTextBoxColumn
+    Friend WithEvents descripcion As DataGridViewTextBoxColumn
+    Friend WithEvents cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents precio As DataGridViewTextBoxColumn
     Friend WithEvents subtotal As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents marca As DataGridViewTextBoxColumn
+    Friend WithEvents medidas As DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents lblrespuestatotalcompra As Label
+    Friend WithEvents lblrespuestaivacompra As Label
+    Friend WithEvents lblrespuestasumacompra As Label
+    Friend WithEvents lbltotalcompra As Label
+    Friend WithEvents lblivacompra As Label
+    Friend WithEvents lblsumacompra As Label
 End Class
