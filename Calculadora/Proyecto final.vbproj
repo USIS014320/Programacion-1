@@ -199,6 +199,12 @@
     <Compile Include="frmcreacionprestamo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmDeudas.Designer.vb">
+      <DependentUpon>frmDeudas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeudas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmEmpleados.Designer.vb">
       <DependentUpon>frmEmpleados.vb</DependentUpon>
     </Compile>
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmcreacionprestamo.resx">
       <DependentUpon>frmcreacionprestamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeudas.resx">
+      <DependentUpon>frmDeudas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.vb</DependentUpon>

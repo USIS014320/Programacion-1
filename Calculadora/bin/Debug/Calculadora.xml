@@ -122,6 +122,11 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Calculadora.bd_sigacDataSet.DeudaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Calculadora.bd_sigacDataSet.cargosRow">
 <summary>
 Represents strongly named DataRow class.
@@ -208,6 +213,11 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:Calculadora.bd_sigacDataSet.DcomprasProductosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.DeudaRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -302,6 +312,11 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:Calculadora.bd_sigacDataSet.DeudaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:Calculadora.bd_sigacDataSetTableAdapters.cargosTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -388,6 +403,11 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:Calculadora.bd_sigacDataSetTableAdapters.DcomprasProductosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSetTableAdapters.DeudaTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
