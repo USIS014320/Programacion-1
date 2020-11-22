@@ -115,10 +115,22 @@
     <Compile Include="frmBuscarCargos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBuscarClientes.Designer.vb">
+      <DependentUpon>frmBuscarClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBuscarEmpleados.Designer.vb">
       <DependentUpon>frmBuscarEmpleados.vb</DependentUpon>
     </Compile>
     <Compile Include="frmBuscarEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarInteres.Designer.vb">
+      <DependentUpon>frmBuscarInteres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarInteres.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBuscarPrestamo.Designer.vb">
@@ -169,6 +181,12 @@
     <Compile Include="frmCargos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmClientes.Designer.vb">
+      <DependentUpon>frmClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmComprasproducto.Designer.vb">
       <DependentUpon>frmComprasproducto.vb</DependentUpon>
     </Compile>
@@ -179,6 +197,12 @@
       <DependentUpon>frmEmpleados.vb</DependentUpon>
     </Compile>
     <Compile Include="frmEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInteres.Designer.vb">
+      <DependentUpon>frmInteres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInteres.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPagos varios.Designer.vb">
@@ -253,8 +277,14 @@
     <EmbeddedResource Include="frmBuscarCargos.resx">
       <DependentUpon>frmBuscarCargos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarClientes.resx">
+      <DependentUpon>frmBuscarClientes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarEmpleados.resx">
       <DependentUpon>frmBuscarEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarInteres.resx">
+      <DependentUpon>frmBuscarInteres.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarPrestamo.resx">
       <DependentUpon>frmBuscarPrestamo.vb</DependentUpon>
@@ -280,11 +310,17 @@
     <EmbeddedResource Include="frmCargos.resx">
       <DependentUpon>frmCargos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmComprasproducto.resx">
       <DependentUpon>frmComprasproducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInteres.resx">
+      <DependentUpon>frmInteres.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPagos varios.resx">
       <DependentUpon>frmPagos varios.vb</DependentUpon>
