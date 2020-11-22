@@ -32,14 +32,8 @@ Partial Class frmcrearprestamo
         Dim lblOcupaciónPrest As System.Windows.Forms.Label
         Dim lblMontoPrest As System.Windows.Forms.Label
         Dim lblCuotasPrest As System.Windows.Forms.Label
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblIdVenta = New System.Windows.Forms.Label()
         Me.VentasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.marca = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.medidas = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lblRespuestaTotal = New System.Windows.Forms.Label()
         Me.lbltotal = New System.Windows.Forms.Label()
         Me.lblRespuestaInteres = New System.Windows.Forms.Label()
@@ -58,14 +52,6 @@ Partial Class frmcrearprestamo
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnAgregarCliente = New System.Windows.Forms.Button()
-        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DventasProductosDataGridView = New System.Windows.Forms.DataGridView()
-        Me.idDetalle = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.idVenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.idProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DventasProductosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.dtpFechaPrestamo = New System.Windows.Forms.DateTimePicker()
         Me.TipofacturaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -79,6 +65,21 @@ Partial Class frmcrearprestamo
         Me.txtCuotasPrest = New System.Windows.Forms.TextBox()
         Me.cboInteresPrest = New System.Windows.Forms.ComboBox()
         Me.cboOcupacionPrest = New System.Windows.Forms.ComboBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.idPrest = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.idCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.idOcupacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.idInteres = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cedula = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.codigocliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ocupacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.monto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cuotas = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.interes = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fechaprestamo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         lblFechaPrestamo = New System.Windows.Forms.Label()
         lblInteresPrest = New System.Windows.Forms.Label()
         lblClientePrest = New System.Windows.Forms.Label()
@@ -91,11 +92,11 @@ Partial Class frmcrearprestamo
         CType(Me.VentasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grbNavegacion.SuspendLayout()
         Me.grbEdicion.SuspendLayout()
-        CType(Me.DventasProductosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DventasProductosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TipofacturaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblFechaPrestamo
@@ -202,36 +203,6 @@ Partial Class frmcrearprestamo
         'VentasBindingSource
         '
         Me.VentasBindingSource.DataMember = "ventas"
-        '
-        'subtotal
-        '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.subtotal.DefaultCellStyle = DataGridViewCellStyle1
-        Me.subtotal.HeaderText = "SUBTOTAL"
-        Me.subtotal.MinimumWidth = 6
-        Me.subtotal.Name = "subtotal"
-        Me.subtotal.ReadOnly = True
-        Me.subtotal.Width = 150
-        '
-        'marca
-        '
-        Me.marca.DataPropertyName = "marca"
-        Me.marca.HeaderText = "marca"
-        Me.marca.MinimumWidth = 6
-        Me.marca.Name = "marca"
-        Me.marca.ReadOnly = True
-        Me.marca.Visible = False
-        Me.marca.Width = 125
-        '
-        'medidas
-        '
-        Me.medidas.DataPropertyName = "medidas"
-        Me.medidas.HeaderText = "medidas"
-        Me.medidas.MinimumWidth = 6
-        Me.medidas.Name = "medidas"
-        Me.medidas.ReadOnly = True
-        Me.medidas.Visible = False
-        Me.medidas.Width = 125
         '
         'lblRespuestaTotal
         '
@@ -444,92 +415,6 @@ Partial Class frmcrearprestamo
         Me.btnAgregarCliente.UseVisualStyleBackColor = True
         Me.btnAgregarCliente.Visible = False
         '
-        'precio
-        '
-        Me.precio.DataPropertyName = "precio"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.precio.DefaultCellStyle = DataGridViewCellStyle2
-        Me.precio.HeaderText = "PRECIO"
-        Me.precio.MinimumWidth = 6
-        Me.precio.Name = "precio"
-        Me.precio.ReadOnly = True
-        Me.precio.Width = 125
-        '
-        'cantidad
-        '
-        Me.cantidad.DataPropertyName = "cantidad"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.cantidad.DefaultCellStyle = DataGridViewCellStyle3
-        Me.cantidad.HeaderText = "CANT"
-        Me.cantidad.MinimumWidth = 6
-        Me.cantidad.Name = "cantidad"
-        Me.cantidad.ReadOnly = True
-        Me.cantidad.Width = 125
-        '
-        'DventasProductosDataGridView
-        '
-        Me.DventasProductosDataGridView.AllowUserToAddRows = False
-        Me.DventasProductosDataGridView.AllowUserToDeleteRows = False
-        Me.DventasProductosDataGridView.AutoGenerateColumns = False
-        Me.DventasProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DventasProductosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idDetalle, Me.idVenta, Me.idProducto, Me.codigo, Me.descripcion, Me.cantidad, Me.precio, Me.subtotal, Me.marca, Me.medidas})
-        Me.DventasProductosDataGridView.DataSource = Me.DventasProductosBindingSource
-        Me.DventasProductosDataGridView.Location = New System.Drawing.Point(11, 293)
-        Me.DventasProductosDataGridView.Margin = New System.Windows.Forms.Padding(4)
-        Me.DventasProductosDataGridView.Name = "DventasProductosDataGridView"
-        Me.DventasProductosDataGridView.ReadOnly = True
-        Me.DventasProductosDataGridView.RowHeadersWidth = 51
-        Me.DventasProductosDataGridView.Size = New System.Drawing.Size(960, 289)
-        Me.DventasProductosDataGridView.TabIndex = 30
-        '
-        'idDetalle
-        '
-        Me.idDetalle.DataPropertyName = "idDetalle"
-        Me.idDetalle.HeaderText = "idDetalle"
-        Me.idDetalle.MinimumWidth = 6
-        Me.idDetalle.Name = "idDetalle"
-        Me.idDetalle.ReadOnly = True
-        Me.idDetalle.Visible = False
-        Me.idDetalle.Width = 125
-        '
-        'idVenta
-        '
-        Me.idVenta.DataPropertyName = "idVenta"
-        Me.idVenta.HeaderText = "idVenta"
-        Me.idVenta.MinimumWidth = 6
-        Me.idVenta.Name = "idVenta"
-        Me.idVenta.ReadOnly = True
-        Me.idVenta.Visible = False
-        Me.idVenta.Width = 125
-        '
-        'idProducto
-        '
-        Me.idProducto.DataPropertyName = "idProducto"
-        Me.idProducto.HeaderText = "idProducto"
-        Me.idProducto.MinimumWidth = 6
-        Me.idProducto.Name = "idProducto"
-        Me.idProducto.ReadOnly = True
-        Me.idProducto.Visible = False
-        Me.idProducto.Width = 125
-        '
-        'codigo
-        '
-        Me.codigo.DataPropertyName = "codigo"
-        Me.codigo.HeaderText = "CODIGO"
-        Me.codigo.MinimumWidth = 6
-        Me.codigo.Name = "codigo"
-        Me.codigo.ReadOnly = True
-        Me.codigo.Width = 125
-        '
-        'descripcion
-        '
-        Me.descripcion.DataPropertyName = "descripcion"
-        Me.descripcion.HeaderText = "DESCRIPCION"
-        Me.descripcion.MinimumWidth = 6
-        Me.descripcion.Name = "descripcion"
-        Me.descripcion.ReadOnly = True
-        Me.descripcion.Width = 250
-        '
         'DventasProductosBindingSource
         '
         Me.DventasProductosBindingSource.DataMember = "FK_dventas_ventas1"
@@ -631,12 +516,143 @@ Partial Class frmcrearprestamo
         Me.cboOcupacionPrest.Size = New System.Drawing.Size(152, 24)
         Me.cboOcupacionPrest.TabIndex = 52
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idPrest, Me.idCliente, Me.idOcupacion, Me.idInteres, Me.cedula, Me.telefono, Me.codigocliente, Me.cliente, Me.ocupacion, Me.monto, Me.cuotas, Me.interes, Me.fechaprestamo, Me.total})
+        Me.DataGridView1.Location = New System.Drawing.Point(19, 303)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(951, 285)
+        Me.DataGridView1.TabIndex = 53
+        '
+        'idPrest
+        '
+        Me.idPrest.HeaderText = "ID PRESTAMO"
+        Me.idPrest.MinimumWidth = 6
+        Me.idPrest.Name = "idPrest"
+        Me.idPrest.ReadOnly = True
+        Me.idPrest.Visible = False
+        Me.idPrest.Width = 125
+        '
+        'idCliente
+        '
+        Me.idCliente.HeaderText = "ID CLIENTE"
+        Me.idCliente.MinimumWidth = 6
+        Me.idCliente.Name = "idCliente"
+        Me.idCliente.ReadOnly = True
+        Me.idCliente.Visible = False
+        Me.idCliente.Width = 125
+        '
+        'idOcupacion
+        '
+        Me.idOcupacion.HeaderText = "ID OCUPACION"
+        Me.idOcupacion.MinimumWidth = 6
+        Me.idOcupacion.Name = "idOcupacion"
+        Me.idOcupacion.ReadOnly = True
+        Me.idOcupacion.Visible = False
+        Me.idOcupacion.Width = 125
+        '
+        'idInteres
+        '
+        Me.idInteres.HeaderText = "ID INTERES"
+        Me.idInteres.MinimumWidth = 6
+        Me.idInteres.Name = "idInteres"
+        Me.idInteres.ReadOnly = True
+        Me.idInteres.Visible = False
+        Me.idInteres.Width = 125
+        '
+        'cedula
+        '
+        Me.cedula.HeaderText = "CEDULA"
+        Me.cedula.MinimumWidth = 6
+        Me.cedula.Name = "cedula"
+        Me.cedula.ReadOnly = True
+        Me.cedula.Width = 125
+        '
+        'telefono
+        '
+        Me.telefono.HeaderText = "TELEFONO"
+        Me.telefono.MinimumWidth = 6
+        Me.telefono.Name = "telefono"
+        Me.telefono.ReadOnly = True
+        Me.telefono.Width = 125
+        '
+        'codigocliente
+        '
+        Me.codigocliente.HeaderText = "CODIGO CLIENTE"
+        Me.codigocliente.MinimumWidth = 6
+        Me.codigocliente.Name = "codigocliente"
+        Me.codigocliente.ReadOnly = True
+        Me.codigocliente.Width = 125
+        '
+        'cliente
+        '
+        Me.cliente.HeaderText = "CLIENTE"
+        Me.cliente.MinimumWidth = 6
+        Me.cliente.Name = "cliente"
+        Me.cliente.ReadOnly = True
+        Me.cliente.Width = 125
+        '
+        'ocupacion
+        '
+        Me.ocupacion.HeaderText = "OCUPACION"
+        Me.ocupacion.MinimumWidth = 6
+        Me.ocupacion.Name = "ocupacion"
+        Me.ocupacion.ReadOnly = True
+        Me.ocupacion.Width = 125
+        '
+        'monto
+        '
+        Me.monto.HeaderText = "MONTO"
+        Me.monto.MinimumWidth = 6
+        Me.monto.Name = "monto"
+        Me.monto.ReadOnly = True
+        Me.monto.Width = 125
+        '
+        'cuotas
+        '
+        Me.cuotas.HeaderText = "CUOTAS"
+        Me.cuotas.MinimumWidth = 6
+        Me.cuotas.Name = "cuotas"
+        Me.cuotas.ReadOnly = True
+        Me.cuotas.Width = 125
+        '
+        'interes
+        '
+        Me.interes.HeaderText = "INTERES"
+        Me.interes.MinimumWidth = 6
+        Me.interes.Name = "interes"
+        Me.interes.ReadOnly = True
+        Me.interes.Width = 125
+        '
+        'fechaprestamo
+        '
+        Me.fechaprestamo.HeaderText = "FECHA PRESTAMO"
+        Me.fechaprestamo.MinimumWidth = 6
+        Me.fechaprestamo.Name = "fechaprestamo"
+        Me.fechaprestamo.ReadOnly = True
+        Me.fechaprestamo.Width = 125
+        '
+        'total
+        '
+        Me.total.HeaderText = "TOTAL"
+        Me.total.MinimumWidth = 6
+        Me.total.Name = "total"
+        Me.total.ReadOnly = True
+        Me.total.Width = 125
+        '
         'frmcrearprestamo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
         Me.ClientSize = New System.Drawing.Size(984, 725)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.cboOcupacionPrest)
         Me.Controls.Add(Me.cboInteresPrest)
         Me.Controls.Add(lblCuotasPrest)
@@ -662,7 +678,6 @@ Partial Class frmcrearprestamo
         Me.Controls.Add(Me.btnAgregarCliente)
         Me.Controls.Add(Me.lblMonto)
         Me.Controls.Add(lblFechaPrestamo)
-        Me.Controls.Add(Me.DventasProductosDataGridView)
         Me.Controls.Add(Me.dtpFechaPrestamo)
         Me.Controls.Add(lblInteresPrest)
         Me.Controls.Add(lblClientePrest)
@@ -672,11 +687,11 @@ Partial Class frmcrearprestamo
         Me.grbNavegacion.ResumeLayout(False)
         Me.grbNavegacion.PerformLayout()
         Me.grbEdicion.ResumeLayout(False)
-        CType(Me.DventasProductosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DventasProductosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TipofacturaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -684,9 +699,6 @@ Partial Class frmcrearprestamo
 
     Friend WithEvents lblIdVenta As Label
     Friend WithEvents VentasBindingSource As BindingSource
-    Friend WithEvents subtotal As DataGridViewTextBoxColumn
-    Friend WithEvents marca As DataGridViewTextBoxColumn
-    Friend WithEvents medidas As DataGridViewTextBoxColumn
     Friend WithEvents lblRespuestaTotal As Label
     Friend WithEvents lbltotal As Label
     Friend WithEvents lblRespuestaInteres As Label
@@ -705,14 +717,6 @@ Partial Class frmcrearprestamo
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnAgregar As Button
     Friend WithEvents btnAgregarCliente As Button
-    Friend WithEvents precio As DataGridViewTextBoxColumn
-    Friend WithEvents cantidad As DataGridViewTextBoxColumn
-    Friend WithEvents DventasProductosDataGridView As DataGridView
-    Friend WithEvents idDetalle As DataGridViewTextBoxColumn
-    Friend WithEvents idVenta As DataGridViewTextBoxColumn
-    Friend WithEvents idProducto As DataGridViewTextBoxColumn
-    Friend WithEvents codigo As DataGridViewTextBoxColumn
-    Friend WithEvents descripcion As DataGridViewTextBoxColumn
     Friend WithEvents DventasProductosBindingSource As BindingSource
     Friend WithEvents dtpFechaPrestamo As DateTimePicker
     Friend WithEvents TipofacturaBindingSource As BindingSource
@@ -726,4 +730,19 @@ Partial Class frmcrearprestamo
     Friend WithEvents txtCuotasPrest As TextBox
     Friend WithEvents cboInteresPrest As ComboBox
     Friend WithEvents cboOcupacionPrest As ComboBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents idPrest As DataGridViewTextBoxColumn
+    Friend WithEvents idCliente As DataGridViewTextBoxColumn
+    Friend WithEvents idOcupacion As DataGridViewTextBoxColumn
+    Friend WithEvents idInteres As DataGridViewTextBoxColumn
+    Friend WithEvents cedula As DataGridViewTextBoxColumn
+    Friend WithEvents telefono As DataGridViewTextBoxColumn
+    Friend WithEvents codigocliente As DataGridViewTextBoxColumn
+    Friend WithEvents cliente As DataGridViewTextBoxColumn
+    Friend WithEvents ocupacion As DataGridViewTextBoxColumn
+    Friend WithEvents monto As DataGridViewTextBoxColumn
+    Friend WithEvents cuotas As DataGridViewTextBoxColumn
+    Friend WithEvents interes As DataGridViewTextBoxColumn
+    Friend WithEvents fechaprestamo As DataGridViewTextBoxColumn
+    Friend WithEvents total As DataGridViewTextBoxColumn
 End Class
