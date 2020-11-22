@@ -82,8 +82,13 @@
     End Sub
 
     Private Sub CrearPrestamoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearPrestamoToolStripMenuItem.Click
-        Dim objcrearprestamo As New frmcrearprestamo
+        Dim objcrearprestamo As New frmPrestamo
         objcrearprestamo.MdiParent = Me
         objcrearprestamo.Show()
+    End Sub
+    Private Sub DeudasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeudasToolStripMenuItem.Click
+        Dim objDeudas As New frmDeudas
+        objDeudas.MdiParent = Me
+        objDeudas.Show()
     End Sub
 End Class
