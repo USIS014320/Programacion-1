@@ -32,6 +32,7 @@ Partial Class Form1
         Me.RegistroDeCargosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResgistrosDePrestamosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.INVENTARIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosDeudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,7 +42,7 @@ Partial Class Form1
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CrearPrestamoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -74,7 +75,7 @@ Partial Class Form1
         '
         'EMPRESAToolStripMenuItem
         '
-        Me.EMPRESAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.UsuariosToolStripMenuItem, Me.RegistroDeCargosToolStripMenuItem, Me.ToolStripMenuItem3, Me.ResgistrosDePrestamosToolStripMenuItem, Me.ClientesToolStripMenuItem})
+        Me.EMPRESAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.UsuariosToolStripMenuItem, Me.RegistroDeCargosToolStripMenuItem, Me.ToolStripMenuItem3, Me.ResgistrosDePrestamosToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.CrearPrestamoToolStripMenuItem})
         Me.EMPRESAToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.EMPRESAToolStripMenuItem.Name = "EMPRESAToolStripMenuItem"
         Me.EMPRESAToolStripMenuItem.Size = New System.Drawing.Size(87, 24)
@@ -121,6 +122,13 @@ Partial Class Form1
         Me.ResgistrosDePrestamosToolStripMenuItem.Name = "ResgistrosDePrestamosToolStripMenuItem"
         Me.ResgistrosDePrestamosToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
         Me.ResgistrosDePrestamosToolStripMenuItem.Text = "Resgistros de Prestamos"
+        '
+        'ClientesToolStripMenuItem
+        '
+        Me.ClientesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
+        Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'INVENTARIOToolStripMenuItem
         '
@@ -188,12 +196,12 @@ Partial Class Form1
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(174, 26)
         Me.ToolStripMenuItem2.Text = "Pagos varios"
         '
-        'ClientesToolStripMenuItem
+        'CrearPrestamoToolStripMenuItem
         '
-        Me.ClientesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
-        Me.ClientesToolStripMenuItem.Text = "Clientes"
+        Me.CrearPrestamoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.CrearPrestamoToolStripMenuItem.Name = "CrearPrestamoToolStripMenuItem"
+        Me.CrearPrestamoToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
+        Me.CrearPrestamoToolStripMenuItem.Text = "Crear Prestamo"
         '
         'Form1
         '
@@ -237,4 +245,5 @@ Partial Class Form1
     Friend WithEvents ResgistrosDePrestamosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ComprasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CrearPrestamoToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -80,4 +80,10 @@
         objClientes.MdiParent = Me
         objClientes.Show()
     End Sub
+
+    Private Sub CrearPrestamoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearPrestamoToolStripMenuItem.Click
+        Dim objcrearprestamo As New frmcrearprestamo
+        objcrearprestamo.MdiParent = Me
+        objcrearprestamo.Show()
+    End Sub
 End Class
