@@ -216,7 +216,7 @@ Partial Class frmcreacionprestamo
         Me.grbEdicion.Controls.Add(Me.btnEliminarPrest)
         Me.grbEdicion.Controls.Add(Me.btnModificarPrest)
         Me.grbEdicion.Controls.Add(Me.btnAgregarPrest)
-        Me.grbEdicion.Location = New System.Drawing.Point(438, 641)
+        Me.grbEdicion.Location = New System.Drawing.Point(438, 635)
         Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
         Me.grbEdicion.Name = "grbEdicion"
         Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
@@ -276,7 +276,7 @@ Partial Class frmcreacionprestamo
         Me.grbNavegacion.Controls.Add(Me.btnSiguientePrest)
         Me.grbNavegacion.Controls.Add(Me.btnAnteriorPrest)
         Me.grbNavegacion.Controls.Add(Me.btnPrimeroPrest)
-        Me.grbNavegacion.Location = New System.Drawing.Point(19, 641)
+        Me.grbNavegacion.Location = New System.Drawing.Point(19, 635)
         Me.grbNavegacion.Margin = New System.Windows.Forms.Padding(1)
         Me.grbNavegacion.Name = "grbNavegacion"
         Me.grbNavegacion.Padding = New System.Windows.Forms.Padding(1)
@@ -411,7 +411,7 @@ Partial Class frmcreacionprestamo
         '
         'txtCédulaPrest
         '
-        Me.txtCédulaPrest.Location = New System.Drawing.Point(446, 129)
+        Me.txtCédulaPrest.Location = New System.Drawing.Point(455, 131)
         Me.txtCédulaPrest.Name = "txtCédulaPrest"
         Me.txtCédulaPrest.Size = New System.Drawing.Size(121, 22)
         Me.txtCédulaPrest.TabIndex = 64
@@ -420,7 +420,7 @@ Partial Class frmcreacionprestamo
         '
         Me.lblPrest.AutoSize = True
         Me.lblPrest.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrest.Location = New System.Drawing.Point(893, 60)
+        Me.lblPrest.Location = New System.Drawing.Point(880, 44)
         Me.lblPrest.Name = "lblPrest"
         Me.lblPrest.Size = New System.Drawing.Size(28, 20)
         Me.lblPrest.TabIndex = 65
@@ -439,7 +439,7 @@ Partial Class frmcreacionprestamo
         'cboClientePrest
         '
         Me.cboClientePrest.FormattingEnabled = True
-        Me.cboClientePrest.Location = New System.Drawing.Point(113, 127)
+        Me.cboClientePrest.Location = New System.Drawing.Point(157, 125)
         Me.cboClientePrest.Name = "cboClientePrest"
         Me.cboClientePrest.Size = New System.Drawing.Size(121, 24)
         Me.cboClientePrest.TabIndex = 67
@@ -448,7 +448,7 @@ Partial Class frmcreacionprestamo
         '
         Me.lblCédulaPrest.AutoSize = True
         Me.lblCédulaPrest.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCédulaPrest.Location = New System.Drawing.Point(363, 129)
+        Me.lblCédulaPrest.Location = New System.Drawing.Point(381, 129)
         Me.lblCédulaPrest.Name = "lblCédulaPrest"
         Me.lblCédulaPrest.Size = New System.Drawing.Size(66, 20)
         Me.lblCédulaPrest.TabIndex = 68
@@ -458,7 +458,7 @@ Partial Class frmcreacionprestamo
         '
         Me.lblTeléfonoPrest.AutoSize = True
         Me.lblTeléfonoPrest.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTeléfonoPrest.Location = New System.Drawing.Point(704, 131)
+        Me.lblTeléfonoPrest.Location = New System.Drawing.Point(729, 131)
         Me.lblTeléfonoPrest.Name = "lblTeléfonoPrest"
         Me.lblTeléfonoPrest.Size = New System.Drawing.Size(78, 20)
         Me.lblTeléfonoPrest.TabIndex = 69
@@ -466,7 +466,7 @@ Partial Class frmcreacionprestamo
         '
         'txtTeléfonoPrest
         '
-        Me.txtTeléfonoPrest.Location = New System.Drawing.Point(789, 127)
+        Me.txtTeléfonoPrest.Location = New System.Drawing.Point(833, 129)
         Me.txtTeléfonoPrest.Name = "txtTeléfonoPrest"
         Me.txtTeléfonoPrest.Size = New System.Drawing.Size(121, 22)
         Me.txtTeléfonoPrest.TabIndex = 70
@@ -509,7 +509,7 @@ Partial Class frmcreacionprestamo
         '
         Me.lblOcupaciónPrest.AutoSize = True
         Me.lblOcupaciónPrest.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOcupaciónPrest.Location = New System.Drawing.Point(713, 212)
+        Me.lblOcupaciónPrest.Location = New System.Drawing.Point(729, 208)
         Me.lblOcupaciónPrest.Name = "lblOcupaciónPrest"
         Me.lblOcupaciónPrest.Size = New System.Drawing.Size(94, 20)
         Me.lblOcupaciónPrest.TabIndex = 75
@@ -518,7 +518,7 @@ Partial Class frmcreacionprestamo
         'cboOcupacionPrest
         '
         Me.cboOcupacionPrest.FormattingEnabled = True
-        Me.cboOcupacionPrest.Location = New System.Drawing.Point(813, 208)
+        Me.cboOcupacionPrest.Location = New System.Drawing.Point(833, 208)
         Me.cboOcupacionPrest.Name = "cboOcupacionPrest"
         Me.cboOcupacionPrest.Size = New System.Drawing.Size(121, 24)
         Me.cboOcupacionPrest.TabIndex = 76
@@ -535,7 +535,7 @@ Partial Class frmcreacionprestamo
         '
         'txtMontoPrest
         '
-        Me.txtMontoPrest.Location = New System.Drawing.Point(108, 276)
+        Me.txtMontoPrest.Location = New System.Drawing.Point(157, 276)
         Me.txtMontoPrest.Name = "txtMontoPrest"
         Me.txtMontoPrest.Size = New System.Drawing.Size(100, 22)
         Me.txtMontoPrest.TabIndex = 78
@@ -544,7 +544,7 @@ Partial Class frmcreacionprestamo
         '
         Me.lblCuotasPrest.AutoSize = True
         Me.lblCuotasPrest.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCuotasPrest.Location = New System.Drawing.Point(351, 276)
+        Me.lblCuotasPrest.Location = New System.Drawing.Point(380, 276)
         Me.lblCuotasPrest.Name = "lblCuotasPrest"
         Me.lblCuotasPrest.Size = New System.Drawing.Size(67, 20)
         Me.lblCuotasPrest.TabIndex = 79
@@ -552,7 +552,7 @@ Partial Class frmcreacionprestamo
         '
         'txtCuotasPrest
         '
-        Me.txtCuotasPrest.Location = New System.Drawing.Point(425, 276)
+        Me.txtCuotasPrest.Location = New System.Drawing.Point(455, 276)
         Me.txtCuotasPrest.Name = "txtCuotasPrest"
         Me.txtCuotasPrest.Size = New System.Drawing.Size(121, 22)
         Me.txtCuotasPrest.TabIndex = 80
@@ -561,7 +561,7 @@ Partial Class frmcreacionprestamo
         '
         Me.lblInteresPrest.AutoSize = True
         Me.lblInteresPrest.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInteresPrest.Location = New System.Drawing.Point(667, 276)
+        Me.lblInteresPrest.Location = New System.Drawing.Point(729, 276)
         Me.lblInteresPrest.Name = "lblInteresPrest"
         Me.lblInteresPrest.Size = New System.Drawing.Size(65, 20)
         Me.lblInteresPrest.TabIndex = 81
@@ -570,7 +570,7 @@ Partial Class frmcreacionprestamo
         'cboInteresPrest
         '
         Me.cboInteresPrest.FormattingEnabled = True
-        Me.cboInteresPrest.Location = New System.Drawing.Point(753, 272)
+        Me.cboInteresPrest.Location = New System.Drawing.Point(833, 272)
         Me.cboInteresPrest.Name = "cboInteresPrest"
         Me.cboInteresPrest.Size = New System.Drawing.Size(121, 24)
         Me.cboInteresPrest.TabIndex = 82
@@ -580,7 +580,7 @@ Partial Class frmcreacionprestamo
         Me.lblTituloPrest.AutoSize = True
         Me.lblTituloPrest.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTituloPrest.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblTituloPrest.Location = New System.Drawing.Point(204, 28)
+        Me.lblTituloPrest.Location = New System.Drawing.Point(226, 28)
         Me.lblTituloPrest.Name = "lblTituloPrest"
         Me.lblTituloPrest.Size = New System.Drawing.Size(461, 52)
         Me.lblTituloPrest.TabIndex = 83
