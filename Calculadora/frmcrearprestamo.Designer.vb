@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmcrearprestamo
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class frmCrearprestamo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmcrearprestamo
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim Label1 As System.Windows.Forms.Label
@@ -30,7 +30,7 @@ Partial Class frmcrearprestamo
         Dim Label5 As System.Windows.Forms.Label
         Dim Label3 As System.Windows.Forms.Label
         Dim Label7 As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmcrearprestamo))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCrearprestamo))
         Me.Bd_sigacDataSet = New Calculadora.bd_sigacDataSet()
         Me.CrearprestamoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CrearprestamoTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.crearprestamoTableAdapter()
@@ -55,11 +55,16 @@ Partial Class frmcrearprestamo
         Me.lblTituloPrest = New System.Windows.Forms.Label()
         Me.IdClienteComboBox = New System.Windows.Forms.ComboBox()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ClientesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdOcupacionComboBox = New System.Windows.Forms.ComboBox()
+        Me.OcupacionBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OcupacionBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OcupacionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OcupacionBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdInteresComboBox = New System.Windows.Forms.ComboBox()
+        Me.InteresesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InteresesBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.InteresesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.InteresesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CedulaTextBox = New System.Windows.Forms.TextBox()
@@ -69,6 +74,11 @@ Partial Class frmcrearprestamo
         Me.CrearprestamoClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CrearprestamoClienteTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.crearprestamoClienteTableAdapter()
         Me.CrearprestamoClienteDataGridView = New System.Windows.Forms.DataGridView()
+        Me.btnAgregarClienteNuevo = New System.Windows.Forms.Button()
+        Me.lbltotal = New System.Windows.Forms.Label()
+        Me.lblRespuestaTotal = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnCalcular = New System.Windows.Forms.Button()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -80,12 +90,6 @@ Partial Class frmcrearprestamo
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnAgregarClienteNuevo = New System.Windows.Forms.Button()
-        Me.ClientesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OcupacionBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OcupacionBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.InteresesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.InteresesBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Label1 = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
@@ -98,18 +102,19 @@ Partial Class frmcrearprestamo
         CType(Me.CrearprestamoBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CrearprestamoBindingNavigator.SuspendLayout()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClientesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OcupacionBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OcupacionBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OcupacionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OcupacionBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InteresesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InteresesBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InteresesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InteresesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CrearprestamoClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CrearprestamoClienteDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ClientesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OcupacionBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OcupacionBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.InteresesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.InteresesBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -251,7 +256,7 @@ Partial Class frmcrearprestamo
         Me.CrearprestamoBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.CrearprestamoBindingNavigator.Name = "CrearprestamoBindingNavigator"
         Me.CrearprestamoBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.CrearprestamoBindingNavigator.Size = New System.Drawing.Size(978, 27)
+        Me.CrearprestamoBindingNavigator.Size = New System.Drawing.Size(978, 31)
         Me.CrearprestamoBindingNavigator.TabIndex = 0
         Me.CrearprestamoBindingNavigator.Text = "BindingNavigator1"
         '
@@ -261,13 +266,13 @@ Partial Class frmcrearprestamo
         Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 28)
         Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
         '
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 28)
         Me.BindingNavigatorCountItem.Text = "de {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
         '
@@ -277,7 +282,7 @@ Partial Class frmcrearprestamo
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(29, 28)
         Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
@@ -286,7 +291,7 @@ Partial Class frmcrearprestamo
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(29, 28)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -295,13 +300,13 @@ Partial Class frmcrearprestamo
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(29, 28)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 31)
         '
         'BindingNavigatorPositionItem
         '
@@ -316,7 +321,7 @@ Partial Class frmcrearprestamo
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 31)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -324,7 +329,7 @@ Partial Class frmcrearprestamo
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(29, 28)
         Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
         '
         'BindingNavigatorMoveLastItem
@@ -333,20 +338,20 @@ Partial Class frmcrearprestamo
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(29, 28)
         Me.BindingNavigatorMoveLastItem.Text = "Mover último"
         '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 31)
         '
         'CrearprestamoBindingNavigatorSaveItem
         '
         Me.CrearprestamoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.CrearprestamoBindingNavigatorSaveItem.Image = CType(resources.GetObject("CrearprestamoBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.CrearprestamoBindingNavigatorSaveItem.Name = "CrearprestamoBindingNavigatorSaveItem"
-        Me.CrearprestamoBindingNavigatorSaveItem.Size = New System.Drawing.Size(29, 24)
+        Me.CrearprestamoBindingNavigatorSaveItem.Size = New System.Drawing.Size(29, 28)
         Me.CrearprestamoBindingNavigatorSaveItem.Text = "Guardar datos"
         '
         'lblIdPrest
@@ -364,7 +369,7 @@ Partial Class frmcrearprestamo
         Me.lblTituloPrest.AutoSize = True
         Me.lblTituloPrest.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTituloPrest.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblTituloPrest.Location = New System.Drawing.Point(235, 48)
+        Me.lblTituloPrest.Location = New System.Drawing.Point(251, 48)
         Me.lblTituloPrest.Name = "lblTituloPrest"
         Me.lblTituloPrest.Size = New System.Drawing.Size(453, 51)
         Me.lblTituloPrest.TabIndex = 184
@@ -372,7 +377,7 @@ Partial Class frmcrearprestamo
         '
         'IdClienteComboBox
         '
-        Me.IdClienteComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.ClientesBindingSource, "nombre", True))
+        Me.IdClienteComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.ClientesBindingSource, "idCliente", True))
         Me.IdClienteComboBox.DataSource = Me.ClientesBindingSource2
         Me.IdClienteComboBox.DisplayMember = "nombre"
         Me.IdClienteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -388,6 +393,11 @@ Partial Class frmcrearprestamo
         Me.ClientesBindingSource.DataMember = "clientes"
         Me.ClientesBindingSource.DataSource = Me.Bd_sigacDataSet
         '
+        'ClientesBindingSource2
+        '
+        Me.ClientesBindingSource2.DataMember = "clientes"
+        Me.ClientesBindingSource2.DataSource = Me.Bd_sigacDataSet
+        '
         'ClientesBindingSource1
         '
         Me.ClientesBindingSource1.DataMember = "clientes"
@@ -395,7 +405,7 @@ Partial Class frmcrearprestamo
         '
         'IdOcupacionComboBox
         '
-        Me.IdOcupacionComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OcupacionBindingSource2, "ocupacion", True))
+        Me.IdOcupacionComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OcupacionBindingSource2, "idOcupacion", True))
         Me.IdOcupacionComboBox.DataSource = Me.OcupacionBindingSource3
         Me.IdOcupacionComboBox.DisplayMember = "ocupacion"
         Me.IdOcupacionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -405,6 +415,16 @@ Partial Class frmcrearprestamo
         Me.IdOcupacionComboBox.Size = New System.Drawing.Size(200, 24)
         Me.IdOcupacionComboBox.TabIndex = 191
         Me.IdOcupacionComboBox.ValueMember = "idOcupacion"
+        '
+        'OcupacionBindingSource2
+        '
+        Me.OcupacionBindingSource2.DataMember = "ocupacion"
+        Me.OcupacionBindingSource2.DataSource = Me.Bd_sigacDataSet
+        '
+        'OcupacionBindingSource3
+        '
+        Me.OcupacionBindingSource3.DataMember = "ocupacion"
+        Me.OcupacionBindingSource3.DataSource = Me.Bd_sigacDataSet
         '
         'OcupacionBindingSource
         '
@@ -418,7 +438,7 @@ Partial Class frmcrearprestamo
         '
         'IdInteresComboBox
         '
-        Me.IdInteresComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.InteresesBindingSource2, "interes", True))
+        Me.IdInteresComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.InteresesBindingSource2, "idInteres", True))
         Me.IdInteresComboBox.DataSource = Me.InteresesBindingSource3
         Me.IdInteresComboBox.DisplayMember = "interes"
         Me.IdInteresComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -428,6 +448,16 @@ Partial Class frmcrearprestamo
         Me.IdInteresComboBox.Size = New System.Drawing.Size(200, 24)
         Me.IdInteresComboBox.TabIndex = 193
         Me.IdInteresComboBox.ValueMember = "idInteres"
+        '
+        'InteresesBindingSource2
+        '
+        Me.InteresesBindingSource2.DataMember = "intereses"
+        Me.InteresesBindingSource2.DataSource = Me.Bd_sigacDataSet
+        '
+        'InteresesBindingSource3
+        '
+        Me.InteresesBindingSource3.DataMember = "intereses"
+        Me.InteresesBindingSource3.DataSource = Me.Bd_sigacDataSet
         '
         'InteresesBindingSource
         '
@@ -495,6 +525,61 @@ Partial Class frmcrearprestamo
         Me.CrearprestamoClienteDataGridView.RowTemplate.Height = 24
         Me.CrearprestamoClienteDataGridView.Size = New System.Drawing.Size(917, 286)
         Me.CrearprestamoClienteDataGridView.TabIndex = 210
+        '
+        'btnAgregarClienteNuevo
+        '
+        Me.btnAgregarClienteNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregarClienteNuevo.Location = New System.Drawing.Point(758, 60)
+        Me.btnAgregarClienteNuevo.Name = "btnAgregarClienteNuevo"
+        Me.btnAgregarClienteNuevo.Size = New System.Drawing.Size(200, 47)
+        Me.btnAgregarClienteNuevo.TabIndex = 211
+        Me.btnAgregarClienteNuevo.Text = "Nuevo Cliente"
+        Me.btnAgregarClienteNuevo.UseVisualStyleBackColor = True
+        '
+        'lbltotal
+        '
+        Me.lbltotal.AutoSize = True
+        Me.lbltotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbltotal.Location = New System.Drawing.Point(4, 15)
+        Me.lbltotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbltotal.Name = "lbltotal"
+        Me.lbltotal.Size = New System.Drawing.Size(74, 20)
+        Me.lbltotal.TabIndex = 4
+        Me.lbltotal.Text = "TOTAL:"
+        '
+        'lblRespuestaTotal
+        '
+        Me.lblRespuestaTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRespuestaTotal.Location = New System.Drawing.Point(129, 15)
+        Me.lblRespuestaTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblRespuestaTotal.Name = "lblRespuestaTotal"
+        Me.lblRespuestaTotal.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblRespuestaTotal.Size = New System.Drawing.Size(102, 20)
+        Me.lblRespuestaTotal.TabIndex = 5
+        Me.lblRespuestaTotal.Text = "00.00"
+        Me.lblRespuestaTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Snow
+        Me.Panel1.Controls.Add(Me.lblRespuestaTotal)
+        Me.Panel1.Controls.Add(Me.lbltotal)
+        Me.Panel1.Location = New System.Drawing.Point(724, 234)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(235, 61)
+        Me.Panel1.TabIndex = 212
+        '
+        'btnCalcular
+        '
+        Me.btnCalcular.BackColor = System.Drawing.Color.White
+        Me.btnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCalcular.Location = New System.Drawing.Point(560, 234)
+        Me.btnCalcular.Name = "btnCalcular"
+        Me.btnCalcular.Size = New System.Drawing.Size(144, 61)
+        Me.btnCalcular.TabIndex = 213
+        Me.btnCalcular.Text = "CALCULAR INTERES"
+        Me.btnCalcular.UseVisualStyleBackColor = False
         '
         'DataGridViewTextBoxColumn1
         '
@@ -584,7 +669,7 @@ Partial Class frmcrearprestamo
         'DataGridViewTextBoxColumn10
         '
         Me.DataGridViewTextBoxColumn10.DataPropertyName = "fechaprestamo"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "FECHAPRESTAMO"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "FECHA DE PRESTAMO"
         Me.DataGridViewTextBoxColumn10.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
         Me.DataGridViewTextBoxColumn10.ReadOnly = True
@@ -599,47 +684,14 @@ Partial Class frmcrearprestamo
         Me.DataGridViewTextBoxColumn11.ReadOnly = True
         Me.DataGridViewTextBoxColumn11.Width = 125
         '
-        'btnAgregarClienteNuevo
-        '
-        Me.btnAgregarClienteNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarClienteNuevo.Location = New System.Drawing.Point(758, 60)
-        Me.btnAgregarClienteNuevo.Name = "btnAgregarClienteNuevo"
-        Me.btnAgregarClienteNuevo.Size = New System.Drawing.Size(200, 47)
-        Me.btnAgregarClienteNuevo.TabIndex = 211
-        Me.btnAgregarClienteNuevo.Text = "Nuevo Cliente"
-        Me.btnAgregarClienteNuevo.UseVisualStyleBackColor = True
-        '
-        'ClientesBindingSource2
-        '
-        Me.ClientesBindingSource2.DataMember = "clientes"
-        Me.ClientesBindingSource2.DataSource = Me.Bd_sigacDataSet
-        '
-        'OcupacionBindingSource2
-        '
-        Me.OcupacionBindingSource2.DataMember = "ocupacion"
-        Me.OcupacionBindingSource2.DataSource = Me.Bd_sigacDataSet
-        '
-        'OcupacionBindingSource3
-        '
-        Me.OcupacionBindingSource3.DataMember = "ocupacion"
-        Me.OcupacionBindingSource3.DataSource = Me.Bd_sigacDataSet
-        '
-        'InteresesBindingSource2
-        '
-        Me.InteresesBindingSource2.DataMember = "intereses"
-        Me.InteresesBindingSource2.DataSource = Me.Bd_sigacDataSet
-        '
-        'InteresesBindingSource3
-        '
-        Me.InteresesBindingSource3.DataMember = "intereses"
-        Me.InteresesBindingSource3.DataSource = Me.Bd_sigacDataSet
-        '
-        'frmcrearprestamo
+        'frmCrearprestamo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
         Me.ClientSize = New System.Drawing.Size(978, 648)
+        Me.Controls.Add(Me.btnCalcular)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnAgregarClienteNuevo)
         Me.Controls.Add(Me.CrearprestamoClienteDataGridView)
         Me.Controls.Add(Label7)
@@ -659,7 +711,7 @@ Partial Class frmcrearprestamo
         Me.Controls.Add(Me.lblIdPrest)
         Me.Controls.Add(Me.lblTituloPrest)
         Me.Controls.Add(Me.CrearprestamoBindingNavigator)
-        Me.Name = "frmcrearprestamo"
+        Me.Name = "frmCrearprestamo"
         Me.Text = "Registro de Prestamo"
         CType(Me.Bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CrearprestamoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -667,18 +719,20 @@ Partial Class frmcrearprestamo
         Me.CrearprestamoBindingNavigator.ResumeLayout(False)
         Me.CrearprestamoBindingNavigator.PerformLayout()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClientesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OcupacionBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OcupacionBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OcupacionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OcupacionBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InteresesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InteresesBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InteresesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InteresesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CrearprestamoClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CrearprestamoClienteDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ClientesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OcupacionBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OcupacionBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.InteresesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.InteresesBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -713,17 +767,6 @@ Partial Class frmcrearprestamo
     Friend WithEvents CrearprestamoClienteBindingSource As BindingSource
     Friend WithEvents CrearprestamoClienteTableAdapter As bd_sigacDataSetTableAdapters.crearprestamoClienteTableAdapter
     Friend WithEvents CrearprestamoClienteDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents ClientesTableAdapter As bd_sigacDataSetTableAdapters.clientesTableAdapter
     Friend WithEvents ClientesBindingSource As BindingSource
     Friend WithEvents OcupacionTableAdapter As bd_sigacDataSetTableAdapters.ocupacionTableAdapter
@@ -739,4 +782,19 @@ Partial Class frmcrearprestamo
     Friend WithEvents OcupacionBindingSource3 As BindingSource
     Friend WithEvents InteresesBindingSource2 As BindingSource
     Friend WithEvents InteresesBindingSource3 As BindingSource
+    Friend WithEvents lbltotal As Label
+    Friend WithEvents lblRespuestaTotal As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnCalcular As Button
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
 End Class

@@ -1,4 +1,5 @@
-﻿Public Class frmcrearprestamo
+﻿Public Class frmCrearprestamo
+
     Private Sub CrearprestamoBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles CrearprestamoBindingNavigatorSaveItem.Click
         Me.Validate()
         Me.CrearprestamoBindingSource.EndEdit()
@@ -24,4 +25,17 @@
         Dim objClientes As New frmClientes
         objClientes.Show()
     End Sub
+
+    Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
+        Dim Num1, Num2, Num3, respuesta As Double
+
+        Num1 = MontoTextBox.Text
+        Num2 = IdInteresComboBox.SelectedValue
+        Num3 = CuotasTextBox.Text
+        respuesta = lblRespuestaTotal.Text
+
+        respuesta = (Num1 * (1 + Num2 / 100) ^ (Num3 / 12))
+    End Sub
+
+
 End Class

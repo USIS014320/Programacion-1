@@ -50,4 +50,5 @@
     Private Sub ComprasBindingNavigator_RefreshItems(sender As Object, e As EventArgs) Handles ComprasBindingNavigator.RefreshItems
         totalizar()
     End Sub
+
 End Class
