@@ -32,7 +32,7 @@
             txtMedidasfaltante.Text = dataTable.Rows(posicion).ItemArray(5).ToString()
             txtCantidadfaltante.Text = dataTable.Rows(posicion).ItemArray(6).ToString()
 
-            lblRegistrosProducto.Text = posicion + 1 & " de " & dataTable.Rows.Count
+            lblRegistrosfaltante.Text = posicion + 1 & " de " & dataTable.Rows.Count
         Else
             limpiarDatosfaltantes()
             MessageBox.Show("No hay registros que mostrar", "Registro de Productos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Information)

@@ -22,11 +22,10 @@ Partial Class frmBuscarPrestamo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBuscarPrestamo))
         Me.btnCancelarPrestamo = New System.Windows.Forms.Button()
         Me.btnSeleccionarEmpleadoPrestamo = New System.Windows.Forms.Button()
         Me.grdBuscarPrestamo = New System.Windows.Forms.DataGridView()
-        Me.lblBuscarEmpleadoPrestamo = New System.Windows.Forms.Label()
-        Me.txtBuscarEmpleadoPrestamo = New System.Windows.Forms.TextBox()
         Me.idSalario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.idEmpleado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -34,31 +33,37 @@ Partial Class frmBuscarPrestamo
         Me.pago = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.capital = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblBuscarEmpleadoPrestamo = New System.Windows.Forms.Label()
+        Me.txtBuscarEmpleadoPrestamo = New System.Windows.Forms.TextBox()
         CType(Me.grdBuscarPrestamo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnCancelarPrestamo
         '
         Me.btnCancelarPrestamo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelarPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelarPrestamo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarPrestamo.Location = New System.Drawing.Point(604, 466)
+        Me.btnCancelarPrestamo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnCancelarPrestamo.Image = CType(resources.GetObject("btnCancelarPrestamo.Image"), System.Drawing.Image)
+        Me.btnCancelarPrestamo.Location = New System.Drawing.Point(908, 574)
         Me.btnCancelarPrestamo.Margin = New System.Windows.Forms.Padding(1)
         Me.btnCancelarPrestamo.Name = "btnCancelarPrestamo"
-        Me.btnCancelarPrestamo.Size = New System.Drawing.Size(120, 33)
+        Me.btnCancelarPrestamo.Size = New System.Drawing.Size(57, 41)
         Me.btnCancelarPrestamo.TabIndex = 24
-        Me.btnCancelarPrestamo.Text = "Cancelar"
         Me.btnCancelarPrestamo.UseVisualStyleBackColor = True
         '
         'btnSeleccionarEmpleadoPrestamo
         '
         Me.btnSeleccionarEmpleadoPrestamo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSeleccionarEmpleadoPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSeleccionarEmpleadoPrestamo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionarEmpleadoPrestamo.Location = New System.Drawing.Point(342, 466)
+        Me.btnSeleccionarEmpleadoPrestamo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSeleccionarEmpleadoPrestamo.Image = CType(resources.GetObject("btnSeleccionarEmpleadoPrestamo.Image"), System.Drawing.Image)
+        Me.btnSeleccionarEmpleadoPrestamo.Location = New System.Drawing.Point(851, 574)
         Me.btnSeleccionarEmpleadoPrestamo.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSeleccionarEmpleadoPrestamo.Name = "btnSeleccionarEmpleadoPrestamo"
-        Me.btnSeleccionarEmpleadoPrestamo.Size = New System.Drawing.Size(236, 33)
+        Me.btnSeleccionarEmpleadoPrestamo.Size = New System.Drawing.Size(55, 41)
         Me.btnSeleccionarEmpleadoPrestamo.TabIndex = 23
-        Me.btnSeleccionarEmpleadoPrestamo.Text = "Seleccionar Empleado"
         Me.btnSeleccionarEmpleadoPrestamo.UseVisualStyleBackColor = True
         '
         'grdBuscarPrestamo
@@ -70,34 +75,14 @@ Partial Class frmBuscarPrestamo
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grdBuscarPrestamo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdBuscarPrestamo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idSalario, Me.idEmpleado, Me.nombre, Me.mes, Me.pago, Me.descuento, Me.capital})
-        Me.grdBuscarPrestamo.Location = New System.Drawing.Point(26, 64)
+        Me.grdBuscarPrestamo.Location = New System.Drawing.Point(35, 79)
         Me.grdBuscarPrestamo.Margin = New System.Windows.Forms.Padding(1)
         Me.grdBuscarPrestamo.Name = "grdBuscarPrestamo"
         Me.grdBuscarPrestamo.ReadOnly = True
         Me.grdBuscarPrestamo.RowHeadersWidth = 102
         Me.grdBuscarPrestamo.RowTemplate.Height = 40
-        Me.grdBuscarPrestamo.Size = New System.Drawing.Size(706, 385)
+        Me.grdBuscarPrestamo.Size = New System.Drawing.Size(941, 474)
         Me.grdBuscarPrestamo.TabIndex = 22
-        '
-        'lblBuscarEmpleadoPrestamo
-        '
-        Me.lblBuscarEmpleadoPrestamo.AutoSize = True
-        Me.lblBuscarEmpleadoPrestamo.Location = New System.Drawing.Point(16, 24)
-        Me.lblBuscarEmpleadoPrestamo.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblBuscarEmpleadoPrestamo.Name = "lblBuscarEmpleadoPrestamo"
-        Me.lblBuscarEmpleadoPrestamo.Size = New System.Drawing.Size(54, 13)
-        Me.lblBuscarEmpleadoPrestamo.TabIndex = 21
-        Me.lblBuscarEmpleadoPrestamo.Text = "BUSCAR:"
-        '
-        'txtBuscarEmpleadoPrestamo
-        '
-        Me.txtBuscarEmpleadoPrestamo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtBuscarEmpleadoPrestamo.Location = New System.Drawing.Point(71, 21)
-        Me.txtBuscarEmpleadoPrestamo.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtBuscarEmpleadoPrestamo.Name = "txtBuscarEmpleadoPrestamo"
-        Me.txtBuscarEmpleadoPrestamo.Size = New System.Drawing.Size(654, 20)
-        Me.txtBuscarEmpleadoPrestamo.TabIndex = 20
         '
         'idSalario
         '
@@ -164,18 +149,38 @@ Partial Class frmBuscarPrestamo
         Me.capital.ReadOnly = True
         Me.capital.Width = 125
         '
+        'lblBuscarEmpleadoPrestamo
+        '
+        Me.lblBuscarEmpleadoPrestamo.AutoSize = True
+        Me.lblBuscarEmpleadoPrestamo.Location = New System.Drawing.Point(21, 30)
+        Me.lblBuscarEmpleadoPrestamo.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblBuscarEmpleadoPrestamo.Name = "lblBuscarEmpleadoPrestamo"
+        Me.lblBuscarEmpleadoPrestamo.Size = New System.Drawing.Size(68, 17)
+        Me.lblBuscarEmpleadoPrestamo.TabIndex = 21
+        Me.lblBuscarEmpleadoPrestamo.Text = "BUSCAR:"
+        '
+        'txtBuscarEmpleadoPrestamo
+        '
+        Me.txtBuscarEmpleadoPrestamo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtBuscarEmpleadoPrestamo.Location = New System.Drawing.Point(95, 26)
+        Me.txtBuscarEmpleadoPrestamo.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtBuscarEmpleadoPrestamo.Name = "txtBuscarEmpleadoPrestamo"
+        Me.txtBuscarEmpleadoPrestamo.Size = New System.Drawing.Size(871, 22)
+        Me.txtBuscarEmpleadoPrestamo.TabIndex = 20
+        '
         'frmBuscarPrestamo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(742, 520)
+        Me.ClientSize = New System.Drawing.Size(989, 640)
         Me.Controls.Add(Me.btnCancelarPrestamo)
         Me.Controls.Add(Me.btnSeleccionarEmpleadoPrestamo)
         Me.Controls.Add(Me.grdBuscarPrestamo)
         Me.Controls.Add(Me.lblBuscarEmpleadoPrestamo)
         Me.Controls.Add(Me.txtBuscarEmpleadoPrestamo)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frmBuscarPrestamo"
         Me.Text = "Busqueda de Cuotas de Prestamo"
         CType(Me.grdBuscarPrestamo, System.ComponentModel.ISupportInitialize).EndInit()

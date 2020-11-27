@@ -22,17 +22,7 @@ Partial Class frmProveedores
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btnAgregarProveedor = New System.Windows.Forms.Button()
-        Me.btnBuscarProveedor = New System.Windows.Forms.Button()
-        Me.btnEliminarProveedor = New System.Windows.Forms.Button()
-        Me.grbEdicion = New System.Windows.Forms.GroupBox()
-        Me.btnModificarProveedor = New System.Windows.Forms.Button()
-        Me.btnAnteriorProveedor = New System.Windows.Forms.Button()
-        Me.btnPrimeroProveedor = New System.Windows.Forms.Button()
-        Me.lblRegistrosProveedor = New System.Windows.Forms.Label()
-        Me.btnUltimoProveedor = New System.Windows.Forms.Button()
-        Me.grbNavegacion = New System.Windows.Forms.GroupBox()
-        Me.btnSiguienteProveedor = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProveedores))
         Me.lblCodigoProveedor = New System.Windows.Forms.Label()
         Me.txtCodigoProveedor = New System.Windows.Forms.TextBox()
         Me.txtNombreEmpresaProveedor = New System.Windows.Forms.TextBox()
@@ -48,139 +38,21 @@ Partial Class frmProveedores
         Me.grbDatos = New System.Windows.Forms.GroupBox()
         Me.txtFechaProveedor = New System.Windows.Forms.TextBox()
         Me.lblFechaProveedor = New System.Windows.Forms.Label()
+        Me.grbEdicion = New System.Windows.Forms.GroupBox()
+        Me.btnBuscarProveedor = New System.Windows.Forms.Button()
+        Me.btnEliminarProveedor = New System.Windows.Forms.Button()
+        Me.btnModificarProveedor = New System.Windows.Forms.Button()
+        Me.btnAgregarProveedor = New System.Windows.Forms.Button()
+        Me.grbNavegacion = New System.Windows.Forms.GroupBox()
+        Me.lblRegistrosProveedor = New System.Windows.Forms.Label()
+        Me.btnUltimoProveedor = New System.Windows.Forms.Button()
+        Me.btnSiguienteProveedor = New System.Windows.Forms.Button()
+        Me.btnAnteriorProveedor = New System.Windows.Forms.Button()
+        Me.btnPrimeroProveedor = New System.Windows.Forms.Button()
+        Me.grbDatos.SuspendLayout()
         Me.grbEdicion.SuspendLayout()
         Me.grbNavegacion.SuspendLayout()
-        Me.grbDatos.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'btnAgregarProveedor
-        '
-        Me.btnAgregarProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarProveedor.Location = New System.Drawing.Point(3, 23)
-        Me.btnAgregarProveedor.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnAgregarProveedor.Name = "btnAgregarProveedor"
-        Me.btnAgregarProveedor.Size = New System.Drawing.Size(91, 48)
-        Me.btnAgregarProveedor.TabIndex = 5
-        Me.btnAgregarProveedor.Text = "Nuevo"
-        Me.btnAgregarProveedor.UseVisualStyleBackColor = True
-        '
-        'btnBuscarProveedor
-        '
-        Me.btnBuscarProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarProveedor.Location = New System.Drawing.Point(316, 23)
-        Me.btnBuscarProveedor.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnBuscarProveedor.Name = "btnBuscarProveedor"
-        Me.btnBuscarProveedor.Size = New System.Drawing.Size(100, 48)
-        Me.btnBuscarProveedor.TabIndex = 8
-        Me.btnBuscarProveedor.Text = "Buscar"
-        Me.btnBuscarProveedor.UseVisualStyleBackColor = True
-        '
-        'btnEliminarProveedor
-        '
-        Me.btnEliminarProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarProveedor.Location = New System.Drawing.Point(211, 23)
-        Me.btnEliminarProveedor.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnEliminarProveedor.Name = "btnEliminarProveedor"
-        Me.btnEliminarProveedor.Size = New System.Drawing.Size(107, 48)
-        Me.btnEliminarProveedor.TabIndex = 7
-        Me.btnEliminarProveedor.Text = "Eliminar"
-        Me.btnEliminarProveedor.UseVisualStyleBackColor = True
-        '
-        'grbEdicion
-        '
-        Me.grbEdicion.Controls.Add(Me.btnBuscarProveedor)
-        Me.grbEdicion.Controls.Add(Me.btnEliminarProveedor)
-        Me.grbEdicion.Controls.Add(Me.btnModificarProveedor)
-        Me.grbEdicion.Controls.Add(Me.btnAgregarProveedor)
-        Me.grbEdicion.Location = New System.Drawing.Point(393, 495)
-        Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
-        Me.grbEdicion.Name = "grbEdicion"
-        Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbEdicion.Size = New System.Drawing.Size(421, 84)
-        Me.grbEdicion.TabIndex = 5
-        Me.grbEdicion.TabStop = False
-        Me.grbEdicion.Text = "Edicion"
-        '
-        'btnModificarProveedor
-        '
-        Me.btnModificarProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarProveedor.Location = New System.Drawing.Point(92, 23)
-        Me.btnModificarProveedor.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnModificarProveedor.Name = "btnModificarProveedor"
-        Me.btnModificarProveedor.Size = New System.Drawing.Size(120, 48)
-        Me.btnModificarProveedor.TabIndex = 6
-        Me.btnModificarProveedor.Text = "Modificar"
-        Me.btnModificarProveedor.UseVisualStyleBackColor = True
-        '
-        'btnAnteriorProveedor
-        '
-        Me.btnAnteriorProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnteriorProveedor.Location = New System.Drawing.Point(56, 23)
-        Me.btnAnteriorProveedor.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnAnteriorProveedor.Name = "btnAnteriorProveedor"
-        Me.btnAnteriorProveedor.Size = New System.Drawing.Size(55, 48)
-        Me.btnAnteriorProveedor.TabIndex = 1
-        Me.btnAnteriorProveedor.Text = "<"
-        Me.btnAnteriorProveedor.UseVisualStyleBackColor = True
-        '
-        'btnPrimeroProveedor
-        '
-        Me.btnPrimeroProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrimeroProveedor.Location = New System.Drawing.Point(3, 23)
-        Me.btnPrimeroProveedor.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnPrimeroProveedor.Name = "btnPrimeroProveedor"
-        Me.btnPrimeroProveedor.Size = New System.Drawing.Size(55, 48)
-        Me.btnPrimeroProveedor.TabIndex = 0
-        Me.btnPrimeroProveedor.Text = "|<"
-        Me.btnPrimeroProveedor.UseVisualStyleBackColor = True
-        '
-        'lblRegistrosProveedor
-        '
-        Me.lblRegistrosProveedor.AutoSize = True
-        Me.lblRegistrosProveedor.Location = New System.Drawing.Point(115, 42)
-        Me.lblRegistrosProveedor.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblRegistrosProveedor.Name = "lblRegistrosProveedor"
-        Me.lblRegistrosProveedor.Size = New System.Drawing.Size(46, 17)
-        Me.lblRegistrosProveedor.TabIndex = 4
-        Me.lblRegistrosProveedor.Text = "x de n"
-        '
-        'btnUltimoProveedor
-        '
-        Me.btnUltimoProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUltimoProveedor.Location = New System.Drawing.Point(301, 23)
-        Me.btnUltimoProveedor.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnUltimoProveedor.Name = "btnUltimoProveedor"
-        Me.btnUltimoProveedor.Size = New System.Drawing.Size(55, 48)
-        Me.btnUltimoProveedor.TabIndex = 3
-        Me.btnUltimoProveedor.Text = ">|"
-        Me.btnUltimoProveedor.UseVisualStyleBackColor = True
-        '
-        'grbNavegacion
-        '
-        Me.grbNavegacion.Controls.Add(Me.lblRegistrosProveedor)
-        Me.grbNavegacion.Controls.Add(Me.btnUltimoProveedor)
-        Me.grbNavegacion.Controls.Add(Me.btnSiguienteProveedor)
-        Me.grbNavegacion.Controls.Add(Me.btnAnteriorProveedor)
-        Me.grbNavegacion.Controls.Add(Me.btnPrimeroProveedor)
-        Me.grbNavegacion.Location = New System.Drawing.Point(31, 495)
-        Me.grbNavegacion.Margin = New System.Windows.Forms.Padding(1)
-        Me.grbNavegacion.Name = "grbNavegacion"
-        Me.grbNavegacion.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbNavegacion.Size = New System.Drawing.Size(783, 84)
-        Me.grbNavegacion.TabIndex = 4
-        Me.grbNavegacion.TabStop = False
-        Me.grbNavegacion.Text = "Navegacion"
-        '
-        'btnSiguienteProveedor
-        '
-        Me.btnSiguienteProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSiguienteProveedor.Location = New System.Drawing.Point(249, 23)
-        Me.btnSiguienteProveedor.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnSiguienteProveedor.Name = "btnSiguienteProveedor"
-        Me.btnSiguienteProveedor.Size = New System.Drawing.Size(55, 48)
-        Me.btnSiguienteProveedor.TabIndex = 2
-        Me.btnSiguienteProveedor.Text = ">"
-        Me.btnSiguienteProveedor.UseVisualStyleBackColor = True
         '
         'lblCodigoProveedor
         '
@@ -344,6 +216,147 @@ Partial Class frmProveedores
         Me.lblFechaProveedor.TabIndex = 54
         Me.lblFechaProveedor.Text = "FECHA PROVEEDOR:"
         '
+        'grbEdicion
+        '
+        Me.grbEdicion.Controls.Add(Me.btnBuscarProveedor)
+        Me.grbEdicion.Controls.Add(Me.btnEliminarProveedor)
+        Me.grbEdicion.Controls.Add(Me.btnModificarProveedor)
+        Me.grbEdicion.Controls.Add(Me.btnAgregarProveedor)
+        Me.grbEdicion.Location = New System.Drawing.Point(394, 498)
+        Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
+        Me.grbEdicion.Name = "grbEdicion"
+        Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
+        Me.grbEdicion.Size = New System.Drawing.Size(420, 84)
+        Me.grbEdicion.TabIndex = 69
+        Me.grbEdicion.TabStop = False
+        Me.grbEdicion.Text = "Edicion"
+        '
+        'btnBuscarProveedor
+        '
+        Me.btnBuscarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscarProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscarProveedor.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnBuscarProveedor.Image = CType(resources.GetObject("btnBuscarProveedor.Image"), System.Drawing.Image)
+        Me.btnBuscarProveedor.Location = New System.Drawing.Point(344, 23)
+        Me.btnBuscarProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnBuscarProveedor.Name = "btnBuscarProveedor"
+        Me.btnBuscarProveedor.Size = New System.Drawing.Size(72, 48)
+        Me.btnBuscarProveedor.TabIndex = 8
+        Me.btnBuscarProveedor.UseVisualStyleBackColor = True
+        '
+        'btnEliminarProveedor
+        '
+        Me.btnEliminarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminarProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminarProveedor.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnEliminarProveedor.Image = CType(resources.GetObject("btnEliminarProveedor.Image"), System.Drawing.Image)
+        Me.btnEliminarProveedor.Location = New System.Drawing.Point(244, 23)
+        Me.btnEliminarProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnEliminarProveedor.Name = "btnEliminarProveedor"
+        Me.btnEliminarProveedor.Size = New System.Drawing.Size(83, 48)
+        Me.btnEliminarProveedor.TabIndex = 7
+        Me.btnEliminarProveedor.UseVisualStyleBackColor = True
+        '
+        'btnModificarProveedor
+        '
+        Me.btnModificarProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificarProveedor.Location = New System.Drawing.Point(121, 23)
+        Me.btnModificarProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnModificarProveedor.Name = "btnModificarProveedor"
+        Me.btnModificarProveedor.Size = New System.Drawing.Size(120, 48)
+        Me.btnModificarProveedor.TabIndex = 6
+        Me.btnModificarProveedor.Text = "Modificar"
+        Me.btnModificarProveedor.UseVisualStyleBackColor = True
+        '
+        'btnAgregarProveedor
+        '
+        Me.btnAgregarProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregarProveedor.Location = New System.Drawing.Point(15, 23)
+        Me.btnAgregarProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnAgregarProveedor.Name = "btnAgregarProveedor"
+        Me.btnAgregarProveedor.Size = New System.Drawing.Size(91, 48)
+        Me.btnAgregarProveedor.TabIndex = 5
+        Me.btnAgregarProveedor.Text = "Nuevo"
+        Me.btnAgregarProveedor.UseVisualStyleBackColor = True
+        '
+        'grbNavegacion
+        '
+        Me.grbNavegacion.Controls.Add(Me.lblRegistrosProveedor)
+        Me.grbNavegacion.Controls.Add(Me.btnUltimoProveedor)
+        Me.grbNavegacion.Controls.Add(Me.btnSiguienteProveedor)
+        Me.grbNavegacion.Controls.Add(Me.btnAnteriorProveedor)
+        Me.grbNavegacion.Controls.Add(Me.btnPrimeroProveedor)
+        Me.grbNavegacion.Location = New System.Drawing.Point(31, 498)
+        Me.grbNavegacion.Margin = New System.Windows.Forms.Padding(1)
+        Me.grbNavegacion.Name = "grbNavegacion"
+        Me.grbNavegacion.Padding = New System.Windows.Forms.Padding(1)
+        Me.grbNavegacion.Size = New System.Drawing.Size(360, 84)
+        Me.grbNavegacion.TabIndex = 68
+        Me.grbNavegacion.TabStop = False
+        Me.grbNavegacion.Text = "Navegacion"
+        '
+        'lblRegistrosProveedor
+        '
+        Me.lblRegistrosProveedor.AutoSize = True
+        Me.lblRegistrosProveedor.Location = New System.Drawing.Point(115, 42)
+        Me.lblRegistrosProveedor.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblRegistrosProveedor.Name = "lblRegistrosProveedor"
+        Me.lblRegistrosProveedor.Size = New System.Drawing.Size(46, 17)
+        Me.lblRegistrosProveedor.TabIndex = 4
+        Me.lblRegistrosProveedor.Text = "x de n"
+        '
+        'btnUltimoProveedor
+        '
+        Me.btnUltimoProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUltimoProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUltimoProveedor.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnUltimoProveedor.Image = CType(resources.GetObject("btnUltimoProveedor.Image"), System.Drawing.Image)
+        Me.btnUltimoProveedor.Location = New System.Drawing.Point(301, 23)
+        Me.btnUltimoProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnUltimoProveedor.Name = "btnUltimoProveedor"
+        Me.btnUltimoProveedor.Size = New System.Drawing.Size(55, 48)
+        Me.btnUltimoProveedor.TabIndex = 3
+        Me.btnUltimoProveedor.UseVisualStyleBackColor = True
+        '
+        'btnSiguienteProveedor
+        '
+        Me.btnSiguienteProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSiguienteProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSiguienteProveedor.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSiguienteProveedor.Image = CType(resources.GetObject("btnSiguienteProveedor.Image"), System.Drawing.Image)
+        Me.btnSiguienteProveedor.Location = New System.Drawing.Point(249, 23)
+        Me.btnSiguienteProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnSiguienteProveedor.Name = "btnSiguienteProveedor"
+        Me.btnSiguienteProveedor.Size = New System.Drawing.Size(55, 48)
+        Me.btnSiguienteProveedor.TabIndex = 2
+        Me.btnSiguienteProveedor.UseVisualStyleBackColor = True
+        '
+        'btnAnteriorProveedor
+        '
+        Me.btnAnteriorProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAnteriorProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAnteriorProveedor.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnAnteriorProveedor.Image = CType(resources.GetObject("btnAnteriorProveedor.Image"), System.Drawing.Image)
+        Me.btnAnteriorProveedor.Location = New System.Drawing.Point(56, 23)
+        Me.btnAnteriorProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnAnteriorProveedor.Name = "btnAnteriorProveedor"
+        Me.btnAnteriorProveedor.Size = New System.Drawing.Size(55, 48)
+        Me.btnAnteriorProveedor.TabIndex = 1
+        Me.btnAnteriorProveedor.UseVisualStyleBackColor = True
+        '
+        'btnPrimeroProveedor
+        '
+        Me.btnPrimeroProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrimeroProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrimeroProveedor.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnPrimeroProveedor.Image = CType(resources.GetObject("btnPrimeroProveedor.Image"), System.Drawing.Image)
+        Me.btnPrimeroProveedor.Location = New System.Drawing.Point(3, 23)
+        Me.btnPrimeroProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnPrimeroProveedor.Name = "btnPrimeroProveedor"
+        Me.btnPrimeroProveedor.Size = New System.Drawing.Size(55, 48)
+        Me.btnPrimeroProveedor.TabIndex = 0
+        Me.btnPrimeroProveedor.UseVisualStyleBackColor = True
+        '
         'frmProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -353,28 +366,17 @@ Partial Class frmProveedores
         Me.Controls.Add(Me.grbEdicion)
         Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.grbDatos)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmProveedores"
         Me.Text = "Registro de Proveedores"
+        Me.grbDatos.ResumeLayout(False)
+        Me.grbDatos.PerformLayout()
         Me.grbEdicion.ResumeLayout(False)
         Me.grbNavegacion.ResumeLayout(False)
         Me.grbNavegacion.PerformLayout()
-        Me.grbDatos.ResumeLayout(False)
-        Me.grbDatos.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents btnAgregarProveedor As Button
-    Friend WithEvents btnBuscarProveedor As Button
-    Friend WithEvents btnEliminarProveedor As Button
-    Friend WithEvents grbEdicion As GroupBox
-    Friend WithEvents btnModificarProveedor As Button
-    Friend WithEvents btnAnteriorProveedor As Button
-    Friend WithEvents btnPrimeroProveedor As Button
-    Friend WithEvents lblRegistrosProveedor As Label
-    Friend WithEvents btnUltimoProveedor As Button
-    Friend WithEvents grbNavegacion As GroupBox
-    Friend WithEvents btnSiguienteProveedor As Button
     Friend WithEvents lblCodigoProveedor As Label
     Friend WithEvents txtCodigoProveedor As TextBox
     Friend WithEvents txtNombreEmpresaProveedor As TextBox
@@ -390,4 +392,15 @@ Partial Class frmProveedores
     Friend WithEvents grbDatos As GroupBox
     Friend WithEvents lblFechaProveedor As Label
     Friend WithEvents txtFechaProveedor As TextBox
+    Friend WithEvents grbEdicion As GroupBox
+    Friend WithEvents btnBuscarProveedor As Button
+    Friend WithEvents btnEliminarProveedor As Button
+    Friend WithEvents btnModificarProveedor As Button
+    Friend WithEvents btnAgregarProveedor As Button
+    Friend WithEvents grbNavegacion As GroupBox
+    Friend WithEvents lblRegistrosProveedor As Label
+    Friend WithEvents btnUltimoProveedor As Button
+    Friend WithEvents btnSiguienteProveedor As Button
+    Friend WithEvents btnAnteriorProveedor As Button
+    Friend WithEvents btnPrimeroProveedor As Button
 End Class

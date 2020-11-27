@@ -22,17 +22,7 @@ Partial Class frmProductosfaltantes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.grbEdicion = New System.Windows.Forms.GroupBox()
-        Me.btnBuscarfaltante = New System.Windows.Forms.Button()
-        Me.btnEliminarfaltante = New System.Windows.Forms.Button()
-        Me.btnModificarfaltante = New System.Windows.Forms.Button()
-        Me.btnAgregarfaltante = New System.Windows.Forms.Button()
-        Me.grbNavegacion = New System.Windows.Forms.GroupBox()
-        Me.lblRegistrosProducto = New System.Windows.Forms.Label()
-        Me.btnUltimofaltante = New System.Windows.Forms.Button()
-        Me.btnSiguientefaltante = New System.Windows.Forms.Button()
-        Me.btnAnteriorfaltante = New System.Windows.Forms.Button()
-        Me.btnPrimerofaltante = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProductosfaltantes))
         Me.grbfaltantes = New System.Windows.Forms.GroupBox()
         Me.lblCantidadfaltante = New System.Windows.Forms.Label()
         Me.txtCantidadfaltante = New System.Windows.Forms.TextBox()
@@ -46,139 +36,21 @@ Partial Class frmProductosfaltantes
         Me.txtDescripcionfaltante = New System.Windows.Forms.TextBox()
         Me.txtCodigofaltante = New System.Windows.Forms.TextBox()
         Me.lblCodigofaltante = New System.Windows.Forms.Label()
+        Me.grbEdicion = New System.Windows.Forms.GroupBox()
+        Me.btnBuscarfaltante = New System.Windows.Forms.Button()
+        Me.btnEliminarfaltante = New System.Windows.Forms.Button()
+        Me.btnModificarfaltante = New System.Windows.Forms.Button()
+        Me.btnAgregarfaltante = New System.Windows.Forms.Button()
+        Me.grbNavegacion = New System.Windows.Forms.GroupBox()
+        Me.lblRegistrosfaltante = New System.Windows.Forms.Label()
+        Me.btnUltimofaltante = New System.Windows.Forms.Button()
+        Me.btnSiguientefaltante = New System.Windows.Forms.Button()
+        Me.btnAnteriorfaltante = New System.Windows.Forms.Button()
+        Me.btnPrimerofaltante = New System.Windows.Forms.Button()
+        Me.grbfaltantes.SuspendLayout()
         Me.grbEdicion.SuspendLayout()
         Me.grbNavegacion.SuspendLayout()
-        Me.grbfaltantes.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'grbEdicion
-        '
-        Me.grbEdicion.Controls.Add(Me.btnBuscarfaltante)
-        Me.grbEdicion.Controls.Add(Me.btnEliminarfaltante)
-        Me.grbEdicion.Controls.Add(Me.btnModificarfaltante)
-        Me.grbEdicion.Controls.Add(Me.btnAgregarfaltante)
-        Me.grbEdicion.Location = New System.Drawing.Point(373, 528)
-        Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
-        Me.grbEdicion.Name = "grbEdicion"
-        Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbEdicion.Size = New System.Drawing.Size(420, 84)
-        Me.grbEdicion.TabIndex = 20
-        Me.grbEdicion.TabStop = False
-        Me.grbEdicion.Text = "Edicion"
-        '
-        'btnBuscarfaltante
-        '
-        Me.btnBuscarfaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarfaltante.Location = New System.Drawing.Point(316, 23)
-        Me.btnBuscarfaltante.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnBuscarfaltante.Name = "btnBuscarfaltante"
-        Me.btnBuscarfaltante.Size = New System.Drawing.Size(100, 48)
-        Me.btnBuscarfaltante.TabIndex = 8
-        Me.btnBuscarfaltante.Text = "Buscar"
-        Me.btnBuscarfaltante.UseVisualStyleBackColor = True
-        '
-        'btnEliminarfaltante
-        '
-        Me.btnEliminarfaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarfaltante.Location = New System.Drawing.Point(211, 23)
-        Me.btnEliminarfaltante.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnEliminarfaltante.Name = "btnEliminarfaltante"
-        Me.btnEliminarfaltante.Size = New System.Drawing.Size(107, 48)
-        Me.btnEliminarfaltante.TabIndex = 7
-        Me.btnEliminarfaltante.Text = "Eliminar"
-        Me.btnEliminarfaltante.UseVisualStyleBackColor = True
-        '
-        'btnModificarfaltante
-        '
-        Me.btnModificarfaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarfaltante.Location = New System.Drawing.Point(92, 23)
-        Me.btnModificarfaltante.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnModificarfaltante.Name = "btnModificarfaltante"
-        Me.btnModificarfaltante.Size = New System.Drawing.Size(120, 48)
-        Me.btnModificarfaltante.TabIndex = 6
-        Me.btnModificarfaltante.Text = "Modificar"
-        Me.btnModificarfaltante.UseVisualStyleBackColor = True
-        '
-        'btnAgregarfaltante
-        '
-        Me.btnAgregarfaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarfaltante.Location = New System.Drawing.Point(3, 23)
-        Me.btnAgregarfaltante.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnAgregarfaltante.Name = "btnAgregarfaltante"
-        Me.btnAgregarfaltante.Size = New System.Drawing.Size(91, 48)
-        Me.btnAgregarfaltante.TabIndex = 5
-        Me.btnAgregarfaltante.Text = "Nuevo"
-        Me.btnAgregarfaltante.UseVisualStyleBackColor = True
-        '
-        'grbNavegacion
-        '
-        Me.grbNavegacion.Controls.Add(Me.lblRegistrosProducto)
-        Me.grbNavegacion.Controls.Add(Me.btnUltimofaltante)
-        Me.grbNavegacion.Controls.Add(Me.btnSiguientefaltante)
-        Me.grbNavegacion.Controls.Add(Me.btnAnteriorfaltante)
-        Me.grbNavegacion.Controls.Add(Me.btnPrimerofaltante)
-        Me.grbNavegacion.Location = New System.Drawing.Point(11, 528)
-        Me.grbNavegacion.Margin = New System.Windows.Forms.Padding(1)
-        Me.grbNavegacion.Name = "grbNavegacion"
-        Me.grbNavegacion.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbNavegacion.Size = New System.Drawing.Size(360, 84)
-        Me.grbNavegacion.TabIndex = 19
-        Me.grbNavegacion.TabStop = False
-        Me.grbNavegacion.Text = "Navegacion"
-        '
-        'lblRegistrosProducto
-        '
-        Me.lblRegistrosProducto.AutoSize = True
-        Me.lblRegistrosProducto.Location = New System.Drawing.Point(115, 42)
-        Me.lblRegistrosProducto.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblRegistrosProducto.Name = "lblRegistrosProducto"
-        Me.lblRegistrosProducto.Size = New System.Drawing.Size(46, 17)
-        Me.lblRegistrosProducto.TabIndex = 4
-        Me.lblRegistrosProducto.Text = "x de n"
-        '
-        'btnUltimofaltante
-        '
-        Me.btnUltimofaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUltimofaltante.Location = New System.Drawing.Point(301, 23)
-        Me.btnUltimofaltante.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnUltimofaltante.Name = "btnUltimofaltante"
-        Me.btnUltimofaltante.Size = New System.Drawing.Size(55, 48)
-        Me.btnUltimofaltante.TabIndex = 3
-        Me.btnUltimofaltante.Text = ">|"
-        Me.btnUltimofaltante.UseVisualStyleBackColor = True
-        '
-        'btnSiguientefaltante
-        '
-        Me.btnSiguientefaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSiguientefaltante.Location = New System.Drawing.Point(249, 23)
-        Me.btnSiguientefaltante.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnSiguientefaltante.Name = "btnSiguientefaltante"
-        Me.btnSiguientefaltante.Size = New System.Drawing.Size(55, 48)
-        Me.btnSiguientefaltante.TabIndex = 2
-        Me.btnSiguientefaltante.Text = ">"
-        Me.btnSiguientefaltante.UseVisualStyleBackColor = True
-        '
-        'btnAnteriorfaltante
-        '
-        Me.btnAnteriorfaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnteriorfaltante.Location = New System.Drawing.Point(56, 23)
-        Me.btnAnteriorfaltante.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnAnteriorfaltante.Name = "btnAnteriorfaltante"
-        Me.btnAnteriorfaltante.Size = New System.Drawing.Size(55, 48)
-        Me.btnAnteriorfaltante.TabIndex = 1
-        Me.btnAnteriorfaltante.Text = "<"
-        Me.btnAnteriorfaltante.UseVisualStyleBackColor = True
-        '
-        'btnPrimerofaltante
-        '
-        Me.btnPrimerofaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrimerofaltante.Location = New System.Drawing.Point(3, 23)
-        Me.btnPrimerofaltante.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnPrimerofaltante.Name = "btnPrimerofaltante"
-        Me.btnPrimerofaltante.Size = New System.Drawing.Size(55, 48)
-        Me.btnPrimerofaltante.TabIndex = 0
-        Me.btnPrimerofaltante.Text = "|<"
-        Me.btnPrimerofaltante.UseVisualStyleBackColor = True
         '
         'grbfaltantes
         '
@@ -227,7 +99,7 @@ Partial Class frmProductosfaltantes
         '
         Me.cboCategoriafaltante.FormattingEnabled = True
         Me.cboCategoriafaltante.Location = New System.Drawing.Point(260, 63)
-        Me.cboCategoriafaltante.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboCategoriafaltante.Margin = New System.Windows.Forms.Padding(4)
         Me.cboCategoriafaltante.Name = "cboCategoriafaltante"
         Me.cboCategoriafaltante.Size = New System.Drawing.Size(253, 24)
         Me.cboCategoriafaltante.TabIndex = 10
@@ -319,6 +191,147 @@ Partial Class frmProductosfaltantes
         Me.lblCodigofaltante.TabIndex = 0
         Me.lblCodigofaltante.Text = "CODIGO:"
         '
+        'grbEdicion
+        '
+        Me.grbEdicion.Controls.Add(Me.btnBuscarfaltante)
+        Me.grbEdicion.Controls.Add(Me.btnEliminarfaltante)
+        Me.grbEdicion.Controls.Add(Me.btnModificarfaltante)
+        Me.grbEdicion.Controls.Add(Me.btnAgregarfaltante)
+        Me.grbEdicion.Location = New System.Drawing.Point(374, 535)
+        Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
+        Me.grbEdicion.Name = "grbEdicion"
+        Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
+        Me.grbEdicion.Size = New System.Drawing.Size(420, 84)
+        Me.grbEdicion.TabIndex = 71
+        Me.grbEdicion.TabStop = False
+        Me.grbEdicion.Text = "Edicion"
+        '
+        'btnBuscarfaltante
+        '
+        Me.btnBuscarfaltante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscarfaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscarfaltante.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnBuscarfaltante.Image = CType(resources.GetObject("btnBuscarfaltante.Image"), System.Drawing.Image)
+        Me.btnBuscarfaltante.Location = New System.Drawing.Point(344, 23)
+        Me.btnBuscarfaltante.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnBuscarfaltante.Name = "btnBuscarfaltante"
+        Me.btnBuscarfaltante.Size = New System.Drawing.Size(72, 48)
+        Me.btnBuscarfaltante.TabIndex = 8
+        Me.btnBuscarfaltante.UseVisualStyleBackColor = True
+        '
+        'btnEliminarfaltante
+        '
+        Me.btnEliminarfaltante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminarfaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminarfaltante.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnEliminarfaltante.Image = CType(resources.GetObject("btnEliminarfaltante.Image"), System.Drawing.Image)
+        Me.btnEliminarfaltante.Location = New System.Drawing.Point(244, 23)
+        Me.btnEliminarfaltante.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnEliminarfaltante.Name = "btnEliminarfaltante"
+        Me.btnEliminarfaltante.Size = New System.Drawing.Size(83, 48)
+        Me.btnEliminarfaltante.TabIndex = 7
+        Me.btnEliminarfaltante.UseVisualStyleBackColor = True
+        '
+        'btnModificarfaltante
+        '
+        Me.btnModificarfaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificarfaltante.Location = New System.Drawing.Point(121, 23)
+        Me.btnModificarfaltante.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnModificarfaltante.Name = "btnModificarfaltante"
+        Me.btnModificarfaltante.Size = New System.Drawing.Size(120, 48)
+        Me.btnModificarfaltante.TabIndex = 6
+        Me.btnModificarfaltante.Text = "Modificar"
+        Me.btnModificarfaltante.UseVisualStyleBackColor = True
+        '
+        'btnAgregarfaltante
+        '
+        Me.btnAgregarfaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregarfaltante.Location = New System.Drawing.Point(15, 23)
+        Me.btnAgregarfaltante.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnAgregarfaltante.Name = "btnAgregarfaltante"
+        Me.btnAgregarfaltante.Size = New System.Drawing.Size(91, 48)
+        Me.btnAgregarfaltante.TabIndex = 5
+        Me.btnAgregarfaltante.Text = "Nuevo"
+        Me.btnAgregarfaltante.UseVisualStyleBackColor = True
+        '
+        'grbNavegacion
+        '
+        Me.grbNavegacion.Controls.Add(Me.lblRegistrosfaltante)
+        Me.grbNavegacion.Controls.Add(Me.btnUltimofaltante)
+        Me.grbNavegacion.Controls.Add(Me.btnSiguientefaltante)
+        Me.grbNavegacion.Controls.Add(Me.btnAnteriorfaltante)
+        Me.grbNavegacion.Controls.Add(Me.btnPrimerofaltante)
+        Me.grbNavegacion.Location = New System.Drawing.Point(11, 535)
+        Me.grbNavegacion.Margin = New System.Windows.Forms.Padding(1)
+        Me.grbNavegacion.Name = "grbNavegacion"
+        Me.grbNavegacion.Padding = New System.Windows.Forms.Padding(1)
+        Me.grbNavegacion.Size = New System.Drawing.Size(360, 84)
+        Me.grbNavegacion.TabIndex = 70
+        Me.grbNavegacion.TabStop = False
+        Me.grbNavegacion.Text = "Navegacion"
+        '
+        'lblRegistrosfaltante
+        '
+        Me.lblRegistrosfaltante.AutoSize = True
+        Me.lblRegistrosfaltante.Location = New System.Drawing.Point(115, 42)
+        Me.lblRegistrosfaltante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblRegistrosfaltante.Name = "lblRegistrosfaltante"
+        Me.lblRegistrosfaltante.Size = New System.Drawing.Size(46, 17)
+        Me.lblRegistrosfaltante.TabIndex = 4
+        Me.lblRegistrosfaltante.Text = "x de n"
+        '
+        'btnUltimofaltante
+        '
+        Me.btnUltimofaltante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUltimofaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUltimofaltante.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnUltimofaltante.Image = CType(resources.GetObject("btnUltimofaltante.Image"), System.Drawing.Image)
+        Me.btnUltimofaltante.Location = New System.Drawing.Point(301, 23)
+        Me.btnUltimofaltante.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnUltimofaltante.Name = "btnUltimofaltante"
+        Me.btnUltimofaltante.Size = New System.Drawing.Size(55, 48)
+        Me.btnUltimofaltante.TabIndex = 3
+        Me.btnUltimofaltante.UseVisualStyleBackColor = True
+        '
+        'btnSiguientefaltante
+        '
+        Me.btnSiguientefaltante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSiguientefaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSiguientefaltante.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSiguientefaltante.Image = CType(resources.GetObject("btnSiguientefaltante.Image"), System.Drawing.Image)
+        Me.btnSiguientefaltante.Location = New System.Drawing.Point(249, 23)
+        Me.btnSiguientefaltante.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnSiguientefaltante.Name = "btnSiguientefaltante"
+        Me.btnSiguientefaltante.Size = New System.Drawing.Size(55, 48)
+        Me.btnSiguientefaltante.TabIndex = 2
+        Me.btnSiguientefaltante.UseVisualStyleBackColor = True
+        '
+        'btnAnteriorfaltante
+        '
+        Me.btnAnteriorfaltante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAnteriorfaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAnteriorfaltante.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnAnteriorfaltante.Image = CType(resources.GetObject("btnAnteriorfaltante.Image"), System.Drawing.Image)
+        Me.btnAnteriorfaltante.Location = New System.Drawing.Point(56, 23)
+        Me.btnAnteriorfaltante.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnAnteriorfaltante.Name = "btnAnteriorfaltante"
+        Me.btnAnteriorfaltante.Size = New System.Drawing.Size(55, 48)
+        Me.btnAnteriorfaltante.TabIndex = 1
+        Me.btnAnteriorfaltante.UseVisualStyleBackColor = True
+        '
+        'btnPrimerofaltante
+        '
+        Me.btnPrimerofaltante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrimerofaltante.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrimerofaltante.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnPrimerofaltante.Image = CType(resources.GetObject("btnPrimerofaltante.Image"), System.Drawing.Image)
+        Me.btnPrimerofaltante.Location = New System.Drawing.Point(3, 23)
+        Me.btnPrimerofaltante.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnPrimerofaltante.Name = "btnPrimerofaltante"
+        Me.btnPrimerofaltante.Size = New System.Drawing.Size(55, 48)
+        Me.btnPrimerofaltante.TabIndex = 0
+        Me.btnPrimerofaltante.UseVisualStyleBackColor = True
+        '
         'frmProductosfaltantes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -328,29 +341,17 @@ Partial Class frmProductosfaltantes
         Me.Controls.Add(Me.grbEdicion)
         Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.grbfaltantes)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmProductosfaltantes"
         Me.Text = "Productos Faltantes"
+        Me.grbfaltantes.ResumeLayout(False)
+        Me.grbfaltantes.PerformLayout()
         Me.grbEdicion.ResumeLayout(False)
         Me.grbNavegacion.ResumeLayout(False)
         Me.grbNavegacion.PerformLayout()
-        Me.grbfaltantes.ResumeLayout(False)
-        Me.grbfaltantes.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents grbEdicion As GroupBox
-    Friend WithEvents btnBuscarfaltante As Button
-    Friend WithEvents btnEliminarfaltante As Button
-    Friend WithEvents btnModificarfaltante As Button
-    Friend WithEvents btnAgregarfaltante As Button
-    Friend WithEvents grbNavegacion As GroupBox
-    Friend WithEvents lblRegistrosProducto As Label
-    Friend WithEvents btnUltimofaltante As Button
-    Friend WithEvents btnSiguientefaltante As Button
-    Friend WithEvents btnAnteriorfaltante As Button
-    Friend WithEvents btnPrimerofaltante As Button
     Friend WithEvents grbfaltantes As GroupBox
     Friend WithEvents lblCantidadfaltante As Label
     Friend WithEvents txtCantidadfaltante As TextBox
@@ -364,4 +365,15 @@ Partial Class frmProductosfaltantes
     Friend WithEvents txtDescripcionfaltante As TextBox
     Friend WithEvents txtCodigofaltante As TextBox
     Friend WithEvents lblCodigofaltante As Label
+    Friend WithEvents grbEdicion As GroupBox
+    Friend WithEvents btnBuscarfaltante As Button
+    Friend WithEvents btnEliminarfaltante As Button
+    Friend WithEvents btnModificarfaltante As Button
+    Friend WithEvents btnAgregarfaltante As Button
+    Friend WithEvents grbNavegacion As GroupBox
+    Friend WithEvents lblRegistrosfaltante As Label
+    Friend WithEvents btnUltimofaltante As Button
+    Friend WithEvents btnSiguientefaltante As Button
+    Friend WithEvents btnAnteriorfaltante As Button
+    Friend WithEvents btnPrimerofaltante As Button
 End Class

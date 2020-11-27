@@ -22,6 +22,7 @@ Partial Class frmBuscarvarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBuscarvarios))
         Me.btnCancelarvarios = New System.Windows.Forms.Button()
         Me.btnSeleccionarvarios = New System.Windows.Forms.Button()
         Me.grdBuscarvarios = New System.Windows.Forms.DataGridView()
@@ -39,25 +40,29 @@ Partial Class frmBuscarvarios
         'btnCancelarvarios
         '
         Me.btnCancelarvarios.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelarvarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelarvarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarvarios.Location = New System.Drawing.Point(833, 601)
+        Me.btnCancelarvarios.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnCancelarvarios.Image = CType(resources.GetObject("btnCancelarvarios.Image"), System.Drawing.Image)
+        Me.btnCancelarvarios.Location = New System.Drawing.Point(937, 601)
         Me.btnCancelarvarios.Margin = New System.Windows.Forms.Padding(1)
         Me.btnCancelarvarios.Name = "btnCancelarvarios"
-        Me.btnCancelarvarios.Size = New System.Drawing.Size(160, 41)
+        Me.btnCancelarvarios.Size = New System.Drawing.Size(56, 41)
         Me.btnCancelarvarios.TabIndex = 22
-        Me.btnCancelarvarios.Text = "Cancelar"
         Me.btnCancelarvarios.UseVisualStyleBackColor = True
         '
         'btnSeleccionarvarios
         '
         Me.btnSeleccionarvarios.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSeleccionarvarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSeleccionarvarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionarvarios.Location = New System.Drawing.Point(516, 601)
+        Me.btnSeleccionarvarios.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSeleccionarvarios.Image = CType(resources.GetObject("btnSeleccionarvarios.Image"), System.Drawing.Image)
+        Me.btnSeleccionarvarios.Location = New System.Drawing.Point(875, 601)
         Me.btnSeleccionarvarios.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSeleccionarvarios.Name = "btnSeleccionarvarios"
-        Me.btnSeleccionarvarios.Size = New System.Drawing.Size(315, 41)
+        Me.btnSeleccionarvarios.Size = New System.Drawing.Size(48, 41)
         Me.btnSeleccionarvarios.TabIndex = 21
-        Me.btnSeleccionarvarios.Text = "Seleccionar"
         Me.btnSeleccionarvarios.UseVisualStyleBackColor = True
         '
         'grdBuscarvarios
@@ -164,7 +169,7 @@ Partial Class frmBuscarvarios
         Me.Controls.Add(Me.grdBuscarvarios)
         Me.Controls.Add(Me.lblBuscarvarios)
         Me.Controls.Add(Me.txtBuscarvarios)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmBuscarvarios"
         Me.Text = "Buscar pagos varios"
         CType(Me.grdBuscarvarios, System.ComponentModel.ISupportInitialize).EndInit()

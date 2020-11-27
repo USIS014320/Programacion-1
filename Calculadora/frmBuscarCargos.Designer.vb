@@ -22,6 +22,7 @@ Partial Class frmBuscarCargos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBuscarCargos))
         Me.btnCancelarCargo = New System.Windows.Forms.Button()
         Me.btnSeleccionarCargo = New System.Windows.Forms.Button()
         Me.grdBuscarCargo = New System.Windows.Forms.DataGridView()
@@ -35,25 +36,30 @@ Partial Class frmBuscarCargos
         'btnCancelarCargo
         '
         Me.btnCancelarCargo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelarCargo.BackColor = System.Drawing.Color.OrangeRed
+        Me.btnCancelarCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelarCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarCargo.Location = New System.Drawing.Point(810, 563)
+        Me.btnCancelarCargo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnCancelarCargo.Image = CType(resources.GetObject("btnCancelarCargo.Image"), System.Drawing.Image)
+        Me.btnCancelarCargo.Location = New System.Drawing.Point(635, 495)
         Me.btnCancelarCargo.Margin = New System.Windows.Forms.Padding(1)
         Me.btnCancelarCargo.Name = "btnCancelarCargo"
-        Me.btnCancelarCargo.Size = New System.Drawing.Size(160, 41)
+        Me.btnCancelarCargo.Size = New System.Drawing.Size(68, 41)
         Me.btnCancelarCargo.TabIndex = 19
-        Me.btnCancelarCargo.Text = "Cancelar"
-        Me.btnCancelarCargo.UseVisualStyleBackColor = True
+        Me.btnCancelarCargo.UseVisualStyleBackColor = False
         '
         'btnSeleccionarCargo
         '
         Me.btnSeleccionarCargo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSeleccionarCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSeleccionarCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionarCargo.Location = New System.Drawing.Point(460, 563)
+        Me.btnSeleccionarCargo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSeleccionarCargo.Image = CType(resources.GetObject("btnSeleccionarCargo.Image"), System.Drawing.Image)
+        Me.btnSeleccionarCargo.Location = New System.Drawing.Point(575, 495)
         Me.btnSeleccionarCargo.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSeleccionarCargo.Name = "btnSeleccionarCargo"
-        Me.btnSeleccionarCargo.Size = New System.Drawing.Size(315, 41)
+        Me.btnSeleccionarCargo.Size = New System.Drawing.Size(58, 41)
         Me.btnSeleccionarCargo.TabIndex = 18
-        Me.btnSeleccionarCargo.Text = "Seleccionar Cargo"
         Me.btnSeleccionarCargo.UseVisualStyleBackColor = True
         '
         'grdBuscarCargo
@@ -71,7 +77,7 @@ Partial Class frmBuscarCargos
         Me.grdBuscarCargo.ReadOnly = True
         Me.grdBuscarCargo.RowHeadersWidth = 102
         Me.grdBuscarCargo.RowTemplate.Height = 40
-        Me.grdBuscarCargo.Size = New System.Drawing.Size(941, 474)
+        Me.grdBuscarCargo.Size = New System.Drawing.Size(670, 406)
         Me.grdBuscarCargo.TabIndex = 17
         '
         'idCargo
@@ -110,7 +116,7 @@ Partial Class frmBuscarCargos
         Me.txtBuscarCargo.Location = New System.Drawing.Point(99, 16)
         Me.txtBuscarCargo.Margin = New System.Windows.Forms.Padding(1)
         Me.txtBuscarCargo.Name = "txtBuscarCargo"
-        Me.txtBuscarCargo.Size = New System.Drawing.Size(871, 22)
+        Me.txtBuscarCargo.Size = New System.Drawing.Size(600, 22)
         Me.txtBuscarCargo.TabIndex = 15
         '
         'frmBuscarCargos
@@ -118,7 +124,7 @@ Partial Class frmBuscarCargos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(997, 621)
+        Me.ClientSize = New System.Drawing.Size(734, 546)
         Me.Controls.Add(Me.btnCancelarCargo)
         Me.Controls.Add(Me.btnSeleccionarCargo)
         Me.Controls.Add(Me.grdBuscarCargo)

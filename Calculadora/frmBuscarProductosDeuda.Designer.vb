@@ -22,6 +22,7 @@ Partial Class frmBuscarProductosDeuda
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBuscarProductosDeuda))
         Me.lblBuscarCliente = New System.Windows.Forms.Label()
         Me.txtBuscarProuctos = New System.Windows.Forms.TextBox()
         Me.grdBuscarProductoDeuda = New System.Windows.Forms.DataGridView()
@@ -40,7 +41,7 @@ Partial Class frmBuscarProductosDeuda
         'lblBuscarCliente
         '
         Me.lblBuscarCliente.AutoSize = True
-        Me.lblBuscarCliente.Location = New System.Drawing.Point(40, 30)
+        Me.lblBuscarCliente.Location = New System.Drawing.Point(21, 31)
         Me.lblBuscarCliente.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.lblBuscarCliente.Name = "lblBuscarCliente"
         Me.lblBuscarCliente.Size = New System.Drawing.Size(68, 17)
@@ -51,10 +52,10 @@ Partial Class frmBuscarProductosDeuda
         '
         Me.txtBuscarProuctos.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtBuscarProuctos.Location = New System.Drawing.Point(115, 26)
+        Me.txtBuscarProuctos.Location = New System.Drawing.Point(91, 26)
         Me.txtBuscarProuctos.Margin = New System.Windows.Forms.Padding(1)
         Me.txtBuscarProuctos.Name = "txtBuscarProuctos"
-        Me.txtBuscarProuctos.Size = New System.Drawing.Size(1072, 22)
+        Me.txtBuscarProuctos.Size = New System.Drawing.Size(917, 22)
         Me.txtBuscarProuctos.TabIndex = 5
         '
         'grdBuscarProductoDeuda
@@ -66,13 +67,13 @@ Partial Class frmBuscarProductosDeuda
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grdBuscarProductoDeuda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdBuscarProductoDeuda.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idProductosDeuda, Me.codigo, Me.nombre, Me.direccion, Me.telefono, Me.depto, Me.Municipio})
-        Me.grdBuscarProductoDeuda.Location = New System.Drawing.Point(115, 53)
+        Me.grdBuscarProductoDeuda.Location = New System.Drawing.Point(91, 63)
         Me.grdBuscarProductoDeuda.Margin = New System.Windows.Forms.Padding(1)
         Me.grdBuscarProductoDeuda.Name = "grdBuscarProductoDeuda"
         Me.grdBuscarProductoDeuda.ReadOnly = True
         Me.grdBuscarProductoDeuda.RowHeadersWidth = 102
         Me.grdBuscarProductoDeuda.RowTemplate.Height = 40
-        Me.grdBuscarProductoDeuda.Size = New System.Drawing.Size(1073, 506)
+        Me.grdBuscarProductoDeuda.Size = New System.Drawing.Size(917, 506)
         Me.grdBuscarProductoDeuda.TabIndex = 6
         '
         'idProductosDeuda
@@ -142,25 +143,29 @@ Partial Class frmBuscarProductosDeuda
         'btnSeleccionarCliente
         '
         Me.btnSeleccionarCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSeleccionarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSeleccionarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionarCliente.Location = New System.Drawing.Point(525, 569)
+        Me.btnSeleccionarCliente.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSeleccionarCliente.Image = CType(resources.GetObject("btnSeleccionarCliente.Image"), System.Drawing.Image)
+        Me.btnSeleccionarCliente.Location = New System.Drawing.Point(907, 571)
         Me.btnSeleccionarCliente.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSeleccionarCliente.Name = "btnSeleccionarCliente"
-        Me.btnSeleccionarCliente.Size = New System.Drawing.Size(315, 41)
+        Me.btnSeleccionarCliente.Size = New System.Drawing.Size(50, 41)
         Me.btnSeleccionarCliente.TabIndex = 7
-        Me.btnSeleccionarCliente.Text = "Seleccionar Cliente"
         Me.btnSeleccionarCliente.UseVisualStyleBackColor = True
         '
         'btnCancelarCliente
         '
         Me.btnCancelarCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarCliente.Location = New System.Drawing.Point(1028, 569)
+        Me.btnCancelarCliente.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnCancelarCliente.Image = CType(resources.GetObject("btnCancelarCliente.Image"), System.Drawing.Image)
+        Me.btnCancelarCliente.Location = New System.Drawing.Point(959, 571)
         Me.btnCancelarCliente.Margin = New System.Windows.Forms.Padding(1)
         Me.btnCancelarCliente.Name = "btnCancelarCliente"
-        Me.btnCancelarCliente.Size = New System.Drawing.Size(160, 41)
+        Me.btnCancelarCliente.Size = New System.Drawing.Size(49, 41)
         Me.btnCancelarCliente.TabIndex = 8
-        Me.btnCancelarCliente.Text = "Cancelar"
         Me.btnCancelarCliente.UseVisualStyleBackColor = True
         '
         'frmBuscarProductosDeuda
@@ -168,13 +173,13 @@ Partial Class frmBuscarProductosDeuda
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(1239, 622)
+        Me.ClientSize = New System.Drawing.Size(1042, 622)
         Me.Controls.Add(Me.btnCancelarCliente)
         Me.Controls.Add(Me.btnSeleccionarCliente)
         Me.Controls.Add(Me.grdBuscarProductoDeuda)
         Me.Controls.Add(Me.txtBuscarProuctos)
         Me.Controls.Add(Me.lblBuscarCliente)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmBuscarProductosDeuda"
         Me.Text = "Buscar Productos Deuda"
         CType(Me.grdBuscarProductoDeuda, System.ComponentModel.ISupportInitialize).EndInit()

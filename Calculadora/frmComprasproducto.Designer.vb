@@ -74,12 +74,12 @@ Partial Class frmComprasproducto
         Me.marca = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.medidas = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblsumacompra = New System.Windows.Forms.Label()
-        Me.lblivacompra = New System.Windows.Forms.Label()
-        Me.lbltotalcompra = New System.Windows.Forms.Label()
-        Me.lblrespuestasumacompra = New System.Windows.Forms.Label()
-        Me.lblrespuestaivacompra = New System.Windows.Forms.Label()
         Me.lblrespuestatotalcompra = New System.Windows.Forms.Label()
+        Me.lblrespuestaivacompra = New System.Windows.Forms.Label()
+        Me.lblrespuestasumacompra = New System.Windows.Forms.Label()
+        Me.lbltotalcompra = New System.Windows.Forms.Label()
+        Me.lblivacompra = New System.Windows.Forms.Label()
+        Me.lblsumacompra = New System.Windows.Forms.Label()
         NfacturaLabel = New System.Windows.Forms.Label()
         IdTipofacturaLabel = New System.Windows.Forms.Label()
         IdPagoLabel = New System.Windows.Forms.Label()
@@ -102,45 +102,50 @@ Partial Class frmComprasproducto
         'NfacturaLabel
         '
         NfacturaLabel.AutoSize = True
-        NfacturaLabel.Location = New System.Drawing.Point(580, 15)
+        NfacturaLabel.Location = New System.Drawing.Point(776, 47)
+        NfacturaLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         NfacturaLabel.Name = "NfacturaLabel"
-        NfacturaLabel.Size = New System.Drawing.Size(61, 13)
+        NfacturaLabel.Size = New System.Drawing.Size(80, 17)
         NfacturaLabel.TabIndex = 3
         NfacturaLabel.Text = "Factura N°:"
         '
         'IdTipofacturaLabel
         '
         IdTipofacturaLabel.AutoSize = True
-        IdTipofacturaLabel.Location = New System.Drawing.Point(297, 86)
+        IdTipofacturaLabel.Location = New System.Drawing.Point(396, 106)
+        IdTipofacturaLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         IdTipofacturaLabel.Name = "IdTipofacturaLabel"
-        IdTipofacturaLabel.Size = New System.Drawing.Size(67, 13)
+        IdTipofacturaLabel.Size = New System.Drawing.Size(88, 17)
         IdTipofacturaLabel.TabIndex = 9
         IdTipofacturaLabel.Text = "Tipo factura:"
         '
         'IdPagoLabel
         '
         IdPagoLabel.AutoSize = True
-        IdPagoLabel.Location = New System.Drawing.Point(522, 86)
+        IdPagoLabel.Location = New System.Drawing.Point(694, 106)
+        IdPagoLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         IdPagoLabel.Name = "IdPagoLabel"
-        IdPagoLabel.Size = New System.Drawing.Size(81, 13)
+        IdPagoLabel.Size = New System.Drawing.Size(108, 17)
         IdPagoLabel.TabIndex = 11
         IdPagoLabel.Text = "Forma de pago:"
         '
         'IdProveedorLabel
         '
         IdProveedorLabel.AutoSize = True
-        IdProveedorLabel.Location = New System.Drawing.Point(3, 40)
+        IdProveedorLabel.Location = New System.Drawing.Point(4, 49)
+        IdProveedorLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         IdProveedorLabel.Name = "IdProveedorLabel"
-        IdProveedorLabel.Size = New System.Drawing.Size(59, 13)
+        IdProveedorLabel.Size = New System.Drawing.Size(78, 17)
         IdProveedorLabel.TabIndex = 13
         IdProveedorLabel.Text = "Proveedor:"
         '
         'Fecha_vtaLabel
         '
         Fecha_vtaLabel.AutoSize = True
-        Fecha_vtaLabel.Location = New System.Drawing.Point(12, 85)
+        Fecha_vtaLabel.Location = New System.Drawing.Point(16, 105)
+        Fecha_vtaLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Fecha_vtaLabel.Name = "Fecha_vtaLabel"
-        Fecha_vtaLabel.Size = New System.Drawing.Size(75, 13)
+        Fecha_vtaLabel.Size = New System.Drawing.Size(98, 17)
         Fecha_vtaLabel.TabIndex = 14
         Fecha_vtaLabel.Text = "fecha compra:"
         '
@@ -150,6 +155,7 @@ Partial Class frmComprasproducto
         Me.ComprasBindingNavigator.BindingSource = Me.ComprasBindingSource
         Me.ComprasBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.ComprasBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.ComprasBindingNavigator.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ComprasBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ComprasBindingNavigatorSaveItem})
         Me.ComprasBindingNavigator.Location = New System.Drawing.Point(0, 0)
         Me.ComprasBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
@@ -158,7 +164,7 @@ Partial Class frmComprasproducto
         Me.ComprasBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ComprasBindingNavigator.Name = "ComprasBindingNavigator"
         Me.ComprasBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ComprasBindingNavigator.Size = New System.Drawing.Size(777, 25)
+        Me.ComprasBindingNavigator.Size = New System.Drawing.Size(1036, 27)
         Me.ComprasBindingNavigator.TabIndex = 0
         Me.ComprasBindingNavigator.Text = "BindingNavigator1"
         '
@@ -168,7 +174,7 @@ Partial Class frmComprasproducto
         Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
         '
         'ComprasBindingSource
@@ -184,7 +190,7 @@ Partial Class frmComprasproducto
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
         Me.BindingNavigatorCountItem.Text = "de {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
         '
@@ -194,7 +200,7 @@ Partial Class frmComprasproducto
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
@@ -203,7 +209,7 @@ Partial Class frmComprasproducto
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -212,27 +218,28 @@ Partial Class frmComprasproducto
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Posición"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(65, 27)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -240,7 +247,7 @@ Partial Class frmComprasproducto
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
         '
         'BindingNavigatorMoveLastItem
@@ -249,28 +256,29 @@ Partial Class frmComprasproducto
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorMoveLastItem.Text = "Mover último"
         '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'ComprasBindingNavigatorSaveItem
         '
         Me.ComprasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.ComprasBindingNavigatorSaveItem.Image = CType(resources.GetObject("ComprasBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.ComprasBindingNavigatorSaveItem.Name = "ComprasBindingNavigatorSaveItem"
-        Me.ComprasBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.ComprasBindingNavigatorSaveItem.Size = New System.Drawing.Size(29, 24)
         Me.ComprasBindingNavigatorSaveItem.Text = "Guardar datos"
         '
         'NfacturaTextBox
         '
         Me.NfacturaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ComprasBindingSource, "nfactura", True))
-        Me.NfacturaTextBox.Location = New System.Drawing.Point(647, 12)
+        Me.NfacturaTextBox.Location = New System.Drawing.Point(864, 44)
+        Me.NfacturaTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.NfacturaTextBox.Name = "NfacturaTextBox"
-        Me.NfacturaTextBox.Size = New System.Drawing.Size(110, 20)
+        Me.NfacturaTextBox.Size = New System.Drawing.Size(145, 22)
         Me.NfacturaTextBox.TabIndex = 4
         '
         'IdTipofacturaComboBox
@@ -280,9 +288,10 @@ Partial Class frmComprasproducto
         Me.IdTipofacturaComboBox.DisplayMember = "tipofactura"
         Me.IdTipofacturaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IdTipofacturaComboBox.FormattingEnabled = True
-        Me.IdTipofacturaComboBox.Location = New System.Drawing.Point(370, 79)
+        Me.IdTipofacturaComboBox.Location = New System.Drawing.Point(493, 97)
+        Me.IdTipofacturaComboBox.Margin = New System.Windows.Forms.Padding(4)
         Me.IdTipofacturaComboBox.Name = "IdTipofacturaComboBox"
-        Me.IdTipofacturaComboBox.Size = New System.Drawing.Size(146, 21)
+        Me.IdTipofacturaComboBox.Size = New System.Drawing.Size(193, 24)
         Me.IdTipofacturaComboBox.TabIndex = 10
         Me.IdTipofacturaComboBox.ValueMember = "idTipofactura"
         '
@@ -298,9 +307,10 @@ Partial Class frmComprasproducto
         Me.IdPagoComboBox.DisplayMember = "pago"
         Me.IdPagoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IdPagoComboBox.FormattingEnabled = True
-        Me.IdPagoComboBox.Location = New System.Drawing.Point(609, 82)
+        Me.IdPagoComboBox.Location = New System.Drawing.Point(813, 99)
+        Me.IdPagoComboBox.Margin = New System.Windows.Forms.Padding(4)
         Me.IdPagoComboBox.Name = "IdPagoComboBox"
-        Me.IdPagoComboBox.Size = New System.Drawing.Size(148, 21)
+        Me.IdPagoComboBox.Size = New System.Drawing.Size(196, 24)
         Me.IdPagoComboBox.TabIndex = 12
         Me.IdPagoComboBox.ValueMember = "idPago"
         '
@@ -316,9 +326,10 @@ Partial Class frmComprasproducto
         Me.IdProveedorComboBox.DisplayMember = "nombreempresa"
         Me.IdProveedorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IdProveedorComboBox.FormattingEnabled = True
-        Me.IdProveedorComboBox.Location = New System.Drawing.Point(68, 37)
+        Me.IdProveedorComboBox.Location = New System.Drawing.Point(91, 46)
+        Me.IdProveedorComboBox.Margin = New System.Windows.Forms.Padding(4)
         Me.IdProveedorComboBox.Name = "IdProveedorComboBox"
-        Me.IdProveedorComboBox.Size = New System.Drawing.Size(200, 21)
+        Me.IdProveedorComboBox.Size = New System.Drawing.Size(276, 24)
         Me.IdProveedorComboBox.TabIndex = 14
         Me.IdProveedorComboBox.ValueMember = "idProveedor"
         '
@@ -342,12 +353,17 @@ Partial Class frmComprasproducto
         Me.TableAdapterManager.cargosTableAdapter = Nothing
         Me.TableAdapterManager.categoriafaltanteTableAdapter = Nothing
         Me.TableAdapterManager.categoriasTableAdapter = Nothing
+        Me.TableAdapterManager.clientesTableAdapter = Nothing
         Me.TableAdapterManager.comprasTableAdapter = Me.ComprasTableAdapter
+        Me.TableAdapterManager.contactosTableAdapter = Nothing
+        Me.TableAdapterManager.crearprestamoTableAdapter = Nothing
         Me.TableAdapterManager.dcomprasTableAdapter = Nothing
         Me.TableAdapterManager.DescuentosTableAdapter = Nothing
         Me.TableAdapterManager.DeudaTableAdapter = Nothing
         Me.TableAdapterManager.empleadosTableAdapter = Nothing
         Me.TableAdapterManager.faltanteproductoTableAdapter = Nothing
+        Me.TableAdapterManager.interesesTableAdapter = Nothing
+        Me.TableAdapterManager.ocupacionTableAdapter = Nothing
         Me.TableAdapterManager.pagosTableAdapter = Nothing
         Me.TableAdapterManager.pagosvariosTableAdapter = Nothing
         Me.TableAdapterManager.prestamosTableAdapter = Nothing
@@ -366,9 +382,10 @@ Partial Class frmComprasproducto
         'Fecha_vtaDateTimePicker
         '
         Me.Fecha_vtaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ComprasBindingSource, "fecha_vta", True))
-        Me.Fecha_vtaDateTimePicker.Location = New System.Drawing.Point(91, 80)
+        Me.Fecha_vtaDateTimePicker.Location = New System.Drawing.Point(121, 98)
+        Me.Fecha_vtaDateTimePicker.Margin = New System.Windows.Forms.Padding(4)
         Me.Fecha_vtaDateTimePicker.Name = "Fecha_vtaDateTimePicker"
-        Me.Fecha_vtaDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.Fecha_vtaDateTimePicker.Size = New System.Drawing.Size(246, 22)
         Me.Fecha_vtaDateTimePicker.TabIndex = 15
         '
         'ProveedoresTableAdapter
@@ -405,47 +422,58 @@ Partial Class frmComprasproducto
         Me.DcomprasProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DcomprasProductosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idDetalle, Me.idCompra, Me.idProducto, Me.codigo, Me.descripcion, Me.cantidad, Me.precio, Me.subtotal, Me.marca, Me.medidas})
         Me.DcomprasProductosDataGridView.DataSource = Me.DcomprasProductosBindingSource1
-        Me.DcomprasProductosDataGridView.Location = New System.Drawing.Point(15, 126)
+        Me.DcomprasProductosDataGridView.Location = New System.Drawing.Point(20, 155)
+        Me.DcomprasProductosDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.DcomprasProductosDataGridView.Name = "DcomprasProductosDataGridView"
         Me.DcomprasProductosDataGridView.ReadOnly = True
-        Me.DcomprasProductosDataGridView.Size = New System.Drawing.Size(742, 304)
+        Me.DcomprasProductosDataGridView.RowHeadersWidth = 51
+        Me.DcomprasProductosDataGridView.Size = New System.Drawing.Size(989, 374)
         Me.DcomprasProductosDataGridView.TabIndex = 15
         '
         'idDetalle
         '
         Me.idDetalle.DataPropertyName = "idDetalle"
         Me.idDetalle.HeaderText = "idDetalle"
+        Me.idDetalle.MinimumWidth = 6
         Me.idDetalle.Name = "idDetalle"
         Me.idDetalle.ReadOnly = True
         Me.idDetalle.Visible = False
+        Me.idDetalle.Width = 125
         '
         'idCompra
         '
         Me.idCompra.DataPropertyName = "idCompra"
         Me.idCompra.HeaderText = "idCompra"
+        Me.idCompra.MinimumWidth = 6
         Me.idCompra.Name = "idCompra"
         Me.idCompra.ReadOnly = True
         Me.idCompra.Visible = False
+        Me.idCompra.Width = 125
         '
         'idProducto
         '
         Me.idProducto.DataPropertyName = "idProducto"
         Me.idProducto.HeaderText = "idProducto"
+        Me.idProducto.MinimumWidth = 6
         Me.idProducto.Name = "idProducto"
         Me.idProducto.ReadOnly = True
         Me.idProducto.Visible = False
+        Me.idProducto.Width = 125
         '
         'codigo
         '
         Me.codigo.DataPropertyName = "codigo"
         Me.codigo.HeaderText = "CODIGO"
+        Me.codigo.MinimumWidth = 6
         Me.codigo.Name = "codigo"
         Me.codigo.ReadOnly = True
+        Me.codigo.Width = 125
         '
         'descripcion
         '
         Me.descripcion.DataPropertyName = "descripcion"
         Me.descripcion.HeaderText = "DESCRIPCION"
+        Me.descripcion.MinimumWidth = 6
         Me.descripcion.Name = "descripcion"
         Me.descripcion.ReadOnly = True
         Me.descripcion.Width = 250
@@ -454,19 +482,24 @@ Partial Class frmComprasproducto
         '
         Me.cantidad.DataPropertyName = "cantidad"
         Me.cantidad.HeaderText = "CANTIDAD"
+        Me.cantidad.MinimumWidth = 6
         Me.cantidad.Name = "cantidad"
         Me.cantidad.ReadOnly = True
+        Me.cantidad.Width = 125
         '
         'precio
         '
         Me.precio.DataPropertyName = "precio"
         Me.precio.HeaderText = "PRECIO"
+        Me.precio.MinimumWidth = 6
         Me.precio.Name = "precio"
         Me.precio.ReadOnly = True
+        Me.precio.Width = 125
         '
         'subtotal
         '
         Me.subtotal.HeaderText = "SUBTOTAL"
+        Me.subtotal.MinimumWidth = 6
         Me.subtotal.Name = "subtotal"
         Me.subtotal.ReadOnly = True
         Me.subtotal.Width = 150
@@ -475,17 +508,21 @@ Partial Class frmComprasproducto
         '
         Me.marca.DataPropertyName = "marca"
         Me.marca.HeaderText = "marca"
+        Me.marca.MinimumWidth = 6
         Me.marca.Name = "marca"
         Me.marca.ReadOnly = True
         Me.marca.Visible = False
+        Me.marca.Width = 125
         '
         'medidas
         '
         Me.medidas.DataPropertyName = "medidas"
         Me.medidas.HeaderText = "medidas"
+        Me.medidas.MinimumWidth = 6
         Me.medidas.Name = "medidas"
         Me.medidas.ReadOnly = True
         Me.medidas.Visible = False
+        Me.medidas.Width = 125
         '
         'Panel1
         '
@@ -495,76 +532,84 @@ Partial Class frmComprasproducto
         Me.Panel1.Controls.Add(Me.lbltotalcompra)
         Me.Panel1.Controls.Add(Me.lblivacompra)
         Me.Panel1.Controls.Add(Me.lblsumacompra)
-        Me.Panel1.Location = New System.Drawing.Point(538, 436)
+        Me.Panel1.Location = New System.Drawing.Point(717, 537)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(219, 120)
+        Me.Panel1.Size = New System.Drawing.Size(292, 148)
         Me.Panel1.TabIndex = 16
-        '
-        'lblsumacompra
-        '
-        Me.lblsumacompra.AutoSize = True
-        Me.lblsumacompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsumacompra.Location = New System.Drawing.Point(7, 15)
-        Me.lblsumacompra.Name = "lblsumacompra"
-        Me.lblsumacompra.Size = New System.Drawing.Size(65, 20)
-        Me.lblsumacompra.TabIndex = 0
-        Me.lblsumacompra.Text = "SUMA:"
-        '
-        'lblivacompra
-        '
-        Me.lblivacompra.AutoSize = True
-        Me.lblivacompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblivacompra.Location = New System.Drawing.Point(7, 52)
-        Me.lblivacompra.Name = "lblivacompra"
-        Me.lblivacompra.Size = New System.Drawing.Size(44, 20)
-        Me.lblivacompra.TabIndex = 1
-        Me.lblivacompra.Text = "IVA:"
-        '
-        'lbltotalcompra
-        '
-        Me.lbltotalcompra.AutoSize = True
-        Me.lbltotalcompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbltotalcompra.Location = New System.Drawing.Point(7, 91)
-        Me.lbltotalcompra.Name = "lbltotalcompra"
-        Me.lbltotalcompra.Size = New System.Drawing.Size(69, 20)
-        Me.lbltotalcompra.TabIndex = 2
-        Me.lbltotalcompra.Text = "TOTAL:"
-        '
-        'lblrespuestasumacompra
-        '
-        Me.lblrespuestasumacompra.AutoSize = True
-        Me.lblrespuestasumacompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblrespuestasumacompra.Location = New System.Drawing.Point(122, 15)
-        Me.lblrespuestasumacompra.Name = "lblrespuestasumacompra"
-        Me.lblrespuestasumacompra.Size = New System.Drawing.Size(44, 20)
-        Me.lblrespuestasumacompra.TabIndex = 3
-        Me.lblrespuestasumacompra.Text = "0.00"
-        '
-        'lblrespuestaivacompra
-        '
-        Me.lblrespuestaivacompra.AutoSize = True
-        Me.lblrespuestaivacompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblrespuestaivacompra.Location = New System.Drawing.Point(122, 52)
-        Me.lblrespuestaivacompra.Name = "lblrespuestaivacompra"
-        Me.lblrespuestaivacompra.Size = New System.Drawing.Size(44, 20)
-        Me.lblrespuestaivacompra.TabIndex = 4
-        Me.lblrespuestaivacompra.Text = "0.00"
         '
         'lblrespuestatotalcompra
         '
         Me.lblrespuestatotalcompra.AutoSize = True
         Me.lblrespuestatotalcompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblrespuestatotalcompra.Location = New System.Drawing.Point(122, 91)
+        Me.lblrespuestatotalcompra.Location = New System.Drawing.Point(163, 112)
+        Me.lblrespuestatotalcompra.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblrespuestatotalcompra.Name = "lblrespuestatotalcompra"
-        Me.lblrespuestatotalcompra.Size = New System.Drawing.Size(44, 20)
+        Me.lblrespuestatotalcompra.Size = New System.Drawing.Size(54, 25)
         Me.lblrespuestatotalcompra.TabIndex = 5
         Me.lblrespuestatotalcompra.Text = "0.00"
         '
+        'lblrespuestaivacompra
+        '
+        Me.lblrespuestaivacompra.AutoSize = True
+        Me.lblrespuestaivacompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblrespuestaivacompra.Location = New System.Drawing.Point(163, 64)
+        Me.lblrespuestaivacompra.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblrespuestaivacompra.Name = "lblrespuestaivacompra"
+        Me.lblrespuestaivacompra.Size = New System.Drawing.Size(54, 25)
+        Me.lblrespuestaivacompra.TabIndex = 4
+        Me.lblrespuestaivacompra.Text = "0.00"
+        '
+        'lblrespuestasumacompra
+        '
+        Me.lblrespuestasumacompra.AutoSize = True
+        Me.lblrespuestasumacompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblrespuestasumacompra.Location = New System.Drawing.Point(163, 18)
+        Me.lblrespuestasumacompra.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblrespuestasumacompra.Name = "lblrespuestasumacompra"
+        Me.lblrespuestasumacompra.Size = New System.Drawing.Size(54, 25)
+        Me.lblrespuestasumacompra.TabIndex = 3
+        Me.lblrespuestasumacompra.Text = "0.00"
+        '
+        'lbltotalcompra
+        '
+        Me.lbltotalcompra.AutoSize = True
+        Me.lbltotalcompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbltotalcompra.Location = New System.Drawing.Point(9, 112)
+        Me.lbltotalcompra.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbltotalcompra.Name = "lbltotalcompra"
+        Me.lbltotalcompra.Size = New System.Drawing.Size(91, 25)
+        Me.lbltotalcompra.TabIndex = 2
+        Me.lbltotalcompra.Text = "TOTAL:"
+        '
+        'lblivacompra
+        '
+        Me.lblivacompra.AutoSize = True
+        Me.lblivacompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblivacompra.Location = New System.Drawing.Point(9, 64)
+        Me.lblivacompra.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblivacompra.Name = "lblivacompra"
+        Me.lblivacompra.Size = New System.Drawing.Size(55, 25)
+        Me.lblivacompra.TabIndex = 1
+        Me.lblivacompra.Text = "IVA:"
+        '
+        'lblsumacompra
+        '
+        Me.lblsumacompra.AutoSize = True
+        Me.lblsumacompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblsumacompra.Location = New System.Drawing.Point(9, 18)
+        Me.lblsumacompra.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblsumacompra.Name = "lblsumacompra"
+        Me.lblsumacompra.Size = New System.Drawing.Size(82, 25)
+        Me.lblsumacompra.TabIndex = 0
+        Me.lblsumacompra.Text = "SUMA:"
+        '
         'frmComprasproducto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(777, 568)
+        Me.BackColor = System.Drawing.Color.OrangeRed
+        Me.ClientSize = New System.Drawing.Size(1036, 699)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DcomprasProductosDataGridView)
         Me.Controls.Add(Fecha_vtaLabel)
@@ -578,6 +623,8 @@ Partial Class frmComprasproducto
         Me.Controls.Add(IdProveedorLabel)
         Me.Controls.Add(Me.IdProveedorComboBox)
         Me.Controls.Add(Me.ComprasBindingNavigator)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmComprasproducto"
         Me.Text = "Compras de productos"
         CType(Me.ComprasBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()

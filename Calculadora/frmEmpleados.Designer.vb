@@ -22,6 +22,7 @@ Partial Class frmEmpleados
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEmpleados))
         Me.grbDatos = New System.Windows.Forms.GroupBox()
         Me.lblEmailCliente = New System.Windows.Forms.Label()
         Me.txtDireccionEmpleados = New System.Windows.Forms.TextBox()
@@ -195,46 +196,54 @@ Partial Class frmEmpleados
         '
         'btnUltimoEmpleado
         '
+        Me.btnUltimoEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUltimoEmpleado.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUltimoEmpleado.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnUltimoEmpleado.Image = CType(resources.GetObject("btnUltimoEmpleado.Image"), System.Drawing.Image)
         Me.btnUltimoEmpleado.Location = New System.Drawing.Point(301, 23)
         Me.btnUltimoEmpleado.Margin = New System.Windows.Forms.Padding(1)
         Me.btnUltimoEmpleado.Name = "btnUltimoEmpleado"
         Me.btnUltimoEmpleado.Size = New System.Drawing.Size(55, 48)
         Me.btnUltimoEmpleado.TabIndex = 3
-        Me.btnUltimoEmpleado.Text = ">|"
         Me.btnUltimoEmpleado.UseVisualStyleBackColor = True
         '
         'btnSiguienteEmpleado
         '
+        Me.btnSiguienteEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSiguienteEmpleado.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSiguienteEmpleado.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSiguienteEmpleado.Image = CType(resources.GetObject("btnSiguienteEmpleado.Image"), System.Drawing.Image)
         Me.btnSiguienteEmpleado.Location = New System.Drawing.Point(249, 23)
         Me.btnSiguienteEmpleado.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSiguienteEmpleado.Name = "btnSiguienteEmpleado"
         Me.btnSiguienteEmpleado.Size = New System.Drawing.Size(55, 48)
         Me.btnSiguienteEmpleado.TabIndex = 2
-        Me.btnSiguienteEmpleado.Text = ">"
         Me.btnSiguienteEmpleado.UseVisualStyleBackColor = True
         '
         'btnAnteriorEmpleado
         '
+        Me.btnAnteriorEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAnteriorEmpleado.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAnteriorEmpleado.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnAnteriorEmpleado.Image = CType(resources.GetObject("btnAnteriorEmpleado.Image"), System.Drawing.Image)
         Me.btnAnteriorEmpleado.Location = New System.Drawing.Point(56, 23)
         Me.btnAnteriorEmpleado.Margin = New System.Windows.Forms.Padding(1)
         Me.btnAnteriorEmpleado.Name = "btnAnteriorEmpleado"
         Me.btnAnteriorEmpleado.Size = New System.Drawing.Size(55, 48)
         Me.btnAnteriorEmpleado.TabIndex = 1
-        Me.btnAnteriorEmpleado.Text = "<"
         Me.btnAnteriorEmpleado.UseVisualStyleBackColor = True
         '
         'btnPrimeroEmpleado
         '
+        Me.btnPrimeroEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPrimeroEmpleado.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrimeroEmpleado.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnPrimeroEmpleado.Image = CType(resources.GetObject("btnPrimeroEmpleado.Image"), System.Drawing.Image)
         Me.btnPrimeroEmpleado.Location = New System.Drawing.Point(3, 23)
         Me.btnPrimeroEmpleado.Margin = New System.Windows.Forms.Padding(1)
         Me.btnPrimeroEmpleado.Name = "btnPrimeroEmpleado"
         Me.btnPrimeroEmpleado.Size = New System.Drawing.Size(55, 48)
         Me.btnPrimeroEmpleado.TabIndex = 0
-        Me.btnPrimeroEmpleado.Text = "|<"
         Me.btnPrimeroEmpleado.UseVisualStyleBackColor = True
         '
         'grbEdicion
@@ -254,30 +263,34 @@ Partial Class frmEmpleados
         '
         'btnBuscarEmpleados
         '
+        Me.btnBuscarEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscarEmpleados.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarEmpleados.Location = New System.Drawing.Point(316, 23)
+        Me.btnBuscarEmpleados.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnBuscarEmpleados.Image = CType(resources.GetObject("btnBuscarEmpleados.Image"), System.Drawing.Image)
+        Me.btnBuscarEmpleados.Location = New System.Drawing.Point(344, 23)
         Me.btnBuscarEmpleados.Margin = New System.Windows.Forms.Padding(1)
         Me.btnBuscarEmpleados.Name = "btnBuscarEmpleados"
-        Me.btnBuscarEmpleados.Size = New System.Drawing.Size(100, 48)
+        Me.btnBuscarEmpleados.Size = New System.Drawing.Size(72, 48)
         Me.btnBuscarEmpleados.TabIndex = 8
-        Me.btnBuscarEmpleados.Text = "Buscar"
         Me.btnBuscarEmpleados.UseVisualStyleBackColor = True
         '
         'btnEliminarEmpleados
         '
+        Me.btnEliminarEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminarEmpleados.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarEmpleados.Location = New System.Drawing.Point(211, 23)
+        Me.btnEliminarEmpleados.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnEliminarEmpleados.Image = CType(resources.GetObject("btnEliminarEmpleados.Image"), System.Drawing.Image)
+        Me.btnEliminarEmpleados.Location = New System.Drawing.Point(244, 23)
         Me.btnEliminarEmpleados.Margin = New System.Windows.Forms.Padding(1)
         Me.btnEliminarEmpleados.Name = "btnEliminarEmpleados"
-        Me.btnEliminarEmpleados.Size = New System.Drawing.Size(107, 48)
+        Me.btnEliminarEmpleados.Size = New System.Drawing.Size(83, 48)
         Me.btnEliminarEmpleados.TabIndex = 7
-        Me.btnEliminarEmpleados.Text = "Eliminar"
         Me.btnEliminarEmpleados.UseVisualStyleBackColor = True
         '
         'btnModificarEmpleados
         '
         Me.btnModificarEmpleados.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarEmpleados.Location = New System.Drawing.Point(92, 23)
+        Me.btnModificarEmpleados.Location = New System.Drawing.Point(121, 23)
         Me.btnModificarEmpleados.Margin = New System.Windows.Forms.Padding(1)
         Me.btnModificarEmpleados.Name = "btnModificarEmpleados"
         Me.btnModificarEmpleados.Size = New System.Drawing.Size(120, 48)
@@ -288,7 +301,7 @@ Partial Class frmEmpleados
         'btnAgregarEmpleados
         '
         Me.btnAgregarEmpleados.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarEmpleados.Location = New System.Drawing.Point(3, 23)
+        Me.btnAgregarEmpleados.Location = New System.Drawing.Point(15, 23)
         Me.btnAgregarEmpleados.Margin = New System.Windows.Forms.Padding(1)
         Me.btnAgregarEmpleados.Name = "btnAgregarEmpleados"
         Me.btnAgregarEmpleados.Size = New System.Drawing.Size(91, 48)
@@ -305,6 +318,7 @@ Partial Class frmEmpleados
         Me.Controls.Add(Me.grbEdicion)
         Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.grbDatos)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmEmpleados"
         Me.Text = "Sistema Empleados"

@@ -22,6 +22,7 @@ Partial Class frmBuscarProductofaltante
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBuscarProductofaltante))
         Me.btnCancelarfaltante = New System.Windows.Forms.Button()
         Me.btnSeleccionarfaltante = New System.Windows.Forms.Button()
         Me.grdBuscarfaltante = New System.Windows.Forms.DataGridView()
@@ -41,25 +42,29 @@ Partial Class frmBuscarProductofaltante
         'btnCancelarfaltante
         '
         Me.btnCancelarfaltante.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelarfaltante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelarfaltante.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarfaltante.Location = New System.Drawing.Point(848, 668)
+        Me.btnCancelarfaltante.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnCancelarfaltante.Image = CType(resources.GetObject("btnCancelarfaltante.Image"), System.Drawing.Image)
+        Me.btnCancelarfaltante.Location = New System.Drawing.Point(947, 668)
         Me.btnCancelarfaltante.Margin = New System.Windows.Forms.Padding(1)
         Me.btnCancelarfaltante.Name = "btnCancelarfaltante"
-        Me.btnCancelarfaltante.Size = New System.Drawing.Size(160, 41)
+        Me.btnCancelarfaltante.Size = New System.Drawing.Size(61, 41)
         Me.btnCancelarfaltante.TabIndex = 22
-        Me.btnCancelarfaltante.Text = "Cancelar"
         Me.btnCancelarfaltante.UseVisualStyleBackColor = True
         '
         'btnSeleccionarfaltante
         '
         Me.btnSeleccionarfaltante.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSeleccionarfaltante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSeleccionarfaltante.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionarfaltante.Location = New System.Drawing.Point(531, 668)
+        Me.btnSeleccionarfaltante.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSeleccionarfaltante.Image = CType(resources.GetObject("btnSeleccionarfaltante.Image"), System.Drawing.Image)
+        Me.btnSeleccionarfaltante.Location = New System.Drawing.Point(889, 668)
         Me.btnSeleccionarfaltante.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSeleccionarfaltante.Name = "btnSeleccionarfaltante"
-        Me.btnSeleccionarfaltante.Size = New System.Drawing.Size(315, 41)
+        Me.btnSeleccionarfaltante.Size = New System.Drawing.Size(56, 41)
         Me.btnSeleccionarfaltante.TabIndex = 21
-        Me.btnSeleccionarfaltante.Text = "Seleccionar Producto"
         Me.btnSeleccionarfaltante.UseVisualStyleBackColor = True
         '
         'grdBuscarfaltante
@@ -171,7 +176,7 @@ Partial Class frmBuscarProductofaltante
         Me.txtBuscarfaltante.Location = New System.Drawing.Point(97, 11)
         Me.txtBuscarfaltante.Margin = New System.Windows.Forms.Padding(1)
         Me.txtBuscarfaltante.Name = "txtBuscarfaltante"
-        Me.txtBuscarfaltante.Size = New System.Drawing.Size(876, 22)
+        Me.txtBuscarfaltante.Size = New System.Drawing.Size(911, 22)
         Me.txtBuscarfaltante.TabIndex = 18
         '
         'frmBuscarProductofaltante
@@ -185,7 +190,7 @@ Partial Class frmBuscarProductofaltante
         Me.Controls.Add(Me.grdBuscarfaltante)
         Me.Controls.Add(Me.lblBuscarfaltante)
         Me.Controls.Add(Me.txtBuscarfaltante)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmBuscarProductofaltante"
         Me.Text = "Producto Faltante"
         CType(Me.grdBuscarfaltante, System.ComponentModel.ISupportInitialize).EndInit()

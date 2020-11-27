@@ -22,6 +22,7 @@ Partial Class frmBuscarUsuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBuscarUsuario))
         Me.btnCancelarUsuario = New System.Windows.Forms.Button()
         Me.btnSeleccionarUsuario = New System.Windows.Forms.Button()
         Me.grdBuscarUsuario = New System.Windows.Forms.DataGridView()
@@ -40,25 +41,29 @@ Partial Class frmBuscarUsuario
         'btnCancelarUsuario
         '
         Me.btnCancelarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarUsuario.Location = New System.Drawing.Point(819, 575)
+        Me.btnCancelarUsuario.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnCancelarUsuario.Image = CType(resources.GetObject("btnCancelarUsuario.Image"), System.Drawing.Image)
+        Me.btnCancelarUsuario.Location = New System.Drawing.Point(925, 546)
         Me.btnCancelarUsuario.Margin = New System.Windows.Forms.Padding(1)
         Me.btnCancelarUsuario.Name = "btnCancelarUsuario"
-        Me.btnCancelarUsuario.Size = New System.Drawing.Size(160, 41)
+        Me.btnCancelarUsuario.Size = New System.Drawing.Size(54, 41)
         Me.btnCancelarUsuario.TabIndex = 14
-        Me.btnCancelarUsuario.Text = "Cancelar"
         Me.btnCancelarUsuario.UseVisualStyleBackColor = True
         '
         'btnSeleccionarUsuario
         '
         Me.btnSeleccionarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSeleccionarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSeleccionarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionarUsuario.Location = New System.Drawing.Point(469, 575)
+        Me.btnSeleccionarUsuario.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSeleccionarUsuario.Image = CType(resources.GetObject("btnSeleccionarUsuario.Image"), System.Drawing.Image)
+        Me.btnSeleccionarUsuario.Location = New System.Drawing.Point(869, 546)
         Me.btnSeleccionarUsuario.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSeleccionarUsuario.Name = "btnSeleccionarUsuario"
-        Me.btnSeleccionarUsuario.Size = New System.Drawing.Size(315, 41)
+        Me.btnSeleccionarUsuario.Size = New System.Drawing.Size(54, 41)
         Me.btnSeleccionarUsuario.TabIndex = 13
-        Me.btnSeleccionarUsuario.Text = "Seleccionar Usuario"
         Me.btnSeleccionarUsuario.UseVisualStyleBackColor = True
         '
         'grdBuscarUsuario
@@ -76,7 +81,7 @@ Partial Class frmBuscarUsuario
         Me.grdBuscarUsuario.ReadOnly = True
         Me.grdBuscarUsuario.RowHeadersWidth = 102
         Me.grdBuscarUsuario.RowTemplate.Height = 40
-        Me.grdBuscarUsuario.Size = New System.Drawing.Size(941, 474)
+        Me.grdBuscarUsuario.Size = New System.Drawing.Size(941, 454)
         Me.grdBuscarUsuario.TabIndex = 12
         '
         'idUsuario
@@ -168,7 +173,7 @@ Partial Class frmBuscarUsuario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(1043, 639)
+        Me.ClientSize = New System.Drawing.Size(1043, 597)
         Me.Controls.Add(Me.btnCancelarUsuario)
         Me.Controls.Add(Me.btnSeleccionarUsuario)
         Me.Controls.Add(Me.grdBuscarUsuario)

@@ -74,11 +74,6 @@ Partial Class frmCrearprestamo
         Me.CrearprestamoClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CrearprestamoClienteTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.crearprestamoClienteTableAdapter()
         Me.CrearprestamoClienteDataGridView = New System.Windows.Forms.DataGridView()
-        Me.btnAgregarClienteNuevo = New System.Windows.Forms.Button()
-        Me.lbltotal = New System.Windows.Forms.Label()
-        Me.lblRespuestaTotal = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnCalcular = New System.Windows.Forms.Button()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -90,6 +85,11 @@ Partial Class frmCrearprestamo
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnAgregarClienteNuevo = New System.Windows.Forms.Button()
+        Me.lbltotal = New System.Windows.Forms.Label()
+        Me.lblRespuestaTotal = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnCalcular = New System.Windows.Forms.Button()
         Label1 = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
@@ -256,7 +256,7 @@ Partial Class frmCrearprestamo
         Me.CrearprestamoBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.CrearprestamoBindingNavigator.Name = "CrearprestamoBindingNavigator"
         Me.CrearprestamoBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.CrearprestamoBindingNavigator.Size = New System.Drawing.Size(978, 31)
+        Me.CrearprestamoBindingNavigator.Size = New System.Drawing.Size(978, 27)
         Me.CrearprestamoBindingNavigator.TabIndex = 0
         Me.CrearprestamoBindingNavigator.Text = "BindingNavigator1"
         '
@@ -266,13 +266,13 @@ Partial Class frmCrearprestamo
         Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 28)
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
         '
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 28)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
         Me.BindingNavigatorCountItem.Text = "de {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
         '
@@ -282,7 +282,7 @@ Partial Class frmCrearprestamo
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(29, 28)
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
@@ -291,7 +291,7 @@ Partial Class frmCrearprestamo
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(29, 28)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -300,13 +300,13 @@ Partial Class frmCrearprestamo
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(29, 28)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 31)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -321,7 +321,7 @@ Partial Class frmCrearprestamo
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 31)
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -329,7 +329,7 @@ Partial Class frmCrearprestamo
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(29, 28)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
         '
         'BindingNavigatorMoveLastItem
@@ -338,20 +338,20 @@ Partial Class frmCrearprestamo
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(29, 28)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorMoveLastItem.Text = "Mover último"
         '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 31)
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'CrearprestamoBindingNavigatorSaveItem
         '
         Me.CrearprestamoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.CrearprestamoBindingNavigatorSaveItem.Image = CType(resources.GetObject("CrearprestamoBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.CrearprestamoBindingNavigatorSaveItem.Name = "CrearprestamoBindingNavigatorSaveItem"
-        Me.CrearprestamoBindingNavigatorSaveItem.Size = New System.Drawing.Size(29, 28)
+        Me.CrearprestamoBindingNavigatorSaveItem.Size = New System.Drawing.Size(29, 24)
         Me.CrearprestamoBindingNavigatorSaveItem.Text = "Guardar datos"
         '
         'lblIdPrest
@@ -526,61 +526,6 @@ Partial Class frmCrearprestamo
         Me.CrearprestamoClienteDataGridView.Size = New System.Drawing.Size(917, 286)
         Me.CrearprestamoClienteDataGridView.TabIndex = 210
         '
-        'btnAgregarClienteNuevo
-        '
-        Me.btnAgregarClienteNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarClienteNuevo.Location = New System.Drawing.Point(758, 60)
-        Me.btnAgregarClienteNuevo.Name = "btnAgregarClienteNuevo"
-        Me.btnAgregarClienteNuevo.Size = New System.Drawing.Size(200, 47)
-        Me.btnAgregarClienteNuevo.TabIndex = 211
-        Me.btnAgregarClienteNuevo.Text = "Nuevo Cliente"
-        Me.btnAgregarClienteNuevo.UseVisualStyleBackColor = True
-        '
-        'lbltotal
-        '
-        Me.lbltotal.AutoSize = True
-        Me.lbltotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbltotal.Location = New System.Drawing.Point(4, 15)
-        Me.lbltotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbltotal.Name = "lbltotal"
-        Me.lbltotal.Size = New System.Drawing.Size(74, 20)
-        Me.lbltotal.TabIndex = 4
-        Me.lbltotal.Text = "TOTAL:"
-        '
-        'lblRespuestaTotal
-        '
-        Me.lblRespuestaTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRespuestaTotal.Location = New System.Drawing.Point(129, 15)
-        Me.lblRespuestaTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRespuestaTotal.Name = "lblRespuestaTotal"
-        Me.lblRespuestaTotal.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblRespuestaTotal.Size = New System.Drawing.Size(102, 20)
-        Me.lblRespuestaTotal.TabIndex = 5
-        Me.lblRespuestaTotal.Text = "00.00"
-        Me.lblRespuestaTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Snow
-        Me.Panel1.Controls.Add(Me.lblRespuestaTotal)
-        Me.Panel1.Controls.Add(Me.lbltotal)
-        Me.Panel1.Location = New System.Drawing.Point(724, 234)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(235, 61)
-        Me.Panel1.TabIndex = 212
-        '
-        'btnCalcular
-        '
-        Me.btnCalcular.BackColor = System.Drawing.Color.White
-        Me.btnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCalcular.Location = New System.Drawing.Point(560, 234)
-        Me.btnCalcular.Name = "btnCalcular"
-        Me.btnCalcular.Size = New System.Drawing.Size(144, 61)
-        Me.btnCalcular.TabIndex = 213
-        Me.btnCalcular.Text = "CALCULAR INTERES"
-        Me.btnCalcular.UseVisualStyleBackColor = False
-        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "idPrest"
@@ -684,6 +629,65 @@ Partial Class frmCrearprestamo
         Me.DataGridViewTextBoxColumn11.ReadOnly = True
         Me.DataGridViewTextBoxColumn11.Width = 125
         '
+        'btnAgregarClienteNuevo
+        '
+        Me.btnAgregarClienteNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAgregarClienteNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregarClienteNuevo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnAgregarClienteNuevo.Image = CType(resources.GetObject("btnAgregarClienteNuevo.Image"), System.Drawing.Image)
+        Me.btnAgregarClienteNuevo.Location = New System.Drawing.Point(818, 60)
+        Me.btnAgregarClienteNuevo.Name = "btnAgregarClienteNuevo"
+        Me.btnAgregarClienteNuevo.Size = New System.Drawing.Size(79, 62)
+        Me.btnAgregarClienteNuevo.TabIndex = 211
+        Me.btnAgregarClienteNuevo.UseVisualStyleBackColor = True
+        '
+        'lbltotal
+        '
+        Me.lbltotal.AutoSize = True
+        Me.lbltotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbltotal.Location = New System.Drawing.Point(4, 15)
+        Me.lbltotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbltotal.Name = "lbltotal"
+        Me.lbltotal.Size = New System.Drawing.Size(74, 20)
+        Me.lbltotal.TabIndex = 4
+        Me.lbltotal.Text = "TOTAL:"
+        '
+        'lblRespuestaTotal
+        '
+        Me.lblRespuestaTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRespuestaTotal.Location = New System.Drawing.Point(129, 15)
+        Me.lblRespuestaTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblRespuestaTotal.Name = "lblRespuestaTotal"
+        Me.lblRespuestaTotal.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblRespuestaTotal.Size = New System.Drawing.Size(102, 20)
+        Me.lblRespuestaTotal.TabIndex = 5
+        Me.lblRespuestaTotal.Text = "00.00"
+        Me.lblRespuestaTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Snow
+        Me.Panel1.Controls.Add(Me.lblRespuestaTotal)
+        Me.Panel1.Controls.Add(Me.lbltotal)
+        Me.Panel1.Location = New System.Drawing.Point(724, 234)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(235, 61)
+        Me.Panel1.TabIndex = 212
+        '
+        'btnCalcular
+        '
+        Me.btnCalcular.BackColor = System.Drawing.Color.OrangeRed
+        Me.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCalcular.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnCalcular.Image = CType(resources.GetObject("btnCalcular.Image"), System.Drawing.Image)
+        Me.btnCalcular.Location = New System.Drawing.Point(647, 234)
+        Me.btnCalcular.Name = "btnCalcular"
+        Me.btnCalcular.Size = New System.Drawing.Size(67, 61)
+        Me.btnCalcular.TabIndex = 213
+        Me.btnCalcular.UseVisualStyleBackColor = False
+        '
         'frmCrearprestamo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -711,6 +715,7 @@ Partial Class frmCrearprestamo
         Me.Controls.Add(Me.lblIdPrest)
         Me.Controls.Add(Me.lblTituloPrest)
         Me.Controls.Add(Me.CrearprestamoBindingNavigator)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCrearprestamo"
         Me.Text = "Registro de Prestamo"
         CType(Me.Bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()

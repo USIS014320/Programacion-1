@@ -22,6 +22,7 @@ Partial Class frmCargos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCargos))
         Me.grbDatos = New System.Windows.Forms.GroupBox()
         Me.lblDescripcionCargos = New System.Windows.Forms.Label()
         Me.txtDescripcionCargo = New System.Windows.Forms.TextBox()
@@ -91,30 +92,34 @@ Partial Class frmCargos
         '
         'btnBuscarCargo
         '
+        Me.btnBuscarCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscarCargo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarCargo.Location = New System.Drawing.Point(316, 23)
+        Me.btnBuscarCargo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnBuscarCargo.Image = CType(resources.GetObject("btnBuscarCargo.Image"), System.Drawing.Image)
+        Me.btnBuscarCargo.Location = New System.Drawing.Point(349, 23)
         Me.btnBuscarCargo.Margin = New System.Windows.Forms.Padding(1)
         Me.btnBuscarCargo.Name = "btnBuscarCargo"
-        Me.btnBuscarCargo.Size = New System.Drawing.Size(100, 48)
+        Me.btnBuscarCargo.Size = New System.Drawing.Size(67, 48)
         Me.btnBuscarCargo.TabIndex = 8
-        Me.btnBuscarCargo.Text = "Buscar"
         Me.btnBuscarCargo.UseVisualStyleBackColor = True
         '
         'btnEliminarCargo
         '
+        Me.btnEliminarCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminarCargo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarCargo.Location = New System.Drawing.Point(211, 23)
+        Me.btnEliminarCargo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnEliminarCargo.Image = CType(resources.GetObject("btnEliminarCargo.Image"), System.Drawing.Image)
+        Me.btnEliminarCargo.Location = New System.Drawing.Point(270, 23)
         Me.btnEliminarCargo.Margin = New System.Windows.Forms.Padding(1)
         Me.btnEliminarCargo.Name = "btnEliminarCargo"
-        Me.btnEliminarCargo.Size = New System.Drawing.Size(107, 48)
+        Me.btnEliminarCargo.Size = New System.Drawing.Size(63, 48)
         Me.btnEliminarCargo.TabIndex = 7
-        Me.btnEliminarCargo.Text = "Eliminar"
         Me.btnEliminarCargo.UseVisualStyleBackColor = True
         '
         'btnModificarCargo
         '
         Me.btnModificarCargo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarCargo.Location = New System.Drawing.Point(92, 23)
+        Me.btnModificarCargo.Location = New System.Drawing.Point(122, 23)
         Me.btnModificarCargo.Margin = New System.Windows.Forms.Padding(1)
         Me.btnModificarCargo.Name = "btnModificarCargo"
         Me.btnModificarCargo.Size = New System.Drawing.Size(120, 48)
@@ -125,7 +130,7 @@ Partial Class frmCargos
         'btnAgregarCargo
         '
         Me.btnAgregarCargo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarCargo.Location = New System.Drawing.Point(3, 23)
+        Me.btnAgregarCargo.Location = New System.Drawing.Point(14, 23)
         Me.btnAgregarCargo.Margin = New System.Windows.Forms.Padding(1)
         Me.btnAgregarCargo.Name = "btnAgregarCargo"
         Me.btnAgregarCargo.Size = New System.Drawing.Size(91, 48)
@@ -161,46 +166,54 @@ Partial Class frmCargos
         '
         'btnUltimoCargo
         '
+        Me.btnUltimoCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUltimoCargo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUltimoCargo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnUltimoCargo.Image = CType(resources.GetObject("btnUltimoCargo.Image"), System.Drawing.Image)
         Me.btnUltimoCargo.Location = New System.Drawing.Point(301, 23)
         Me.btnUltimoCargo.Margin = New System.Windows.Forms.Padding(1)
         Me.btnUltimoCargo.Name = "btnUltimoCargo"
         Me.btnUltimoCargo.Size = New System.Drawing.Size(55, 48)
         Me.btnUltimoCargo.TabIndex = 3
-        Me.btnUltimoCargo.Text = ">|"
         Me.btnUltimoCargo.UseVisualStyleBackColor = True
         '
         'btnSiguienteCargo
         '
+        Me.btnSiguienteCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSiguienteCargo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSiguienteCargo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSiguienteCargo.Image = CType(resources.GetObject("btnSiguienteCargo.Image"), System.Drawing.Image)
         Me.btnSiguienteCargo.Location = New System.Drawing.Point(249, 23)
         Me.btnSiguienteCargo.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSiguienteCargo.Name = "btnSiguienteCargo"
         Me.btnSiguienteCargo.Size = New System.Drawing.Size(55, 48)
         Me.btnSiguienteCargo.TabIndex = 2
-        Me.btnSiguienteCargo.Text = ">"
         Me.btnSiguienteCargo.UseVisualStyleBackColor = True
         '
         'btnAnteriorCargo
         '
+        Me.btnAnteriorCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAnteriorCargo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAnteriorCargo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnAnteriorCargo.Image = CType(resources.GetObject("btnAnteriorCargo.Image"), System.Drawing.Image)
         Me.btnAnteriorCargo.Location = New System.Drawing.Point(56, 23)
         Me.btnAnteriorCargo.Margin = New System.Windows.Forms.Padding(1)
         Me.btnAnteriorCargo.Name = "btnAnteriorCargo"
         Me.btnAnteriorCargo.Size = New System.Drawing.Size(55, 48)
         Me.btnAnteriorCargo.TabIndex = 1
-        Me.btnAnteriorCargo.Text = "<"
         Me.btnAnteriorCargo.UseVisualStyleBackColor = True
         '
         'btnPrimeroCargo
         '
+        Me.btnPrimeroCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPrimeroCargo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrimeroCargo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnPrimeroCargo.Image = CType(resources.GetObject("btnPrimeroCargo.Image"), System.Drawing.Image)
         Me.btnPrimeroCargo.Location = New System.Drawing.Point(3, 23)
         Me.btnPrimeroCargo.Margin = New System.Windows.Forms.Padding(1)
         Me.btnPrimeroCargo.Name = "btnPrimeroCargo"
         Me.btnPrimeroCargo.Size = New System.Drawing.Size(55, 48)
         Me.btnPrimeroCargo.TabIndex = 0
-        Me.btnPrimeroCargo.Text = "|<"
         Me.btnPrimeroCargo.UseVisualStyleBackColor = True
         '
         'frmCargos
@@ -212,6 +225,7 @@ Partial Class frmCargos
         Me.Controls.Add(Me.grbEdicion)
         Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.grbDatos)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCargos"
         Me.Text = "Registro de Cargos"
         Me.grbDatos.ResumeLayout(False)

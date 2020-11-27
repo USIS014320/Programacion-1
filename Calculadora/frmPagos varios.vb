@@ -23,7 +23,7 @@
             txtDescripciontipo.Text = dataTable.Rows(posicion).ItemArray(4).ToString()
             txtCantidadtipo.Text = dataTable.Rows(posicion).ItemArray(5).ToString()
 
-            lblRegistrosEmpleado.Text = posicion + 1 & " de " & dataTable.Rows.Count
+            lblRegistrostipo.Text = posicion + 1 & " de " & dataTable.Rows.Count
         Else
             limpiarPagosvarios()
             MessageBox.Show("No hay registros que mostrar", "Registro de Pagos varios", MessageBoxButtons.OK, MessageBoxIcon.Information)

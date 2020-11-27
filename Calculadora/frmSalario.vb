@@ -19,7 +19,7 @@
             Me.Tag = dataTable.Rows(posicion).ItemArray(0).ToString() 'ID de Categoria 
             txtDescuentos.Text = dataTable.Rows(posicion).ItemArray(1).ToString()
 
-            lblRegistrosCategoria.Text = posicion + 1 & " de " & dataTable.Rows.Count
+            lblRegistrosSalario.Text = posicion + 1 & " de " & dataTable.Rows.Count
         Else
             limpiarDatosCategoria()
             MessageBox.Show("No hay registros que mostrar", "Registro de Productos", MessageBoxButtons.OK, MessageBoxIcon.Information)

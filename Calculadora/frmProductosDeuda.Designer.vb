@@ -22,6 +22,7 @@ Partial Class frmProductosDeuda
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProductosDeuda))
         Me.grbDatos = New System.Windows.Forms.GroupBox()
         Me.txtMunProducto = New System.Windows.Forms.TextBox()
         Me.txtDeptoProductos = New System.Windows.Forms.TextBox()
@@ -35,20 +36,20 @@ Partial Class frmProductosDeuda
         Me.txtNombreCliente = New System.Windows.Forms.TextBox()
         Me.txtCodigoCliente = New System.Windows.Forms.TextBox()
         Me.lblCodigoCliente = New System.Windows.Forms.Label()
+        Me.grbEdicion = New System.Windows.Forms.GroupBox()
+        Me.btnBuscarProducto = New System.Windows.Forms.Button()
+        Me.btnEliminarProducto = New System.Windows.Forms.Button()
+        Me.btnModificarProducto = New System.Windows.Forms.Button()
+        Me.btnAgregarProducto = New System.Windows.Forms.Button()
         Me.grbNavegacion = New System.Windows.Forms.GroupBox()
         Me.lblRegistrosCliente = New System.Windows.Forms.Label()
         Me.btnUltimoCliente = New System.Windows.Forms.Button()
         Me.btnSiguienteCliente = New System.Windows.Forms.Button()
         Me.btnAnteriorCliente = New System.Windows.Forms.Button()
         Me.btnPrimeroCliente = New System.Windows.Forms.Button()
-        Me.grbEdicion = New System.Windows.Forms.GroupBox()
-        Me.btnBuscarProducto = New System.Windows.Forms.Button()
-        Me.btnEliminarProducto = New System.Windows.Forms.Button()
-        Me.btnModificarProducto = New System.Windows.Forms.Button()
-        Me.btnAgregarProducto = New System.Windows.Forms.Button()
         Me.grbDatos.SuspendLayout()
-        Me.grbNavegacion.SuspendLayout()
         Me.grbEdicion.SuspendLayout()
+        Me.grbNavegacion.SuspendLayout()
         Me.SuspendLayout()
         '
         'grbDatos
@@ -190,6 +191,69 @@ Partial Class frmProductosDeuda
         Me.lblCodigoCliente.TabIndex = 0
         Me.lblCodigoCliente.Text = "CODIGO:"
         '
+        'grbEdicion
+        '
+        Me.grbEdicion.Controls.Add(Me.btnBuscarProducto)
+        Me.grbEdicion.Controls.Add(Me.btnEliminarProducto)
+        Me.grbEdicion.Controls.Add(Me.btnModificarProducto)
+        Me.grbEdicion.Controls.Add(Me.btnAgregarProducto)
+        Me.grbEdicion.Location = New System.Drawing.Point(376, 554)
+        Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
+        Me.grbEdicion.Name = "grbEdicion"
+        Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
+        Me.grbEdicion.Size = New System.Drawing.Size(420, 84)
+        Me.grbEdicion.TabIndex = 23
+        Me.grbEdicion.TabStop = False
+        Me.grbEdicion.Text = "Edicion"
+        '
+        'btnBuscarProducto
+        '
+        Me.btnBuscarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscarProducto.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscarProducto.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnBuscarProducto.Image = CType(resources.GetObject("btnBuscarProducto.Image"), System.Drawing.Image)
+        Me.btnBuscarProducto.Location = New System.Drawing.Point(344, 23)
+        Me.btnBuscarProducto.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnBuscarProducto.Name = "btnBuscarProducto"
+        Me.btnBuscarProducto.Size = New System.Drawing.Size(72, 48)
+        Me.btnBuscarProducto.TabIndex = 8
+        Me.btnBuscarProducto.UseVisualStyleBackColor = True
+        '
+        'btnEliminarProducto
+        '
+        Me.btnEliminarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminarProducto.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminarProducto.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnEliminarProducto.Image = CType(resources.GetObject("btnEliminarProducto.Image"), System.Drawing.Image)
+        Me.btnEliminarProducto.Location = New System.Drawing.Point(244, 23)
+        Me.btnEliminarProducto.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnEliminarProducto.Name = "btnEliminarProducto"
+        Me.btnEliminarProducto.Size = New System.Drawing.Size(83, 48)
+        Me.btnEliminarProducto.TabIndex = 7
+        Me.btnEliminarProducto.UseVisualStyleBackColor = True
+        '
+        'btnModificarProducto
+        '
+        Me.btnModificarProducto.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificarProducto.Location = New System.Drawing.Point(121, 23)
+        Me.btnModificarProducto.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnModificarProducto.Name = "btnModificarProducto"
+        Me.btnModificarProducto.Size = New System.Drawing.Size(120, 48)
+        Me.btnModificarProducto.TabIndex = 6
+        Me.btnModificarProducto.Text = "Modificar"
+        Me.btnModificarProducto.UseVisualStyleBackColor = True
+        '
+        'btnAgregarProducto
+        '
+        Me.btnAgregarProducto.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregarProducto.Location = New System.Drawing.Point(15, 23)
+        Me.btnAgregarProducto.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnAgregarProducto.Name = "btnAgregarProducto"
+        Me.btnAgregarProducto.Size = New System.Drawing.Size(91, 48)
+        Me.btnAgregarProducto.TabIndex = 5
+        Me.btnAgregarProducto.Text = "Nuevo"
+        Me.btnAgregarProducto.UseVisualStyleBackColor = True
+        '
         'grbNavegacion
         '
         Me.grbNavegacion.Controls.Add(Me.lblRegistrosCliente)
@@ -197,12 +261,12 @@ Partial Class frmProductosDeuda
         Me.grbNavegacion.Controls.Add(Me.btnSiguienteCliente)
         Me.grbNavegacion.Controls.Add(Me.btnAnteriorCliente)
         Me.grbNavegacion.Controls.Add(Me.btnPrimeroCliente)
-        Me.grbNavegacion.Location = New System.Drawing.Point(13, 535)
+        Me.grbNavegacion.Location = New System.Drawing.Point(13, 554)
         Me.grbNavegacion.Margin = New System.Windows.Forms.Padding(1)
         Me.grbNavegacion.Name = "grbNavegacion"
         Me.grbNavegacion.Padding = New System.Windows.Forms.Padding(1)
         Me.grbNavegacion.Size = New System.Drawing.Size(360, 84)
-        Me.grbNavegacion.TabIndex = 4
+        Me.grbNavegacion.TabIndex = 22
         Me.grbNavegacion.TabStop = False
         Me.grbNavegacion.Text = "Navegacion"
         '
@@ -218,106 +282,55 @@ Partial Class frmProductosDeuda
         '
         'btnUltimoCliente
         '
+        Me.btnUltimoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUltimoCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUltimoCliente.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnUltimoCliente.Image = CType(resources.GetObject("btnUltimoCliente.Image"), System.Drawing.Image)
         Me.btnUltimoCliente.Location = New System.Drawing.Point(301, 23)
         Me.btnUltimoCliente.Margin = New System.Windows.Forms.Padding(1)
         Me.btnUltimoCliente.Name = "btnUltimoCliente"
         Me.btnUltimoCliente.Size = New System.Drawing.Size(55, 48)
         Me.btnUltimoCliente.TabIndex = 3
-        Me.btnUltimoCliente.Text = ">|"
         Me.btnUltimoCliente.UseVisualStyleBackColor = True
         '
         'btnSiguienteCliente
         '
+        Me.btnSiguienteCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSiguienteCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSiguienteCliente.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSiguienteCliente.Image = CType(resources.GetObject("btnSiguienteCliente.Image"), System.Drawing.Image)
         Me.btnSiguienteCliente.Location = New System.Drawing.Point(249, 23)
         Me.btnSiguienteCliente.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSiguienteCliente.Name = "btnSiguienteCliente"
         Me.btnSiguienteCliente.Size = New System.Drawing.Size(55, 48)
         Me.btnSiguienteCliente.TabIndex = 2
-        Me.btnSiguienteCliente.Text = ">"
         Me.btnSiguienteCliente.UseVisualStyleBackColor = True
         '
         'btnAnteriorCliente
         '
+        Me.btnAnteriorCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAnteriorCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAnteriorCliente.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnAnteriorCliente.Image = CType(resources.GetObject("btnAnteriorCliente.Image"), System.Drawing.Image)
         Me.btnAnteriorCliente.Location = New System.Drawing.Point(56, 23)
         Me.btnAnteriorCliente.Margin = New System.Windows.Forms.Padding(1)
         Me.btnAnteriorCliente.Name = "btnAnteriorCliente"
         Me.btnAnteriorCliente.Size = New System.Drawing.Size(55, 48)
         Me.btnAnteriorCliente.TabIndex = 1
-        Me.btnAnteriorCliente.Text = "<"
         Me.btnAnteriorCliente.UseVisualStyleBackColor = True
         '
         'btnPrimeroCliente
         '
+        Me.btnPrimeroCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPrimeroCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrimeroCliente.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnPrimeroCliente.Image = CType(resources.GetObject("btnPrimeroCliente.Image"), System.Drawing.Image)
         Me.btnPrimeroCliente.Location = New System.Drawing.Point(3, 23)
         Me.btnPrimeroCliente.Margin = New System.Windows.Forms.Padding(1)
         Me.btnPrimeroCliente.Name = "btnPrimeroCliente"
         Me.btnPrimeroCliente.Size = New System.Drawing.Size(55, 48)
         Me.btnPrimeroCliente.TabIndex = 0
-        Me.btnPrimeroCliente.Text = "|<"
         Me.btnPrimeroCliente.UseVisualStyleBackColor = True
-        '
-        'grbEdicion
-        '
-        Me.grbEdicion.Controls.Add(Me.btnBuscarProducto)
-        Me.grbEdicion.Controls.Add(Me.btnEliminarProducto)
-        Me.grbEdicion.Controls.Add(Me.btnModificarProducto)
-        Me.grbEdicion.Controls.Add(Me.btnAgregarProducto)
-        Me.grbEdicion.Location = New System.Drawing.Point(376, 535)
-        Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
-        Me.grbEdicion.Name = "grbEdicion"
-        Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbEdicion.Size = New System.Drawing.Size(420, 84)
-        Me.grbEdicion.TabIndex = 5
-        Me.grbEdicion.TabStop = False
-        Me.grbEdicion.Text = "Edicion"
-        '
-        'btnBuscarProducto
-        '
-        Me.btnBuscarProducto.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarProducto.Location = New System.Drawing.Point(316, 23)
-        Me.btnBuscarProducto.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnBuscarProducto.Name = "btnBuscarProducto"
-        Me.btnBuscarProducto.Size = New System.Drawing.Size(100, 48)
-        Me.btnBuscarProducto.TabIndex = 8
-        Me.btnBuscarProducto.Text = "Buscar"
-        Me.btnBuscarProducto.UseVisualStyleBackColor = True
-        '
-        'btnEliminarProducto
-        '
-        Me.btnEliminarProducto.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarProducto.Location = New System.Drawing.Point(211, 23)
-        Me.btnEliminarProducto.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnEliminarProducto.Name = "btnEliminarProducto"
-        Me.btnEliminarProducto.Size = New System.Drawing.Size(107, 48)
-        Me.btnEliminarProducto.TabIndex = 7
-        Me.btnEliminarProducto.Text = "Eliminar"
-        Me.btnEliminarProducto.UseVisualStyleBackColor = True
-        '
-        'btnModificarProducto
-        '
-        Me.btnModificarProducto.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarProducto.Location = New System.Drawing.Point(92, 23)
-        Me.btnModificarProducto.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnModificarProducto.Name = "btnModificarProducto"
-        Me.btnModificarProducto.Size = New System.Drawing.Size(120, 48)
-        Me.btnModificarProducto.TabIndex = 6
-        Me.btnModificarProducto.Text = "Modificar"
-        Me.btnModificarProducto.UseVisualStyleBackColor = True
-        '
-        'btnAgregarProducto
-        '
-        Me.btnAgregarProducto.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarProducto.Location = New System.Drawing.Point(3, 23)
-        Me.btnAgregarProducto.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnAgregarProducto.Name = "btnAgregarProducto"
-        Me.btnAgregarProducto.Size = New System.Drawing.Size(91, 48)
-        Me.btnAgregarProducto.TabIndex = 5
-        Me.btnAgregarProducto.Text = "Nuevo"
-        Me.btnAgregarProducto.UseVisualStyleBackColor = True
         '
         'frmProductosDeuda
         '
@@ -328,14 +341,15 @@ Partial Class frmProductosDeuda
         Me.Controls.Add(Me.grbEdicion)
         Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.grbDatos)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmProductosDeuda"
-        Me.Text = "Productos Deuda"
+        Me.Text = " Productos Deuda"
         Me.grbDatos.ResumeLayout(False)
         Me.grbDatos.PerformLayout()
+        Me.grbEdicion.ResumeLayout(False)
         Me.grbNavegacion.ResumeLayout(False)
         Me.grbNavegacion.PerformLayout()
-        Me.grbEdicion.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -353,15 +367,15 @@ Partial Class frmProductosDeuda
     Friend WithEvents txtNombreCliente As TextBox
     Friend WithEvents txtCodigoCliente As TextBox
     Friend WithEvents lblCodigoCliente As Label
+    Friend WithEvents grbEdicion As GroupBox
+    Friend WithEvents btnBuscarProducto As Button
+    Friend WithEvents btnEliminarProducto As Button
+    Friend WithEvents btnModificarProducto As Button
+    Friend WithEvents btnAgregarProducto As Button
     Friend WithEvents grbNavegacion As GroupBox
     Friend WithEvents lblRegistrosCliente As Label
     Friend WithEvents btnUltimoCliente As Button
     Friend WithEvents btnSiguienteCliente As Button
     Friend WithEvents btnAnteriorCliente As Button
     Friend WithEvents btnPrimeroCliente As Button
-    Friend WithEvents grbEdicion As GroupBox
-    Friend WithEvents btnBuscarProducto As Button
-    Friend WithEvents btnEliminarProducto As Button
-    Friend WithEvents btnModificarProducto As Button
-    Friend WithEvents btnAgregarProducto As Button
 End Class

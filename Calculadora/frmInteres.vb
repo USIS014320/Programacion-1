@@ -28,11 +28,11 @@
     Private Sub limpiarDatosInteres()
         txtInteres.Text = ""
     End Sub
-    Private Sub btnPrimeroInteres_Click(sender As Object, e As EventArgs) Handles btnPrimeroInteres.Click
+    Private Sub btnPrimeroInteres_Click(sender As Object, e As EventArgs)
         posicion = 0
         mostrarDatos()
     End Sub
-    Private Sub btnAnteriorInteres_Click(sender As Object, e As EventArgs) Handles btnAnteriorInteres.Click
+    Private Sub btnAnteriorInteres_Click(sender As Object, e As EventArgs)
         If posicion > 0 Then
             posicion -= 1
             mostrarDatos()
@@ -40,7 +40,7 @@
             MessageBox.Show("Ya te encuentras en el primer registro.", "Registro de Intereses", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
-    Private Sub btnSiguienteInteres_Click(sender As Object, e As EventArgs) Handles btnSiguienteInteres.Click
+    Private Sub btnSiguienteInteres_Click(sender As Object, e As EventArgs)
         If posicion < dataTable.Rows.Count - 1 Then
             posicion += 1
             mostrarDatos()
@@ -48,7 +48,7 @@
             MessageBox.Show("Ya te encuentras en el ultimo registro.", "Registro de Intereses", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
-    Private Sub btnUltimoInteres_Click(sender As Object, e As EventArgs) Handles btnUltimoInteres.Click
+    Private Sub btnUltimoInteres_Click(sender As Object, e As EventArgs)
         posicion = dataTable.Rows.Count - 1
         mostrarDatos()
     End Sub
@@ -58,7 +58,7 @@
         btnEliminarInteres.Enabled = estado
         btnBuscarInteres.Enabled = estado
     End Sub
-    Private Sub btnAgregarInteres_Click(sender As Object, e As EventArgs) Handles btnAgregarInteres.Click
+    Private Sub btnAgregarInteres_Click(sender As Object, e As EventArgs)
         If btnAgregarInteres.Text = "Nuevo" Then 'Nuevo
             btnAgregarInteres.Text = "Guardar"
             btnModificarInteres.Text = "Cancelar"
@@ -81,7 +81,7 @@
             End If
         End If
     End Sub
-    Private Sub btnModificarInteres_Click(sender As Object, e As EventArgs) Handles btnModificarInteres.Click
+    Private Sub btnModificarInteres_Click(sender As Object, e As EventArgs)
         If btnModificarInteres.Text = "Modificar" Then 'Modificar
             btnAgregarInteres.Text = "Guardar"
             btnModificarInteres.Text = "Cancelar"
@@ -95,7 +95,7 @@
             btnModificarInteres.Text = "Modificar"
         End If
     End Sub
-    Private Sub btnEliminarInteres_Click(sender As Object, e As EventArgs) Handles btnEliminarInteres.Click
+    Private Sub btnEliminarInteres_Click(sender As Object, e As EventArgs)
         If MessageBox.Show("Esta seguro de eliminar " & txtInteres.Text, "Registro de Interes", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
             Dim msg = objConexion.mantenimientoDatosInteres(New String() {Me.Tag}, "eliminar")
             If msg = "error" Then
@@ -109,7 +109,7 @@
             End If
         End If
     End Sub
-    Private Sub btnBuscarInteres_Click(sender As Object, e As EventArgs) Handles btnBuscarInteres.Click
+    Private Sub btnBuscarInteres_Click(sender As Object, e As EventArgs)
         Dim objBuscarInteres As New frmBuscarInteres
         objBuscarInteres.ShowDialog()
         If objBuscarInteres._idI > 0 Then

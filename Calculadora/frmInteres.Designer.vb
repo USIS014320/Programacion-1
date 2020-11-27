@@ -22,6 +22,7 @@ Partial Class frmInteres
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInteres))
         Me.grbDatos = New System.Windows.Forms.GroupBox()
         Me.lblInteres = New System.Windows.Forms.Label()
         Me.txtInteres = New System.Windows.Forms.TextBox()
@@ -80,41 +81,45 @@ Partial Class frmInteres
         Me.grbEdicion.Controls.Add(Me.btnEliminarInteres)
         Me.grbEdicion.Controls.Add(Me.btnModificarInteres)
         Me.grbEdicion.Controls.Add(Me.btnAgregarInteres)
-        Me.grbEdicion.Location = New System.Drawing.Point(387, 167)
+        Me.grbEdicion.Location = New System.Drawing.Point(387, 178)
         Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
         Me.grbEdicion.Name = "grbEdicion"
         Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
         Me.grbEdicion.Size = New System.Drawing.Size(420, 84)
-        Me.grbEdicion.TabIndex = 30
+        Me.grbEdicion.TabIndex = 6
         Me.grbEdicion.TabStop = False
         Me.grbEdicion.Text = "Edicion"
         '
         'btnBuscarInteres
         '
+        Me.btnBuscarInteres.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscarInteres.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarInteres.Location = New System.Drawing.Point(316, 23)
+        Me.btnBuscarInteres.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnBuscarInteres.Image = CType(resources.GetObject("btnBuscarInteres.Image"), System.Drawing.Image)
+        Me.btnBuscarInteres.Location = New System.Drawing.Point(344, 23)
         Me.btnBuscarInteres.Margin = New System.Windows.Forms.Padding(1)
         Me.btnBuscarInteres.Name = "btnBuscarInteres"
-        Me.btnBuscarInteres.Size = New System.Drawing.Size(100, 48)
+        Me.btnBuscarInteres.Size = New System.Drawing.Size(72, 48)
         Me.btnBuscarInteres.TabIndex = 8
-        Me.btnBuscarInteres.Text = "Buscar"
         Me.btnBuscarInteres.UseVisualStyleBackColor = True
         '
         'btnEliminarInteres
         '
+        Me.btnEliminarInteres.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminarInteres.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarInteres.Location = New System.Drawing.Point(211, 23)
+        Me.btnEliminarInteres.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnEliminarInteres.Image = CType(resources.GetObject("btnEliminarInteres.Image"), System.Drawing.Image)
+        Me.btnEliminarInteres.Location = New System.Drawing.Point(244, 23)
         Me.btnEliminarInteres.Margin = New System.Windows.Forms.Padding(1)
         Me.btnEliminarInteres.Name = "btnEliminarInteres"
-        Me.btnEliminarInteres.Size = New System.Drawing.Size(107, 48)
+        Me.btnEliminarInteres.Size = New System.Drawing.Size(83, 48)
         Me.btnEliminarInteres.TabIndex = 7
-        Me.btnEliminarInteres.Text = "Eliminar"
         Me.btnEliminarInteres.UseVisualStyleBackColor = True
         '
         'btnModificarInteres
         '
         Me.btnModificarInteres.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarInteres.Location = New System.Drawing.Point(92, 23)
+        Me.btnModificarInteres.Location = New System.Drawing.Point(121, 23)
         Me.btnModificarInteres.Margin = New System.Windows.Forms.Padding(1)
         Me.btnModificarInteres.Name = "btnModificarInteres"
         Me.btnModificarInteres.Size = New System.Drawing.Size(120, 48)
@@ -125,7 +130,7 @@ Partial Class frmInteres
         'btnAgregarInteres
         '
         Me.btnAgregarInteres.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarInteres.Location = New System.Drawing.Point(3, 23)
+        Me.btnAgregarInteres.Location = New System.Drawing.Point(15, 23)
         Me.btnAgregarInteres.Margin = New System.Windows.Forms.Padding(1)
         Me.btnAgregarInteres.Name = "btnAgregarInteres"
         Me.btnAgregarInteres.Size = New System.Drawing.Size(91, 48)
@@ -140,12 +145,12 @@ Partial Class frmInteres
         Me.grbNavegacion.Controls.Add(Me.btnSiguienteInteres)
         Me.grbNavegacion.Controls.Add(Me.btnAnteriorInteres)
         Me.grbNavegacion.Controls.Add(Me.btnPrimeroInteres)
-        Me.grbNavegacion.Location = New System.Drawing.Point(24, 167)
+        Me.grbNavegacion.Location = New System.Drawing.Point(24, 178)
         Me.grbNavegacion.Margin = New System.Windows.Forms.Padding(1)
         Me.grbNavegacion.Name = "grbNavegacion"
         Me.grbNavegacion.Padding = New System.Windows.Forms.Padding(1)
         Me.grbNavegacion.Size = New System.Drawing.Size(360, 84)
-        Me.grbNavegacion.TabIndex = 29
+        Me.grbNavegacion.TabIndex = 5
         Me.grbNavegacion.TabStop = False
         Me.grbNavegacion.Text = "Navegacion"
         '
@@ -161,46 +166,54 @@ Partial Class frmInteres
         '
         'btnUltimoInteres
         '
+        Me.btnUltimoInteres.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUltimoInteres.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUltimoInteres.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnUltimoInteres.Image = CType(resources.GetObject("btnUltimoInteres.Image"), System.Drawing.Image)
         Me.btnUltimoInteres.Location = New System.Drawing.Point(301, 23)
         Me.btnUltimoInteres.Margin = New System.Windows.Forms.Padding(1)
         Me.btnUltimoInteres.Name = "btnUltimoInteres"
         Me.btnUltimoInteres.Size = New System.Drawing.Size(55, 48)
         Me.btnUltimoInteres.TabIndex = 3
-        Me.btnUltimoInteres.Text = ">|"
         Me.btnUltimoInteres.UseVisualStyleBackColor = True
         '
         'btnSiguienteInteres
         '
+        Me.btnSiguienteInteres.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSiguienteInteres.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSiguienteInteres.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSiguienteInteres.Image = CType(resources.GetObject("btnSiguienteInteres.Image"), System.Drawing.Image)
         Me.btnSiguienteInteres.Location = New System.Drawing.Point(249, 23)
         Me.btnSiguienteInteres.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSiguienteInteres.Name = "btnSiguienteInteres"
         Me.btnSiguienteInteres.Size = New System.Drawing.Size(55, 48)
         Me.btnSiguienteInteres.TabIndex = 2
-        Me.btnSiguienteInteres.Text = ">"
         Me.btnSiguienteInteres.UseVisualStyleBackColor = True
         '
         'btnAnteriorInteres
         '
+        Me.btnAnteriorInteres.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAnteriorInteres.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAnteriorInteres.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnAnteriorInteres.Image = CType(resources.GetObject("btnAnteriorInteres.Image"), System.Drawing.Image)
         Me.btnAnteriorInteres.Location = New System.Drawing.Point(56, 23)
         Me.btnAnteriorInteres.Margin = New System.Windows.Forms.Padding(1)
         Me.btnAnteriorInteres.Name = "btnAnteriorInteres"
         Me.btnAnteriorInteres.Size = New System.Drawing.Size(55, 48)
         Me.btnAnteriorInteres.TabIndex = 1
-        Me.btnAnteriorInteres.Text = "<"
         Me.btnAnteriorInteres.UseVisualStyleBackColor = True
         '
         'btnPrimeroInteres
         '
+        Me.btnPrimeroInteres.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPrimeroInteres.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrimeroInteres.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnPrimeroInteres.Image = CType(resources.GetObject("btnPrimeroInteres.Image"), System.Drawing.Image)
         Me.btnPrimeroInteres.Location = New System.Drawing.Point(3, 23)
         Me.btnPrimeroInteres.Margin = New System.Windows.Forms.Padding(1)
         Me.btnPrimeroInteres.Name = "btnPrimeroInteres"
         Me.btnPrimeroInteres.Size = New System.Drawing.Size(55, 48)
         Me.btnPrimeroInteres.TabIndex = 0
-        Me.btnPrimeroInteres.Text = "|<"
         Me.btnPrimeroInteres.UseVisualStyleBackColor = True
         '
         'frmInteres
@@ -209,11 +222,12 @@ Partial Class frmInteres
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
         Me.ClientSize = New System.Drawing.Size(830, 272)
-        Me.Controls.Add(Me.grbDatos)
         Me.Controls.Add(Me.grbEdicion)
         Me.Controls.Add(Me.grbNavegacion)
+        Me.Controls.Add(Me.grbDatos)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmInteres"
-        Me.Text = "Registros de Intereses"
+        Me.Text = " Registros de Intereses"
         Me.grbDatos.ResumeLayout(False)
         Me.grbDatos.PerformLayout()
         Me.grbEdicion.ResumeLayout(False)

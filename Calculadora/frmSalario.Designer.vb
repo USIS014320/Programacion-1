@@ -22,26 +22,28 @@ Partial Class frmSalario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSalario))
         Me.grbDatos = New System.Windows.Forms.GroupBox()
         Me.lblUsuario = New System.Windows.Forms.Label()
         Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtDescuentos = New System.Windows.Forms.TextBox()
         Me.lblDescuentos = New System.Windows.Forms.Label()
+        Me.grbEdicion = New System.Windows.Forms.GroupBox()
+        Me.btnBuscarDescuento = New System.Windows.Forms.Button()
+        Me.btnEliminarDescuento = New System.Windows.Forms.Button()
+        Me.btnModificarDescuento = New System.Windows.Forms.Button()
+        Me.btnAgregarDescuento = New System.Windows.Forms.Button()
         Me.grbNavegacion = New System.Windows.Forms.GroupBox()
-        Me.lblRegistrosCategoria = New System.Windows.Forms.Label()
+        Me.lblRegistrosSalario = New System.Windows.Forms.Label()
         Me.btnUltimo = New System.Windows.Forms.Button()
         Me.btnSiguiente = New System.Windows.Forms.Button()
         Me.btnAnterior = New System.Windows.Forms.Button()
         Me.btnPrimero = New System.Windows.Forms.Button()
-        Me.grbEdicion = New System.Windows.Forms.GroupBox()
-        Me.btnEliminarDescuento = New System.Windows.Forms.Button()
-        Me.btnModificarDescuento = New System.Windows.Forms.Button()
-        Me.btnAgregarDescuento = New System.Windows.Forms.Button()
         Me.grbDatos.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.grbNavegacion.SuspendLayout()
         Me.grbEdicion.SuspendLayout()
+        Me.grbNavegacion.SuspendLayout()
         Me.SuspendLayout()
         '
         'grbDatos
@@ -110,105 +112,51 @@ Partial Class frmSalario
         Me.lblDescuentos.TabIndex = 4
         Me.lblDescuentos.Text = "DESCUENTOS:"
         '
-        'grbNavegacion
-        '
-        Me.grbNavegacion.Controls.Add(Me.lblRegistrosCategoria)
-        Me.grbNavegacion.Controls.Add(Me.btnUltimo)
-        Me.grbNavegacion.Controls.Add(Me.btnSiguiente)
-        Me.grbNavegacion.Controls.Add(Me.btnAnterior)
-        Me.grbNavegacion.Controls.Add(Me.btnPrimero)
-        Me.grbNavegacion.Location = New System.Drawing.Point(13, 274)
-        Me.grbNavegacion.Margin = New System.Windows.Forms.Padding(1)
-        Me.grbNavegacion.Name = "grbNavegacion"
-        Me.grbNavegacion.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbNavegacion.Size = New System.Drawing.Size(360, 84)
-        Me.grbNavegacion.TabIndex = 12
-        Me.grbNavegacion.TabStop = False
-        Me.grbNavegacion.Text = "Navegacion"
-        '
-        'lblRegistrosCategoria
-        '
-        Me.lblRegistrosCategoria.AutoSize = True
-        Me.lblRegistrosCategoria.Location = New System.Drawing.Point(115, 42)
-        Me.lblRegistrosCategoria.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblRegistrosCategoria.Name = "lblRegistrosCategoria"
-        Me.lblRegistrosCategoria.Size = New System.Drawing.Size(46, 17)
-        Me.lblRegistrosCategoria.TabIndex = 4
-        Me.lblRegistrosCategoria.Text = "x de n"
-        '
-        'btnUltimo
-        '
-        Me.btnUltimo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUltimo.Location = New System.Drawing.Point(301, 23)
-        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnUltimo.Name = "btnUltimo"
-        Me.btnUltimo.Size = New System.Drawing.Size(55, 48)
-        Me.btnUltimo.TabIndex = 3
-        Me.btnUltimo.Text = ">|"
-        Me.btnUltimo.UseVisualStyleBackColor = True
-        '
-        'btnSiguiente
-        '
-        Me.btnSiguiente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSiguiente.Location = New System.Drawing.Point(249, 23)
-        Me.btnSiguiente.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnSiguiente.Name = "btnSiguiente"
-        Me.btnSiguiente.Size = New System.Drawing.Size(55, 48)
-        Me.btnSiguiente.TabIndex = 2
-        Me.btnSiguiente.Text = ">"
-        Me.btnSiguiente.UseVisualStyleBackColor = True
-        '
-        'btnAnterior
-        '
-        Me.btnAnterior.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnterior.Location = New System.Drawing.Point(56, 23)
-        Me.btnAnterior.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnAnterior.Name = "btnAnterior"
-        Me.btnAnterior.Size = New System.Drawing.Size(55, 48)
-        Me.btnAnterior.TabIndex = 1
-        Me.btnAnterior.Text = "<"
-        Me.btnAnterior.UseVisualStyleBackColor = True
-        '
-        'btnPrimero
-        '
-        Me.btnPrimero.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrimero.Location = New System.Drawing.Point(3, 23)
-        Me.btnPrimero.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnPrimero.Name = "btnPrimero"
-        Me.btnPrimero.Size = New System.Drawing.Size(55, 48)
-        Me.btnPrimero.TabIndex = 0
-        Me.btnPrimero.Text = "|<"
-        Me.btnPrimero.UseVisualStyleBackColor = True
-        '
         'grbEdicion
         '
+        Me.grbEdicion.Controls.Add(Me.btnBuscarDescuento)
         Me.grbEdicion.Controls.Add(Me.btnEliminarDescuento)
         Me.grbEdicion.Controls.Add(Me.btnModificarDescuento)
         Me.grbEdicion.Controls.Add(Me.btnAgregarDescuento)
-        Me.grbEdicion.Location = New System.Drawing.Point(377, 274)
+        Me.grbEdicion.Location = New System.Drawing.Point(377, 283)
         Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
         Me.grbEdicion.Name = "grbEdicion"
         Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
         Me.grbEdicion.Size = New System.Drawing.Size(420, 84)
-        Me.grbEdicion.TabIndex = 13
+        Me.grbEdicion.TabIndex = 71
         Me.grbEdicion.TabStop = False
         Me.grbEdicion.Text = "Edicion"
         '
+        'btnBuscarDescuento
+        '
+        Me.btnBuscarDescuento.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscarDescuento.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscarDescuento.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnBuscarDescuento.Image = CType(resources.GetObject("btnBuscarDescuento.Image"), System.Drawing.Image)
+        Me.btnBuscarDescuento.Location = New System.Drawing.Point(344, 23)
+        Me.btnBuscarDescuento.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnBuscarDescuento.Name = "btnBuscarDescuento"
+        Me.btnBuscarDescuento.Size = New System.Drawing.Size(72, 48)
+        Me.btnBuscarDescuento.TabIndex = 8
+        Me.btnBuscarDescuento.UseVisualStyleBackColor = True
+        '
         'btnEliminarDescuento
         '
+        Me.btnEliminarDescuento.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminarDescuento.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarDescuento.Location = New System.Drawing.Point(291, 25)
+        Me.btnEliminarDescuento.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnEliminarDescuento.Image = CType(resources.GetObject("btnEliminarDescuento.Image"), System.Drawing.Image)
+        Me.btnEliminarDescuento.Location = New System.Drawing.Point(244, 23)
         Me.btnEliminarDescuento.Margin = New System.Windows.Forms.Padding(1)
         Me.btnEliminarDescuento.Name = "btnEliminarDescuento"
-        Me.btnEliminarDescuento.Size = New System.Drawing.Size(107, 48)
+        Me.btnEliminarDescuento.Size = New System.Drawing.Size(83, 48)
         Me.btnEliminarDescuento.TabIndex = 7
-        Me.btnEliminarDescuento.Text = "Eliminar"
         Me.btnEliminarDescuento.UseVisualStyleBackColor = True
         '
         'btnModificarDescuento
         '
         Me.btnModificarDescuento.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarDescuento.Location = New System.Drawing.Point(131, 23)
+        Me.btnModificarDescuento.Location = New System.Drawing.Point(121, 23)
         Me.btnModificarDescuento.Margin = New System.Windows.Forms.Padding(1)
         Me.btnModificarDescuento.Name = "btnModificarDescuento"
         Me.btnModificarDescuento.Size = New System.Drawing.Size(120, 48)
@@ -219,13 +167,91 @@ Partial Class frmSalario
         'btnAgregarDescuento
         '
         Me.btnAgregarDescuento.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarDescuento.Location = New System.Drawing.Point(17, 23)
+        Me.btnAgregarDescuento.Location = New System.Drawing.Point(15, 23)
         Me.btnAgregarDescuento.Margin = New System.Windows.Forms.Padding(1)
         Me.btnAgregarDescuento.Name = "btnAgregarDescuento"
         Me.btnAgregarDescuento.Size = New System.Drawing.Size(91, 48)
         Me.btnAgregarDescuento.TabIndex = 5
         Me.btnAgregarDescuento.Text = "Nuevo"
         Me.btnAgregarDescuento.UseVisualStyleBackColor = True
+        '
+        'grbNavegacion
+        '
+        Me.grbNavegacion.Controls.Add(Me.lblRegistrosSalario)
+        Me.grbNavegacion.Controls.Add(Me.btnUltimo)
+        Me.grbNavegacion.Controls.Add(Me.btnSiguiente)
+        Me.grbNavegacion.Controls.Add(Me.btnAnterior)
+        Me.grbNavegacion.Controls.Add(Me.btnPrimero)
+        Me.grbNavegacion.Location = New System.Drawing.Point(14, 283)
+        Me.grbNavegacion.Margin = New System.Windows.Forms.Padding(1)
+        Me.grbNavegacion.Name = "grbNavegacion"
+        Me.grbNavegacion.Padding = New System.Windows.Forms.Padding(1)
+        Me.grbNavegacion.Size = New System.Drawing.Size(360, 84)
+        Me.grbNavegacion.TabIndex = 70
+        Me.grbNavegacion.TabStop = False
+        Me.grbNavegacion.Text = "Navegacion"
+        '
+        'lblRegistrosSalario
+        '
+        Me.lblRegistrosSalario.AutoSize = True
+        Me.lblRegistrosSalario.Location = New System.Drawing.Point(115, 42)
+        Me.lblRegistrosSalario.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblRegistrosSalario.Name = "lblRegistrosSalario"
+        Me.lblRegistrosSalario.Size = New System.Drawing.Size(46, 17)
+        Me.lblRegistrosSalario.TabIndex = 4
+        Me.lblRegistrosSalario.Text = "x de n"
+        '
+        'btnUltimo
+        '
+        Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUltimo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUltimo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnUltimo.Image = CType(resources.GetObject("btnUltimo.Image"), System.Drawing.Image)
+        Me.btnUltimo.Location = New System.Drawing.Point(301, 23)
+        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnUltimo.Name = "btnUltimo"
+        Me.btnUltimo.Size = New System.Drawing.Size(55, 48)
+        Me.btnUltimo.TabIndex = 3
+        Me.btnUltimo.UseVisualStyleBackColor = True
+        '
+        'btnSiguiente
+        '
+        Me.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSiguiente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSiguiente.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSiguiente.Image = CType(resources.GetObject("btnSiguiente.Image"), System.Drawing.Image)
+        Me.btnSiguiente.Location = New System.Drawing.Point(249, 23)
+        Me.btnSiguiente.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnSiguiente.Name = "btnSiguiente"
+        Me.btnSiguiente.Size = New System.Drawing.Size(55, 48)
+        Me.btnSiguiente.TabIndex = 2
+        Me.btnSiguiente.UseVisualStyleBackColor = True
+        '
+        'btnAnterior
+        '
+        Me.btnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAnterior.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAnterior.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnAnterior.Image = CType(resources.GetObject("btnAnterior.Image"), System.Drawing.Image)
+        Me.btnAnterior.Location = New System.Drawing.Point(56, 23)
+        Me.btnAnterior.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnAnterior.Name = "btnAnterior"
+        Me.btnAnterior.Size = New System.Drawing.Size(55, 48)
+        Me.btnAnterior.TabIndex = 1
+        Me.btnAnterior.UseVisualStyleBackColor = True
+        '
+        'btnPrimero
+        '
+        Me.btnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrimero.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrimero.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnPrimero.Image = CType(resources.GetObject("btnPrimero.Image"), System.Drawing.Image)
+        Me.btnPrimero.Location = New System.Drawing.Point(3, 23)
+        Me.btnPrimero.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnPrimero.Name = "btnPrimero"
+        Me.btnPrimero.Size = New System.Drawing.Size(55, 48)
+        Me.btnPrimero.TabIndex = 0
+        Me.btnPrimero.UseVisualStyleBackColor = True
         '
         'frmSalario
         '
@@ -237,16 +263,17 @@ Partial Class frmSalario
         Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.grbDatos)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmSalario"
-        Me.Text = "Salario"
+        Me.Text = " Salario"
         Me.grbDatos.ResumeLayout(False)
         Me.grbDatos.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.grbEdicion.ResumeLayout(False)
         Me.grbNavegacion.ResumeLayout(False)
         Me.grbNavegacion.PerformLayout()
-        Me.grbEdicion.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -257,14 +284,15 @@ Partial Class frmSalario
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtDescuentos As TextBox
     Friend WithEvents lblDescuentos As Label
+    Friend WithEvents grbEdicion As GroupBox
+    Friend WithEvents btnBuscarDescuento As Button
+    Friend WithEvents btnEliminarDescuento As Button
+    Friend WithEvents btnModificarDescuento As Button
+    Friend WithEvents btnAgregarDescuento As Button
     Friend WithEvents grbNavegacion As GroupBox
-    Friend WithEvents lblRegistrosCategoria As Label
+    Friend WithEvents lblRegistrosSalario As Label
     Friend WithEvents btnUltimo As Button
     Friend WithEvents btnSiguiente As Button
     Friend WithEvents btnAnterior As Button
     Friend WithEvents btnPrimero As Button
-    Friend WithEvents grbEdicion As GroupBox
-    Friend WithEvents btnEliminarDescuento As Button
-    Friend WithEvents btnModificarDescuento As Button
-    Friend WithEvents btnAgregarDescuento As Button
 End Class

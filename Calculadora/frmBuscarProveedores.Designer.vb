@@ -22,11 +22,10 @@ Partial Class frmBuscarProveedores
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBuscarProveedores))
         Me.btnCancelarProveedor = New System.Windows.Forms.Button()
         Me.btnSeleccionarProveedor = New System.Windows.Forms.Button()
         Me.grdBuscarProveedor = New System.Windows.Forms.DataGridView()
-        Me.lblBuscarProveedor = New System.Windows.Forms.Label()
-        Me.txtBuscarProveedor = New System.Windows.Forms.TextBox()
         Me.idProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombreempresa = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -35,31 +34,37 @@ Partial Class frmBuscarProveedores
         Me.email = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.website = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fechaproveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblBuscarProveedor = New System.Windows.Forms.Label()
+        Me.txtBuscarProveedor = New System.Windows.Forms.TextBox()
         CType(Me.grdBuscarProveedor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnCancelarProveedor
         '
         Me.btnCancelarProveedor.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelarProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarProveedor.Location = New System.Drawing.Point(816, 577)
+        Me.btnCancelarProveedor.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnCancelarProveedor.Image = CType(resources.GetObject("btnCancelarProveedor.Image"), System.Drawing.Image)
+        Me.btnCancelarProveedor.Location = New System.Drawing.Point(918, 568)
         Me.btnCancelarProveedor.Margin = New System.Windows.Forms.Padding(1)
         Me.btnCancelarProveedor.Name = "btnCancelarProveedor"
-        Me.btnCancelarProveedor.Size = New System.Drawing.Size(160, 41)
+        Me.btnCancelarProveedor.Size = New System.Drawing.Size(58, 41)
         Me.btnCancelarProveedor.TabIndex = 9
-        Me.btnCancelarProveedor.Text = "Cancelar"
         Me.btnCancelarProveedor.UseVisualStyleBackColor = True
         '
         'btnSeleccionarProveedor
         '
         Me.btnSeleccionarProveedor.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSeleccionarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSeleccionarProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionarProveedor.Location = New System.Drawing.Point(499, 577)
+        Me.btnSeleccionarProveedor.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSeleccionarProveedor.Image = CType(resources.GetObject("btnSeleccionarProveedor.Image"), System.Drawing.Image)
+        Me.btnSeleccionarProveedor.Location = New System.Drawing.Point(860, 568)
         Me.btnSeleccionarProveedor.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSeleccionarProveedor.Name = "btnSeleccionarProveedor"
-        Me.btnSeleccionarProveedor.Size = New System.Drawing.Size(315, 41)
+        Me.btnSeleccionarProveedor.Size = New System.Drawing.Size(51, 41)
         Me.btnSeleccionarProveedor.TabIndex = 8
-        Me.btnSeleccionarProveedor.Text = "Seleccionar Proveedor"
         Me.btnSeleccionarProveedor.UseVisualStyleBackColor = True
         '
         'grdBuscarProveedor
@@ -77,28 +82,8 @@ Partial Class frmBuscarProveedores
         Me.grdBuscarProveedor.ReadOnly = True
         Me.grdBuscarProveedor.RowHeadersWidth = 102
         Me.grdBuscarProveedor.RowTemplate.Height = 40
-        Me.grdBuscarProveedor.Size = New System.Drawing.Size(941, 474)
+        Me.grdBuscarProveedor.Size = New System.Drawing.Size(941, 458)
         Me.grdBuscarProveedor.TabIndex = 7
-        '
-        'lblBuscarProveedor
-        '
-        Me.lblBuscarProveedor.AutoSize = True
-        Me.lblBuscarProveedor.Location = New System.Drawing.Point(31, 42)
-        Me.lblBuscarProveedor.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblBuscarProveedor.Name = "lblBuscarProveedor"
-        Me.lblBuscarProveedor.Size = New System.Drawing.Size(68, 17)
-        Me.lblBuscarProveedor.TabIndex = 6
-        Me.lblBuscarProveedor.Text = "BUSCAR:"
-        '
-        'txtBuscarProveedor
-        '
-        Me.txtBuscarProveedor.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtBuscarProveedor.Location = New System.Drawing.Point(104, 42)
-        Me.txtBuscarProveedor.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtBuscarProveedor.Name = "txtBuscarProveedor"
-        Me.txtBuscarProveedor.Size = New System.Drawing.Size(871, 22)
-        Me.txtBuscarProveedor.TabIndex = 5
         '
         'idProveedor
         '
@@ -173,12 +158,32 @@ Partial Class frmBuscarProveedores
         Me.fechaproveedor.ReadOnly = True
         Me.fechaproveedor.Width = 125
         '
+        'lblBuscarProveedor
+        '
+        Me.lblBuscarProveedor.AutoSize = True
+        Me.lblBuscarProveedor.Location = New System.Drawing.Point(31, 42)
+        Me.lblBuscarProveedor.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblBuscarProveedor.Name = "lblBuscarProveedor"
+        Me.lblBuscarProveedor.Size = New System.Drawing.Size(68, 17)
+        Me.lblBuscarProveedor.TabIndex = 6
+        Me.lblBuscarProveedor.Text = "BUSCAR:"
+        '
+        'txtBuscarProveedor
+        '
+        Me.txtBuscarProveedor.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtBuscarProveedor.Location = New System.Drawing.Point(104, 42)
+        Me.txtBuscarProveedor.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtBuscarProveedor.Name = "txtBuscarProveedor"
+        Me.txtBuscarProveedor.Size = New System.Drawing.Size(871, 22)
+        Me.txtBuscarProveedor.TabIndex = 5
+        '
         'frmBuscarProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(1006, 661)
+        Me.ClientSize = New System.Drawing.Size(1006, 619)
         Me.Controls.Add(Me.btnCancelarProveedor)
         Me.Controls.Add(Me.btnSeleccionarProveedor)
         Me.Controls.Add(Me.grdBuscarProveedor)
