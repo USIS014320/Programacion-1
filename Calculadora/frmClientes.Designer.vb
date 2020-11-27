@@ -40,11 +40,11 @@ Partial Class frmClientes
         Me.btnUltimoCliente = New System.Windows.Forms.Button()
         Me.lblRegistrosCliente = New System.Windows.Forms.Label()
         Me.grbNavegacion = New System.Windows.Forms.GroupBox()
-        Me.btnAgregarCliente = New System.Windows.Forms.Button()
-        Me.btnModificarCliente = New System.Windows.Forms.Button()
         Me.btnEliminarCliente = New System.Windows.Forms.Button()
         Me.btnBuscarCliente = New System.Windows.Forms.Button()
         Me.grbEdicion = New System.Windows.Forms.GroupBox()
+        Me.btnModificarCliente = New System.Windows.Forms.Button()
+        Me.btnAgregarCliente = New System.Windows.Forms.Button()
         Me.grbDatos.SuspendLayout()
         Me.grbNavegacion.SuspendLayout()
         Me.grbEdicion.SuspendLayout()
@@ -163,7 +163,7 @@ Partial Class frmClientes
         Me.grbDatos.Margin = New System.Windows.Forms.Padding(1)
         Me.grbDatos.Name = "grbDatos"
         Me.grbDatos.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbDatos.Size = New System.Drawing.Size(645, 553)
+        Me.grbDatos.Size = New System.Drawing.Size(784, 553)
         Me.grbDatos.TabIndex = 3
         Me.grbDatos.TabStop = False
         Me.grbDatos.Text = "Datos de Clientes"
@@ -247,32 +247,6 @@ Partial Class frmClientes
         Me.grbNavegacion.TabStop = False
         Me.grbNavegacion.Text = "Navegacion"
         '
-        'btnAgregarCliente
-        '
-        Me.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAgregarCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarCliente.ForeColor = System.Drawing.Color.OrangeRed
-        Me.btnAgregarCliente.Image = CType(resources.GetObject("btnAgregarCliente.Image"), System.Drawing.Image)
-        Me.btnAgregarCliente.Location = New System.Drawing.Point(3, 23)
-        Me.btnAgregarCliente.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnAgregarCliente.Name = "btnAgregarCliente"
-        Me.btnAgregarCliente.Size = New System.Drawing.Size(79, 48)
-        Me.btnAgregarCliente.TabIndex = 5
-        Me.btnAgregarCliente.UseVisualStyleBackColor = True
-        '
-        'btnModificarCliente
-        '
-        Me.btnModificarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnModificarCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarCliente.ForeColor = System.Drawing.Color.OrangeRed
-        Me.btnModificarCliente.Image = CType(resources.GetObject("btnModificarCliente.Image"), System.Drawing.Image)
-        Me.btnModificarCliente.Location = New System.Drawing.Point(68, 23)
-        Me.btnModificarCliente.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnModificarCliente.Name = "btnModificarCliente"
-        Me.btnModificarCliente.Size = New System.Drawing.Size(88, 48)
-        Me.btnModificarCliente.TabIndex = 6
-        Me.btnModificarCliente.UseVisualStyleBackColor = True
-        '
         'btnEliminarCliente
         '
         Me.btnEliminarCliente.BackColor = System.Drawing.Color.Transparent
@@ -280,7 +254,7 @@ Partial Class frmClientes
         Me.btnEliminarCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminarCliente.ForeColor = System.Drawing.Color.OrangeRed
         Me.btnEliminarCliente.Image = CType(resources.GetObject("btnEliminarCliente.Image"), System.Drawing.Image)
-        Me.btnEliminarCliente.Location = New System.Drawing.Point(144, 23)
+        Me.btnEliminarCliente.Location = New System.Drawing.Point(278, 23)
         Me.btnEliminarCliente.Margin = New System.Windows.Forms.Padding(1)
         Me.btnEliminarCliente.Name = "btnEliminarCliente"
         Me.btnEliminarCliente.Size = New System.Drawing.Size(82, 48)
@@ -294,7 +268,7 @@ Partial Class frmClientes
         Me.btnBuscarCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarCliente.ForeColor = System.Drawing.Color.OrangeRed
         Me.btnBuscarCliente.Image = CType(resources.GetObject("btnBuscarCliente.Image"), System.Drawing.Image)
-        Me.btnBuscarCliente.Location = New System.Drawing.Point(219, 23)
+        Me.btnBuscarCliente.Location = New System.Drawing.Point(362, 23)
         Me.btnBuscarCliente.Margin = New System.Windows.Forms.Padding(1)
         Me.btnBuscarCliente.Name = "btnBuscarCliente"
         Me.btnBuscarCliente.Size = New System.Drawing.Size(62, 48)
@@ -304,25 +278,47 @@ Partial Class frmClientes
         'grbEdicion
         '
         Me.grbEdicion.BackColor = System.Drawing.Color.Transparent
-        Me.grbEdicion.Controls.Add(Me.btnBuscarCliente)
-        Me.grbEdicion.Controls.Add(Me.btnEliminarCliente)
         Me.grbEdicion.Controls.Add(Me.btnModificarCliente)
         Me.grbEdicion.Controls.Add(Me.btnAgregarCliente)
+        Me.grbEdicion.Controls.Add(Me.btnBuscarCliente)
+        Me.grbEdicion.Controls.Add(Me.btnEliminarCliente)
         Me.grbEdicion.Location = New System.Drawing.Point(364, 578)
         Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
         Me.grbEdicion.Name = "grbEdicion"
         Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbEdicion.Size = New System.Drawing.Size(296, 84)
+        Me.grbEdicion.Size = New System.Drawing.Size(435, 84)
         Me.grbEdicion.TabIndex = 5
         Me.grbEdicion.TabStop = False
         Me.grbEdicion.Text = "Edicion"
+        '
+        'btnModificarCliente
+        '
+        Me.btnModificarCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificarCliente.Location = New System.Drawing.Point(156, 23)
+        Me.btnModificarCliente.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnModificarCliente.Name = "btnModificarCliente"
+        Me.btnModificarCliente.Size = New System.Drawing.Size(120, 48)
+        Me.btnModificarCliente.TabIndex = 10
+        Me.btnModificarCliente.Text = "Modificar"
+        Me.btnModificarCliente.UseVisualStyleBackColor = True
+        '
+        'btnAgregarCliente
+        '
+        Me.btnAgregarCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregarCliente.Location = New System.Drawing.Point(21, 23)
+        Me.btnAgregarCliente.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnAgregarCliente.Name = "btnAgregarCliente"
+        Me.btnAgregarCliente.Size = New System.Drawing.Size(91, 48)
+        Me.btnAgregarCliente.TabIndex = 9
+        Me.btnAgregarCliente.Text = "Nuevo"
+        Me.btnAgregarCliente.UseVisualStyleBackColor = True
         '
         'frmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(680, 676)
+        Me.ClientSize = New System.Drawing.Size(809, 676)
         Me.Controls.Add(Me.grbEdicion)
         Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.grbDatos)
@@ -354,9 +350,9 @@ Partial Class frmClientes
     Friend WithEvents btnUltimoCliente As Button
     Friend WithEvents lblRegistrosCliente As Label
     Friend WithEvents grbNavegacion As GroupBox
-    Friend WithEvents btnAgregarCliente As Button
-    Friend WithEvents btnModificarCliente As Button
     Friend WithEvents btnEliminarCliente As Button
     Friend WithEvents btnBuscarCliente As Button
     Friend WithEvents grbEdicion As GroupBox
+    Friend WithEvents btnModificarCliente As Button
+    Friend WithEvents btnAgregarCliente As Button
 End Class

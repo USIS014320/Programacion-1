@@ -319,7 +319,7 @@ Partial Class frmPagosVarios
         Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.grbPagosvarios)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmPagosVarios"
         Me.Text = "Pagos varios"
         Me.grbPagosvarios.ResumeLayout(False)

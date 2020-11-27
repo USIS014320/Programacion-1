@@ -169,7 +169,7 @@ Partial Class frmBuscarEmpleados
         Me.Controls.Add(Me.grdBuscarEmpleados)
         Me.Controls.Add(Me.txtBuscarEmpleado)
         Me.Controls.Add(Me.lblBuscarCliente)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmBuscarEmpleados"
         Me.Text = "Buscar Empleados"
         CType(Me.grdBuscarEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
