@@ -18,7 +18,7 @@ Public Class db_conexion
         miCommand.Parameters.Add("@idCargo", SqlDbType.Int).Value = 0
         miCommand.Parameters.Add("@idCategoria", SqlDbType.Int).Value = 0
         miCommand.Parameters.Add("@idEmpleado", SqlDbType.Int).Value = 0
-        miCommand.Parameters.Add("@idCliente", SqlDbType.Int).Value = 0
+        miCommand.Parameters.Add("@idContacto", SqlDbType.Int).Value = 0
 
         miCommand.Parameters.Add("@idVarios", SqlDbType.Int).Value = 0
         miCommand.Parameters.Add("@cod", SqlDbType.Char).Value = ""
@@ -57,11 +57,11 @@ Public Class db_conexion
         miCommand.Parameters.Add("@dc", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@cap", SqlDbType.Char).Value = ""
 
-        miCommand.Parameters.Add("@codg", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@nombr", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@dirtn", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@telfn", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@mail", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@dir", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@tel", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@ema", SqlDbType.Char).Value = ""
+        'miCommand.Parameters.Add("@telfn", SqlDbType.Char).Value = ""
+        'miCommand.Parameters.Add("@mail", SqlDbType.Char).Value = ""
 
     End Sub
 
@@ -424,19 +424,19 @@ Public Class db_conexion
         Dim sql, msg As String
         Select Case accion
             Case "nuevo"
-                sql = "INSERT INTO clientes (codigo,nombre,direccion) VALUES(@codg,@nombr,@dirtn)"
+                sql = "INSERT INTO clientes (codigo,nombre,direccion) VALUES(@cod,@nom,@dir)"
             Case "modificar"
-                sql = "UPDATE clientes SET codigo=@codg,nombre=@nombr,direccion=@dirtn WHERE idCliente=@id"
+                sql = "UPDATE clientes SET codigo=@cod,nombre=@nom,direccion=@dir WHERE idCliente=@id"
             Case "eliminar"
                 sql = "DELETE FROM clientes WHERE idCliente=@id"
         End Select
         miCommand.Parameters("@id").Value = datos(0)
         If accion IsNot "eliminar" Then
-            miCommand.Parameters("@codg").Value = datos(1)
-            miCommand.Parameters("@nombr").Value = datos(2)
-            miCommand.Parameters("@dirtn").Value = datos(3)
-            miCommand.Parameters("@telfn").Value = datos(4)
-            miCommand.Parameters("@mail").Value = datos(5)
+            miCommand.Parameters("@cod").Value = datos(1)
+            miCommand.Parameters("@nom").Value = datos(2)
+            miCommand.Parameters("@dir").Value = datos(3)
+            miCommand.Parameters("@tel").Value = datos(4)
+            miCommand.Parameters("@ema").Value = datos(5)
         Else 'Accion es eliminar
             mantenimientoDatosContacto(datos, accion)
         End If
@@ -458,16 +458,16 @@ Public Class db_conexion
                 miCommand.CommandText = "select MAX(idCliente) AS idCliente from clientes"
                 datos(0) = miCommand.ExecuteScalar().ToString()
 
-                sql = "INSERT INTO contactos (idPersona,telefono,email) VALUES(@id,@telfn,@mail)"
+                sql = "INSERT INTO contactos (idPersona,telefono,email) VALUES(@id,@tel,@ema)"
             Case "modificar"
-                sql = "UPDATE contactos SET telefono=@telfn,email=@mail WHERE idPersona=@id"
+                sql = "UPDATE contactos SET telefono=@tel,email=@ema WHERE idPersona=@id"
             Case "eliminar"
                 sql = "DELETE FROM contactos WHERE idPersona=@id"
         End Select
         miCommand.Parameters("@id").Value = datos(0)
         If accion IsNot "eliminar" Then
-            miCommand.Parameters("@telfn").Value = datos(4)
-            miCommand.Parameters("@mail").Value = datos(5)
+            miCommand.Parameters("@tel").Value = datos(4)
+            miCommand.Parameters("@ema").Value = datos(5)
         End If
         executeSql(sql)
     End Sub

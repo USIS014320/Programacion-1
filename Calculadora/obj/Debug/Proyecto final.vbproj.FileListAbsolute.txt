@@ -377,7 +377,6 @@ C:\Users\brand\Source\Repos\Programacion-ProyectoFinal\Calculadora\obj\Debug\Cal
 C:\Users\brand\Source\Repos\Programacion-ProyectoFinal\Calculadora\obj\Debug\Calculadora.frmCargos.resources
 C:\Users\brand\Source\Repos\Programacion-ProyectoFinal\Calculadora\obj\Debug\Calculadora.frmClientes.resources
 C:\Users\brand\Source\Repos\Programacion-ProyectoFinal\Calculadora\obj\Debug\Calculadora.frmComprasproducto.resources
-C:\Users\brand\Source\Repos\Programacion-ProyectoFinal\Calculadora\obj\Debug\Calculadora.frmDeudas.resources
 C:\Users\brand\Source\Repos\Programacion-ProyectoFinal\Calculadora\obj\Debug\Calculadora.frmEmpleados.resources
 C:\Users\brand\Source\Repos\Programacion-ProyectoFinal\Calculadora\obj\Debug\Calculadora.frmInteres.resources
 C:\Users\brand\Source\Repos\Programacion-ProyectoFinal\Calculadora\obj\Debug\Calculadora.frmPagosVarios.resources
@@ -395,3 +394,4 @@ C:\Users\brand\Source\Repos\Programacion-ProyectoFinal\Calculadora\obj\Debug\Cal
 C:\Users\brand\Source\Repos\Programacion-ProyectoFinal\Calculadora\obj\Debug\Calculadora.xml
 C:\Users\brand\Source\Repos\Programacion-ProyectoFinal\Calculadora\obj\Debug\Calculadora.pdb
 C:\Users\brand\Source\Repos\Programacion-ProyectoFinal\Calculadora\obj\Debug\Calculadora.frmcrearprestamo.resources
+C:\Users\brand\Source\Repos\Programacion-ProyectoFinal\Calculadora\obj\Debug\Calculadora.frmDeuda.resources

@@ -30,12 +30,13 @@
 
             For i As Integer = 0 To nfilas
                 fila = DcomprasProductosDataGridView.Rows(i)
-                subtotal = Double.Parse(fila.Cells("cantidad").Value.ToString()) * Double.Parse(fila.Cells("precio").Value.ToString())
+
+
 
                 fila.Cells("subtotal").Value = subtotal.ToString()
                 sumas += subtotal
             Next
-            iva = If(IdTipofacturaComboBox.SelectedValue = 2, sumas * 0.13, 0)
+            iva = If(IdTipofacturaComboBox.SelectedValue = 4, sumas * 0.13, 0)
             total = sumas + iva
 
             lblrespuestasumacompra.Text = "$ " + Math.Round(sumas, 2).ToString()

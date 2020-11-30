@@ -51,7 +51,6 @@ Partial Class frmCrearprestamo
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.CrearprestamoBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.lblIdPrest = New System.Windows.Forms.Label()
         Me.lblTituloPrest = New System.Windows.Forms.Label()
         Me.IdClienteComboBox = New System.Windows.Forms.ComboBox()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -86,10 +85,9 @@ Partial Class frmCrearprestamo
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnAgregarClienteNuevo = New System.Windows.Forms.Button()
-        Me.lbltotal = New System.Windows.Forms.Label()
-        Me.lblRespuestaTotal = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnCalcular = New System.Windows.Forms.Button()
+        Me.lbltotal = New System.Windows.Forms.Label()
+        Me.lblinteresCompuesto = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
@@ -114,7 +112,6 @@ Partial Class frmCrearprestamo
         CType(Me.InteresesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CrearprestamoClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CrearprestamoClienteDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -256,7 +253,7 @@ Partial Class frmCrearprestamo
         Me.CrearprestamoBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.CrearprestamoBindingNavigator.Name = "CrearprestamoBindingNavigator"
         Me.CrearprestamoBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.CrearprestamoBindingNavigator.Size = New System.Drawing.Size(978, 27)
+        Me.CrearprestamoBindingNavigator.Size = New System.Drawing.Size(1007, 27)
         Me.CrearprestamoBindingNavigator.TabIndex = 0
         Me.CrearprestamoBindingNavigator.Text = "BindingNavigator1"
         '
@@ -354,16 +351,6 @@ Partial Class frmCrearprestamo
         Me.CrearprestamoBindingNavigatorSaveItem.Size = New System.Drawing.Size(29, 24)
         Me.CrearprestamoBindingNavigatorSaveItem.Text = "Guardar datos"
         '
-        'lblIdPrest
-        '
-        Me.lblIdPrest.AutoSize = True
-        Me.lblIdPrest.Location = New System.Drawing.Point(907, 40)
-        Me.lblIdPrest.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblIdPrest.Name = "lblIdPrest"
-        Me.lblIdPrest.Size = New System.Drawing.Size(51, 17)
-        Me.lblIdPrest.TabIndex = 186
-        Me.lblIdPrest.Text = "Label1"
-        '
         'lblTituloPrest
         '
         Me.lblTituloPrest.AutoSize = True
@@ -378,7 +365,7 @@ Partial Class frmCrearprestamo
         'IdClienteComboBox
         '
         Me.IdClienteComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.ClientesBindingSource, "idCliente", True))
-        Me.IdClienteComboBox.DataSource = Me.ClientesBindingSource2
+        Me.IdClienteComboBox.DataSource = Me.ClientesBindingSource
         Me.IdClienteComboBox.DisplayMember = "nombre"
         Me.IdClienteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IdClienteComboBox.FormattingEnabled = True
@@ -405,8 +392,8 @@ Partial Class frmCrearprestamo
         '
         'IdOcupacionComboBox
         '
-        Me.IdOcupacionComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OcupacionBindingSource2, "idOcupacion", True))
-        Me.IdOcupacionComboBox.DataSource = Me.OcupacionBindingSource3
+        Me.IdOcupacionComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OcupacionBindingSource, "idOcupacion", True))
+        Me.IdOcupacionComboBox.DataSource = Me.OcupacionBindingSource
         Me.IdOcupacionComboBox.DisplayMember = "ocupacion"
         Me.IdOcupacionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IdOcupacionComboBox.FormattingEnabled = True
@@ -438,8 +425,8 @@ Partial Class frmCrearprestamo
         '
         'IdInteresComboBox
         '
-        Me.IdInteresComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.InteresesBindingSource2, "idInteres", True))
-        Me.IdInteresComboBox.DataSource = Me.InteresesBindingSource3
+        Me.IdInteresComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.InteresesBindingSource, "idInteres", True))
+        Me.IdInteresComboBox.DataSource = Me.InteresesBindingSource
         Me.IdInteresComboBox.DisplayMember = "interes"
         Me.IdInteresComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IdInteresComboBox.FormattingEnabled = True
@@ -523,7 +510,7 @@ Partial Class frmCrearprestamo
         Me.CrearprestamoClienteDataGridView.ReadOnly = True
         Me.CrearprestamoClienteDataGridView.RowHeadersWidth = 51
         Me.CrearprestamoClienteDataGridView.RowTemplate.Height = 24
-        Me.CrearprestamoClienteDataGridView.Size = New System.Drawing.Size(917, 286)
+        Me.CrearprestamoClienteDataGridView.Size = New System.Drawing.Size(917, 289)
         Me.CrearprestamoClienteDataGridView.TabIndex = 210
         '
         'DataGridViewTextBoxColumn1
@@ -635,45 +622,11 @@ Partial Class frmCrearprestamo
         Me.btnAgregarClienteNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregarClienteNuevo.ForeColor = System.Drawing.Color.OrangeRed
         Me.btnAgregarClienteNuevo.Image = CType(resources.GetObject("btnAgregarClienteNuevo.Image"), System.Drawing.Image)
-        Me.btnAgregarClienteNuevo.Location = New System.Drawing.Point(818, 60)
+        Me.btnAgregarClienteNuevo.Location = New System.Drawing.Point(879, 52)
         Me.btnAgregarClienteNuevo.Name = "btnAgregarClienteNuevo"
         Me.btnAgregarClienteNuevo.Size = New System.Drawing.Size(79, 62)
         Me.btnAgregarClienteNuevo.TabIndex = 211
         Me.btnAgregarClienteNuevo.UseVisualStyleBackColor = True
-        '
-        'lbltotal
-        '
-        Me.lbltotal.AutoSize = True
-        Me.lbltotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbltotal.Location = New System.Drawing.Point(4, 15)
-        Me.lbltotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbltotal.Name = "lbltotal"
-        Me.lbltotal.Size = New System.Drawing.Size(74, 20)
-        Me.lbltotal.TabIndex = 4
-        Me.lbltotal.Text = "TOTAL:"
-        '
-        'lblRespuestaTotal
-        '
-        Me.lblRespuestaTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRespuestaTotal.Location = New System.Drawing.Point(129, 15)
-        Me.lblRespuestaTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRespuestaTotal.Name = "lblRespuestaTotal"
-        Me.lblRespuestaTotal.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblRespuestaTotal.Size = New System.Drawing.Size(102, 20)
-        Me.lblRespuestaTotal.TabIndex = 5
-        Me.lblRespuestaTotal.Text = "00.00"
-        Me.lblRespuestaTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Snow
-        Me.Panel1.Controls.Add(Me.lblRespuestaTotal)
-        Me.Panel1.Controls.Add(Me.lbltotal)
-        Me.Panel1.Location = New System.Drawing.Point(724, 234)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(235, 61)
-        Me.Panel1.TabIndex = 212
         '
         'btnCalcular
         '
@@ -682,20 +635,43 @@ Partial Class frmCrearprestamo
         Me.btnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCalcular.ForeColor = System.Drawing.Color.OrangeRed
         Me.btnCalcular.Image = CType(resources.GetObject("btnCalcular.Image"), System.Drawing.Image)
-        Me.btnCalcular.Location = New System.Drawing.Point(647, 234)
+        Me.btnCalcular.Location = New System.Drawing.Point(676, 229)
         Me.btnCalcular.Name = "btnCalcular"
         Me.btnCalcular.Size = New System.Drawing.Size(67, 61)
         Me.btnCalcular.TabIndex = 213
         Me.btnCalcular.UseVisualStyleBackColor = False
+        '
+        'lbltotal
+        '
+        Me.lbltotal.AutoSize = True
+        Me.lbltotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbltotal.Location = New System.Drawing.Point(754, 249)
+        Me.lbltotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbltotal.Name = "lbltotal"
+        Me.lbltotal.Size = New System.Drawing.Size(74, 20)
+        Me.lbltotal.TabIndex = 4
+        Me.lbltotal.Text = "TOTAL:"
+        '
+        'lblinteresCompuesto
+        '
+        Me.lblinteresCompuesto.AutoSize = True
+        Me.lblinteresCompuesto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblinteresCompuesto.Location = New System.Drawing.Point(909, 249)
+        Me.lblinteresCompuesto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblinteresCompuesto.Name = "lblinteresCompuesto"
+        Me.lblinteresCompuesto.Size = New System.Drawing.Size(49, 20)
+        Me.lblinteresCompuesto.TabIndex = 224
+        Me.lblinteresCompuesto.Text = "00.00"
         '
         'frmCrearprestamo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(978, 648)
+        Me.ClientSize = New System.Drawing.Size(1007, 648)
+        Me.Controls.Add(Me.lblinteresCompuesto)
         Me.Controls.Add(Me.btnCalcular)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.lbltotal)
         Me.Controls.Add(Me.btnAgregarClienteNuevo)
         Me.Controls.Add(Me.CrearprestamoClienteDataGridView)
         Me.Controls.Add(Label7)
@@ -712,7 +688,6 @@ Partial Class frmCrearprestamo
         Me.Controls.Add(Me.MontoTextBox)
         Me.Controls.Add(Me.CuotasTextBox)
         Me.Controls.Add(Me.FechaprestamoDateTimePicker)
-        Me.Controls.Add(Me.lblIdPrest)
         Me.Controls.Add(Me.lblTituloPrest)
         Me.Controls.Add(Me.CrearprestamoBindingNavigator)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -736,8 +711,6 @@ Partial Class frmCrearprestamo
         CType(Me.InteresesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CrearprestamoClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CrearprestamoClienteDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -760,7 +733,6 @@ Partial Class frmCrearprestamo
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents CrearprestamoBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents lblIdPrest As Label
     Friend WithEvents lblTituloPrest As Label
     Friend WithEvents IdClienteComboBox As ComboBox
     Friend WithEvents IdOcupacionComboBox As ComboBox
@@ -787,9 +759,6 @@ Partial Class frmCrearprestamo
     Friend WithEvents OcupacionBindingSource3 As BindingSource
     Friend WithEvents InteresesBindingSource2 As BindingSource
     Friend WithEvents InteresesBindingSource3 As BindingSource
-    Friend WithEvents lbltotal As Label
-    Friend WithEvents lblRespuestaTotal As Label
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents btnCalcular As Button
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
@@ -802,4 +771,6 @@ Partial Class frmCrearprestamo
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents lbltotal As Label
+    Friend WithEvents lblinteresCompuesto As Label
 End Class

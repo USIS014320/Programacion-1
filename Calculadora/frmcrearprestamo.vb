@@ -1,5 +1,14 @@
 ﻿Public Class frmCrearprestamo
 
+
+    Dim objInteres As New interes()
+    Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
+        objInteres.inter = IdInteresComboBox.SelectedItem
+        objInteres.tiempo = CuotasTextBox.Text
+        objInteres.monto = CuotasTextBox
+        lblinteresCompuesto.Text = "$" & objInteres.interesCompuesto()
+    End Sub
+
     Private Sub CrearprestamoBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles CrearprestamoBindingNavigatorSaveItem.Click
         Me.Validate()
         Me.CrearprestamoBindingSource.EndEdit()
@@ -25,17 +34,53 @@
         Dim objClientes As New frmClientes
         objClientes.Show()
     End Sub
-
-    Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
-        Dim Num1, Num2, Num3, respuesta As Double
-
-        Num1 = MontoTextBox.Text
-        Num2 = IdInteresComboBox.SelectedValue
-        Num3 = CuotasTextBox.Text
-        respuesta = lblRespuestaTotal.Text
-
-        respuesta = (Num1 * (1 + Num2 / 100) ^ (Num3 / 12))
-    End Sub
-
-
 End Class
+
+
+Class interes
+    Dim _interes As String, _ntiempo As Int16, _capital As Double
+
+    Public Property inter
+        Set(value)
+            If value >= 0 And value <= 100 Then
+                _interes = value
+            Else
+                MessageBox.Show("El valor del interes no es valido", "Intereses", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        End Set
+        Get
+            Return _interes
+        End Get
+    End Property
+    Public Property tiempo
+        Set(value)
+            If value >= 1 And value <= 120 Then
+                _ntiempo = value
+            Else
+                MessageBox.Show("Tiempo no es valido", "Intereses", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        End Set
+        Get
+            Return _ntiempo
+        End Get
+    End Property
+    Public Property monto
+        Set(value)
+            If value > 0 Then
+                _capital = value
+            Else
+                MessageBox.Show("El capital debe ser mayor a 0", "Intereses", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        End Set
+        Get
+            Return _capital
+        End Get
+    End Property
+
+    Public Function interesCompuesto()
+        Dim inC = (_capital * (1 + _interes / 100) ^ ((_ntiempo / 12)))
+        Return Math.Round(inC, 2)
+    End Function
+End Class
+
+
