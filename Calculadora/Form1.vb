@@ -92,4 +92,21 @@
         objDeudas.Show()
     End Sub
 
+    Private Sub ReportesDePrestamosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportesDePrestamosToolStripMenuItem.Click
+        Dim objPrestamosPorCliente As New frmImprimirPrestamo
+        objPrestamosPorCliente.MdiParent = Me
+        objPrestamosPorCliente.Show()
+    End Sub
+
+    Private Sub ReporteDeProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeProveedoresToolStripMenuItem.Click
+        Dim objImprimirProveedores As New frmImprimirProveedores
+        objImprimirProveedores.MdiParent = Me
+        objImprimirProveedores.Show()
+    End Sub
+
+    Private Sub ReporteDeUsariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeUsariosToolStripMenuItem.Click
+        Dim objImprimirUsuarios As New frmImprimirUsuarios
+        objImprimirUsuarios.MdiParent = Me
+        objImprimirUsuarios.Show()
+    End Sub
 End Class

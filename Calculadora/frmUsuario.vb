@@ -147,6 +147,8 @@
         End If
     End Sub
 
-
-
+    Private Sub btnImprimirUsuario_Click(sender As Object, e As EventArgs) Handles btnImprimirUsuario.Click
+        Dim objImprimirUsuarios As New frmImprimirUsuarios
+        objImprimirUsuarios.ShowDialog()
+    End Sub
 End Class

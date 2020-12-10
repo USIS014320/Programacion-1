@@ -48,6 +48,7 @@ Partial Class frmUsuario
         Me.btnEliminarUsuario = New System.Windows.Forms.Button()
         Me.btnBuscarUsuario = New System.Windows.Forms.Button()
         Me.grbEdicion = New System.Windows.Forms.GroupBox()
+        Me.btnImprimirUsuario = New System.Windows.Forms.Button()
         Me.grbDatos.SuspendLayout()
         Me.grbNavegacion.SuspendLayout()
         Me.grbEdicion.SuspendLayout()
@@ -299,7 +300,7 @@ Partial Class frmUsuario
         'btnModificarUsuario
         '
         Me.btnModificarUsuario.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarUsuario.Location = New System.Drawing.Point(121, 23)
+        Me.btnModificarUsuario.Location = New System.Drawing.Point(117, 23)
         Me.btnModificarUsuario.Margin = New System.Windows.Forms.Padding(1)
         Me.btnModificarUsuario.Name = "btnModificarUsuario"
         Me.btnModificarUsuario.Size = New System.Drawing.Size(120, 48)
@@ -313,10 +314,10 @@ Partial Class frmUsuario
         Me.btnEliminarUsuario.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminarUsuario.ForeColor = System.Drawing.Color.OrangeRed
         Me.btnEliminarUsuario.Image = CType(resources.GetObject("btnEliminarUsuario.Image"), System.Drawing.Image)
-        Me.btnEliminarUsuario.Location = New System.Drawing.Point(244, 23)
+        Me.btnEliminarUsuario.Location = New System.Drawing.Point(230, 23)
         Me.btnEliminarUsuario.Margin = New System.Windows.Forms.Padding(1)
         Me.btnEliminarUsuario.Name = "btnEliminarUsuario"
-        Me.btnEliminarUsuario.Size = New System.Drawing.Size(83, 48)
+        Me.btnEliminarUsuario.Size = New System.Drawing.Size(60, 48)
         Me.btnEliminarUsuario.TabIndex = 7
         Me.btnEliminarUsuario.UseVisualStyleBackColor = True
         '
@@ -326,15 +327,16 @@ Partial Class frmUsuario
         Me.btnBuscarUsuario.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarUsuario.ForeColor = System.Drawing.Color.OrangeRed
         Me.btnBuscarUsuario.Image = CType(resources.GetObject("btnBuscarUsuario.Image"), System.Drawing.Image)
-        Me.btnBuscarUsuario.Location = New System.Drawing.Point(344, 23)
+        Me.btnBuscarUsuario.Location = New System.Drawing.Point(355, 23)
         Me.btnBuscarUsuario.Margin = New System.Windows.Forms.Padding(1)
         Me.btnBuscarUsuario.Name = "btnBuscarUsuario"
-        Me.btnBuscarUsuario.Size = New System.Drawing.Size(72, 48)
+        Me.btnBuscarUsuario.Size = New System.Drawing.Size(61, 48)
         Me.btnBuscarUsuario.TabIndex = 8
         Me.btnBuscarUsuario.UseVisualStyleBackColor = True
         '
         'grbEdicion
         '
+        Me.grbEdicion.Controls.Add(Me.btnImprimirUsuario)
         Me.grbEdicion.Controls.Add(Me.btnBuscarUsuario)
         Me.grbEdicion.Controls.Add(Me.btnEliminarUsuario)
         Me.grbEdicion.Controls.Add(Me.btnModificarUsuario)
@@ -347,6 +349,19 @@ Partial Class frmUsuario
         Me.grbEdicion.TabIndex = 73
         Me.grbEdicion.TabStop = False
         Me.grbEdicion.Text = "Edicion"
+        '
+        'btnImprimirUsuario
+        '
+        Me.btnImprimirUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimirUsuario.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImprimirUsuario.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnImprimirUsuario.Image = CType(resources.GetObject("btnImprimirUsuario.Image"), System.Drawing.Image)
+        Me.btnImprimirUsuario.Location = New System.Drawing.Point(292, 23)
+        Me.btnImprimirUsuario.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnImprimirUsuario.Name = "btnImprimirUsuario"
+        Me.btnImprimirUsuario.Size = New System.Drawing.Size(58, 48)
+        Me.btnImprimirUsuario.TabIndex = 33
+        Me.btnImprimirUsuario.UseVisualStyleBackColor = True
         '
         'frmUsuario
         '
@@ -395,4 +410,5 @@ Partial Class frmUsuario
     Friend WithEvents btnBuscarUsuario As Button
     Friend WithEvents grbEdicion As GroupBox
     Friend WithEvents btnAnteriorUsuario As Button
+    Friend WithEvents btnImprimirUsuario As Button
 End Class

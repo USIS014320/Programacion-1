@@ -29,12 +29,14 @@ Partial Class Form1
         Me.EMPRESAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDeProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistroDeCargosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResgistrosDePrestamosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CrearPrestamoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesDePrestamosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.INVENTARIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosDeudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -45,6 +47,7 @@ Partial Class Form1
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeudasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDeUsariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -74,7 +77,7 @@ Partial Class Form1
         Me.SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(174, 26)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'EMPRESAToolStripMenuItem
@@ -97,14 +100,24 @@ Partial Class Form1
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ProveedoresToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeProveedoresToolStripMenuItem})
         Me.ProveedoresToolStripMenuItem.Image = CType(resources.GetObject("ProveedoresToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
         Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
+        'ReporteDeProveedoresToolStripMenuItem
+        '
+        Me.ReporteDeProveedoresToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ReporteDeProveedoresToolStripMenuItem.Image = CType(resources.GetObject("ReporteDeProveedoresToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ReporteDeProveedoresToolStripMenuItem.Name = "ReporteDeProveedoresToolStripMenuItem"
+        Me.ReporteDeProveedoresToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
+        Me.ReporteDeProveedoresToolStripMenuItem.Text = "Reporte de Proveedores"
+        '
         'UsuariosToolStripMenuItem
         '
         Me.UsuariosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.UsuariosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeUsariosToolStripMenuItem})
         Me.UsuariosToolStripMenuItem.Image = CType(resources.GetObject("UsuariosToolStripMenuItem.Image"), System.Drawing.Image)
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
         Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
@@ -145,10 +158,19 @@ Partial Class Form1
         'CrearPrestamoToolStripMenuItem
         '
         Me.CrearPrestamoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.CrearPrestamoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesDePrestamosToolStripMenuItem})
         Me.CrearPrestamoToolStripMenuItem.Image = CType(resources.GetObject("CrearPrestamoToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CrearPrestamoToolStripMenuItem.Name = "CrearPrestamoToolStripMenuItem"
         Me.CrearPrestamoToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
         Me.CrearPrestamoToolStripMenuItem.Text = "Crear Prestamo"
+        '
+        'ReportesDePrestamosToolStripMenuItem
+        '
+        Me.ReportesDePrestamosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ReportesDePrestamosToolStripMenuItem.Image = CType(resources.GetObject("ReportesDePrestamosToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ReportesDePrestamosToolStripMenuItem.Name = "ReportesDePrestamosToolStripMenuItem"
+        Me.ReportesDePrestamosToolStripMenuItem.Size = New System.Drawing.Size(244, 26)
+        Me.ReportesDePrestamosToolStripMenuItem.Text = "Reportes de Prestamos"
         '
         'INVENTARIOToolStripMenuItem
         '
@@ -222,7 +244,7 @@ Partial Class Form1
         Me.ToolStripMenuItem2.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ToolStripMenuItem2.Image = CType(resources.GetObject("ToolStripMenuItem2.Image"), System.Drawing.Image)
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(224, 26)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(174, 26)
         Me.ToolStripMenuItem2.Text = "Pagos varios"
         '
         'DeudasToolStripMenuItem
@@ -230,8 +252,16 @@ Partial Class Form1
         Me.DeudasToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
         Me.DeudasToolStripMenuItem.Image = CType(resources.GetObject("DeudasToolStripMenuItem.Image"), System.Drawing.Image)
         Me.DeudasToolStripMenuItem.Name = "DeudasToolStripMenuItem"
-        Me.DeudasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.DeudasToolStripMenuItem.Size = New System.Drawing.Size(174, 26)
         Me.DeudasToolStripMenuItem.Text = "Deudas"
+        '
+        'ReporteDeUsariosToolStripMenuItem
+        '
+        Me.ReporteDeUsariosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ReporteDeUsariosToolStripMenuItem.Image = CType(resources.GetObject("ReporteDeUsariosToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ReporteDeUsariosToolStripMenuItem.Name = "ReporteDeUsariosToolStripMenuItem"
+        Me.ReporteDeUsariosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ReporteDeUsariosToolStripMenuItem.Text = "Reporte de Usarios"
         '
         'Form1
         '
@@ -278,4 +308,7 @@ Partial Class Form1
     Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CrearPrestamoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeudasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteDeProveedoresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportesDePrestamosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteDeUsariosToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -38,33 +38,20 @@ Partial Class frmCrearprestamo
         Me.ClientesTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.clientesTableAdapter()
         Me.InteresesTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.interesesTableAdapter()
         Me.OcupacionTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.ocupacionTableAdapter()
-        Me.CrearprestamoBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.CrearprestamoBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.lblTituloPrest = New System.Windows.Forms.Label()
         Me.IdClienteComboBox = New System.Windows.Forms.ComboBox()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdOcupacionComboBox = New System.Windows.Forms.ComboBox()
+        Me.OcupacionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OcupacionBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OcupacionBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OcupacionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OcupacionBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdInteresComboBox = New System.Windows.Forms.ComboBox()
+        Me.InteresesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.InteresesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.InteresesBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.InteresesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.InteresesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CedulaTextBox = New System.Windows.Forms.TextBox()
         Me.MontoTextBox = New System.Windows.Forms.TextBox()
@@ -88,6 +75,18 @@ Partial Class frmCrearprestamo
         Me.btnCalcular = New System.Windows.Forms.Button()
         Me.lbltotal = New System.Windows.Forms.Label()
         Me.lblinteresCompuesto = New System.Windows.Forms.Label()
+        Me.grbEdicion = New System.Windows.Forms.GroupBox()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.grbNavegacion = New System.Windows.Forms.GroupBox()
+        Me.lblRegistros = New System.Windows.Forms.Label()
+        Me.btnUltimo = New System.Windows.Forms.Button()
+        Me.btnSiguiente = New System.Windows.Forms.Button()
+        Me.btnAnterior = New System.Windows.Forms.Button()
+        Me.btnPrimero = New System.Windows.Forms.Button()
+        Me.btnImprimir = New System.Windows.Forms.Button()
         Label1 = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
@@ -97,28 +96,28 @@ Partial Class frmCrearprestamo
         Label7 = New System.Windows.Forms.Label()
         CType(Me.Bd_sigacDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CrearprestamoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CrearprestamoBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.CrearprestamoBindingNavigator.SuspendLayout()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OcupacionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OcupacionBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OcupacionBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OcupacionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OcupacionBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InteresesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InteresesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InteresesBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.InteresesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InteresesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CrearprestamoClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CrearprestamoClienteDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grbEdicion.SuspendLayout()
+        Me.grbNavegacion.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Label1.AutoSize = True
         Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label1.Location = New System.Drawing.Point(12, 132)
+        Label1.Location = New System.Drawing.Point(15, 93)
         Label1.Name = "Label1"
         Label1.Size = New System.Drawing.Size(66, 20)
         Label1.TabIndex = 204
@@ -128,7 +127,7 @@ Partial Class frmCrearprestamo
         '
         Label4.AutoSize = True
         Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label4.Location = New System.Drawing.Point(335, 132)
+        Label4.Location = New System.Drawing.Point(338, 93)
         Label4.Name = "Label4"
         Label4.Size = New System.Drawing.Size(66, 20)
         Label4.TabIndex = 205
@@ -138,7 +137,7 @@ Partial Class frmCrearprestamo
         '
         Label2.AutoSize = True
         Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label2.Location = New System.Drawing.Point(643, 128)
+        Label2.Location = New System.Drawing.Point(646, 89)
         Label2.Name = "Label2"
         Label2.Size = New System.Drawing.Size(94, 20)
         Label2.TabIndex = 206
@@ -148,7 +147,7 @@ Partial Class frmCrearprestamo
         '
         Label6.AutoSize = True
         Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label6.Location = New System.Drawing.Point(13, 189)
+        Label6.Location = New System.Drawing.Point(16, 150)
         Label6.Name = "Label6"
         Label6.Size = New System.Drawing.Size(67, 20)
         Label6.TabIndex = 207
@@ -158,7 +157,7 @@ Partial Class frmCrearprestamo
         '
         Label5.AutoSize = True
         Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label5.Location = New System.Drawing.Point(335, 187)
+        Label5.Location = New System.Drawing.Point(338, 148)
         Label5.Name = "Label5"
         Label5.Size = New System.Drawing.Size(60, 20)
         Label5.TabIndex = 208
@@ -168,7 +167,7 @@ Partial Class frmCrearprestamo
         '
         Label3.AutoSize = True
         Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label3.Location = New System.Drawing.Point(672, 193)
+        Label3.Location = New System.Drawing.Point(675, 154)
         Label3.Name = "Label3"
         Label3.Size = New System.Drawing.Size(65, 20)
         Label3.TabIndex = 209
@@ -178,7 +177,7 @@ Partial Class frmCrearprestamo
         '
         Label7.AutoSize = True
         Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label7.Location = New System.Drawing.Point(12, 264)
+        Label7.Location = New System.Drawing.Point(15, 225)
         Label7.Name = "Label7"
         Label7.Size = New System.Drawing.Size(137, 20)
         Label7.TabIndex = 210
@@ -210,7 +209,7 @@ Partial Class frmCrearprestamo
         Me.TableAdapterManager.crearprestamoTableAdapter = Me.CrearprestamoTableAdapter
         Me.TableAdapterManager.dcomprasTableAdapter = Nothing
         Me.TableAdapterManager.DescuentosTableAdapter = Nothing
-        Me.TableAdapterManager.DeudaTableAdapter = Nothing
+        Me.TableAdapterManager.deudaTableAdapter = Nothing
         Me.TableAdapterManager.empleadosTableAdapter = Nothing
         Me.TableAdapterManager.faltanteproductoTableAdapter = Nothing
         Me.TableAdapterManager.interesesTableAdapter = Me.InteresesTableAdapter
@@ -238,125 +237,12 @@ Partial Class frmCrearprestamo
         '
         Me.OcupacionTableAdapter.ClearBeforeFill = True
         '
-        'CrearprestamoBindingNavigator
-        '
-        Me.CrearprestamoBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.CrearprestamoBindingNavigator.BindingSource = Me.CrearprestamoBindingSource
-        Me.CrearprestamoBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.CrearprestamoBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.CrearprestamoBindingNavigator.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.CrearprestamoBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.CrearprestamoBindingNavigatorSaveItem})
-        Me.CrearprestamoBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.CrearprestamoBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.CrearprestamoBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.CrearprestamoBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.CrearprestamoBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.CrearprestamoBindingNavigator.Name = "CrearprestamoBindingNavigator"
-        Me.CrearprestamoBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.CrearprestamoBindingNavigator.Size = New System.Drawing.Size(1007, 27)
-        Me.CrearprestamoBindingNavigator.TabIndex = 0
-        Me.CrearprestamoBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(29, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(29, 24)
-        Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(29, 24)
-        Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Posición"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 27)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(29, 24)
-        Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(29, 24)
-        Me.BindingNavigatorMoveLastItem.Text = "Mover último"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
-        '
-        'CrearprestamoBindingNavigatorSaveItem
-        '
-        Me.CrearprestamoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.CrearprestamoBindingNavigatorSaveItem.Image = CType(resources.GetObject("CrearprestamoBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.CrearprestamoBindingNavigatorSaveItem.Name = "CrearprestamoBindingNavigatorSaveItem"
-        Me.CrearprestamoBindingNavigatorSaveItem.Size = New System.Drawing.Size(29, 24)
-        Me.CrearprestamoBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
         'lblTituloPrest
         '
         Me.lblTituloPrest.AutoSize = True
         Me.lblTituloPrest.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTituloPrest.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblTituloPrest.Location = New System.Drawing.Point(251, 48)
+        Me.lblTituloPrest.Location = New System.Drawing.Point(254, 9)
         Me.lblTituloPrest.Name = "lblTituloPrest"
         Me.lblTituloPrest.Size = New System.Drawing.Size(453, 51)
         Me.lblTituloPrest.TabIndex = 184
@@ -369,7 +255,7 @@ Partial Class frmCrearprestamo
         Me.IdClienteComboBox.DisplayMember = "nombre"
         Me.IdClienteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IdClienteComboBox.FormattingEnabled = True
-        Me.IdClienteComboBox.Location = New System.Drawing.Point(100, 128)
+        Me.IdClienteComboBox.Location = New System.Drawing.Point(103, 89)
         Me.IdClienteComboBox.Name = "IdClienteComboBox"
         Me.IdClienteComboBox.Size = New System.Drawing.Size(200, 24)
         Me.IdClienteComboBox.TabIndex = 189
@@ -397,11 +283,16 @@ Partial Class frmCrearprestamo
         Me.IdOcupacionComboBox.DisplayMember = "ocupacion"
         Me.IdOcupacionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IdOcupacionComboBox.FormattingEnabled = True
-        Me.IdOcupacionComboBox.Location = New System.Drawing.Point(758, 128)
+        Me.IdOcupacionComboBox.Location = New System.Drawing.Point(761, 89)
         Me.IdOcupacionComboBox.Name = "IdOcupacionComboBox"
         Me.IdOcupacionComboBox.Size = New System.Drawing.Size(200, 24)
         Me.IdOcupacionComboBox.TabIndex = 191
         Me.IdOcupacionComboBox.ValueMember = "idOcupacion"
+        '
+        'OcupacionBindingSource
+        '
+        Me.OcupacionBindingSource.DataMember = "ocupacion"
+        Me.OcupacionBindingSource.DataSource = Me.Bd_sigacDataSet
         '
         'OcupacionBindingSource2
         '
@@ -412,11 +303,6 @@ Partial Class frmCrearprestamo
         '
         Me.OcupacionBindingSource3.DataMember = "ocupacion"
         Me.OcupacionBindingSource3.DataSource = Me.Bd_sigacDataSet
-        '
-        'OcupacionBindingSource
-        '
-        Me.OcupacionBindingSource.DataMember = "ocupacion"
-        Me.OcupacionBindingSource.DataSource = Me.Bd_sigacDataSet
         '
         'OcupacionBindingSource1
         '
@@ -430,11 +316,16 @@ Partial Class frmCrearprestamo
         Me.IdInteresComboBox.DisplayMember = "interes"
         Me.IdInteresComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IdInteresComboBox.FormattingEnabled = True
-        Me.IdInteresComboBox.Location = New System.Drawing.Point(758, 189)
+        Me.IdInteresComboBox.Location = New System.Drawing.Point(761, 150)
         Me.IdInteresComboBox.Name = "IdInteresComboBox"
         Me.IdInteresComboBox.Size = New System.Drawing.Size(200, 24)
         Me.IdInteresComboBox.TabIndex = 193
         Me.IdInteresComboBox.ValueMember = "idInteres"
+        '
+        'InteresesBindingSource
+        '
+        Me.InteresesBindingSource.DataMember = "intereses"
+        Me.InteresesBindingSource.DataSource = Me.Bd_sigacDataSet
         '
         'InteresesBindingSource2
         '
@@ -446,11 +337,6 @@ Partial Class frmCrearprestamo
         Me.InteresesBindingSource3.DataMember = "intereses"
         Me.InteresesBindingSource3.DataSource = Me.Bd_sigacDataSet
         '
-        'InteresesBindingSource
-        '
-        Me.InteresesBindingSource.DataMember = "intereses"
-        Me.InteresesBindingSource.DataSource = Me.Bd_sigacDataSet
-        '
         'InteresesBindingSource1
         '
         Me.InteresesBindingSource1.DataMember = "intereses"
@@ -459,7 +345,7 @@ Partial Class frmCrearprestamo
         'CedulaTextBox
         '
         Me.CedulaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CrearprestamoBindingSource, "cedula", True))
-        Me.CedulaTextBox.Location = New System.Drawing.Point(426, 132)
+        Me.CedulaTextBox.Location = New System.Drawing.Point(429, 93)
         Me.CedulaTextBox.Name = "CedulaTextBox"
         Me.CedulaTextBox.Size = New System.Drawing.Size(200, 22)
         Me.CedulaTextBox.TabIndex = 195
@@ -467,7 +353,7 @@ Partial Class frmCrearprestamo
         'MontoTextBox
         '
         Me.MontoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CrearprestamoBindingSource, "monto", True))
-        Me.MontoTextBox.Location = New System.Drawing.Point(426, 187)
+        Me.MontoTextBox.Location = New System.Drawing.Point(429, 148)
         Me.MontoTextBox.Name = "MontoTextBox"
         Me.MontoTextBox.Size = New System.Drawing.Size(200, 22)
         Me.MontoTextBox.TabIndex = 197
@@ -475,7 +361,7 @@ Partial Class frmCrearprestamo
         'CuotasTextBox
         '
         Me.CuotasTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CrearprestamoBindingSource, "cuotas", True))
-        Me.CuotasTextBox.Location = New System.Drawing.Point(100, 187)
+        Me.CuotasTextBox.Location = New System.Drawing.Point(103, 148)
         Me.CuotasTextBox.Name = "CuotasTextBox"
         Me.CuotasTextBox.Size = New System.Drawing.Size(200, 22)
         Me.CuotasTextBox.TabIndex = 199
@@ -483,7 +369,7 @@ Partial Class frmCrearprestamo
         'FechaprestamoDateTimePicker
         '
         Me.FechaprestamoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.CrearprestamoBindingSource, "fechaprestamo", True))
-        Me.FechaprestamoDateTimePicker.Location = New System.Drawing.Point(175, 262)
+        Me.FechaprestamoDateTimePicker.Location = New System.Drawing.Point(178, 223)
         Me.FechaprestamoDateTimePicker.Name = "FechaprestamoDateTimePicker"
         Me.FechaprestamoDateTimePicker.Size = New System.Drawing.Size(252, 22)
         Me.FechaprestamoDateTimePicker.TabIndex = 201
@@ -505,7 +391,7 @@ Partial Class frmCrearprestamo
         Me.CrearprestamoClienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CrearprestamoClienteDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11})
         Me.CrearprestamoClienteDataGridView.DataSource = Me.CrearprestamoClienteBindingSource
-        Me.CrearprestamoClienteDataGridView.Location = New System.Drawing.Point(41, 302)
+        Me.CrearprestamoClienteDataGridView.Location = New System.Drawing.Point(44, 263)
         Me.CrearprestamoClienteDataGridView.Name = "CrearprestamoClienteDataGridView"
         Me.CrearprestamoClienteDataGridView.ReadOnly = True
         Me.CrearprestamoClienteDataGridView.RowHeadersWidth = 51
@@ -622,7 +508,7 @@ Partial Class frmCrearprestamo
         Me.btnAgregarClienteNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregarClienteNuevo.ForeColor = System.Drawing.Color.OrangeRed
         Me.btnAgregarClienteNuevo.Image = CType(resources.GetObject("btnAgregarClienteNuevo.Image"), System.Drawing.Image)
-        Me.btnAgregarClienteNuevo.Location = New System.Drawing.Point(879, 52)
+        Me.btnAgregarClienteNuevo.Location = New System.Drawing.Point(882, 13)
         Me.btnAgregarClienteNuevo.Name = "btnAgregarClienteNuevo"
         Me.btnAgregarClienteNuevo.Size = New System.Drawing.Size(79, 62)
         Me.btnAgregarClienteNuevo.TabIndex = 211
@@ -635,7 +521,7 @@ Partial Class frmCrearprestamo
         Me.btnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCalcular.ForeColor = System.Drawing.Color.OrangeRed
         Me.btnCalcular.Image = CType(resources.GetObject("btnCalcular.Image"), System.Drawing.Image)
-        Me.btnCalcular.Location = New System.Drawing.Point(676, 229)
+        Me.btnCalcular.Location = New System.Drawing.Point(679, 190)
         Me.btnCalcular.Name = "btnCalcular"
         Me.btnCalcular.Size = New System.Drawing.Size(67, 61)
         Me.btnCalcular.TabIndex = 213
@@ -645,7 +531,7 @@ Partial Class frmCrearprestamo
         '
         Me.lbltotal.AutoSize = True
         Me.lbltotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbltotal.Location = New System.Drawing.Point(754, 249)
+        Me.lbltotal.Location = New System.Drawing.Point(757, 210)
         Me.lbltotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbltotal.Name = "lbltotal"
         Me.lbltotal.Size = New System.Drawing.Size(74, 20)
@@ -656,19 +542,180 @@ Partial Class frmCrearprestamo
         '
         Me.lblinteresCompuesto.AutoSize = True
         Me.lblinteresCompuesto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblinteresCompuesto.Location = New System.Drawing.Point(909, 249)
+        Me.lblinteresCompuesto.Location = New System.Drawing.Point(912, 210)
         Me.lblinteresCompuesto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblinteresCompuesto.Name = "lblinteresCompuesto"
         Me.lblinteresCompuesto.Size = New System.Drawing.Size(49, 20)
         Me.lblinteresCompuesto.TabIndex = 224
         Me.lblinteresCompuesto.Text = "00.00"
         '
+        'grbEdicion
+        '
+        Me.grbEdicion.BackColor = System.Drawing.Color.Transparent
+        Me.grbEdicion.Controls.Add(Me.btnImprimir)
+        Me.grbEdicion.Controls.Add(Me.btnModificar)
+        Me.grbEdicion.Controls.Add(Me.btnAgregar)
+        Me.grbEdicion.Controls.Add(Me.btnBuscar)
+        Me.grbEdicion.Controls.Add(Me.btnEliminar)
+        Me.grbEdicion.Location = New System.Drawing.Point(495, 561)
+        Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
+        Me.grbEdicion.Name = "grbEdicion"
+        Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
+        Me.grbEdicion.Size = New System.Drawing.Size(466, 84)
+        Me.grbEdicion.TabIndex = 226
+        Me.grbEdicion.TabStop = False
+        Me.grbEdicion.Text = "Edicion"
+        '
+        'btnModificar
+        '
+        Me.btnModificar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.Location = New System.Drawing.Point(131, 23)
+        Me.btnModificar.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(120, 48)
+        Me.btnModificar.TabIndex = 10
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.UseVisualStyleBackColor = True
+        '
+        'btnAgregar
+        '
+        Me.btnAgregar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregar.Location = New System.Drawing.Point(21, 23)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(91, 48)
+        Me.btnAgregar.TabIndex = 9
+        Me.btnAgregar.Text = "Nuevo"
+        Me.btnAgregar.UseVisualStyleBackColor = True
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.BackColor = System.Drawing.Color.Transparent
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
+        Me.btnBuscar.Location = New System.Drawing.Point(402, 23)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(62, 48)
+        Me.btnBuscar.TabIndex = 8
+        Me.btnBuscar.UseVisualStyleBackColor = False
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.BackColor = System.Drawing.Color.Transparent
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
+        Me.btnEliminar.Location = New System.Drawing.Point(253, 23)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(82, 48)
+        Me.btnEliminar.TabIndex = 7
+        Me.btnEliminar.UseVisualStyleBackColor = False
+        '
+        'grbNavegacion
+        '
+        Me.grbNavegacion.BackColor = System.Drawing.Color.Transparent
+        Me.grbNavegacion.Controls.Add(Me.lblRegistros)
+        Me.grbNavegacion.Controls.Add(Me.btnUltimo)
+        Me.grbNavegacion.Controls.Add(Me.btnSiguiente)
+        Me.grbNavegacion.Controls.Add(Me.btnAnterior)
+        Me.grbNavegacion.Controls.Add(Me.btnPrimero)
+        Me.grbNavegacion.Location = New System.Drawing.Point(44, 561)
+        Me.grbNavegacion.Margin = New System.Windows.Forms.Padding(1)
+        Me.grbNavegacion.Name = "grbNavegacion"
+        Me.grbNavegacion.Padding = New System.Windows.Forms.Padding(1)
+        Me.grbNavegacion.Size = New System.Drawing.Size(360, 84)
+        Me.grbNavegacion.TabIndex = 225
+        Me.grbNavegacion.TabStop = False
+        Me.grbNavegacion.Text = "Navegacion"
+        '
+        'lblRegistros
+        '
+        Me.lblRegistros.AutoSize = True
+        Me.lblRegistros.Location = New System.Drawing.Point(115, 42)
+        Me.lblRegistros.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblRegistros.Name = "lblRegistros"
+        Me.lblRegistros.Size = New System.Drawing.Size(46, 17)
+        Me.lblRegistros.TabIndex = 4
+        Me.lblRegistros.Text = "x de n"
+        '
+        'btnUltimo
+        '
+        Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUltimo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUltimo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnUltimo.Image = CType(resources.GetObject("btnUltimo.Image"), System.Drawing.Image)
+        Me.btnUltimo.Location = New System.Drawing.Point(288, 23)
+        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnUltimo.Name = "btnUltimo"
+        Me.btnUltimo.Size = New System.Drawing.Size(55, 48)
+        Me.btnUltimo.TabIndex = 3
+        Me.btnUltimo.UseVisualStyleBackColor = True
+        '
+        'btnSiguiente
+        '
+        Me.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSiguiente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSiguiente.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSiguiente.Image = CType(resources.GetObject("btnSiguiente.Image"), System.Drawing.Image)
+        Me.btnSiguiente.Location = New System.Drawing.Point(231, 23)
+        Me.btnSiguiente.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnSiguiente.Name = "btnSiguiente"
+        Me.btnSiguiente.Size = New System.Drawing.Size(55, 48)
+        Me.btnSiguiente.TabIndex = 2
+        Me.btnSiguiente.UseVisualStyleBackColor = True
+        '
+        'btnAnterior
+        '
+        Me.btnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAnterior.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAnterior.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnAnterior.Image = CType(resources.GetObject("btnAnterior.Image"), System.Drawing.Image)
+        Me.btnAnterior.Location = New System.Drawing.Point(56, 23)
+        Me.btnAnterior.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnAnterior.Name = "btnAnterior"
+        Me.btnAnterior.Size = New System.Drawing.Size(55, 48)
+        Me.btnAnterior.TabIndex = 1
+        Me.btnAnterior.UseVisualStyleBackColor = True
+        '
+        'btnPrimero
+        '
+        Me.btnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrimero.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrimero.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnPrimero.Image = CType(resources.GetObject("btnPrimero.Image"), System.Drawing.Image)
+        Me.btnPrimero.Location = New System.Drawing.Point(3, 23)
+        Me.btnPrimero.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnPrimero.Name = "btnPrimero"
+        Me.btnPrimero.Size = New System.Drawing.Size(55, 48)
+        Me.btnPrimero.TabIndex = 0
+        Me.btnPrimero.UseVisualStyleBackColor = True
+        '
+        'btnImprimir
+        '
+        Me.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImprimir.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnImprimir.Image = CType(resources.GetObject("btnImprimir.Image"), System.Drawing.Image)
+        Me.btnImprimir.Location = New System.Drawing.Point(337, 23)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(58, 48)
+        Me.btnImprimir.TabIndex = 11
+        Me.btnImprimir.UseVisualStyleBackColor = True
+        '
         'frmCrearprestamo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(1007, 648)
+        Me.ClientSize = New System.Drawing.Size(1007, 653)
+        Me.Controls.Add(Me.grbEdicion)
+        Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.lblinteresCompuesto)
         Me.Controls.Add(Me.btnCalcular)
         Me.Controls.Add(Me.lbltotal)
@@ -689,28 +736,27 @@ Partial Class frmCrearprestamo
         Me.Controls.Add(Me.CuotasTextBox)
         Me.Controls.Add(Me.FechaprestamoDateTimePicker)
         Me.Controls.Add(Me.lblTituloPrest)
-        Me.Controls.Add(Me.CrearprestamoBindingNavigator)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCrearprestamo"
         Me.Text = "Registro de Prestamo"
         CType(Me.Bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CrearprestamoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CrearprestamoBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.CrearprestamoBindingNavigator.ResumeLayout(False)
-        Me.CrearprestamoBindingNavigator.PerformLayout()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OcupacionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OcupacionBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OcupacionBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OcupacionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OcupacionBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InteresesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InteresesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InteresesBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.InteresesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InteresesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CrearprestamoClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CrearprestamoClienteDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grbEdicion.ResumeLayout(False)
+        Me.grbNavegacion.ResumeLayout(False)
+        Me.grbNavegacion.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -720,19 +766,6 @@ Partial Class frmCrearprestamo
     Friend WithEvents CrearprestamoBindingSource As BindingSource
     Friend WithEvents CrearprestamoTableAdapter As bd_sigacDataSetTableAdapters.crearprestamoTableAdapter
     Friend WithEvents TableAdapterManager As bd_sigacDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents CrearprestamoBindingNavigator As BindingNavigator
-    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
-    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
-    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents CrearprestamoBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents lblTituloPrest As Label
     Friend WithEvents IdClienteComboBox As ComboBox
     Friend WithEvents IdOcupacionComboBox As ComboBox
@@ -773,4 +806,16 @@ Partial Class frmCrearprestamo
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents lbltotal As Label
     Friend WithEvents lblinteresCompuesto As Label
+    Friend WithEvents grbEdicion As GroupBox
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents btnAgregar As Button
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents grbNavegacion As GroupBox
+    Friend WithEvents lblRegistros As Label
+    Friend WithEvents btnUltimo As Button
+    Friend WithEvents btnSiguiente As Button
+    Friend WithEvents btnAnterior As Button
+    Friend WithEvents btnPrimero As Button
+    Friend WithEvents btnImprimir As Button
 End Class

@@ -49,6 +49,7 @@ Partial Class frmProveedores
         Me.btnSiguienteProveedor = New System.Windows.Forms.Button()
         Me.btnAnteriorProveedor = New System.Windows.Forms.Button()
         Me.btnPrimeroProveedor = New System.Windows.Forms.Button()
+        Me.btnImprimirProveedores = New System.Windows.Forms.Button()
         Me.grbDatos.SuspendLayout()
         Me.grbEdicion.SuspendLayout()
         Me.grbNavegacion.SuspendLayout()
@@ -218,6 +219,7 @@ Partial Class frmProveedores
         '
         'grbEdicion
         '
+        Me.grbEdicion.Controls.Add(Me.btnImprimirProveedores)
         Me.grbEdicion.Controls.Add(Me.btnBuscarProveedor)
         Me.grbEdicion.Controls.Add(Me.btnEliminarProveedor)
         Me.grbEdicion.Controls.Add(Me.btnModificarProveedor)
@@ -237,10 +239,10 @@ Partial Class frmProveedores
         Me.btnBuscarProveedor.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarProveedor.ForeColor = System.Drawing.Color.OrangeRed
         Me.btnBuscarProveedor.Image = CType(resources.GetObject("btnBuscarProveedor.Image"), System.Drawing.Image)
-        Me.btnBuscarProveedor.Location = New System.Drawing.Point(344, 23)
+        Me.btnBuscarProveedor.Location = New System.Drawing.Point(367, 23)
         Me.btnBuscarProveedor.Margin = New System.Windows.Forms.Padding(1)
         Me.btnBuscarProveedor.Name = "btnBuscarProveedor"
-        Me.btnBuscarProveedor.Size = New System.Drawing.Size(72, 48)
+        Me.btnBuscarProveedor.Size = New System.Drawing.Size(49, 48)
         Me.btnBuscarProveedor.TabIndex = 8
         Me.btnBuscarProveedor.UseVisualStyleBackColor = True
         '
@@ -253,7 +255,7 @@ Partial Class frmProveedores
         Me.btnEliminarProveedor.Location = New System.Drawing.Point(244, 23)
         Me.btnEliminarProveedor.Margin = New System.Windows.Forms.Padding(1)
         Me.btnEliminarProveedor.Name = "btnEliminarProveedor"
-        Me.btnEliminarProveedor.Size = New System.Drawing.Size(83, 48)
+        Me.btnEliminarProveedor.Size = New System.Drawing.Size(60, 48)
         Me.btnEliminarProveedor.TabIndex = 7
         Me.btnEliminarProveedor.UseVisualStyleBackColor = True
         '
@@ -357,6 +359,19 @@ Partial Class frmProveedores
         Me.btnPrimeroProveedor.TabIndex = 0
         Me.btnPrimeroProveedor.UseVisualStyleBackColor = True
         '
+        'btnImprimirProveedores
+        '
+        Me.btnImprimirProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimirProveedores.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImprimirProveedores.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnImprimirProveedores.Image = CType(resources.GetObject("btnImprimirProveedores.Image"), System.Drawing.Image)
+        Me.btnImprimirProveedores.Location = New System.Drawing.Point(306, 23)
+        Me.btnImprimirProveedores.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnImprimirProveedores.Name = "btnImprimirProveedores"
+        Me.btnImprimirProveedores.Size = New System.Drawing.Size(51, 48)
+        Me.btnImprimirProveedores.TabIndex = 9
+        Me.btnImprimirProveedores.UseVisualStyleBackColor = True
+        '
         'frmProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -403,4 +418,5 @@ Partial Class frmProveedores
     Friend WithEvents btnSiguienteProveedor As Button
     Friend WithEvents btnAnteriorProveedor As Button
     Friend WithEvents btnPrimeroProveedor As Button
+    Friend WithEvents btnImprimirProveedores As Button
 End Class

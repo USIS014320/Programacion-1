@@ -132,5 +132,8 @@
         End If
     End Sub
 
-
+    Private Sub btnImprimirProveedores_Click(sender As Object, e As EventArgs) Handles btnImprimirProveedores.Click
+        Dim objImprimirProveedores As New frmImprimirProveedores
+        objImprimirProveedores.ShowDialog()
+    End Sub
 End Class
