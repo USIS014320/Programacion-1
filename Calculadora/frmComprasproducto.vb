@@ -92,15 +92,71 @@ Public Class frmComprasproducto
             habdesh_controles(False)
             ComprasBindingSource.AddNew()
 
-
-
+            IdProveedorComboBox.SelectedValue = 1 'Cliente por default Ventas a Publico
+            IdTipofacturaComboBox.SelectedValue = 3 'Tipo de factura por default consumidor final 
+            IdPagoComboBox.SelectedValue = 1 'Tipo de Pago por default efectivo
+            Fecha_vtaDateTimePicker.Value = Date.Now
         Else 'Guardar
+            Try
+                _idCpro = Integer.Parse(lblIdCompra.Text)
+                Me.Validate()
+                ComprasBindingSource.EndEdit()
 
-            habdesh_controles(True)
-            btnAgregar.Text = "Nuevo"
-            btnModificar.Text = "Modificar"
+                If _idCpro > 0 Then 'Modificanco
+                    eliminarDetalle()
+                Else 'Agregando Nuevas Facturas
+                    ComprasTableAdapter.Connection.Open()
+                    Dim comando As New SqlCommand
+                    comando.Connection = ComprasTableAdapter.Connection
+                    comando.CommandText = "SELECT ident_current('compras') + 1 AS idCompra"
+                    _idCpro = Integer.Parse(comando.ExecuteScalar().ToString())
+                    ComprasTableAdapter.Connection.Close()
+                End If
+
+                Dim nfilas As Integer = DcomprasProductosDataGridView.Rows.Count
+                Dim valores(nfilas, 3) As String
+                Dim fila As New DataGridViewRow
+
+                For i = 0 To nfilas - 1
+                    fila = DcomprasProductosDataGridView.Rows(i)
+
+                    valores(i, 0) = fila.Cells("idProducto").Value.ToString()
+                    valores(i, 1) = fila.Cells("cantidad").Value.ToString()
+                    valores(i, 2) = fila.Cells("precio").Value.ToString()
+                Next
+                TableAdapterManager.UpdateAll(Bd_sigacDataSet)
+
+                For i = 0 To nfilas - 1
+                    DcomprasTableAdapter.Insert(
+                        _idCpro,
+                        valores(i, 0),
+                        valores(i, 1),
+                        valores(i, 2)
+                    )
+                Next
+                actualizarDs()
+                ComprasBindingSource.MoveLast()
+
+                habdesh_controles(True)
+                btnAgregar.Text = "Nuevo"
+                btnModificar.Text = "Modificar"
+            Catch ex As Exception
+                MessageBox.Show("Error al intentar guardar: " + ex.Message,
+                    "Registro de Facturas de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+
         End If
 
+    End Sub
+
+    Private Sub eliminarDetalle()
+        ComprasTableAdapter.Connection.Open()
+        Dim comando As New SqlCommand
+        comando.Connection = ComprasTableAdapter.Connection
+
+        comando.CommandText = "delete from dcompras where idCompra=" + _idCpro.ToString()
+        comando.ExecuteNonQuery()
+        ComprasTableAdapter.Connection.Close()
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
@@ -119,5 +175,44 @@ Public Class frmComprasproducto
             btnModificar.Text = "Modificar"
         End If
 
+    End Sub
+
+    Private Sub btnAgregarProducto_Click(sender As Object, e As EventArgs) Handles btnAgregarProducto.Click
+        Dim objProductos As New frmProductos
+        objProductos.Show()
+
+    End Sub
+
+    Private Sub btnQuitarProducto_Click(sender As Object, e As EventArgs) Handles btnQuitarProducto.Click
+        Try
+            DcomprasProductosDataGridView.Rows.Remove(DcomprasProductosDataGridView.CurrentRow)
+            totalizar()
+        Catch ex As Exception
+            MessageBox.Show("Error al intentar quitar la fila: " + ex.Message)
+        End Try
+    End Sub
+
+    Private Sub DcomprasProductosDataGridView_KeyUp(sender As Object, e As KeyEventArgs) Handles DcomprasProductosDataGridView.KeyUp
+        Try
+            totalizar()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub btnAgregarProveedor_Click(sender As Object, e As EventArgs) Handles btnAgregarProveedor.Click
+        Dim objProveedores As New frmProveedores
+        objProveedores.Show()
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+
+        eliminarDetalle()
+
+        ComprasBindingSource.RemoveAt(ComprasBindingSource.Position)
+        ComprasBindingSource.EndEdit()
+        TableAdapterManager.UpdateAll(Bd_sigacDataSet)
+
+        actualizarDs()
     End Sub
 End Class
