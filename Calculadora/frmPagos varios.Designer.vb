@@ -35,16 +35,17 @@ Partial Class frmPagosVarios
         Me.txtCodigotipo = New System.Windows.Forms.TextBox()
         Me.lblCodigotipo = New System.Windows.Forms.Label()
         Me.grbEdicion = New System.Windows.Forms.GroupBox()
-        Me.btnBuscartipo = New System.Windows.Forms.Button()
-        Me.btnEliminartipo = New System.Windows.Forms.Button()
         Me.btnModificartipo = New System.Windows.Forms.Button()
         Me.btnAgregartipo = New System.Windows.Forms.Button()
         Me.grbNavegacion = New System.Windows.Forms.GroupBox()
         Me.lblRegistrostipo = New System.Windows.Forms.Label()
+        Me.btnBuscartipo = New System.Windows.Forms.Button()
+        Me.btnEliminartipo = New System.Windows.Forms.Button()
         Me.btnUltimotipo = New System.Windows.Forms.Button()
         Me.btnSiguientetipo = New System.Windows.Forms.Button()
         Me.btnAnteriortipo = New System.Windows.Forms.Button()
         Me.btnPrimerotipo = New System.Windows.Forms.Button()
+        Me.btnImprimir = New System.Windows.Forms.Button()
         Me.grbPagosvarios.SuspendLayout()
         Me.grbEdicion.SuspendLayout()
         Me.grbNavegacion.SuspendLayout()
@@ -170,6 +171,7 @@ Partial Class frmPagosVarios
         '
         'grbEdicion
         '
+        Me.grbEdicion.Controls.Add(Me.btnImprimir)
         Me.grbEdicion.Controls.Add(Me.btnBuscartipo)
         Me.grbEdicion.Controls.Add(Me.btnEliminartipo)
         Me.grbEdicion.Controls.Add(Me.btnModificartipo)
@@ -183,39 +185,13 @@ Partial Class frmPagosVarios
         Me.grbEdicion.TabStop = False
         Me.grbEdicion.Text = "Edicion"
         '
-        'btnBuscartipo
-        '
-        Me.btnBuscartipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscartipo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscartipo.ForeColor = System.Drawing.Color.OrangeRed
-        Me.btnBuscartipo.Image = CType(resources.GetObject("btnBuscartipo.Image"), System.Drawing.Image)
-        Me.btnBuscartipo.Location = New System.Drawing.Point(344, 23)
-        Me.btnBuscartipo.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnBuscartipo.Name = "btnBuscartipo"
-        Me.btnBuscartipo.Size = New System.Drawing.Size(72, 48)
-        Me.btnBuscartipo.TabIndex = 8
-        Me.btnBuscartipo.UseVisualStyleBackColor = True
-        '
-        'btnEliminartipo
-        '
-        Me.btnEliminartipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEliminartipo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminartipo.ForeColor = System.Drawing.Color.OrangeRed
-        Me.btnEliminartipo.Image = CType(resources.GetObject("btnEliminartipo.Image"), System.Drawing.Image)
-        Me.btnEliminartipo.Location = New System.Drawing.Point(244, 23)
-        Me.btnEliminartipo.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnEliminartipo.Name = "btnEliminartipo"
-        Me.btnEliminartipo.Size = New System.Drawing.Size(83, 48)
-        Me.btnEliminartipo.TabIndex = 7
-        Me.btnEliminartipo.UseVisualStyleBackColor = True
-        '
         'btnModificartipo
         '
         Me.btnModificartipo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnModificartipo.Location = New System.Drawing.Point(121, 23)
         Me.btnModificartipo.Margin = New System.Windows.Forms.Padding(1)
         Me.btnModificartipo.Name = "btnModificartipo"
-        Me.btnModificartipo.Size = New System.Drawing.Size(120, 48)
+        Me.btnModificartipo.Size = New System.Drawing.Size(121, 48)
         Me.btnModificartipo.TabIndex = 6
         Me.btnModificartipo.Text = "Modificar"
         Me.btnModificartipo.UseVisualStyleBackColor = True
@@ -256,6 +232,32 @@ Partial Class frmPagosVarios
         Me.lblRegistrostipo.Size = New System.Drawing.Size(46, 17)
         Me.lblRegistrostipo.TabIndex = 4
         Me.lblRegistrostipo.Text = "x de n"
+        '
+        'btnBuscartipo
+        '
+        Me.btnBuscartipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscartipo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscartipo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnBuscartipo.Image = CType(resources.GetObject("btnBuscartipo.Image"), System.Drawing.Image)
+        Me.btnBuscartipo.Location = New System.Drawing.Point(366, 23)
+        Me.btnBuscartipo.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnBuscartipo.Name = "btnBuscartipo"
+        Me.btnBuscartipo.Size = New System.Drawing.Size(50, 48)
+        Me.btnBuscartipo.TabIndex = 8
+        Me.btnBuscartipo.UseVisualStyleBackColor = True
+        '
+        'btnEliminartipo
+        '
+        Me.btnEliminartipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminartipo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminartipo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnEliminartipo.Image = CType(resources.GetObject("btnEliminartipo.Image"), System.Drawing.Image)
+        Me.btnEliminartipo.Location = New System.Drawing.Point(244, 23)
+        Me.btnEliminartipo.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnEliminartipo.Name = "btnEliminartipo"
+        Me.btnEliminartipo.Size = New System.Drawing.Size(53, 48)
+        Me.btnEliminartipo.TabIndex = 7
+        Me.btnEliminartipo.UseVisualStyleBackColor = True
         '
         'btnUltimotipo
         '
@@ -309,6 +311,19 @@ Partial Class frmPagosVarios
         Me.btnPrimerotipo.TabIndex = 0
         Me.btnPrimerotipo.UseVisualStyleBackColor = True
         '
+        'btnImprimir
+        '
+        Me.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImprimir.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnImprimir.Image = CType(resources.GetObject("btnImprimir.Image"), System.Drawing.Image)
+        Me.btnImprimir.Location = New System.Drawing.Point(299, 23)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(58, 48)
+        Me.btnImprimir.TabIndex = 12
+        Me.btnImprimir.UseVisualStyleBackColor = True
+        '
         'frmPagosVarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -352,4 +367,5 @@ Partial Class frmPagosVarios
     Friend WithEvents btnSiguientetipo As Button
     Friend WithEvents btnAnteriortipo As Button
     Friend WithEvents btnPrimerotipo As Button
+    Friend WithEvents btnImprimir As Button
 End Class

@@ -177,6 +177,26 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirCompraProductoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirProductosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirProductosFaltantesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirPagosVariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Calculadora.bd_sigacDataSet.cargosRow">
 <summary>
 Represents strongly named DataRow class.
@@ -318,6 +338,26 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:Calculadora.bd_sigacDataSet.ImprimirUsuarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirCompraProductoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirProductosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirProductosFaltantesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirPagosVariosRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -467,6 +507,26 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirCompraProductoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirProductosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirProductosFaltantesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirPagosVariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:Calculadora.bd_sigacDataSetTableAdapters.cargosTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -608,6 +668,26 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:Calculadora.bd_sigacDataSetTableAdapters.ImprimirUsuarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSetTableAdapters.ImprimirCompraProductoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSetTableAdapters.ImprimirProductosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSetTableAdapters.ImprimirProductosFaltantesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSetTableAdapters.ImprimirPagosVariosTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

@@ -733,3 +733,7 @@ C:\Users\brand\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frm
 C:\Users\brand\Source\Repos\Programacion-1\Calculadora\obj\Debug\RdlCompile.cache
 C:\Users\brand\Source\Repos\Programacion-1\Calculadora\obj\Debug\RdlCompile.compiled
 C:\Users\brand\Source\Repos\Programacion-1\Calculadora\obj\Debug\Proyecto final.vbproj.CopyComplete
+C:\Users\brand\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmImprimirCompraProducto.resources
+C:\Users\brand\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmImprimirProductos.resources
+C:\Users\brand\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmImprimirProductosFaltantes.resources
+C:\Users\brand\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmImprimirPagosVarios.resources

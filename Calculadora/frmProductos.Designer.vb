@@ -45,6 +45,7 @@ Partial Class frmProductos
         Me.btnSiguienteProducto = New System.Windows.Forms.Button()
         Me.btnAnteriorProducto = New System.Windows.Forms.Button()
         Me.btnPrimeroProducto = New System.Windows.Forms.Button()
+        Me.btnImprimir = New System.Windows.Forms.Button()
         Me.grbDatos.SuspendLayout()
         Me.grbEdicion.SuspendLayout()
         Me.grbNavegacion.SuspendLayout()
@@ -76,7 +77,7 @@ Partial Class frmProductos
         '
         Me.cboCategoriaProductos.FormattingEnabled = True
         Me.cboCategoriaProductos.Location = New System.Drawing.Point(188, 63)
-        Me.cboCategoriaProductos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboCategoriaProductos.Margin = New System.Windows.Forms.Padding(4)
         Me.cboCategoriaProductos.Name = "cboCategoriaProductos"
         Me.cboCategoriaProductos.Size = New System.Drawing.Size(253, 24)
         Me.cboCategoriaProductos.TabIndex = 10
@@ -170,6 +171,7 @@ Partial Class frmProductos
         '
         'grbEdicion
         '
+        Me.grbEdicion.Controls.Add(Me.btnImprimir)
         Me.grbEdicion.Controls.Add(Me.btnBuscarProducto)
         Me.grbEdicion.Controls.Add(Me.btnEliminarProducto)
         Me.grbEdicion.Controls.Add(Me.btnModificarProducto)
@@ -189,10 +191,10 @@ Partial Class frmProductos
         Me.btnBuscarProducto.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarProducto.ForeColor = System.Drawing.Color.OrangeRed
         Me.btnBuscarProducto.Image = CType(resources.GetObject("btnBuscarProducto.Image"), System.Drawing.Image)
-        Me.btnBuscarProducto.Location = New System.Drawing.Point(344, 23)
+        Me.btnBuscarProducto.Location = New System.Drawing.Point(357, 23)
         Me.btnBuscarProducto.Margin = New System.Windows.Forms.Padding(1)
         Me.btnBuscarProducto.Name = "btnBuscarProducto"
-        Me.btnBuscarProducto.Size = New System.Drawing.Size(72, 48)
+        Me.btnBuscarProducto.Size = New System.Drawing.Size(59, 48)
         Me.btnBuscarProducto.TabIndex = 8
         Me.btnBuscarProducto.UseVisualStyleBackColor = True
         '
@@ -205,7 +207,7 @@ Partial Class frmProductos
         Me.btnEliminarProducto.Location = New System.Drawing.Point(244, 23)
         Me.btnEliminarProducto.Margin = New System.Windows.Forms.Padding(1)
         Me.btnEliminarProducto.Name = "btnEliminarProducto"
-        Me.btnEliminarProducto.Size = New System.Drawing.Size(83, 48)
+        Me.btnEliminarProducto.Size = New System.Drawing.Size(62, 48)
         Me.btnEliminarProducto.TabIndex = 7
         Me.btnEliminarProducto.UseVisualStyleBackColor = True
         '
@@ -309,6 +311,19 @@ Partial Class frmProductos
         Me.btnPrimeroProducto.TabIndex = 0
         Me.btnPrimeroProducto.UseVisualStyleBackColor = True
         '
+        'btnImprimir
+        '
+        Me.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImprimir.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnImprimir.Image = CType(resources.GetObject("btnImprimir.Image"), System.Drawing.Image)
+        Me.btnImprimir.Location = New System.Drawing.Point(297, 23)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(58, 48)
+        Me.btnImprimir.TabIndex = 12
+        Me.btnImprimir.UseVisualStyleBackColor = True
+        '
         'frmProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -319,7 +334,7 @@ Partial Class frmProductos
         Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.grbDatos)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmProductos"
         Me.Text = "Datos de producto"
         Me.grbDatos.ResumeLayout(False)
@@ -352,4 +367,5 @@ Partial Class frmProductos
     Friend WithEvents btnSiguienteProducto As Button
     Friend WithEvents btnAnteriorProducto As Button
     Friend WithEvents btnPrimeroProducto As Button
+    Friend WithEvents btnImprimir As Button
 End Class

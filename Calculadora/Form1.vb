@@ -110,4 +110,27 @@
         objImprimirUsuarios.Show()
     End Sub
 
+    Private Sub ReporteDeCompraDeProdcutosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeCompraDeProdcutosToolStripMenuItem.Click
+        Dim objImprimirComprProductos As New frmImprimirCompraProducto
+        objImprimirComprProductos.MdiParent = Me
+        objImprimirComprProductos.Show()
+    End Sub
+
+    Private Sub ReporteDeProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeProductosToolStripMenuItem.Click
+        Dim objImprimirProductos As New frmImprimirProductos
+        objImprimirProductos.MdiParent = Me
+        objImprimirProductos.Show()
+    End Sub
+
+    Private Sub ReporteDeProductosFaltantesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeProductosFaltantesToolStripMenuItem.Click
+        Dim objImprimirProductoFaltante As New frmImprimirProductosFaltantes
+        objImprimirProductoFaltante.MdiParent = Me
+        objImprimirProductoFaltante.Show()
+    End Sub
+
+    Private Sub ReporteDePagosVariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDePagosVariosToolStripMenuItem.Click
+        Dim objImprimirPagosVarios As New frmImprimirPagosVarios
+        objImprimirPagosVarios.MdiParent = Me
+        objImprimirPagosVarios.Show()
+    End Sub
 End Class

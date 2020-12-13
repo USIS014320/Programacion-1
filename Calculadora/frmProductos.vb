@@ -134,4 +134,9 @@
             mostrarDatos()
         End If
     End Sub
+
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+        Dim objClientes As New frmImprimirProductos
+        objClientes.Show()
+    End Sub
 End Class

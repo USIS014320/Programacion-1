@@ -1593,6 +1593,157 @@ FROM     cargos INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ImprimirCompraProductoTableAdapter" GeneratorDataComponentClassName="ImprimirCompraProductoTableAdapter" Name="ImprimirCompraProducto" UserDataComponentName="ImprimirCompraProductoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_sigacConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillImprimirCompraProducto" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataImprimirCompraProducto" GeneratorSourceName="FillImprimirCompraProducto" GetMethodModifier="Public" GetMethodName="GetDataImprimirCompraProducto" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataImprimirCompraProducto" UserSourceName="FillImprimirCompraProducto">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT compras.idCompra, compras.nfactura, proveedores.idProveedor, proveedores.codigo, proveedores.nombreempresa, proveedores.nombrepropietario, proveedores.telefono, dcompras.idDetalle, dcompras.idProducto, dcompras.cantidad, 
+                  pagos.pago, tipofactura.tipofactura
+FROM     compras INNER JOIN
+                  pagos ON compras.idPago = pagos.idPago INNER JOIN
+                  proveedores ON compras.idProveedor = proveedores.idProveedor INNER JOIN
+                  tipofactura ON compras.idTipofactura = tipofactura.idTipofactura INNER JOIN
+                  dcompras ON compras.idCompra = dcompras.idCompra</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idCompra" DataSetColumn="idCompra" />
+              <Mapping SourceColumn="nfactura" DataSetColumn="nfactura" />
+              <Mapping SourceColumn="idProveedor" DataSetColumn="idProveedor" />
+              <Mapping SourceColumn="codigo" DataSetColumn="codigo" />
+              <Mapping SourceColumn="nombreempresa" DataSetColumn="nombreempresa" />
+              <Mapping SourceColumn="nombrepropietario" DataSetColumn="nombrepropietario" />
+              <Mapping SourceColumn="telefono" DataSetColumn="telefono" />
+              <Mapping SourceColumn="idDetalle" DataSetColumn="idDetalle" />
+              <Mapping SourceColumn="idProducto" DataSetColumn="idProducto" />
+              <Mapping SourceColumn="cantidad" DataSetColumn="cantidad" />
+              <Mapping SourceColumn="pago" DataSetColumn="pago" />
+              <Mapping SourceColumn="tipofactura" DataSetColumn="tipofactura" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ImprimirProductosTableAdapter" GeneratorDataComponentClassName="ImprimirProductosTableAdapter" Name="ImprimirProductos" UserDataComponentName="ImprimirProductosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_sigacConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillImprimirProductos" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataImprimirProductos" GeneratorSourceName="FillImprimirProductos" GetMethodModifier="Public" GetMethodName="GetDataImprimirProductos" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataImprimirProductos" UserSourceName="FillImprimirProductos">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT categorias.idCategoria, categorias.categoria, productos.idProducto, productos.codigo, productos.descripcion, productos.marca, productos.medidas
+FROM     productos INNER JOIN
+                  categorias ON productos.idCategoria = categorias.idCategoria</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idCategoria" DataSetColumn="idCategoria" />
+              <Mapping SourceColumn="categoria" DataSetColumn="categoria" />
+              <Mapping SourceColumn="idProducto" DataSetColumn="idProducto" />
+              <Mapping SourceColumn="codigo" DataSetColumn="codigo" />
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+              <Mapping SourceColumn="marca" DataSetColumn="marca" />
+              <Mapping SourceColumn="medidas" DataSetColumn="medidas" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ImprimirProductosFaltantesTableAdapter" GeneratorDataComponentClassName="ImprimirProductosFaltantesTableAdapter" Name="ImprimirProductosFaltantes" UserDataComponentName="ImprimirProductosFaltantesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_sigacConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillImprimirProductosFaltantes" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataImprimirProductosFaltantes" GeneratorSourceName="FillImprimirProductosFaltantes" GetMethodModifier="Public" GetMethodName="GetDataImprimirProductosFaltantes" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataImprimirProductosFaltantes" UserSourceName="FillImprimirProductosFaltantes">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT categoriafaltante.idFaltante, categoriafaltante.categoriafalta, faltanteproducto.idFaltanteproducto, faltanteproducto.codigofalta, faltanteproducto.descripcionfalta, faltanteproducto.marcafalta, faltanteproducto.medidasfalta, 
+                  faltanteproducto.cantidadfalta
+FROM     categoriafaltante INNER JOIN
+                  faltanteproducto ON categoriafaltante.idFaltante = faltanteproducto.idFaltante</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idFaltante" DataSetColumn="idFaltante" />
+              <Mapping SourceColumn="categoriafalta" DataSetColumn="categoriafalta" />
+              <Mapping SourceColumn="idFaltanteproducto" DataSetColumn="idFaltanteproducto" />
+              <Mapping SourceColumn="codigofalta" DataSetColumn="codigofalta" />
+              <Mapping SourceColumn="descripcionfalta" DataSetColumn="descripcionfalta" />
+              <Mapping SourceColumn="marcafalta" DataSetColumn="marcafalta" />
+              <Mapping SourceColumn="medidasfalta" DataSetColumn="medidasfalta" />
+              <Mapping SourceColumn="cantidadfalta" DataSetColumn="cantidadfalta" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ImprimirPagosVariosTableAdapter" GeneratorDataComponentClassName="ImprimirPagosVariosTableAdapter" Name="ImprimirPagosVarios" UserDataComponentName="ImprimirPagosVariosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_sigacConnectionString (MySettings)" DbObjectName="dbo.pagosvarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillImprimirPagosVarios" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataImprimirPagosVarios" GeneratorSourceName="FillImprimirPagosVarios" GetMethodModifier="Public" GetMethodName="GetDataImprimirPagosVarios" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataImprimirPagosVarios" UserSourceName="FillImprimirPagosVarios">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [pagosvarios] WHERE (([IdVarios] = @Original_IdVarios) AND ([codigo] = @Original_codigo) AND ([tipoproducto] = @Original_tipoproducto) AND ([nfactura] = @Original_nfactura) AND ([descripcion] = @Original_descripcion) AND ([cantidad] = @Original_cantidad))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdVarios" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdVarios" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_codigo" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="codigo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_tipoproducto" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="tipoproducto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_nfactura" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="nfactura" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_descripcion" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="descripcion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_cantidad" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="cantidad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [pagosvarios] ([codigo], [tipoproducto], [nfactura], [descripcion], [cantidad]) VALUES (@codigo, @tipoproducto, @nfactura, @descripcion, @cantidad);
+SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pagosvarios WHERE (IdVarios = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@codigo" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="codigo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@tipoproducto" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="tipoproducto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@nfactura" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="nfactura" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@descripcion" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="descripcion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@cantidad" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="cantidad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad
+FROM     pagosvarios</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [pagosvarios] SET [codigo] = @codigo, [tipoproducto] = @tipoproducto, [nfactura] = @nfactura, [descripcion] = @descripcion, [cantidad] = @cantidad WHERE (([IdVarios] = @Original_IdVarios) AND ([codigo] = @Original_codigo) AND ([tipoproducto] = @Original_tipoproducto) AND ([nfactura] = @Original_nfactura) AND ([descripcion] = @Original_descripcion) AND ([cantidad] = @Original_cantidad));
+SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pagosvarios WHERE (IdVarios = @IdVarios)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@codigo" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="codigo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@tipoproducto" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="tipoproducto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@nfactura" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="nfactura" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@descripcion" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="descripcion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@cantidad" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="cantidad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdVarios" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdVarios" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_codigo" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="codigo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_tipoproducto" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="tipoproducto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_nfactura" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="nfactura" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_descripcion" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="descripcion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_cantidad" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="cantidad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdVarios" ColumnName="IdVarios" DataSourceName="[C:\USERS\BRAND\SOURCE\REPOS\PROGRAMACION-1\CALCULADORA\BD_SIGAC.MDF].dbo.pagosvarios" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdVarios" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdVarios" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdVarios" DataSetColumn="IdVarios" />
+              <Mapping SourceColumn="codigo" DataSetColumn="codigo" />
+              <Mapping SourceColumn="tipoproducto" DataSetColumn="tipoproducto" />
+              <Mapping SourceColumn="nfactura" DataSetColumn="nfactura" />
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+              <Mapping SourceColumn="cantidad" DataSetColumn="cantidad" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -2539,6 +2690,201 @@ FROM     cargos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="ImprimirCompraProducto" msprop:Generator_TableClassName="ImprimirCompraProductoDataTable" msprop:Generator_TableVarName="tableImprimirCompraProducto" msprop:Generator_RowChangedName="ImprimirCompraProductoRowChanged" msprop:Generator_TablePropName="ImprimirCompraProducto" msprop:Generator_RowDeletingName="ImprimirCompraProductoRowDeleting" msprop:Generator_RowChangingName="ImprimirCompraProductoRowChanging" msprop:Generator_RowEvHandlerName="ImprimirCompraProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirCompraProductoRowDeleted" msprop:Generator_RowClassName="ImprimirCompraProductoRow" msprop:Generator_UserTableName="ImprimirCompraProducto" msprop:Generator_RowEvArgName="ImprimirCompraProductoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idCompra" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCompra" msprop:Generator_ColumnPropNameInRow="idCompra" msprop:Generator_ColumnPropNameInTable="idCompraColumn" msprop:Generator_UserColumnName="idCompra" type="xs:int" />
+              <xs:element name="nfactura" msprop:Generator_ColumnVarNameInTable="columnnfactura" msprop:Generator_ColumnPropNameInRow="nfactura" msprop:Generator_ColumnPropNameInTable="nfacturaColumn" msprop:Generator_UserColumnName="nfactura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idProveedor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidProveedor" msprop:Generator_ColumnPropNameInRow="idProveedor" msprop:Generator_ColumnPropNameInTable="idProveedorColumn" msprop:Generator_UserColumnName="idProveedor" type="xs:int" />
+              <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombreempresa" msprop:Generator_ColumnVarNameInTable="columnnombreempresa" msprop:Generator_ColumnPropNameInRow="nombreempresa" msprop:Generator_ColumnPropNameInTable="nombreempresaColumn" msprop:Generator_UserColumnName="nombreempresa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombrepropietario" msprop:Generator_ColumnVarNameInTable="columnnombrepropietario" msprop:Generator_ColumnPropNameInRow="nombrepropietario" msprop:Generator_ColumnPropNameInTable="nombrepropietarioColumn" msprop:Generator_UserColumnName="nombrepropietario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idDetalle" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidDetalle" msprop:Generator_ColumnPropNameInRow="idDetalle" msprop:Generator_ColumnPropNameInTable="idDetalleColumn" msprop:Generator_UserColumnName="idDetalle" type="xs:int" />
+              <xs:element name="idProducto" msprop:Generator_ColumnVarNameInTable="columnidProducto" msprop:Generator_ColumnPropNameInRow="idProducto" msprop:Generator_ColumnPropNameInTable="idProductoColumn" msprop:Generator_UserColumnName="idProducto" type="xs:int" />
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:int" />
+              <xs:element name="pago" msprop:Generator_ColumnVarNameInTable="columnpago" msprop:Generator_ColumnPropNameInRow="pago" msprop:Generator_ColumnPropNameInTable="pagoColumn" msprop:Generator_UserColumnName="pago">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipofactura" msprop:Generator_ColumnVarNameInTable="columntipofactura" msprop:Generator_ColumnPropNameInRow="tipofactura" msprop:Generator_ColumnPropNameInTable="tipofacturaColumn" msprop:Generator_UserColumnName="tipofactura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ImprimirProductos" msprop:Generator_TableClassName="ImprimirProductosDataTable" msprop:Generator_TableVarName="tableImprimirProductos" msprop:Generator_RowChangedName="ImprimirProductosRowChanged" msprop:Generator_TablePropName="ImprimirProductos" msprop:Generator_RowDeletingName="ImprimirProductosRowDeleting" msprop:Generator_RowChangingName="ImprimirProductosRowChanging" msprop:Generator_RowEvHandlerName="ImprimirProductosRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirProductosRowDeleted" msprop:Generator_RowClassName="ImprimirProductosRow" msprop:Generator_UserTableName="ImprimirProductos" msprop:Generator_RowEvArgName="ImprimirProductosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idCategoria" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCategoria" msprop:Generator_ColumnPropNameInRow="idCategoria" msprop:Generator_ColumnPropNameInTable="idCategoriaColumn" msprop:Generator_UserColumnName="idCategoria" type="xs:int" />
+              <xs:element name="categoria" msprop:Generator_ColumnVarNameInTable="columncategoria" msprop:Generator_ColumnPropNameInRow="categoria" msprop:Generator_ColumnPropNameInTable="categoriaColumn" msprop:Generator_UserColumnName="categoria">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idProducto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidProducto" msprop:Generator_ColumnPropNameInRow="idProducto" msprop:Generator_ColumnPropNameInTable="idProductoColumn" msprop:Generator_UserColumnName="idProducto" type="xs:int" />
+              <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_UserColumnName="marca">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="medidas" msprop:Generator_ColumnVarNameInTable="columnmedidas" msprop:Generator_ColumnPropNameInRow="medidas" msprop:Generator_ColumnPropNameInTable="medidasColumn" msprop:Generator_UserColumnName="medidas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ImprimirProductosFaltantes" msprop:Generator_TableClassName="ImprimirProductosFaltantesDataTable" msprop:Generator_TableVarName="tableImprimirProductosFaltantes" msprop:Generator_RowChangedName="ImprimirProductosFaltantesRowChanged" msprop:Generator_TablePropName="ImprimirProductosFaltantes" msprop:Generator_RowDeletingName="ImprimirProductosFaltantesRowDeleting" msprop:Generator_RowChangingName="ImprimirProductosFaltantesRowChanging" msprop:Generator_RowEvHandlerName="ImprimirProductosFaltantesRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirProductosFaltantesRowDeleted" msprop:Generator_RowClassName="ImprimirProductosFaltantesRow" msprop:Generator_UserTableName="ImprimirProductosFaltantes" msprop:Generator_RowEvArgName="ImprimirProductosFaltantesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idFaltante" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidFaltante" msprop:Generator_ColumnPropNameInRow="idFaltante" msprop:Generator_ColumnPropNameInTable="idFaltanteColumn" msprop:Generator_UserColumnName="idFaltante" type="xs:int" />
+              <xs:element name="categoriafalta" msprop:Generator_ColumnVarNameInTable="columncategoriafalta" msprop:Generator_ColumnPropNameInRow="categoriafalta" msprop:Generator_ColumnPropNameInTable="categoriafaltaColumn" msprop:Generator_UserColumnName="categoriafalta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idFaltanteproducto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidFaltanteproducto" msprop:Generator_ColumnPropNameInRow="idFaltanteproducto" msprop:Generator_ColumnPropNameInTable="idFaltanteproductoColumn" msprop:Generator_UserColumnName="idFaltanteproducto" type="xs:int" />
+              <xs:element name="codigofalta" msprop:Generator_ColumnVarNameInTable="columncodigofalta" msprop:Generator_ColumnPropNameInRow="codigofalta" msprop:Generator_ColumnPropNameInTable="codigofaltaColumn" msprop:Generator_UserColumnName="codigofalta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descripcionfalta" msprop:Generator_ColumnVarNameInTable="columndescripcionfalta" msprop:Generator_ColumnPropNameInRow="descripcionfalta" msprop:Generator_ColumnPropNameInTable="descripcionfaltaColumn" msprop:Generator_UserColumnName="descripcionfalta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marcafalta" msprop:Generator_ColumnVarNameInTable="columnmarcafalta" msprop:Generator_ColumnPropNameInRow="marcafalta" msprop:Generator_ColumnPropNameInTable="marcafaltaColumn" msprop:Generator_UserColumnName="marcafalta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="medidasfalta" msprop:Generator_ColumnVarNameInTable="columnmedidasfalta" msprop:Generator_ColumnPropNameInRow="medidasfalta" msprop:Generator_ColumnPropNameInTable="medidasfaltaColumn" msprop:Generator_UserColumnName="medidasfalta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cantidadfalta" msprop:Generator_ColumnVarNameInTable="columncantidadfalta" msprop:Generator_ColumnPropNameInRow="cantidadfalta" msprop:Generator_ColumnPropNameInTable="cantidadfaltaColumn" msprop:Generator_UserColumnName="cantidadfalta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ImprimirPagosVarios" msprop:Generator_TableClassName="ImprimirPagosVariosDataTable" msprop:Generator_TableVarName="tableImprimirPagosVarios" msprop:Generator_TablePropName="ImprimirPagosVarios" msprop:Generator_RowDeletingName="ImprimirPagosVariosRowDeleting" msprop:Generator_RowChangingName="ImprimirPagosVariosRowChanging" msprop:Generator_RowEvHandlerName="ImprimirPagosVariosRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirPagosVariosRowDeleted" msprop:Generator_UserTableName="ImprimirPagosVarios" msprop:Generator_RowChangedName="ImprimirPagosVariosRowChanged" msprop:Generator_RowEvArgName="ImprimirPagosVariosRowChangeEvent" msprop:Generator_RowClassName="ImprimirPagosVariosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdVarios" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdVarios" msprop:Generator_ColumnPropNameInRow="IdVarios" msprop:Generator_ColumnPropNameInTable="IdVariosColumn" msprop:Generator_UserColumnName="IdVarios" type="xs:int" />
+              <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipoproducto" msprop:Generator_ColumnVarNameInTable="columntipoproducto" msprop:Generator_ColumnPropNameInRow="tipoproducto" msprop:Generator_ColumnPropNameInTable="tipoproductoColumn" msprop:Generator_UserColumnName="tipoproducto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nfactura" msprop:Generator_ColumnVarNameInTable="columnnfactura" msprop:Generator_ColumnPropNameInRow="nfactura" msprop:Generator_ColumnPropNameInTable="nfacturaColumn" msprop:Generator_UserColumnName="nfactura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -2646,6 +2992,19 @@ FROM     cargos INNER JOIN
       <xs:field xpath="mstns:idUsuario" />
       <xs:field xpath="mstns:idCargo" />
     </xs:unique>
+    <xs:unique name="ImprimirProductos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ImprimirProductos" />
+      <xs:field xpath="mstns:idCategoria" />
+    </xs:unique>
+    <xs:unique name="ImprimirProductosFaltantes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ImprimirProductosFaltantes" />
+      <xs:field xpath="mstns:idFaltante" />
+      <xs:field xpath="mstns:idFaltanteproducto" />
+    </xs:unique>
+    <xs:unique name="ImprimirPagosVarios_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ImprimirPagosVarios" />
+      <xs:field xpath="mstns:IdVarios" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
@@ -2674,6 +3033,11 @@ FROM     cargos INNER JOIN
       <msdata:Relationship name="FK_crearprestamo_clientes2" msdata:parent="ImprimirPrestamo" msdata:child="crearprestamo" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="crearprestamo" msprop:Generator_ChildPropName="GetcrearprestamoRows" msprop:Generator_UserRelationName="FK_crearprestamo_clientes2" msprop:Generator_RelationVarName="relationFK_crearprestamo_clientes2" msprop:Generator_UserParentTable="ImprimirPrestamo" msprop:Generator_ParentPropName="ImprimirPrestamoRow" />
       <msdata:Relationship name="FK_compras_proveedores1" msdata:parent="ImprimirProveedor" msdata:child="compras" msdata:parentkey="idProveedor" msdata:childkey="idProveedor" msprop:Generator_UserChildTable="compras" msprop:Generator_ChildPropName="GetcomprasRows" msprop:Generator_UserRelationName="FK_compras_proveedores1" msprop:Generator_ParentPropName="ImprimirProveedorRow" msprop:Generator_RelationVarName="relationFK_compras_proveedores1" msprop:Generator_UserParentTable="ImprimirProveedor" />
       <msdata:Relationship name="FK_usuarios_cargos1" msdata:parent="ImprimirUsuario" msdata:child="usuarios" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserChildTable="usuarios" msprop:Generator_ChildPropName="GetusuariosRows" msprop:Generator_UserRelationName="FK_usuarios_cargos1" msprop:Generator_RelationVarName="relationFK_usuarios_cargos1" msprop:Generator_UserParentTable="ImprimirUsuario" msprop:Generator_ParentPropName="ImprimirUsuarioRow" />
+      <msdata:Relationship name="FK_dcompras_compras2" msdata:parent="ImprimirCompraProducto" msdata:child="dcompras" msdata:parentkey="idCompra" msdata:childkey="idCompra" msprop:Generator_UserChildTable="dcompras" msprop:Generator_ChildPropName="GetdcomprasRows" msprop:Generator_UserRelationName="FK_dcompras_compras2" msprop:Generator_ParentPropName="ImprimirCompraProductoRow" msprop:Generator_RelationVarName="relationFK_dcompras_compras2" msprop:Generator_UserParentTable="ImprimirCompraProducto" />
+      <msdata:Relationship name="FK_compras_proveedores2" msdata:parent="proveedores" msdata:child="ImprimirCompraProducto" msdata:parentkey="idProveedor" msdata:childkey="idProveedor" msprop:Generator_UserChildTable="ImprimirCompraProducto" msprop:Generator_ChildPropName="GetImprimirCompraProductoRows" msprop:Generator_UserRelationName="FK_compras_proveedores2" msprop:Generator_RelationVarName="relationFK_compras_proveedores2" msprop:Generator_UserParentTable="proveedores" msprop:Generator_ParentPropName="proveedoresRow" />
+      <msdata:Relationship name="FK_compras_proveedores3" msdata:parent="ImprimirProveedor" msdata:child="ImprimirCompraProducto" msdata:parentkey="idProveedor" msdata:childkey="idProveedor" msprop:Generator_UserChildTable="ImprimirCompraProducto" msprop:Generator_ChildPropName="GetImprimirCompraProductoRows" msprop:Generator_UserRelationName="FK_compras_proveedores3" msprop:Generator_RelationVarName="relationFK_compras_proveedores3" msprop:Generator_UserParentTable="ImprimirProveedor" msprop:Generator_ParentPropName="ImprimirProveedorRow" />
+      <msdata:Relationship name="FK_productos_categorias1" msdata:parent="ImprimirProductos" msdata:child="productos" msdata:parentkey="idCategoria" msdata:childkey="idCategoria" msprop:Generator_UserChildTable="productos" msprop:Generator_ChildPropName="GetproductosRows" msprop:Generator_UserRelationName="FK_productos_categorias1" msprop:Generator_ParentPropName="ImprimirProductosRow" msprop:Generator_RelationVarName="relationFK_productos_categorias1" msprop:Generator_UserParentTable="ImprimirProductos" />
+      <msdata:Relationship name="FK_faltanteproducto_categoriafaltante1" msdata:parent="ImprimirProductosFaltantes" msdata:child="faltanteproducto" msdata:parentkey="idFaltante" msdata:childkey="idFaltante" msprop:Generator_UserChildTable="faltanteproducto" msprop:Generator_ChildPropName="GetfaltanteproductoRows" msprop:Generator_UserRelationName="FK_faltanteproducto_categoriafaltante1" msprop:Generator_ParentPropName="ImprimirProductosFaltantesRow" msprop:Generator_RelationVarName="relationFK_faltanteproducto_categoriafaltante1" msprop:Generator_UserParentTable="ImprimirProductosFaltantes" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

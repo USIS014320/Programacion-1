@@ -229,10 +229,34 @@
     <Compile Include="frmEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmImprimirCompraProducto.Designer.vb">
+      <DependentUpon>frmImprimirCompraProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmImprimirCompraProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImprimirPagosVarios.Designer.vb">
+      <DependentUpon>frmImprimirPagosVarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmImprimirPagosVarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmImprimirPrestamo.Designer.vb">
       <DependentUpon>frmImprimirPrestamo.vb</DependentUpon>
     </Compile>
     <Compile Include="frmImprimirPrestamo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImprimirProductos.Designer.vb">
+      <DependentUpon>frmImprimirProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmImprimirProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImprimirProductosFaltantes.Designer.vb">
+      <DependentUpon>frmImprimirProductosFaltantes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmImprimirProductosFaltantes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmImprimirProveedores.Designer.vb">
@@ -373,8 +397,20 @@
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmImprimirCompraProducto.resx">
+      <DependentUpon>frmImprimirCompraProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImprimirPagosVarios.resx">
+      <DependentUpon>frmImprimirPagosVarios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmImprimirPrestamo.resx">
       <DependentUpon>frmImprimirPrestamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImprimirProductos.resx">
+      <DependentUpon>frmImprimirProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImprimirProductosFaltantes.resx">
+      <DependentUpon>frmImprimirProductosFaltantes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmImprimirProveedores.resx">
       <DependentUpon>frmImprimirProveedores.vb</DependentUpon>
@@ -409,7 +445,11 @@
     <EmbeddedResource Include="frmUsuario.resx">
       <DependentUpon>frmUsuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="impresionCompraProductos.rdlc" />
+    <EmbeddedResource Include="impresionPagosVarios.rdlc" />
     <EmbeddedResource Include="impresionPrestamo.rdlc" />
+    <EmbeddedResource Include="impresionProductos.rdlc" />
+    <EmbeddedResource Include="impresionProductosFaltantes.rdlc" />
     <EmbeddedResource Include="impresionProveedores.rdlc" />
     <EmbeddedResource Include="impresionUsuarios.rdlc" />
     <EmbeddedResource Include="My Project\Resources.resx">
