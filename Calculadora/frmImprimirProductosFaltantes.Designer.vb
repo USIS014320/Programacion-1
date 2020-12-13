@@ -24,13 +24,24 @@ Partial Class frmImprimirProductosFaltantes
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.bd_sigacDataSet = New Calculadora.bd_sigacDataSet()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmImprimirProductosFaltantes))
         Me.ImprimirProductosFaltantesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.bd_sigacDataSet = New Calculadora.bd_sigacDataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ImprimirProductosFaltantesTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.ImprimirProductosFaltantesTableAdapter()
-        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ImprimirProductosFaltantesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ImprimirProductosFaltantesBindingSource
+        '
+        Me.ImprimirProductosFaltantesBindingSource.DataMember = "ImprimirProductosFaltantes"
+        Me.ImprimirProductosFaltantesBindingSource.DataSource = Me.bd_sigacDataSet
+        '
+        'bd_sigacDataSet
+        '
+        Me.bd_sigacDataSet.DataSetName = "bd_sigacDataSet"
+        Me.bd_sigacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -44,16 +55,6 @@ Partial Class frmImprimirProductosFaltantes
         Me.ReportViewer1.Size = New System.Drawing.Size(1059, 370)
         Me.ReportViewer1.TabIndex = 0
         '
-        'bd_sigacDataSet
-        '
-        Me.bd_sigacDataSet.DataSetName = "bd_sigacDataSet"
-        Me.bd_sigacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ImprimirProductosFaltantesBindingSource
-        '
-        Me.ImprimirProductosFaltantesBindingSource.DataMember = "ImprimirProductosFaltantes"
-        Me.ImprimirProductosFaltantesBindingSource.DataSource = Me.bd_sigacDataSet
-        '
         'ImprimirProductosFaltantesTableAdapter
         '
         Me.ImprimirProductosFaltantesTableAdapter.ClearBeforeFill = True
@@ -64,10 +65,11 @@ Partial Class frmImprimirProductosFaltantes
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1062, 370)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmImprimirProductosFaltantes"
-        Me.Text = "frmImprimirProductosFaltantes"
-        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Reporte Productos Faltantes"
         CType(Me.ImprimirProductosFaltantesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

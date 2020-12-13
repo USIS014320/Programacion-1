@@ -24,13 +24,24 @@ Partial Class frmImprimirUsuarios
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.bd_sigacDataSet = New Calculadora.bd_sigacDataSet()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmImprimirUsuarios))
         Me.ImprimirUsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.bd_sigacDataSet = New Calculadora.bd_sigacDataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ImprimirUsuarioTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.ImprimirUsuarioTableAdapter()
-        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ImprimirUsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ImprimirUsuarioBindingSource
+        '
+        Me.ImprimirUsuarioBindingSource.DataMember = "ImprimirUsuario"
+        Me.ImprimirUsuarioBindingSource.DataSource = Me.bd_sigacDataSet
+        '
+        'bd_sigacDataSet
+        '
+        Me.bd_sigacDataSet.DataSetName = "bd_sigacDataSet"
+        Me.bd_sigacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -44,16 +55,6 @@ Partial Class frmImprimirUsuarios
         Me.ReportViewer1.Size = New System.Drawing.Size(973, 516)
         Me.ReportViewer1.TabIndex = 0
         '
-        'bd_sigacDataSet
-        '
-        Me.bd_sigacDataSet.DataSetName = "bd_sigacDataSet"
-        Me.bd_sigacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ImprimirUsuarioBindingSource
-        '
-        Me.ImprimirUsuarioBindingSource.DataMember = "ImprimirUsuario"
-        Me.ImprimirUsuarioBindingSource.DataSource = Me.bd_sigacDataSet
-        '
         'ImprimirUsuarioTableAdapter
         '
         Me.ImprimirUsuarioTableAdapter.ClearBeforeFill = True
@@ -64,10 +65,11 @@ Partial Class frmImprimirUsuarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(972, 519)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmImprimirUsuarios"
-        Me.Text = "Reporte de Usuarios"
-        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = " Reporte de Usuarios"
         CType(Me.ImprimirUsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

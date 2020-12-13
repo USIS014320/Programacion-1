@@ -24,13 +24,24 @@ Partial Class frmImprimirProveedores
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.bd_sigacDataSet = New Calculadora.bd_sigacDataSet()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmImprimirProveedores))
         Me.ImprimirProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.bd_sigacDataSet = New Calculadora.bd_sigacDataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ImprimirProveedorTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.ImprimirProveedorTableAdapter()
-        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ImprimirProveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ImprimirProveedorBindingSource
+        '
+        Me.ImprimirProveedorBindingSource.DataMember = "ImprimirProveedor"
+        Me.ImprimirProveedorBindingSource.DataSource = Me.bd_sigacDataSet
+        '
+        'bd_sigacDataSet
+        '
+        Me.bd_sigacDataSet.DataSetName = "bd_sigacDataSet"
+        Me.bd_sigacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -44,16 +55,6 @@ Partial Class frmImprimirProveedores
         Me.ReportViewer1.Size = New System.Drawing.Size(978, 548)
         Me.ReportViewer1.TabIndex = 0
         '
-        'bd_sigacDataSet
-        '
-        Me.bd_sigacDataSet.DataSetName = "bd_sigacDataSet"
-        Me.bd_sigacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ImprimirProveedorBindingSource
-        '
-        Me.ImprimirProveedorBindingSource.DataMember = "ImprimirProveedor"
-        Me.ImprimirProveedorBindingSource.DataSource = Me.bd_sigacDataSet
-        '
         'ImprimirProveedorTableAdapter
         '
         Me.ImprimirProveedorTableAdapter.ClearBeforeFill = True
@@ -64,10 +65,11 @@ Partial Class frmImprimirProveedores
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(981, 551)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmImprimirProveedores"
-        Me.Text = "Reporte de Proveedores"
-        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = " Reporte de Proveedores"
         CType(Me.ImprimirProveedorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
