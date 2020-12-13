@@ -197,6 +197,21 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirSalariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirDeudasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirEmpleadosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Calculadora.bd_sigacDataSet.cargosRow">
 <summary>
 Represents strongly named DataRow class.
@@ -358,6 +373,21 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:Calculadora.bd_sigacDataSet.ImprimirPagosVariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirSalariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirDeudasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirEmpleadosRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -527,6 +557,21 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirSalariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirDeudasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSet.ImprimirEmpleadosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:Calculadora.bd_sigacDataSetTableAdapters.cargosTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -688,6 +733,21 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:Calculadora.bd_sigacDataSetTableAdapters.ImprimirPagosVariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSetTableAdapters.ImprimirSalariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSetTableAdapters.ImprimirDeudasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Calculadora.bd_sigacDataSetTableAdapters.ImprimirEmpleadosTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

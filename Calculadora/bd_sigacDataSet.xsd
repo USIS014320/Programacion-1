@@ -1744,6 +1744,121 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ImprimirSalariosTableAdapter" GeneratorDataComponentClassName="ImprimirSalariosTableAdapter" Name="ImprimirSalarios" UserDataComponentName="ImprimirSalariosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_sigacConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillImprimirSalarios" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillImprimirSalarios" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="FillImprimirSalarios">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        empleados.idEmpleado, empleados.usuario, prestamos.pago, empleados.clave, empleados.nombre
+FROM            empleados INNER JOIN
+                         prestamos ON empleados.idEmpleado = prestamos.idEmpleado</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idEmpleado" DataSetColumn="idEmpleado" />
+              <Mapping SourceColumn="usuario" DataSetColumn="usuario" />
+              <Mapping SourceColumn="pago" DataSetColumn="pago" />
+              <Mapping SourceColumn="clave" DataSetColumn="clave" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ImprimirDeudasTableAdapter" GeneratorDataComponentClassName="ImprimirDeudasTableAdapter" Name="ImprimirDeudas" UserDataComponentName="ImprimirDeudasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_sigacConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillImprimirDeuda" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillImprimirDeuda" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="FillImprimirDeuda">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        deuda.IdDeuda, empleados.nombre, empleados.telefono, deuda.Codigo, deuda.Subtotal, deuda.idPrestamo
+FROM            deuda INNER JOIN
+                         empleados ON deuda.idEmpleado = empleados.idEmpleado INNER JOIN
+                         prestamos ON deuda.idPrestamo = prestamos.idPrestamo AND empleados.idEmpleado = prestamos.idEmpleado</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdDeuda" DataSetColumn="IdDeuda" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="telefono" DataSetColumn="telefono" />
+              <Mapping SourceColumn="Codigo" DataSetColumn="Codigo" />
+              <Mapping SourceColumn="Subtotal" DataSetColumn="Subtotal" />
+              <Mapping SourceColumn="idPrestamo" DataSetColumn="idPrestamo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ImprimirEmpleadosTableAdapter" GeneratorDataComponentClassName="ImprimirEmpleadosTableAdapter" Name="ImprimirEmpleados" UserDataComponentName="ImprimirEmpleadosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_sigacConnectionString (MySettings)" DbObjectName="dbo.empleados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillImprimirEmpleados" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="FillImprimirEmpleados" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="FillImprimirEmpleados">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [empleados] WHERE (([nombre] = @Original_nombre) AND ([usuario] = @Original_usuario) AND ([clave] = @Original_clave) AND ([direccion] = @Original_direccion) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ([idEmpleado] = @Original_idEmpleado))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_nombre" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_usuario" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_clave" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="clave" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_direccion" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="direccion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telefono" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_telefono" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idEmpleado" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEmpleado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [empleados] ([nombre], [usuario], [clave], [direccion], [telefono]) VALUES (@nombre, @usuario, @clave, @direccion, @telefono);
+SELECT nombre, usuario, clave, direccion, telefono, idEmpleado FROM empleados WHERE (idEmpleado = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@nombre" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@usuario" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@clave" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="clave" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@direccion" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="direccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@telefono" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT nombre, usuario, clave, direccion, telefono, idEmpleado FROM empleados</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [empleados] SET [nombre] = @nombre, [usuario] = @usuario, [clave] = @clave, [direccion] = @direccion, [telefono] = @telefono WHERE (([nombre] = @Original_nombre) AND ([usuario] = @Original_usuario) AND ([clave] = @Original_clave) AND ([direccion] = @Original_direccion) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ([idEmpleado] = @Original_idEmpleado));
+SELECT nombre, usuario, clave, direccion, telefono, idEmpleado FROM empleados WHERE (idEmpleado = @idEmpleado)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@nombre" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@usuario" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@clave" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="clave" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@direccion" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="direccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@telefono" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_nombre" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_usuario" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_clave" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="clave" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_direccion" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="direccion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telefono" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_telefono" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idEmpleado" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEmpleado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="idEmpleado" ColumnName="idEmpleado" DataSourceName="[C:\USERS\WILBERT RUTH\SOURCE\REPOS\PRO\CALCULADORA\BD_SIGAC.MDF].dbo.empleados" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idEmpleado" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="idEmpleado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="usuario" DataSetColumn="usuario" />
+              <Mapping SourceColumn="clave" DataSetColumn="clave" />
+              <Mapping SourceColumn="direccion" DataSetColumn="direccion" />
+              <Mapping SourceColumn="telefono" DataSetColumn="telefono" />
+              <Mapping SourceColumn="idEmpleado" DataSetColumn="idEmpleado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1752,7 +1867,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
   <xs:element name="bd_sigacDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bd_sigacDataSet" msprop:Generator_UserDSName="bd_sigacDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="cargos" msprop:Generator_TableClassName="cargosDataTable" msprop:Generator_TableVarName="tablecargos" msprop:Generator_RowChangedName="cargosRowChanged" msprop:Generator_TablePropName="cargos" msprop:Generator_RowDeletingName="cargosRowDeleting" msprop:Generator_RowChangingName="cargosRowChanging" msprop:Generator_RowEvHandlerName="cargosRowChangeEventHandler" msprop:Generator_RowDeletedName="cargosRowDeleted" msprop:Generator_RowClassName="cargosRow" msprop:Generator_UserTableName="cargos" msprop:Generator_RowEvArgName="cargosRowChangeEvent">
+        <xs:element name="cargos" msprop:Generator_TableClassName="cargosDataTable" msprop:Generator_TableVarName="tablecargos" msprop:Generator_TablePropName="cargos" msprop:Generator_RowDeletingName="cargosRowDeleting" msprop:Generator_RowChangingName="cargosRowChanging" msprop:Generator_RowEvHandlerName="cargosRowChangeEventHandler" msprop:Generator_RowDeletedName="cargosRowDeleted" msprop:Generator_UserTableName="cargos" msprop:Generator_RowChangedName="cargosRowChanged" msprop:Generator_RowEvArgName="cargosRowChangeEvent" msprop:Generator_RowClassName="cargosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idCargo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCargo" msprop:Generator_ColumnPropNameInRow="idCargo" msprop:Generator_ColumnPropNameInTable="idCargoColumn" msprop:Generator_UserColumnName="idCargo" type="xs:int" />
@@ -1766,7 +1881,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="categoriafaltante" msprop:Generator_TableClassName="categoriafaltanteDataTable" msprop:Generator_TableVarName="tablecategoriafaltante" msprop:Generator_RowChangedName="categoriafaltanteRowChanged" msprop:Generator_TablePropName="categoriafaltante" msprop:Generator_RowDeletingName="categoriafaltanteRowDeleting" msprop:Generator_RowChangingName="categoriafaltanteRowChanging" msprop:Generator_RowEvHandlerName="categoriafaltanteRowChangeEventHandler" msprop:Generator_RowDeletedName="categoriafaltanteRowDeleted" msprop:Generator_RowClassName="categoriafaltanteRow" msprop:Generator_UserTableName="categoriafaltante" msprop:Generator_RowEvArgName="categoriafaltanteRowChangeEvent">
+        <xs:element name="categoriafaltante" msprop:Generator_TableClassName="categoriafaltanteDataTable" msprop:Generator_TableVarName="tablecategoriafaltante" msprop:Generator_TablePropName="categoriafaltante" msprop:Generator_RowDeletingName="categoriafaltanteRowDeleting" msprop:Generator_RowChangingName="categoriafaltanteRowChanging" msprop:Generator_RowEvHandlerName="categoriafaltanteRowChangeEventHandler" msprop:Generator_RowDeletedName="categoriafaltanteRowDeleted" msprop:Generator_UserTableName="categoriafaltante" msprop:Generator_RowChangedName="categoriafaltanteRowChanged" msprop:Generator_RowEvArgName="categoriafaltanteRowChangeEvent" msprop:Generator_RowClassName="categoriafaltanteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idFaltante" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidFaltante" msprop:Generator_ColumnPropNameInRow="idFaltante" msprop:Generator_ColumnPropNameInTable="idFaltanteColumn" msprop:Generator_UserColumnName="idFaltante" type="xs:int" />
@@ -1780,7 +1895,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="categorias" msprop:Generator_TableClassName="categoriasDataTable" msprop:Generator_TableVarName="tablecategorias" msprop:Generator_RowChangedName="categoriasRowChanged" msprop:Generator_TablePropName="categorias" msprop:Generator_RowDeletingName="categoriasRowDeleting" msprop:Generator_RowChangingName="categoriasRowChanging" msprop:Generator_RowEvHandlerName="categoriasRowChangeEventHandler" msprop:Generator_RowDeletedName="categoriasRowDeleted" msprop:Generator_RowClassName="categoriasRow" msprop:Generator_UserTableName="categorias" msprop:Generator_RowEvArgName="categoriasRowChangeEvent">
+        <xs:element name="categorias" msprop:Generator_TableClassName="categoriasDataTable" msprop:Generator_TableVarName="tablecategorias" msprop:Generator_TablePropName="categorias" msprop:Generator_RowDeletingName="categoriasRowDeleting" msprop:Generator_RowChangingName="categoriasRowChanging" msprop:Generator_RowEvHandlerName="categoriasRowChangeEventHandler" msprop:Generator_RowDeletedName="categoriasRowDeleted" msprop:Generator_UserTableName="categorias" msprop:Generator_RowChangedName="categoriasRowChanged" msprop:Generator_RowEvArgName="categoriasRowChangeEvent" msprop:Generator_RowClassName="categoriasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idCategoria" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCategoria" msprop:Generator_ColumnPropNameInRow="idCategoria" msprop:Generator_ColumnPropNameInTable="idCategoriaColumn" msprop:Generator_UserColumnName="idCategoria" type="xs:int" />
@@ -1794,7 +1909,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="compras" msprop:Generator_TableClassName="comprasDataTable" msprop:Generator_TableVarName="tablecompras" msprop:Generator_RowChangedName="comprasRowChanged" msprop:Generator_TablePropName="compras" msprop:Generator_RowDeletingName="comprasRowDeleting" msprop:Generator_RowChangingName="comprasRowChanging" msprop:Generator_RowEvHandlerName="comprasRowChangeEventHandler" msprop:Generator_RowDeletedName="comprasRowDeleted" msprop:Generator_RowClassName="comprasRow" msprop:Generator_UserTableName="compras" msprop:Generator_RowEvArgName="comprasRowChangeEvent">
+        <xs:element name="compras" msprop:Generator_TableClassName="comprasDataTable" msprop:Generator_TableVarName="tablecompras" msprop:Generator_TablePropName="compras" msprop:Generator_RowDeletingName="comprasRowDeleting" msprop:Generator_RowChangingName="comprasRowChanging" msprop:Generator_RowEvHandlerName="comprasRowChangeEventHandler" msprop:Generator_RowDeletedName="comprasRowDeleted" msprop:Generator_UserTableName="compras" msprop:Generator_RowChangedName="comprasRowChanged" msprop:Generator_RowEvArgName="comprasRowChangeEvent" msprop:Generator_RowClassName="comprasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idCompra" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCompra" msprop:Generator_ColumnPropNameInRow="idCompra" msprop:Generator_ColumnPropNameInTable="idCompraColumn" msprop:Generator_UserColumnName="idCompra" type="xs:int" />
@@ -1813,7 +1928,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dcompras" msprop:Generator_TableClassName="dcomprasDataTable" msprop:Generator_TableVarName="tabledcompras" msprop:Generator_RowChangedName="dcomprasRowChanged" msprop:Generator_TablePropName="dcompras" msprop:Generator_RowDeletingName="dcomprasRowDeleting" msprop:Generator_RowChangingName="dcomprasRowChanging" msprop:Generator_RowEvHandlerName="dcomprasRowChangeEventHandler" msprop:Generator_RowDeletedName="dcomprasRowDeleted" msprop:Generator_RowClassName="dcomprasRow" msprop:Generator_UserTableName="dcompras" msprop:Generator_RowEvArgName="dcomprasRowChangeEvent">
+        <xs:element name="dcompras" msprop:Generator_TableClassName="dcomprasDataTable" msprop:Generator_TableVarName="tabledcompras" msprop:Generator_TablePropName="dcompras" msprop:Generator_RowDeletingName="dcomprasRowDeleting" msprop:Generator_RowChangingName="dcomprasRowChanging" msprop:Generator_RowEvHandlerName="dcomprasRowChangeEventHandler" msprop:Generator_RowDeletedName="dcomprasRowDeleted" msprop:Generator_UserTableName="dcompras" msprop:Generator_RowChangedName="dcomprasRowChanged" msprop:Generator_RowEvArgName="dcomprasRowChangeEvent" msprop:Generator_RowClassName="dcomprasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idDetalle" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidDetalle" msprop:Generator_ColumnPropNameInRow="idDetalle" msprop:Generator_ColumnPropNameInTable="idDetalleColumn" msprop:Generator_UserColumnName="idDetalle" type="xs:int" />
@@ -1824,7 +1939,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Descuentos" msprop:Generator_TableClassName="DescuentosDataTable" msprop:Generator_TableVarName="tableDescuentos" msprop:Generator_RowChangedName="DescuentosRowChanged" msprop:Generator_TablePropName="Descuentos" msprop:Generator_RowDeletingName="DescuentosRowDeleting" msprop:Generator_RowChangingName="DescuentosRowChanging" msprop:Generator_RowEvHandlerName="DescuentosRowChangeEventHandler" msprop:Generator_RowDeletedName="DescuentosRowDeleted" msprop:Generator_RowClassName="DescuentosRow" msprop:Generator_UserTableName="Descuentos" msprop:Generator_RowEvArgName="DescuentosRowChangeEvent">
+        <xs:element name="Descuentos" msprop:Generator_TableClassName="DescuentosDataTable" msprop:Generator_TableVarName="tableDescuentos" msprop:Generator_TablePropName="Descuentos" msprop:Generator_RowDeletingName="DescuentosRowDeleting" msprop:Generator_RowChangingName="DescuentosRowChanging" msprop:Generator_RowEvHandlerName="DescuentosRowChangeEventHandler" msprop:Generator_RowDeletedName="DescuentosRowDeleted" msprop:Generator_UserTableName="Descuentos" msprop:Generator_RowChangedName="DescuentosRowChanged" msprop:Generator_RowEvArgName="DescuentosRowChangeEvent" msprop:Generator_RowClassName="DescuentosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdDescuento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdDescuento" msprop:Generator_ColumnPropNameInRow="IdDescuento" msprop:Generator_ColumnPropNameInTable="IdDescuentoColumn" msprop:Generator_UserColumnName="IdDescuento" type="xs:int" />
@@ -1838,7 +1953,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="faltanteproducto" msprop:Generator_TableClassName="faltanteproductoDataTable" msprop:Generator_TableVarName="tablefaltanteproducto" msprop:Generator_RowChangedName="faltanteproductoRowChanged" msprop:Generator_TablePropName="faltanteproducto" msprop:Generator_RowDeletingName="faltanteproductoRowDeleting" msprop:Generator_RowChangingName="faltanteproductoRowChanging" msprop:Generator_RowEvHandlerName="faltanteproductoRowChangeEventHandler" msprop:Generator_RowDeletedName="faltanteproductoRowDeleted" msprop:Generator_RowClassName="faltanteproductoRow" msprop:Generator_UserTableName="faltanteproducto" msprop:Generator_RowEvArgName="faltanteproductoRowChangeEvent">
+        <xs:element name="faltanteproducto" msprop:Generator_TableClassName="faltanteproductoDataTable" msprop:Generator_TableVarName="tablefaltanteproducto" msprop:Generator_TablePropName="faltanteproducto" msprop:Generator_RowDeletingName="faltanteproductoRowDeleting" msprop:Generator_RowChangingName="faltanteproductoRowChanging" msprop:Generator_RowEvHandlerName="faltanteproductoRowChangeEventHandler" msprop:Generator_RowDeletedName="faltanteproductoRowDeleted" msprop:Generator_UserTableName="faltanteproducto" msprop:Generator_RowChangedName="faltanteproductoRowChanged" msprop:Generator_RowEvArgName="faltanteproductoRowChangeEvent" msprop:Generator_RowClassName="faltanteproductoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idFaltanteproducto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidFaltanteproducto" msprop:Generator_ColumnPropNameInRow="idFaltanteproducto" msprop:Generator_ColumnPropNameInTable="idFaltanteproductoColumn" msprop:Generator_UserColumnName="idFaltanteproducto" type="xs:int" />
@@ -1881,7 +1996,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="pagos" msprop:Generator_TableClassName="pagosDataTable" msprop:Generator_TableVarName="tablepagos" msprop:Generator_RowChangedName="pagosRowChanged" msprop:Generator_TablePropName="pagos" msprop:Generator_RowDeletingName="pagosRowDeleting" msprop:Generator_RowChangingName="pagosRowChanging" msprop:Generator_RowEvHandlerName="pagosRowChangeEventHandler" msprop:Generator_RowDeletedName="pagosRowDeleted" msprop:Generator_RowClassName="pagosRow" msprop:Generator_UserTableName="pagos" msprop:Generator_RowEvArgName="pagosRowChangeEvent">
+        <xs:element name="pagos" msprop:Generator_TableClassName="pagosDataTable" msprop:Generator_TableVarName="tablepagos" msprop:Generator_TablePropName="pagos" msprop:Generator_RowDeletingName="pagosRowDeleting" msprop:Generator_RowChangingName="pagosRowChanging" msprop:Generator_RowEvHandlerName="pagosRowChangeEventHandler" msprop:Generator_RowDeletedName="pagosRowDeleted" msprop:Generator_UserTableName="pagos" msprop:Generator_RowChangedName="pagosRowChanged" msprop:Generator_RowEvArgName="pagosRowChangeEvent" msprop:Generator_RowClassName="pagosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idPago" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidPago" msprop:Generator_ColumnPropNameInRow="idPago" msprop:Generator_ColumnPropNameInTable="idPagoColumn" msprop:Generator_UserColumnName="idPago" type="xs:int" />
@@ -1895,7 +2010,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="pagosvarios" msprop:Generator_TableClassName="pagosvariosDataTable" msprop:Generator_TableVarName="tablepagosvarios" msprop:Generator_RowChangedName="pagosvariosRowChanged" msprop:Generator_TablePropName="pagosvarios" msprop:Generator_RowDeletingName="pagosvariosRowDeleting" msprop:Generator_RowChangingName="pagosvariosRowChanging" msprop:Generator_RowEvHandlerName="pagosvariosRowChangeEventHandler" msprop:Generator_RowDeletedName="pagosvariosRowDeleted" msprop:Generator_RowClassName="pagosvariosRow" msprop:Generator_UserTableName="pagosvarios" msprop:Generator_RowEvArgName="pagosvariosRowChangeEvent">
+        <xs:element name="pagosvarios" msprop:Generator_TableClassName="pagosvariosDataTable" msprop:Generator_TableVarName="tablepagosvarios" msprop:Generator_TablePropName="pagosvarios" msprop:Generator_RowDeletingName="pagosvariosRowDeleting" msprop:Generator_RowChangingName="pagosvariosRowChanging" msprop:Generator_RowEvHandlerName="pagosvariosRowChangeEventHandler" msprop:Generator_RowDeletedName="pagosvariosRowDeleted" msprop:Generator_UserTableName="pagosvarios" msprop:Generator_RowChangedName="pagosvariosRowChanged" msprop:Generator_RowEvArgName="pagosvariosRowChangeEvent" msprop:Generator_RowClassName="pagosvariosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdVarios" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdVarios" msprop:Generator_ColumnPropNameInRow="IdVarios" msprop:Generator_ColumnPropNameInTable="IdVariosColumn" msprop:Generator_UserColumnName="IdVarios" type="xs:int" />
@@ -1937,7 +2052,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="productos" msprop:Generator_TableClassName="productosDataTable" msprop:Generator_TableVarName="tableproductos" msprop:Generator_RowChangedName="productosRowChanged" msprop:Generator_TablePropName="productos" msprop:Generator_RowDeletingName="productosRowDeleting" msprop:Generator_RowChangingName="productosRowChanging" msprop:Generator_RowEvHandlerName="productosRowChangeEventHandler" msprop:Generator_RowDeletedName="productosRowDeleted" msprop:Generator_RowClassName="productosRow" msprop:Generator_UserTableName="productos" msprop:Generator_RowEvArgName="productosRowChangeEvent">
+        <xs:element name="productos" msprop:Generator_TableClassName="productosDataTable" msprop:Generator_TableVarName="tableproductos" msprop:Generator_TablePropName="productos" msprop:Generator_RowDeletingName="productosRowDeleting" msprop:Generator_RowChangingName="productosRowChanging" msprop:Generator_RowEvHandlerName="productosRowChangeEventHandler" msprop:Generator_RowDeletedName="productosRowDeleted" msprop:Generator_UserTableName="productos" msprop:Generator_RowChangedName="productosRowChanged" msprop:Generator_RowEvArgName="productosRowChangeEvent" msprop:Generator_RowClassName="productosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idProducto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidProducto" msprop:Generator_ColumnPropNameInRow="idProducto" msprop:Generator_ColumnPropNameInTable="idProductoColumn" msprop:Generator_UserColumnName="idProducto" type="xs:int" />
@@ -1973,7 +2088,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ProductosDeuda" msprop:Generator_TableClassName="ProductosDeudaDataTable" msprop:Generator_TableVarName="tableProductosDeuda" msprop:Generator_RowChangedName="ProductosDeudaRowChanged" msprop:Generator_TablePropName="ProductosDeuda" msprop:Generator_RowDeletingName="ProductosDeudaRowDeleting" msprop:Generator_RowChangingName="ProductosDeudaRowChanging" msprop:Generator_RowEvHandlerName="ProductosDeudaRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductosDeudaRowDeleted" msprop:Generator_RowClassName="ProductosDeudaRow" msprop:Generator_UserTableName="ProductosDeuda" msprop:Generator_RowEvArgName="ProductosDeudaRowChangeEvent">
+        <xs:element name="ProductosDeuda" msprop:Generator_TableClassName="ProductosDeudaDataTable" msprop:Generator_TableVarName="tableProductosDeuda" msprop:Generator_TablePropName="ProductosDeuda" msprop:Generator_RowDeletingName="ProductosDeudaRowDeleting" msprop:Generator_RowChangingName="ProductosDeudaRowChanging" msprop:Generator_RowEvHandlerName="ProductosDeudaRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductosDeudaRowDeleted" msprop:Generator_UserTableName="ProductosDeuda" msprop:Generator_RowChangedName="ProductosDeudaRowChanged" msprop:Generator_RowEvArgName="ProductosDeudaRowChangeEvent" msprop:Generator_RowClassName="ProductosDeudaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdProductoDeuda" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdProductoDeuda" msprop:Generator_ColumnPropNameInRow="IdProductoDeuda" msprop:Generator_ColumnPropNameInTable="IdProductoDeudaColumn" msprop:Generator_UserColumnName="IdProductoDeuda" type="xs:int" />
@@ -2022,7 +2137,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="proveedores" msprop:Generator_TableClassName="proveedoresDataTable" msprop:Generator_TableVarName="tableproveedores" msprop:Generator_RowChangedName="proveedoresRowChanged" msprop:Generator_TablePropName="proveedores" msprop:Generator_RowDeletingName="proveedoresRowDeleting" msprop:Generator_RowChangingName="proveedoresRowChanging" msprop:Generator_RowEvHandlerName="proveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="proveedoresRowDeleted" msprop:Generator_RowClassName="proveedoresRow" msprop:Generator_UserTableName="proveedores" msprop:Generator_RowEvArgName="proveedoresRowChangeEvent">
+        <xs:element name="proveedores" msprop:Generator_TableClassName="proveedoresDataTable" msprop:Generator_TableVarName="tableproveedores" msprop:Generator_TablePropName="proveedores" msprop:Generator_RowDeletingName="proveedoresRowDeleting" msprop:Generator_RowChangingName="proveedoresRowChanging" msprop:Generator_RowEvHandlerName="proveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="proveedoresRowDeleted" msprop:Generator_UserTableName="proveedores" msprop:Generator_RowChangedName="proveedoresRowChanged" msprop:Generator_RowEvArgName="proveedoresRowChangeEvent" msprop:Generator_RowClassName="proveedoresRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idProveedor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidProveedor" msprop:Generator_ColumnPropNameInRow="idProveedor" msprop:Generator_ColumnPropNameInTable="idProveedorColumn" msprop:Generator_UserColumnName="idProveedor" type="xs:int" />
@@ -2078,7 +2193,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="salarios" msprop:Generator_TableClassName="salariosDataTable" msprop:Generator_TableVarName="tablesalarios" msprop:Generator_RowChangedName="salariosRowChanged" msprop:Generator_TablePropName="salarios" msprop:Generator_RowDeletingName="salariosRowDeleting" msprop:Generator_RowChangingName="salariosRowChanging" msprop:Generator_RowEvHandlerName="salariosRowChangeEventHandler" msprop:Generator_RowDeletedName="salariosRowDeleted" msprop:Generator_RowClassName="salariosRow" msprop:Generator_UserTableName="salarios" msprop:Generator_RowEvArgName="salariosRowChangeEvent">
+        <xs:element name="salarios" msprop:Generator_TableClassName="salariosDataTable" msprop:Generator_TableVarName="tablesalarios" msprop:Generator_TablePropName="salarios" msprop:Generator_RowDeletingName="salariosRowDeleting" msprop:Generator_RowChangingName="salariosRowChanging" msprop:Generator_RowEvHandlerName="salariosRowChangeEventHandler" msprop:Generator_RowDeletedName="salariosRowDeleted" msprop:Generator_UserTableName="salarios" msprop:Generator_RowChangedName="salariosRowChanged" msprop:Generator_RowEvArgName="salariosRowChangeEvent" msprop:Generator_RowClassName="salariosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idsalarios" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidsalarios" msprop:Generator_ColumnPropNameInRow="idsalarios" msprop:Generator_ColumnPropNameInTable="idsalariosColumn" msprop:Generator_UserColumnName="idsalarios" type="xs:int" />
@@ -2099,7 +2214,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tipofactura" msprop:Generator_TableClassName="tipofacturaDataTable" msprop:Generator_TableVarName="tabletipofactura" msprop:Generator_RowChangedName="tipofacturaRowChanged" msprop:Generator_TablePropName="tipofactura" msprop:Generator_RowDeletingName="tipofacturaRowDeleting" msprop:Generator_RowChangingName="tipofacturaRowChanging" msprop:Generator_RowEvHandlerName="tipofacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="tipofacturaRowDeleted" msprop:Generator_RowClassName="tipofacturaRow" msprop:Generator_UserTableName="tipofactura" msprop:Generator_RowEvArgName="tipofacturaRowChangeEvent">
+        <xs:element name="tipofactura" msprop:Generator_TableClassName="tipofacturaDataTable" msprop:Generator_TableVarName="tabletipofactura" msprop:Generator_TablePropName="tipofactura" msprop:Generator_RowDeletingName="tipofacturaRowDeleting" msprop:Generator_RowChangingName="tipofacturaRowChanging" msprop:Generator_RowEvHandlerName="tipofacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="tipofacturaRowDeleted" msprop:Generator_UserTableName="tipofactura" msprop:Generator_RowChangedName="tipofacturaRowChanged" msprop:Generator_RowEvArgName="tipofacturaRowChangeEvent" msprop:Generator_RowClassName="tipofacturaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idTipofactura" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidTipofactura" msprop:Generator_ColumnPropNameInRow="idTipofactura" msprop:Generator_ColumnPropNameInTable="idTipofacturaColumn" msprop:Generator_UserColumnName="idTipofactura" type="xs:int" />
@@ -2113,7 +2228,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="usuarios" msprop:Generator_TableClassName="usuariosDataTable" msprop:Generator_TableVarName="tableusuarios" msprop:Generator_RowChangedName="usuariosRowChanged" msprop:Generator_TablePropName="usuarios" msprop:Generator_RowDeletingName="usuariosRowDeleting" msprop:Generator_RowChangingName="usuariosRowChanging" msprop:Generator_RowEvHandlerName="usuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="usuariosRowDeleted" msprop:Generator_RowClassName="usuariosRow" msprop:Generator_UserTableName="usuarios" msprop:Generator_RowEvArgName="usuariosRowChangeEvent">
+        <xs:element name="usuarios" msprop:Generator_TableClassName="usuariosDataTable" msprop:Generator_TableVarName="tableusuarios" msprop:Generator_TablePropName="usuarios" msprop:Generator_RowDeletingName="usuariosRowDeleting" msprop:Generator_RowChangingName="usuariosRowChanging" msprop:Generator_RowEvHandlerName="usuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="usuariosRowDeleted" msprop:Generator_UserTableName="usuarios" msprop:Generator_RowChangedName="usuariosRowChanged" msprop:Generator_RowEvArgName="usuariosRowChangeEvent" msprop:Generator_RowClassName="usuariosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idUsuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidUsuario" msprop:Generator_ColumnPropNameInRow="idUsuario" msprop:Generator_ColumnPropNameInTable="idUsuarioColumn" msprop:Generator_UserColumnName="idUsuario" type="xs:int" />
@@ -2156,7 +2271,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DcomprasProductos" msprop:Generator_TableClassName="DcomprasProductosDataTable" msprop:Generator_TableVarName="tableDcomprasProductos" msprop:Generator_TablePropName="DcomprasProductos" msprop:Generator_RowDeletingName="DcomprasProductosRowDeleting" msprop:Generator_RowChangingName="DcomprasProductosRowChanging" msprop:Generator_RowEvHandlerName="DcomprasProductosRowChangeEventHandler" msprop:Generator_RowDeletedName="DcomprasProductosRowDeleted" msprop:Generator_UserTableName="DcomprasProductos" msprop:Generator_RowChangedName="DcomprasProductosRowChanged" msprop:Generator_RowEvArgName="DcomprasProductosRowChangeEvent" msprop:Generator_RowClassName="DcomprasProductosRow">
+        <xs:element name="DcomprasProductos" msprop:Generator_TableClassName="DcomprasProductosDataTable" msprop:Generator_TableVarName="tableDcomprasProductos" msprop:Generator_RowChangedName="DcomprasProductosRowChanged" msprop:Generator_TablePropName="DcomprasProductos" msprop:Generator_RowDeletingName="DcomprasProductosRowDeleting" msprop:Generator_RowChangingName="DcomprasProductosRowChanging" msprop:Generator_RowEvHandlerName="DcomprasProductosRowChangeEventHandler" msprop:Generator_RowDeletedName="DcomprasProductosRowDeleted" msprop:Generator_RowClassName="DcomprasProductosRow" msprop:Generator_UserTableName="DcomprasProductos" msprop:Generator_RowEvArgName="DcomprasProductosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idDetalle" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidDetalle" msprop:Generator_ColumnPropNameInRow="idDetalle" msprop:Generator_ColumnPropNameInTable="idDetalleColumn" msprop:Generator_UserColumnName="idDetalle" type="xs:int" />
@@ -2195,7 +2310,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="contactos" msprop:Generator_TableClassName="contactosDataTable" msprop:Generator_TableVarName="tablecontactos" msprop:Generator_TablePropName="contactos" msprop:Generator_RowDeletingName="contactosRowDeleting" msprop:Generator_RowChangingName="contactosRowChanging" msprop:Generator_RowEvHandlerName="contactosRowChangeEventHandler" msprop:Generator_RowDeletedName="contactosRowDeleted" msprop:Generator_UserTableName="contactos" msprop:Generator_RowChangedName="contactosRowChanged" msprop:Generator_RowEvArgName="contactosRowChangeEvent" msprop:Generator_RowClassName="contactosRow">
+        <xs:element name="contactos" msprop:Generator_TableClassName="contactosDataTable" msprop:Generator_TableVarName="tablecontactos" msprop:Generator_RowChangedName="contactosRowChanged" msprop:Generator_TablePropName="contactos" msprop:Generator_RowDeletingName="contactosRowDeleting" msprop:Generator_RowChangingName="contactosRowChanging" msprop:Generator_RowEvHandlerName="contactosRowChangeEventHandler" msprop:Generator_RowDeletedName="contactosRowDeleted" msprop:Generator_RowClassName="contactosRow" msprop:Generator_UserTableName="contactos" msprop:Generator_RowEvArgName="contactosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idContacto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidContacto" msprop:Generator_ColumnPropNameInRow="idContacto" msprop:Generator_ColumnPropNameInTable="idContactoColumn" msprop:Generator_UserColumnName="idContacto" type="xs:int" />
@@ -2217,7 +2332,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="crearprestamo" msprop:Generator_TableClassName="crearprestamoDataTable" msprop:Generator_TableVarName="tablecrearprestamo" msprop:Generator_TablePropName="crearprestamo" msprop:Generator_RowDeletingName="crearprestamoRowDeleting" msprop:Generator_RowChangingName="crearprestamoRowChanging" msprop:Generator_RowEvHandlerName="crearprestamoRowChangeEventHandler" msprop:Generator_RowDeletedName="crearprestamoRowDeleted" msprop:Generator_UserTableName="crearprestamo" msprop:Generator_RowChangedName="crearprestamoRowChanged" msprop:Generator_RowEvArgName="crearprestamoRowChangeEvent" msprop:Generator_RowClassName="crearprestamoRow">
+        <xs:element name="crearprestamo" msprop:Generator_TableClassName="crearprestamoDataTable" msprop:Generator_TableVarName="tablecrearprestamo" msprop:Generator_RowChangedName="crearprestamoRowChanged" msprop:Generator_TablePropName="crearprestamo" msprop:Generator_RowDeletingName="crearprestamoRowDeleting" msprop:Generator_RowChangingName="crearprestamoRowChanging" msprop:Generator_RowEvHandlerName="crearprestamoRowChangeEventHandler" msprop:Generator_RowDeletedName="crearprestamoRowDeleted" msprop:Generator_RowClassName="crearprestamoRow" msprop:Generator_UserTableName="crearprestamo" msprop:Generator_RowEvArgName="crearprestamoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idPrest" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidPrest" msprop:Generator_ColumnPropNameInRow="idPrest" msprop:Generator_ColumnPropNameInTable="idPrestColumn" msprop:Generator_UserColumnName="idPrest" type="xs:int" />
@@ -2256,7 +2371,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="intereses" msprop:Generator_TableClassName="interesesDataTable" msprop:Generator_TableVarName="tableintereses" msprop:Generator_TablePropName="intereses" msprop:Generator_RowDeletingName="interesesRowDeleting" msprop:Generator_RowChangingName="interesesRowChanging" msprop:Generator_RowEvHandlerName="interesesRowChangeEventHandler" msprop:Generator_RowDeletedName="interesesRowDeleted" msprop:Generator_UserTableName="intereses" msprop:Generator_RowChangedName="interesesRowChanged" msprop:Generator_RowEvArgName="interesesRowChangeEvent" msprop:Generator_RowClassName="interesesRow">
+        <xs:element name="intereses" msprop:Generator_TableClassName="interesesDataTable" msprop:Generator_TableVarName="tableintereses" msprop:Generator_RowChangedName="interesesRowChanged" msprop:Generator_TablePropName="intereses" msprop:Generator_RowDeletingName="interesesRowDeleting" msprop:Generator_RowChangingName="interesesRowChanging" msprop:Generator_RowEvHandlerName="interesesRowChangeEventHandler" msprop:Generator_RowDeletedName="interesesRowDeleted" msprop:Generator_RowClassName="interesesRow" msprop:Generator_UserTableName="intereses" msprop:Generator_RowEvArgName="interesesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idInteres" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidInteres" msprop:Generator_ColumnPropNameInRow="idInteres" msprop:Generator_ColumnPropNameInTable="idInteresColumn" msprop:Generator_UserColumnName="idInteres" type="xs:int" />
@@ -2270,7 +2385,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ocupacion" msprop:Generator_TableClassName="ocupacionDataTable" msprop:Generator_TableVarName="tableocupacion" msprop:Generator_TablePropName="ocupacion" msprop:Generator_RowDeletingName="ocupacionRowDeleting" msprop:Generator_RowChangingName="ocupacionRowChanging" msprop:Generator_RowEvHandlerName="ocupacionRowChangeEventHandler" msprop:Generator_RowDeletedName="ocupacionRowDeleted" msprop:Generator_UserTableName="ocupacion" msprop:Generator_RowChangedName="ocupacionRowChanged" msprop:Generator_RowEvArgName="ocupacionRowChangeEvent" msprop:Generator_RowClassName="ocupacionRow">
+        <xs:element name="ocupacion" msprop:Generator_TableClassName="ocupacionDataTable" msprop:Generator_TableVarName="tableocupacion" msprop:Generator_RowChangedName="ocupacionRowChanged" msprop:Generator_TablePropName="ocupacion" msprop:Generator_RowDeletingName="ocupacionRowDeleting" msprop:Generator_RowChangingName="ocupacionRowChanging" msprop:Generator_RowEvHandlerName="ocupacionRowChangeEventHandler" msprop:Generator_RowDeletedName="ocupacionRowDeleted" msprop:Generator_RowClassName="ocupacionRow" msprop:Generator_UserTableName="ocupacion" msprop:Generator_RowEvArgName="ocupacionRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idOcupacion" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidOcupacion" msprop:Generator_ColumnPropNameInRow="idOcupacion" msprop:Generator_ColumnPropNameInTable="idOcupacionColumn" msprop:Generator_UserColumnName="idOcupacion" type="xs:int" />
@@ -2284,7 +2399,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="crearprestamoCliente" msprop:Generator_TableClassName="crearprestamoClienteDataTable" msprop:Generator_TableVarName="tablecrearprestamoCliente" msprop:Generator_TablePropName="crearprestamoCliente" msprop:Generator_RowDeletingName="crearprestamoClienteRowDeleting" msprop:Generator_RowChangingName="crearprestamoClienteRowChanging" msprop:Generator_RowEvHandlerName="crearprestamoClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="crearprestamoClienteRowDeleted" msprop:Generator_UserTableName="crearprestamoCliente" msprop:Generator_RowChangedName="crearprestamoClienteRowChanged" msprop:Generator_RowEvArgName="crearprestamoClienteRowChangeEvent" msprop:Generator_RowClassName="crearprestamoClienteRow">
+        <xs:element name="crearprestamoCliente" msprop:Generator_TableClassName="crearprestamoClienteDataTable" msprop:Generator_TableVarName="tablecrearprestamoCliente" msprop:Generator_RowChangedName="crearprestamoClienteRowChanged" msprop:Generator_TablePropName="crearprestamoCliente" msprop:Generator_RowDeletingName="crearprestamoClienteRowDeleting" msprop:Generator_RowChangingName="crearprestamoClienteRowChanging" msprop:Generator_RowEvHandlerName="crearprestamoClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="crearprestamoClienteRowDeleted" msprop:Generator_RowClassName="crearprestamoClienteRow" msprop:Generator_UserTableName="crearprestamoCliente" msprop:Generator_RowEvArgName="crearprestamoClienteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idPrest" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidPrest" msprop:Generator_ColumnPropNameInRow="idPrest" msprop:Generator_ColumnPropNameInTable="idPrestColumn" msprop:Generator_UserColumnName="idPrest" type="xs:int" />
@@ -2337,7 +2452,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="clientes" msprop:Generator_TableClassName="clientesDataTable" msprop:Generator_TableVarName="tableclientes" msprop:Generator_TablePropName="clientes" msprop:Generator_RowDeletingName="clientesRowDeleting" msprop:Generator_RowChangingName="clientesRowChanging" msprop:Generator_RowEvHandlerName="clientesRowChangeEventHandler" msprop:Generator_RowDeletedName="clientesRowDeleted" msprop:Generator_UserTableName="clientes" msprop:Generator_RowChangedName="clientesRowChanged" msprop:Generator_RowEvArgName="clientesRowChangeEvent" msprop:Generator_RowClassName="clientesRow">
+        <xs:element name="clientes" msprop:Generator_TableClassName="clientesDataTable" msprop:Generator_TableVarName="tableclientes" msprop:Generator_RowChangedName="clientesRowChanged" msprop:Generator_TablePropName="clientes" msprop:Generator_RowDeletingName="clientesRowDeleting" msprop:Generator_RowChangingName="clientesRowChanging" msprop:Generator_RowEvHandlerName="clientesRowChangeEventHandler" msprop:Generator_RowDeletedName="clientesRowDeleted" msprop:Generator_RowClassName="clientesRow" msprop:Generator_UserTableName="clientes" msprop:Generator_RowEvArgName="clientesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idCliente" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCliente" msprop:Generator_ColumnPropNameInRow="idCliente" msprop:Generator_ColumnPropNameInTable="idClienteColumn" msprop:Generator_UserColumnName="idCliente" type="xs:int" />
@@ -2365,7 +2480,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="empleados" msprop:Generator_TableClassName="empleadosDataTable" msprop:Generator_TableVarName="tableempleados" msprop:Generator_RowChangedName="empleadosRowChanged" msprop:Generator_TablePropName="empleados" msprop:Generator_RowDeletingName="empleadosRowDeleting" msprop:Generator_RowChangingName="empleadosRowChanging" msprop:Generator_RowEvHandlerName="empleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="empleadosRowDeleted" msprop:Generator_RowClassName="empleadosRow" msprop:Generator_UserTableName="empleados" msprop:Generator_RowEvArgName="empleadosRowChangeEvent">
+        <xs:element name="empleados" msprop:Generator_TableClassName="empleadosDataTable" msprop:Generator_TableVarName="tableempleados" msprop:Generator_TablePropName="empleados" msprop:Generator_RowDeletingName="empleadosRowDeleting" msprop:Generator_RowChangingName="empleadosRowChanging" msprop:Generator_RowEvHandlerName="empleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="empleadosRowDeleted" msprop:Generator_UserTableName="empleados" msprop:Generator_RowChangedName="empleadosRowChanged" msprop:Generator_RowEvArgName="empleadosRowChangeEvent" msprop:Generator_RowClassName="empleadosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idEmpleado" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_UserColumnName="idEmpleado" type="xs:int" />
@@ -2407,7 +2522,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="prestamos" msprop:Generator_TableClassName="prestamosDataTable" msprop:Generator_TableVarName="tableprestamos" msprop:Generator_RowChangedName="prestamosRowChanged" msprop:Generator_TablePropName="prestamos" msprop:Generator_RowDeletingName="prestamosRowDeleting" msprop:Generator_RowChangingName="prestamosRowChanging" msprop:Generator_RowEvHandlerName="prestamosRowChangeEventHandler" msprop:Generator_RowDeletedName="prestamosRowDeleted" msprop:Generator_RowClassName="prestamosRow" msprop:Generator_UserTableName="prestamos" msprop:Generator_RowEvArgName="prestamosRowChangeEvent">
+        <xs:element name="prestamos" msprop:Generator_TableClassName="prestamosDataTable" msprop:Generator_TableVarName="tableprestamos" msprop:Generator_TablePropName="prestamos" msprop:Generator_RowDeletingName="prestamosRowDeleting" msprop:Generator_RowChangingName="prestamosRowChanging" msprop:Generator_RowEvHandlerName="prestamosRowChangeEventHandler" msprop:Generator_RowDeletedName="prestamosRowDeleted" msprop:Generator_UserTableName="prestamos" msprop:Generator_RowChangedName="prestamosRowChanged" msprop:Generator_RowEvArgName="prestamosRowChangeEvent" msprop:Generator_RowClassName="prestamosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idPrestamo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidPrestamo" msprop:Generator_ColumnPropNameInRow="idPrestamo" msprop:Generator_ColumnPropNameInTable="idPrestamoColumn" msprop:Generator_UserColumnName="idPrestamo" type="xs:int" />
@@ -2443,7 +2558,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="deuda" msprop:Generator_TableClassName="deudaDataTable" msprop:Generator_TableVarName="tabledeuda" msprop:Generator_RowChangedName="deudaRowChanged" msprop:Generator_TablePropName="deuda" msprop:Generator_RowDeletingName="deudaRowDeleting" msprop:Generator_RowChangingName="deudaRowChanging" msprop:Generator_RowEvHandlerName="deudaRowChangeEventHandler" msprop:Generator_RowDeletedName="deudaRowDeleted" msprop:Generator_RowClassName="deudaRow" msprop:Generator_UserTableName="deuda" msprop:Generator_RowEvArgName="deudaRowChangeEvent">
+        <xs:element name="deuda" msprop:Generator_TableClassName="deudaDataTable" msprop:Generator_TableVarName="tabledeuda" msprop:Generator_TablePropName="deuda" msprop:Generator_RowDeletingName="deudaRowDeleting" msprop:Generator_RowChangingName="deudaRowChanging" msprop:Generator_RowEvHandlerName="deudaRowChangeEventHandler" msprop:Generator_RowDeletedName="deudaRowDeleted" msprop:Generator_UserTableName="deuda" msprop:Generator_RowChangedName="deudaRowChanged" msprop:Generator_RowEvArgName="deudaRowChangeEvent" msprop:Generator_RowClassName="deudaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdDeuda" msprop:Generator_ColumnVarNameInTable="columnIdDeuda" msprop:Generator_ColumnPropNameInRow="IdDeuda" msprop:Generator_ColumnPropNameInTable="IdDeudaColumn" msprop:Generator_UserColumnName="IdDeuda" type="xs:int" />
@@ -2480,7 +2595,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DetallaPrestamo" msprop:Generator_TableClassName="DetallaPrestamoDataTable" msprop:Generator_TableVarName="tableDetallaPrestamo" msprop:Generator_RowChangedName="DetallaPrestamoRowChanged" msprop:Generator_TablePropName="DetallaPrestamo" msprop:Generator_RowDeletingName="DetallaPrestamoRowDeleting" msprop:Generator_RowChangingName="DetallaPrestamoRowChanging" msprop:Generator_RowEvHandlerName="DetallaPrestamoRowChangeEventHandler" msprop:Generator_RowDeletedName="DetallaPrestamoRowDeleted" msprop:Generator_RowClassName="DetallaPrestamoRow" msprop:Generator_UserTableName="DetallaPrestamo" msprop:Generator_RowEvArgName="DetallaPrestamoRowChangeEvent">
+        <xs:element name="DetallaPrestamo" msprop:Generator_TableClassName="DetallaPrestamoDataTable" msprop:Generator_TableVarName="tableDetallaPrestamo" msprop:Generator_TablePropName="DetallaPrestamo" msprop:Generator_RowDeletingName="DetallaPrestamoRowDeleting" msprop:Generator_RowChangingName="DetallaPrestamoRowChanging" msprop:Generator_RowEvHandlerName="DetallaPrestamoRowChangeEventHandler" msprop:Generator_RowDeletedName="DetallaPrestamoRowDeleted" msprop:Generator_UserTableName="DetallaPrestamo" msprop:Generator_RowChangedName="DetallaPrestamoRowChanged" msprop:Generator_RowEvArgName="DetallaPrestamoRowChangeEvent" msprop:Generator_RowClassName="DetallaPrestamoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdDeuda" msprop:Generator_ColumnVarNameInTable="columnIdDeuda" msprop:Generator_ColumnPropNameInRow="IdDeuda" msprop:Generator_ColumnPropNameInTable="IdDeudaColumn" msprop:Generator_UserColumnName="IdDeuda" type="xs:int" />
@@ -2524,7 +2639,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ImprimirPrestamo" msprop:Generator_TableClassName="ImprimirPrestamoDataTable" msprop:Generator_TableVarName="tableImprimirPrestamo" msprop:Generator_TablePropName="ImprimirPrestamo" msprop:Generator_RowDeletingName="ImprimirPrestamoRowDeleting" msprop:Generator_RowChangingName="ImprimirPrestamoRowChanging" msprop:Generator_RowEvHandlerName="ImprimirPrestamoRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirPrestamoRowDeleted" msprop:Generator_UserTableName="ImprimirPrestamo" msprop:Generator_RowChangedName="ImprimirPrestamoRowChanged" msprop:Generator_RowEvArgName="ImprimirPrestamoRowChangeEvent" msprop:Generator_RowClassName="ImprimirPrestamoRow">
+        <xs:element name="ImprimirPrestamo" msprop:Generator_TableClassName="ImprimirPrestamoDataTable" msprop:Generator_TableVarName="tableImprimirPrestamo" msprop:Generator_RowChangedName="ImprimirPrestamoRowChanged" msprop:Generator_TablePropName="ImprimirPrestamo" msprop:Generator_RowDeletingName="ImprimirPrestamoRowDeleting" msprop:Generator_RowChangingName="ImprimirPrestamoRowChanging" msprop:Generator_RowEvHandlerName="ImprimirPrestamoRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirPrestamoRowDeleted" msprop:Generator_RowClassName="ImprimirPrestamoRow" msprop:Generator_UserTableName="ImprimirPrestamo" msprop:Generator_RowEvArgName="ImprimirPrestamoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idPrest" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidPrest" msprop:Generator_ColumnPropNameInRow="idPrest" msprop:Generator_ColumnPropNameInTable="idPrestColumn" msprop:Generator_UserColumnName="idPrest" type="xs:int" />
@@ -2591,7 +2706,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ImprimirProveedor" msprop:Generator_TableClassName="ImprimirProveedorDataTable" msprop:Generator_TableVarName="tableImprimirProveedor" msprop:Generator_RowChangedName="ImprimirProveedorRowChanged" msprop:Generator_TablePropName="ImprimirProveedor" msprop:Generator_RowDeletingName="ImprimirProveedorRowDeleting" msprop:Generator_RowChangingName="ImprimirProveedorRowChanging" msprop:Generator_RowEvHandlerName="ImprimirProveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirProveedorRowDeleted" msprop:Generator_RowClassName="ImprimirProveedorRow" msprop:Generator_UserTableName="ImprimirProveedor" msprop:Generator_RowEvArgName="ImprimirProveedorRowChangeEvent">
+        <xs:element name="ImprimirProveedor" msprop:Generator_TableClassName="ImprimirProveedorDataTable" msprop:Generator_TableVarName="tableImprimirProveedor" msprop:Generator_TablePropName="ImprimirProveedor" msprop:Generator_RowDeletingName="ImprimirProveedorRowDeleting" msprop:Generator_RowChangingName="ImprimirProveedorRowChanging" msprop:Generator_RowEvHandlerName="ImprimirProveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirProveedorRowDeleted" msprop:Generator_UserTableName="ImprimirProveedor" msprop:Generator_RowChangedName="ImprimirProveedorRowChanged" msprop:Generator_RowEvArgName="ImprimirProveedorRowChangeEvent" msprop:Generator_RowClassName="ImprimirProveedorRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idProveedor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidProveedor" msprop:Generator_ColumnPropNameInRow="idProveedor" msprop:Generator_ColumnPropNameInTable="idProveedorColumn" msprop:Generator_UserColumnName="idProveedor" type="xs:int" />
@@ -2647,7 +2762,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ImprimirUsuario" msprop:Generator_TableClassName="ImprimirUsuarioDataTable" msprop:Generator_TableVarName="tableImprimirUsuario" msprop:Generator_TablePropName="ImprimirUsuario" msprop:Generator_RowDeletingName="ImprimirUsuarioRowDeleting" msprop:Generator_RowChangingName="ImprimirUsuarioRowChanging" msprop:Generator_RowEvHandlerName="ImprimirUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirUsuarioRowDeleted" msprop:Generator_UserTableName="ImprimirUsuario" msprop:Generator_RowChangedName="ImprimirUsuarioRowChanged" msprop:Generator_RowEvArgName="ImprimirUsuarioRowChangeEvent" msprop:Generator_RowClassName="ImprimirUsuarioRow">
+        <xs:element name="ImprimirUsuario" msprop:Generator_TableClassName="ImprimirUsuarioDataTable" msprop:Generator_TableVarName="tableImprimirUsuario" msprop:Generator_RowChangedName="ImprimirUsuarioRowChanged" msprop:Generator_TablePropName="ImprimirUsuario" msprop:Generator_RowDeletingName="ImprimirUsuarioRowDeleting" msprop:Generator_RowChangingName="ImprimirUsuarioRowChanging" msprop:Generator_RowEvHandlerName="ImprimirUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirUsuarioRowDeleted" msprop:Generator_RowClassName="ImprimirUsuarioRow" msprop:Generator_UserTableName="ImprimirUsuario" msprop:Generator_RowEvArgName="ImprimirUsuarioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idUsuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidUsuario" msprop:Generator_ColumnPropNameInRow="idUsuario" msprop:Generator_ColumnPropNameInTable="idUsuarioColumn" msprop:Generator_UserColumnName="idUsuario" type="xs:int" />
@@ -2690,7 +2805,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ImprimirCompraProducto" msprop:Generator_TableClassName="ImprimirCompraProductoDataTable" msprop:Generator_TableVarName="tableImprimirCompraProducto" msprop:Generator_RowChangedName="ImprimirCompraProductoRowChanged" msprop:Generator_TablePropName="ImprimirCompraProducto" msprop:Generator_RowDeletingName="ImprimirCompraProductoRowDeleting" msprop:Generator_RowChangingName="ImprimirCompraProductoRowChanging" msprop:Generator_RowEvHandlerName="ImprimirCompraProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirCompraProductoRowDeleted" msprop:Generator_RowClassName="ImprimirCompraProductoRow" msprop:Generator_UserTableName="ImprimirCompraProducto" msprop:Generator_RowEvArgName="ImprimirCompraProductoRowChangeEvent">
+        <xs:element name="ImprimirCompraProducto" msprop:Generator_TableClassName="ImprimirCompraProductoDataTable" msprop:Generator_TableVarName="tableImprimirCompraProducto" msprop:Generator_TablePropName="ImprimirCompraProducto" msprop:Generator_RowDeletingName="ImprimirCompraProductoRowDeleting" msprop:Generator_RowChangingName="ImprimirCompraProductoRowChanging" msprop:Generator_RowEvHandlerName="ImprimirCompraProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirCompraProductoRowDeleted" msprop:Generator_UserTableName="ImprimirCompraProducto" msprop:Generator_RowChangedName="ImprimirCompraProductoRowChanged" msprop:Generator_RowEvArgName="ImprimirCompraProductoRowChangeEvent" msprop:Generator_RowClassName="ImprimirCompraProductoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idCompra" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCompra" msprop:Generator_ColumnPropNameInRow="idCompra" msprop:Generator_ColumnPropNameInTable="idCompraColumn" msprop:Generator_UserColumnName="idCompra" type="xs:int" />
@@ -2750,7 +2865,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ImprimirProductos" msprop:Generator_TableClassName="ImprimirProductosDataTable" msprop:Generator_TableVarName="tableImprimirProductos" msprop:Generator_RowChangedName="ImprimirProductosRowChanged" msprop:Generator_TablePropName="ImprimirProductos" msprop:Generator_RowDeletingName="ImprimirProductosRowDeleting" msprop:Generator_RowChangingName="ImprimirProductosRowChanging" msprop:Generator_RowEvHandlerName="ImprimirProductosRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirProductosRowDeleted" msprop:Generator_RowClassName="ImprimirProductosRow" msprop:Generator_UserTableName="ImprimirProductos" msprop:Generator_RowEvArgName="ImprimirProductosRowChangeEvent">
+        <xs:element name="ImprimirProductos" msprop:Generator_TableClassName="ImprimirProductosDataTable" msprop:Generator_TableVarName="tableImprimirProductos" msprop:Generator_TablePropName="ImprimirProductos" msprop:Generator_RowDeletingName="ImprimirProductosRowDeleting" msprop:Generator_RowChangingName="ImprimirProductosRowChanging" msprop:Generator_RowEvHandlerName="ImprimirProductosRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirProductosRowDeleted" msprop:Generator_UserTableName="ImprimirProductos" msprop:Generator_RowChangedName="ImprimirProductosRowChanged" msprop:Generator_RowEvArgName="ImprimirProductosRowChangeEvent" msprop:Generator_RowClassName="ImprimirProductosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idCategoria" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCategoria" msprop:Generator_ColumnPropNameInRow="idCategoria" msprop:Generator_ColumnPropNameInTable="idCategoriaColumn" msprop:Generator_UserColumnName="idCategoria" type="xs:int" />
@@ -2793,7 +2908,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ImprimirProductosFaltantes" msprop:Generator_TableClassName="ImprimirProductosFaltantesDataTable" msprop:Generator_TableVarName="tableImprimirProductosFaltantes" msprop:Generator_RowChangedName="ImprimirProductosFaltantesRowChanged" msprop:Generator_TablePropName="ImprimirProductosFaltantes" msprop:Generator_RowDeletingName="ImprimirProductosFaltantesRowDeleting" msprop:Generator_RowChangingName="ImprimirProductosFaltantesRowChanging" msprop:Generator_RowEvHandlerName="ImprimirProductosFaltantesRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirProductosFaltantesRowDeleted" msprop:Generator_RowClassName="ImprimirProductosFaltantesRow" msprop:Generator_UserTableName="ImprimirProductosFaltantes" msprop:Generator_RowEvArgName="ImprimirProductosFaltantesRowChangeEvent">
+        <xs:element name="ImprimirProductosFaltantes" msprop:Generator_TableClassName="ImprimirProductosFaltantesDataTable" msprop:Generator_TableVarName="tableImprimirProductosFaltantes" msprop:Generator_TablePropName="ImprimirProductosFaltantes" msprop:Generator_RowDeletingName="ImprimirProductosFaltantesRowDeleting" msprop:Generator_RowChangingName="ImprimirProductosFaltantesRowChanging" msprop:Generator_RowEvHandlerName="ImprimirProductosFaltantesRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirProductosFaltantesRowDeleted" msprop:Generator_UserTableName="ImprimirProductosFaltantes" msprop:Generator_RowChangedName="ImprimirProductosFaltantesRowChanged" msprop:Generator_RowEvArgName="ImprimirProductosFaltantesRowChangeEvent" msprop:Generator_RowClassName="ImprimirProductosFaltantesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idFaltante" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidFaltante" msprop:Generator_ColumnPropNameInRow="idFaltante" msprop:Generator_ColumnPropNameInTable="idFaltanteColumn" msprop:Generator_UserColumnName="idFaltante" type="xs:int" />
@@ -2843,7 +2958,7 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ImprimirPagosVarios" msprop:Generator_TableClassName="ImprimirPagosVariosDataTable" msprop:Generator_TableVarName="tableImprimirPagosVarios" msprop:Generator_TablePropName="ImprimirPagosVarios" msprop:Generator_RowDeletingName="ImprimirPagosVariosRowDeleting" msprop:Generator_RowChangingName="ImprimirPagosVariosRowChanging" msprop:Generator_RowEvHandlerName="ImprimirPagosVariosRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirPagosVariosRowDeleted" msprop:Generator_UserTableName="ImprimirPagosVarios" msprop:Generator_RowChangedName="ImprimirPagosVariosRowChanged" msprop:Generator_RowEvArgName="ImprimirPagosVariosRowChangeEvent" msprop:Generator_RowClassName="ImprimirPagosVariosRow">
+        <xs:element name="ImprimirPagosVarios" msprop:Generator_TableClassName="ImprimirPagosVariosDataTable" msprop:Generator_TableVarName="tableImprimirPagosVarios" msprop:Generator_RowChangedName="ImprimirPagosVariosRowChanged" msprop:Generator_TablePropName="ImprimirPagosVarios" msprop:Generator_RowDeletingName="ImprimirPagosVariosRowDeleting" msprop:Generator_RowChangingName="ImprimirPagosVariosRowChanging" msprop:Generator_RowEvHandlerName="ImprimirPagosVariosRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirPagosVariosRowDeleted" msprop:Generator_RowClassName="ImprimirPagosVariosRow" msprop:Generator_UserTableName="ImprimirPagosVarios" msprop:Generator_RowEvArgName="ImprimirPagosVariosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdVarios" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdVarios" msprop:Generator_ColumnPropNameInRow="IdVarios" msprop:Generator_ColumnPropNameInTable="IdVariosColumn" msprop:Generator_UserColumnName="IdVarios" type="xs:int" />
@@ -2882,6 +2997,119 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ImprimirSalarios" msprop:Generator_TableClassName="ImprimirSalariosDataTable" msprop:Generator_TableVarName="tableImprimirSalarios" msprop:Generator_TablePropName="ImprimirSalarios" msprop:Generator_RowDeletingName="ImprimirSalariosRowDeleting" msprop:Generator_RowChangingName="ImprimirSalariosRowChanging" msprop:Generator_RowEvHandlerName="ImprimirSalariosRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirSalariosRowDeleted" msprop:Generator_UserTableName="ImprimirSalarios" msprop:Generator_RowChangedName="ImprimirSalariosRowChanged" msprop:Generator_RowEvArgName="ImprimirSalariosRowChangeEvent" msprop:Generator_RowClassName="ImprimirSalariosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idEmpleado" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_UserColumnName="idEmpleado" type="xs:int" />
+              <xs:element name="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_UserColumnName="usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pago" msprop:Generator_ColumnVarNameInTable="columnpago" msprop:Generator_ColumnPropNameInRow="pago" msprop:Generator_ColumnPropNameInTable="pagoColumn" msprop:Generator_UserColumnName="pago">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clave" msprop:Generator_ColumnVarNameInTable="columnclave" msprop:Generator_ColumnPropNameInRow="clave" msprop:Generator_ColumnPropNameInTable="claveColumn" msprop:Generator_UserColumnName="clave">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="22" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ImprimirDeudas" msprop:Generator_TableClassName="ImprimirDeudasDataTable" msprop:Generator_TableVarName="tableImprimirDeudas" msprop:Generator_TablePropName="ImprimirDeudas" msprop:Generator_RowDeletingName="ImprimirDeudasRowDeleting" msprop:Generator_RowChangingName="ImprimirDeudasRowChanging" msprop:Generator_RowEvHandlerName="ImprimirDeudasRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirDeudasRowDeleted" msprop:Generator_UserTableName="ImprimirDeudas" msprop:Generator_RowChangedName="ImprimirDeudasRowChanged" msprop:Generator_RowEvArgName="ImprimirDeudasRowChangeEvent" msprop:Generator_RowClassName="ImprimirDeudasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdDeuda" msprop:Generator_ColumnVarNameInTable="columnIdDeuda" msprop:Generator_ColumnPropNameInRow="IdDeuda" msprop:Generator_ColumnPropNameInTable="IdDeudaColumn" msprop:Generator_UserColumnName="IdDeuda" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="22" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Codigo" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Subtotal" msprop:Generator_ColumnVarNameInTable="columnSubtotal" msprop:Generator_ColumnPropNameInRow="Subtotal" msprop:Generator_ColumnPropNameInTable="SubtotalColumn" msprop:Generator_UserColumnName="Subtotal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idPrestamo" msprop:Generator_ColumnVarNameInTable="columnidPrestamo" msprop:Generator_ColumnPropNameInRow="idPrestamo" msprop:Generator_ColumnPropNameInTable="idPrestamoColumn" msprop:Generator_UserColumnName="idPrestamo" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ImprimirEmpleados" msprop:Generator_TableClassName="ImprimirEmpleadosDataTable" msprop:Generator_TableVarName="tableImprimirEmpleados" msprop:Generator_TablePropName="ImprimirEmpleados" msprop:Generator_RowDeletingName="ImprimirEmpleadosRowDeleting" msprop:Generator_RowChangingName="ImprimirEmpleadosRowChanging" msprop:Generator_RowEvHandlerName="ImprimirEmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirEmpleadosRowDeleted" msprop:Generator_UserTableName="ImprimirEmpleados" msprop:Generator_RowChangedName="ImprimirEmpleadosRowChanged" msprop:Generator_RowEvArgName="ImprimirEmpleadosRowChangeEvent" msprop:Generator_RowClassName="ImprimirEmpleadosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="22" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_UserColumnName="usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clave" msprop:Generator_ColumnVarNameInTable="columnclave" msprop:Generator_ColumnPropNameInRow="clave" msprop:Generator_ColumnPropNameInTable="claveColumn" msprop:Generator_UserColumnName="clave">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="direccion" msprop:Generator_ColumnVarNameInTable="columndireccion" msprop:Generator_ColumnPropNameInRow="direccion" msprop:Generator_ColumnPropNameInTable="direccionColumn" msprop:Generator_UserColumnName="direccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idEmpleado" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_UserColumnName="idEmpleado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -3005,39 +3233,56 @@ SELECT IdVarios, codigo, tipoproducto, nfactura, descripcion, cantidad FROM pago
       <xs:selector xpath=".//mstns:ImprimirPagosVarios" />
       <xs:field xpath="mstns:IdVarios" />
     </xs:unique>
+    <xs:unique name="ImprimirSalarios_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ImprimirSalarios" />
+      <xs:field xpath="mstns:idEmpleado" />
+    </xs:unique>
+    <xs:unique name="ImprimirDeudas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ImprimirDeudas" />
+      <xs:field xpath="mstns:IdDeuda" />
+    </xs:unique>
+    <xs:unique name="ImprimirEmpleados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ImprimirEmpleados" />
+      <xs:field xpath="mstns:idEmpleado" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_compras_pagos" msdata:parent="pagos" msdata:child="compras" msdata:parentkey="idPago" msdata:childkey="idPago" msprop:Generator_UserChildTable="compras" msprop:Generator_ChildPropName="GetcomprasRows" msprop:Generator_UserRelationName="FK_compras_pagos" msprop:Generator_ParentPropName="pagosRow" msprop:Generator_RelationVarName="relationFK_compras_pagos" msprop:Generator_UserParentTable="pagos" />
-      <msdata:Relationship name="FK_compras_proveedores" msdata:parent="proveedores" msdata:child="compras" msdata:parentkey="idProveedor" msdata:childkey="idProveedor" msprop:Generator_UserChildTable="compras" msprop:Generator_ChildPropName="GetcomprasRows" msprop:Generator_UserRelationName="FK_compras_proveedores" msprop:Generator_ParentPropName="proveedoresRow" msprop:Generator_RelationVarName="relationFK_compras_proveedores" msprop:Generator_UserParentTable="proveedores" />
-      <msdata:Relationship name="FK_compras_tipofactura" msdata:parent="tipofactura" msdata:child="compras" msdata:parentkey="idTipofactura" msdata:childkey="idTipofactura" msprop:Generator_UserChildTable="compras" msprop:Generator_ChildPropName="GetcomprasRows" msprop:Generator_UserRelationName="FK_compras_tipofactura" msprop:Generator_ParentPropName="tipofacturaRow" msprop:Generator_RelationVarName="relationFK_compras_tipofactura" msprop:Generator_UserParentTable="tipofactura" />
-      <msdata:Relationship name="FK_dcompras_compras" msdata:parent="compras" msdata:child="dcompras" msdata:parentkey="idCompra" msdata:childkey="idCompra" msprop:Generator_UserChildTable="dcompras" msprop:Generator_ChildPropName="GetdcomprasRows" msprop:Generator_UserRelationName="FK_dcompras_compras" msprop:Generator_RelationVarName="relationFK_dcompras_compras" msprop:Generator_UserParentTable="compras" msprop:Generator_ParentPropName="comprasRow" />
-      <msdata:Relationship name="FK_dcompras_productos" msdata:parent="productos" msdata:child="dcompras" msdata:parentkey="idProducto" msdata:childkey="idProducto" msprop:Generator_UserChildTable="dcompras" msprop:Generator_ChildPropName="GetdcomprasRows" msprop:Generator_UserRelationName="FK_dcompras_productos" msprop:Generator_ParentPropName="productosRow" msprop:Generator_RelationVarName="relationFK_dcompras_productos" msprop:Generator_UserParentTable="productos" />
-      <msdata:Relationship name="FK_faltanteproducto_categoriafaltante" msdata:parent="categoriafaltante" msdata:child="faltanteproducto" msdata:parentkey="idFaltante" msdata:childkey="idFaltante" msprop:Generator_UserChildTable="faltanteproducto" msprop:Generator_ChildPropName="GetfaltanteproductoRows" msprop:Generator_UserRelationName="FK_faltanteproducto_categoriafaltante" msprop:Generator_RelationVarName="relationFK_faltanteproducto_categoriafaltante" msprop:Generator_UserParentTable="categoriafaltante" msprop:Generator_ParentPropName="categoriafaltanteRow" />
-      <msdata:Relationship name="FK_productos_categorias" msdata:parent="categorias" msdata:child="productos" msdata:parentkey="idCategoria" msdata:childkey="idCategoria" msprop:Generator_UserChildTable="productos" msprop:Generator_ChildPropName="GetproductosRows" msprop:Generator_UserRelationName="FK_productos_categorias" msprop:Generator_RelationVarName="relationFK_productos_categorias" msprop:Generator_UserParentTable="categorias" msprop:Generator_ParentPropName="categoriasRow" />
-      <msdata:Relationship name="FK_usuarios_cargos" msdata:parent="cargos" msdata:child="usuarios" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserChildTable="usuarios" msprop:Generator_ChildPropName="GetusuariosRows" msprop:Generator_UserRelationName="FK_usuarios_cargos" msprop:Generator_RelationVarName="relationFK_usuarios_cargos" msprop:Generator_UserParentTable="cargos" msprop:Generator_ParentPropName="cargosRow" />
-      <msdata:Relationship name="FK_dcompras_compras1" msdata:parent="compras" msdata:child="DcomprasProductos" msdata:parentkey="idCompra" msdata:childkey="idCompra" msprop:Generator_UserChildTable="DcomprasProductos" msprop:Generator_ChildPropName="GetDcomprasProductosRows" msprop:Generator_UserRelationName="FK_dcompras_compras1" msprop:Generator_ParentPropName="comprasRow" msprop:Generator_RelationVarName="relationFK_dcompras_compras1" msprop:Generator_UserParentTable="compras" />
-      <msdata:Relationship name="FK_dcompras_productos1" msdata:parent="productos" msdata:child="DcomprasProductos" msdata:parentkey="idProducto" msdata:childkey="idProducto" msprop:Generator_UserChildTable="DcomprasProductos" msprop:Generator_ChildPropName="GetDcomprasProductosRows" msprop:Generator_UserRelationName="FK_dcompras_productos1" msprop:Generator_ParentPropName="productosRow" msprop:Generator_RelationVarName="relationFK_dcompras_productos1" msprop:Generator_UserParentTable="productos" />
-      <msdata:Relationship name="FK_crearprestamo_intereses" msdata:parent="intereses" msdata:child="crearprestamo" msdata:parentkey="idInteres" msdata:childkey="idInteres" msprop:Generator_UserChildTable="crearprestamo" msprop:Generator_ChildPropName="GetcrearprestamoRows" msprop:Generator_UserRelationName="FK_crearprestamo_intereses" msprop:Generator_RelationVarName="relationFK_crearprestamo_intereses" msprop:Generator_UserParentTable="intereses" msprop:Generator_ParentPropName="interesesRow" />
-      <msdata:Relationship name="FK_crearprestamo_ocupacion" msdata:parent="ocupacion" msdata:child="crearprestamo" msdata:parentkey="idOcupacion" msdata:childkey="idOcupacion" msprop:Generator_UserChildTable="crearprestamo" msprop:Generator_ChildPropName="GetcrearprestamoRows" msprop:Generator_UserRelationName="FK_crearprestamo_ocupacion" msprop:Generator_RelationVarName="relationFK_crearprestamo_ocupacion" msprop:Generator_UserParentTable="ocupacion" msprop:Generator_ParentPropName="ocupacionRow" />
-      <msdata:Relationship name="FK_contactos_clientes1" msdata:parent="crearprestamoCliente" msdata:child="contactos" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="contactos" msprop:Generator_ChildPropName="GetcontactosRows" msprop:Generator_UserRelationName="FK_contactos_clientes1" msprop:Generator_RelationVarName="relationFK_contactos_clientes1" msprop:Generator_UserParentTable="crearprestamoCliente" msprop:Generator_ParentPropName="crearprestamoClienteRow" />
-      <msdata:Relationship name="FK_crearprestamo_clientes1" msdata:parent="crearprestamoCliente" msdata:child="crearprestamo" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="crearprestamo" msprop:Generator_ChildPropName="GetcrearprestamoRows" msprop:Generator_UserRelationName="FK_crearprestamo_clientes1" msprop:Generator_RelationVarName="relationFK_crearprestamo_clientes1" msprop:Generator_UserParentTable="crearprestamoCliente" msprop:Generator_ParentPropName="crearprestamoClienteRow" />
-      <msdata:Relationship name="FK_contactos_clientes" msdata:parent="clientes" msdata:child="contactos" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="contactos" msprop:Generator_ChildPropName="GetcontactosRows" msprop:Generator_UserRelationName="FK_contactos_clientes" msprop:Generator_RelationVarName="relationFK_contactos_clientes" msprop:Generator_UserParentTable="clientes" msprop:Generator_ParentPropName="clientesRow" />
-      <msdata:Relationship name="FK_crearprestamo_clientes" msdata:parent="clientes" msdata:child="crearprestamo" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="crearprestamo" msprop:Generator_ChildPropName="GetcrearprestamoRows" msprop:Generator_UserRelationName="FK_crearprestamo_clientes" msprop:Generator_RelationVarName="relationFK_crearprestamo_clientes" msprop:Generator_UserParentTable="clientes" msprop:Generator_ParentPropName="clientesRow" />
-      <msdata:Relationship name="FK_prestamos_empleados" msdata:parent="empleados" msdata:child="prestamos" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserChildTable="prestamos" msprop:Generator_ChildPropName="GetprestamosRows" msprop:Generator_UserRelationName="FK_prestamos_empleados" msprop:Generator_RelationVarName="relationFK_prestamos_empleados" msprop:Generator_UserParentTable="empleados" msprop:Generator_ParentPropName="empleadosRow" />
-      <msdata:Relationship name="FK_deuda_empleados" msdata:parent="empleados" msdata:child="deuda" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserChildTable="deuda" msprop:Generator_ChildPropName="GetdeudaRows" msprop:Generator_UserRelationName="FK_deuda_empleados" msprop:Generator_RelationVarName="relationFK_deuda_empleados" msprop:Generator_UserParentTable="empleados" msprop:Generator_ParentPropName="empleadosRow" />
-      <msdata:Relationship name="FK_deuda_prestamos" msdata:parent="prestamos" msdata:child="deuda" msdata:parentkey="idPrestamo" msdata:childkey="idPrestamo" msprop:Generator_UserChildTable="deuda" msprop:Generator_ChildPropName="GetdeudaRows" msprop:Generator_UserRelationName="FK_deuda_prestamos" msprop:Generator_RelationVarName="relationFK_deuda_prestamos" msprop:Generator_UserParentTable="prestamos" msprop:Generator_ParentPropName="prestamosRow" />
-      <msdata:Relationship name="FK_deuda_empleados1" msdata:parent="empleados" msdata:child="DetallaPrestamo" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserChildTable="DetallaPrestamo" msprop:Generator_ChildPropName="GetDetallaPrestamoRows" msprop:Generator_UserRelationName="FK_deuda_empleados1" msprop:Generator_RelationVarName="relationFK_deuda_empleados1" msprop:Generator_UserParentTable="empleados" msprop:Generator_ParentPropName="empleadosRow" />
-      <msdata:Relationship name="FK_deuda_prestamos1" msdata:parent="prestamos" msdata:child="DetallaPrestamo" msdata:parentkey="idPrestamo" msdata:childkey="idPrestamo" msprop:Generator_UserChildTable="DetallaPrestamo" msprop:Generator_ChildPropName="GetDetallaPrestamoRows" msprop:Generator_UserRelationName="FK_deuda_prestamos1" msprop:Generator_RelationVarName="relationFK_deuda_prestamos1" msprop:Generator_UserParentTable="prestamos" msprop:Generator_ParentPropName="prestamosRow" />
-      <msdata:Relationship name="FK_contactos_clientes2" msdata:parent="ImprimirPrestamo" msdata:child="contactos" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="contactos" msprop:Generator_ChildPropName="GetcontactosRows" msprop:Generator_UserRelationName="FK_contactos_clientes2" msprop:Generator_RelationVarName="relationFK_contactos_clientes2" msprop:Generator_UserParentTable="ImprimirPrestamo" msprop:Generator_ParentPropName="ImprimirPrestamoRow" />
-      <msdata:Relationship name="FK_crearprestamo_clientes2" msdata:parent="ImprimirPrestamo" msdata:child="crearprestamo" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="crearprestamo" msprop:Generator_ChildPropName="GetcrearprestamoRows" msprop:Generator_UserRelationName="FK_crearprestamo_clientes2" msprop:Generator_RelationVarName="relationFK_crearprestamo_clientes2" msprop:Generator_UserParentTable="ImprimirPrestamo" msprop:Generator_ParentPropName="ImprimirPrestamoRow" />
-      <msdata:Relationship name="FK_compras_proveedores1" msdata:parent="ImprimirProveedor" msdata:child="compras" msdata:parentkey="idProveedor" msdata:childkey="idProveedor" msprop:Generator_UserChildTable="compras" msprop:Generator_ChildPropName="GetcomprasRows" msprop:Generator_UserRelationName="FK_compras_proveedores1" msprop:Generator_ParentPropName="ImprimirProveedorRow" msprop:Generator_RelationVarName="relationFK_compras_proveedores1" msprop:Generator_UserParentTable="ImprimirProveedor" />
-      <msdata:Relationship name="FK_usuarios_cargos1" msdata:parent="ImprimirUsuario" msdata:child="usuarios" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserChildTable="usuarios" msprop:Generator_ChildPropName="GetusuariosRows" msprop:Generator_UserRelationName="FK_usuarios_cargos1" msprop:Generator_RelationVarName="relationFK_usuarios_cargos1" msprop:Generator_UserParentTable="ImprimirUsuario" msprop:Generator_ParentPropName="ImprimirUsuarioRow" />
-      <msdata:Relationship name="FK_dcompras_compras2" msdata:parent="ImprimirCompraProducto" msdata:child="dcompras" msdata:parentkey="idCompra" msdata:childkey="idCompra" msprop:Generator_UserChildTable="dcompras" msprop:Generator_ChildPropName="GetdcomprasRows" msprop:Generator_UserRelationName="FK_dcompras_compras2" msprop:Generator_ParentPropName="ImprimirCompraProductoRow" msprop:Generator_RelationVarName="relationFK_dcompras_compras2" msprop:Generator_UserParentTable="ImprimirCompraProducto" />
-      <msdata:Relationship name="FK_compras_proveedores2" msdata:parent="proveedores" msdata:child="ImprimirCompraProducto" msdata:parentkey="idProveedor" msdata:childkey="idProveedor" msprop:Generator_UserChildTable="ImprimirCompraProducto" msprop:Generator_ChildPropName="GetImprimirCompraProductoRows" msprop:Generator_UserRelationName="FK_compras_proveedores2" msprop:Generator_RelationVarName="relationFK_compras_proveedores2" msprop:Generator_UserParentTable="proveedores" msprop:Generator_ParentPropName="proveedoresRow" />
-      <msdata:Relationship name="FK_compras_proveedores3" msdata:parent="ImprimirProveedor" msdata:child="ImprimirCompraProducto" msdata:parentkey="idProveedor" msdata:childkey="idProveedor" msprop:Generator_UserChildTable="ImprimirCompraProducto" msprop:Generator_ChildPropName="GetImprimirCompraProductoRows" msprop:Generator_UserRelationName="FK_compras_proveedores3" msprop:Generator_RelationVarName="relationFK_compras_proveedores3" msprop:Generator_UserParentTable="ImprimirProveedor" msprop:Generator_ParentPropName="ImprimirProveedorRow" />
-      <msdata:Relationship name="FK_productos_categorias1" msdata:parent="ImprimirProductos" msdata:child="productos" msdata:parentkey="idCategoria" msdata:childkey="idCategoria" msprop:Generator_UserChildTable="productos" msprop:Generator_ChildPropName="GetproductosRows" msprop:Generator_UserRelationName="FK_productos_categorias1" msprop:Generator_ParentPropName="ImprimirProductosRow" msprop:Generator_RelationVarName="relationFK_productos_categorias1" msprop:Generator_UserParentTable="ImprimirProductos" />
-      <msdata:Relationship name="FK_faltanteproducto_categoriafaltante1" msdata:parent="ImprimirProductosFaltantes" msdata:child="faltanteproducto" msdata:parentkey="idFaltante" msdata:childkey="idFaltante" msprop:Generator_UserChildTable="faltanteproducto" msprop:Generator_ChildPropName="GetfaltanteproductoRows" msprop:Generator_UserRelationName="FK_faltanteproducto_categoriafaltante1" msprop:Generator_ParentPropName="ImprimirProductosFaltantesRow" msprop:Generator_RelationVarName="relationFK_faltanteproducto_categoriafaltante1" msprop:Generator_UserParentTable="ImprimirProductosFaltantes" />
+      <msdata:Relationship name="FK_compras_pagos" msdata:parent="pagos" msdata:child="compras" msdata:parentkey="idPago" msdata:childkey="idPago" msprop:Generator_UserChildTable="compras" msprop:Generator_ChildPropName="GetcomprasRows" msprop:Generator_UserRelationName="FK_compras_pagos" msprop:Generator_RelationVarName="relationFK_compras_pagos" msprop:Generator_UserParentTable="pagos" msprop:Generator_ParentPropName="pagosRow" />
+      <msdata:Relationship name="FK_compras_proveedores" msdata:parent="proveedores" msdata:child="compras" msdata:parentkey="idProveedor" msdata:childkey="idProveedor" msprop:Generator_UserChildTable="compras" msprop:Generator_ChildPropName="GetcomprasRows" msprop:Generator_UserRelationName="FK_compras_proveedores" msprop:Generator_RelationVarName="relationFK_compras_proveedores" msprop:Generator_UserParentTable="proveedores" msprop:Generator_ParentPropName="proveedoresRow" />
+      <msdata:Relationship name="FK_compras_tipofactura" msdata:parent="tipofactura" msdata:child="compras" msdata:parentkey="idTipofactura" msdata:childkey="idTipofactura" msprop:Generator_UserChildTable="compras" msprop:Generator_ChildPropName="GetcomprasRows" msprop:Generator_UserRelationName="FK_compras_tipofactura" msprop:Generator_RelationVarName="relationFK_compras_tipofactura" msprop:Generator_UserParentTable="tipofactura" msprop:Generator_ParentPropName="tipofacturaRow" />
+      <msdata:Relationship name="FK_dcompras_compras" msdata:parent="compras" msdata:child="dcompras" msdata:parentkey="idCompra" msdata:childkey="idCompra" msprop:Generator_UserChildTable="dcompras" msprop:Generator_ChildPropName="GetdcomprasRows" msprop:Generator_UserRelationName="FK_dcompras_compras" msprop:Generator_ParentPropName="comprasRow" msprop:Generator_RelationVarName="relationFK_dcompras_compras" msprop:Generator_UserParentTable="compras" />
+      <msdata:Relationship name="FK_dcompras_productos" msdata:parent="productos" msdata:child="dcompras" msdata:parentkey="idProducto" msdata:childkey="idProducto" msprop:Generator_UserChildTable="dcompras" msprop:Generator_ChildPropName="GetdcomprasRows" msprop:Generator_UserRelationName="FK_dcompras_productos" msprop:Generator_RelationVarName="relationFK_dcompras_productos" msprop:Generator_UserParentTable="productos" msprop:Generator_ParentPropName="productosRow" />
+      <msdata:Relationship name="FK_faltanteproducto_categoriafaltante" msdata:parent="categoriafaltante" msdata:child="faltanteproducto" msdata:parentkey="idFaltante" msdata:childkey="idFaltante" msprop:Generator_UserChildTable="faltanteproducto" msprop:Generator_ChildPropName="GetfaltanteproductoRows" msprop:Generator_UserRelationName="FK_faltanteproducto_categoriafaltante" msprop:Generator_ParentPropName="categoriafaltanteRow" msprop:Generator_RelationVarName="relationFK_faltanteproducto_categoriafaltante" msprop:Generator_UserParentTable="categoriafaltante" />
+      <msdata:Relationship name="FK_productos_categorias" msdata:parent="categorias" msdata:child="productos" msdata:parentkey="idCategoria" msdata:childkey="idCategoria" msprop:Generator_UserChildTable="productos" msprop:Generator_ChildPropName="GetproductosRows" msprop:Generator_UserRelationName="FK_productos_categorias" msprop:Generator_ParentPropName="categoriasRow" msprop:Generator_RelationVarName="relationFK_productos_categorias" msprop:Generator_UserParentTable="categorias" />
+      <msdata:Relationship name="FK_usuarios_cargos" msdata:parent="cargos" msdata:child="usuarios" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserChildTable="usuarios" msprop:Generator_ChildPropName="GetusuariosRows" msprop:Generator_UserRelationName="FK_usuarios_cargos" msprop:Generator_ParentPropName="cargosRow" msprop:Generator_RelationVarName="relationFK_usuarios_cargos" msprop:Generator_UserParentTable="cargos" />
+      <msdata:Relationship name="FK_dcompras_compras1" msdata:parent="compras" msdata:child="DcomprasProductos" msdata:parentkey="idCompra" msdata:childkey="idCompra" msprop:Generator_UserChildTable="DcomprasProductos" msprop:Generator_ChildPropName="GetDcomprasProductosRows" msprop:Generator_UserRelationName="FK_dcompras_compras1" msprop:Generator_RelationVarName="relationFK_dcompras_compras1" msprop:Generator_UserParentTable="compras" msprop:Generator_ParentPropName="comprasRow" />
+      <msdata:Relationship name="FK_dcompras_productos1" msdata:parent="productos" msdata:child="DcomprasProductos" msdata:parentkey="idProducto" msdata:childkey="idProducto" msprop:Generator_UserChildTable="DcomprasProductos" msprop:Generator_ChildPropName="GetDcomprasProductosRows" msprop:Generator_UserRelationName="FK_dcompras_productos1" msprop:Generator_RelationVarName="relationFK_dcompras_productos1" msprop:Generator_UserParentTable="productos" msprop:Generator_ParentPropName="productosRow" />
+      <msdata:Relationship name="FK_crearprestamo_intereses" msdata:parent="intereses" msdata:child="crearprestamo" msdata:parentkey="idInteres" msdata:childkey="idInteres" msprop:Generator_UserChildTable="crearprestamo" msprop:Generator_ChildPropName="GetcrearprestamoRows" msprop:Generator_UserRelationName="FK_crearprestamo_intereses" msprop:Generator_ParentPropName="interesesRow" msprop:Generator_RelationVarName="relationFK_crearprestamo_intereses" msprop:Generator_UserParentTable="intereses" />
+      <msdata:Relationship name="FK_crearprestamo_ocupacion" msdata:parent="ocupacion" msdata:child="crearprestamo" msdata:parentkey="idOcupacion" msdata:childkey="idOcupacion" msprop:Generator_UserChildTable="crearprestamo" msprop:Generator_ChildPropName="GetcrearprestamoRows" msprop:Generator_UserRelationName="FK_crearprestamo_ocupacion" msprop:Generator_ParentPropName="ocupacionRow" msprop:Generator_RelationVarName="relationFK_crearprestamo_ocupacion" msprop:Generator_UserParentTable="ocupacion" />
+      <msdata:Relationship name="FK_contactos_clientes1" msdata:parent="crearprestamoCliente" msdata:child="contactos" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="contactos" msprop:Generator_ChildPropName="GetcontactosRows" msprop:Generator_UserRelationName="FK_contactos_clientes1" msprop:Generator_ParentPropName="crearprestamoClienteRow" msprop:Generator_RelationVarName="relationFK_contactos_clientes1" msprop:Generator_UserParentTable="crearprestamoCliente" />
+      <msdata:Relationship name="FK_crearprestamo_clientes1" msdata:parent="crearprestamoCliente" msdata:child="crearprestamo" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="crearprestamo" msprop:Generator_ChildPropName="GetcrearprestamoRows" msprop:Generator_UserRelationName="FK_crearprestamo_clientes1" msprop:Generator_ParentPropName="crearprestamoClienteRow" msprop:Generator_RelationVarName="relationFK_crearprestamo_clientes1" msprop:Generator_UserParentTable="crearprestamoCliente" />
+      <msdata:Relationship name="FK_contactos_clientes" msdata:parent="clientes" msdata:child="contactos" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="contactos" msprop:Generator_ChildPropName="GetcontactosRows" msprop:Generator_UserRelationName="FK_contactos_clientes" msprop:Generator_ParentPropName="clientesRow" msprop:Generator_RelationVarName="relationFK_contactos_clientes" msprop:Generator_UserParentTable="clientes" />
+      <msdata:Relationship name="FK_crearprestamo_clientes" msdata:parent="clientes" msdata:child="crearprestamo" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="crearprestamo" msprop:Generator_ChildPropName="GetcrearprestamoRows" msprop:Generator_UserRelationName="FK_crearprestamo_clientes" msprop:Generator_ParentPropName="clientesRow" msprop:Generator_RelationVarName="relationFK_crearprestamo_clientes" msprop:Generator_UserParentTable="clientes" />
+      <msdata:Relationship name="FK_prestamos_empleados" msdata:parent="empleados" msdata:child="prestamos" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserChildTable="prestamos" msprop:Generator_ChildPropName="GetprestamosRows" msprop:Generator_UserRelationName="FK_prestamos_empleados" msprop:Generator_ParentPropName="empleadosRow" msprop:Generator_RelationVarName="relationFK_prestamos_empleados" msprop:Generator_UserParentTable="empleados" />
+      <msdata:Relationship name="FK_deuda_empleados" msdata:parent="empleados" msdata:child="deuda" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserChildTable="deuda" msprop:Generator_ChildPropName="GetdeudaRows" msprop:Generator_UserRelationName="FK_deuda_empleados" msprop:Generator_ParentPropName="empleadosRow" msprop:Generator_RelationVarName="relationFK_deuda_empleados" msprop:Generator_UserParentTable="empleados" />
+      <msdata:Relationship name="FK_deuda_prestamos" msdata:parent="prestamos" msdata:child="deuda" msdata:parentkey="idPrestamo" msdata:childkey="idPrestamo" msprop:Generator_UserChildTable="deuda" msprop:Generator_ChildPropName="GetdeudaRows" msprop:Generator_UserRelationName="FK_deuda_prestamos" msprop:Generator_ParentPropName="prestamosRow" msprop:Generator_RelationVarName="relationFK_deuda_prestamos" msprop:Generator_UserParentTable="prestamos" />
+      <msdata:Relationship name="FK_deuda_empleados1" msdata:parent="empleados" msdata:child="DetallaPrestamo" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserChildTable="DetallaPrestamo" msprop:Generator_ChildPropName="GetDetallaPrestamoRows" msprop:Generator_UserRelationName="FK_deuda_empleados1" msprop:Generator_ParentPropName="empleadosRow" msprop:Generator_RelationVarName="relationFK_deuda_empleados1" msprop:Generator_UserParentTable="empleados" />
+      <msdata:Relationship name="FK_deuda_prestamos1" msdata:parent="prestamos" msdata:child="DetallaPrestamo" msdata:parentkey="idPrestamo" msdata:childkey="idPrestamo" msprop:Generator_UserChildTable="DetallaPrestamo" msprop:Generator_ChildPropName="GetDetallaPrestamoRows" msprop:Generator_UserRelationName="FK_deuda_prestamos1" msprop:Generator_ParentPropName="prestamosRow" msprop:Generator_RelationVarName="relationFK_deuda_prestamos1" msprop:Generator_UserParentTable="prestamos" />
+      <msdata:Relationship name="FK_contactos_clientes2" msdata:parent="ImprimirPrestamo" msdata:child="contactos" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="contactos" msprop:Generator_ChildPropName="GetcontactosRows" msprop:Generator_UserRelationName="FK_contactos_clientes2" msprop:Generator_ParentPropName="ImprimirPrestamoRow" msprop:Generator_RelationVarName="relationFK_contactos_clientes2" msprop:Generator_UserParentTable="ImprimirPrestamo" />
+      <msdata:Relationship name="FK_crearprestamo_clientes2" msdata:parent="ImprimirPrestamo" msdata:child="crearprestamo" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="crearprestamo" msprop:Generator_ChildPropName="GetcrearprestamoRows" msprop:Generator_UserRelationName="FK_crearprestamo_clientes2" msprop:Generator_ParentPropName="ImprimirPrestamoRow" msprop:Generator_RelationVarName="relationFK_crearprestamo_clientes2" msprop:Generator_UserParentTable="ImprimirPrestamo" />
+      <msdata:Relationship name="FK_compras_proveedores1" msdata:parent="ImprimirProveedor" msdata:child="compras" msdata:parentkey="idProveedor" msdata:childkey="idProveedor" msprop:Generator_UserChildTable="compras" msprop:Generator_ChildPropName="GetcomprasRows" msprop:Generator_UserRelationName="FK_compras_proveedores1" msprop:Generator_RelationVarName="relationFK_compras_proveedores1" msprop:Generator_UserParentTable="ImprimirProveedor" msprop:Generator_ParentPropName="ImprimirProveedorRow" />
+      <msdata:Relationship name="FK_usuarios_cargos1" msdata:parent="ImprimirUsuario" msdata:child="usuarios" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserChildTable="usuarios" msprop:Generator_ChildPropName="GetusuariosRows" msprop:Generator_UserRelationName="FK_usuarios_cargos1" msprop:Generator_ParentPropName="ImprimirUsuarioRow" msprop:Generator_RelationVarName="relationFK_usuarios_cargos1" msprop:Generator_UserParentTable="ImprimirUsuario" />
+      <msdata:Relationship name="FK_dcompras_compras2" msdata:parent="ImprimirCompraProducto" msdata:child="dcompras" msdata:parentkey="idCompra" msdata:childkey="idCompra" msprop:Generator_UserChildTable="dcompras" msprop:Generator_ChildPropName="GetdcomprasRows" msprop:Generator_UserRelationName="FK_dcompras_compras2" msprop:Generator_RelationVarName="relationFK_dcompras_compras2" msprop:Generator_UserParentTable="ImprimirCompraProducto" msprop:Generator_ParentPropName="ImprimirCompraProductoRow" />
+      <msdata:Relationship name="FK_compras_proveedores2" msdata:parent="proveedores" msdata:child="ImprimirCompraProducto" msdata:parentkey="idProveedor" msdata:childkey="idProveedor" msprop:Generator_UserChildTable="ImprimirCompraProducto" msprop:Generator_ChildPropName="GetImprimirCompraProductoRows" msprop:Generator_UserRelationName="FK_compras_proveedores2" msprop:Generator_ParentPropName="proveedoresRow" msprop:Generator_RelationVarName="relationFK_compras_proveedores2" msprop:Generator_UserParentTable="proveedores" />
+      <msdata:Relationship name="FK_compras_proveedores3" msdata:parent="ImprimirProveedor" msdata:child="ImprimirCompraProducto" msdata:parentkey="idProveedor" msdata:childkey="idProveedor" msprop:Generator_UserChildTable="ImprimirCompraProducto" msprop:Generator_ChildPropName="GetImprimirCompraProductoRows" msprop:Generator_UserRelationName="FK_compras_proveedores3" msprop:Generator_ParentPropName="ImprimirProveedorRow" msprop:Generator_RelationVarName="relationFK_compras_proveedores3" msprop:Generator_UserParentTable="ImprimirProveedor" />
+      <msdata:Relationship name="FK_productos_categorias1" msdata:parent="ImprimirProductos" msdata:child="productos" msdata:parentkey="idCategoria" msdata:childkey="idCategoria" msprop:Generator_UserChildTable="productos" msprop:Generator_ChildPropName="GetproductosRows" msprop:Generator_UserRelationName="FK_productos_categorias1" msprop:Generator_RelationVarName="relationFK_productos_categorias1" msprop:Generator_UserParentTable="ImprimirProductos" msprop:Generator_ParentPropName="ImprimirProductosRow" />
+      <msdata:Relationship name="FK_faltanteproducto_categoriafaltante1" msdata:parent="ImprimirProductosFaltantes" msdata:child="faltanteproducto" msdata:parentkey="idFaltante" msdata:childkey="idFaltante" msprop:Generator_UserChildTable="faltanteproducto" msprop:Generator_ChildPropName="GetfaltanteproductoRows" msprop:Generator_UserRelationName="FK_faltanteproducto_categoriafaltante1" msprop:Generator_RelationVarName="relationFK_faltanteproducto_categoriafaltante1" msprop:Generator_UserParentTable="ImprimirProductosFaltantes" msprop:Generator_ParentPropName="ImprimirProductosFaltantesRow" />
+      <msdata:Relationship name="FK_prestamos_empleados1" msdata:parent="ImprimirSalarios" msdata:child="prestamos" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserChildTable="prestamos" msprop:Generator_ChildPropName="GetprestamosRows" msprop:Generator_UserRelationName="FK_prestamos_empleados1" msprop:Generator_RelationVarName="relationFK_prestamos_empleados1" msprop:Generator_UserParentTable="ImprimirSalarios" msprop:Generator_ParentPropName="ImprimirSalariosRow" />
+      <msdata:Relationship name="FK_deuda_empleados2" msdata:parent="ImprimirSalarios" msdata:child="deuda" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserChildTable="deuda" msprop:Generator_ChildPropName="GetdeudaRows" msprop:Generator_UserRelationName="FK_deuda_empleados2" msprop:Generator_RelationVarName="relationFK_deuda_empleados2" msprop:Generator_UserParentTable="ImprimirSalarios" msprop:Generator_ParentPropName="ImprimirSalariosRow" />
+      <msdata:Relationship name="FK_deuda_prestamos2" msdata:parent="prestamos" msdata:child="ImprimirDeudas" msdata:parentkey="idPrestamo" msdata:childkey="idPrestamo" msprop:Generator_UserChildTable="ImprimirDeudas" msprop:Generator_ChildPropName="GetImprimirDeudasRows" msprop:Generator_UserRelationName="FK_deuda_prestamos2" msprop:Generator_ParentPropName="prestamosRow" msprop:Generator_RelationVarName="relationFK_deuda_prestamos2" msprop:Generator_UserParentTable="prestamos" />
+      <msdata:Relationship name="FK_prestamos_empleados2" msdata:parent="ImprimirEmpleados" msdata:child="prestamos" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserChildTable="prestamos" msprop:Generator_ChildPropName="GetprestamosRows" msprop:Generator_UserRelationName="FK_prestamos_empleados2" msprop:Generator_RelationVarName="relationFK_prestamos_empleados2" msprop:Generator_UserParentTable="ImprimirEmpleados" msprop:Generator_ParentPropName="ImprimirEmpleadosRow" />
+      <msdata:Relationship name="FK_deuda_empleados3" msdata:parent="ImprimirEmpleados" msdata:child="deuda" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserChildTable="deuda" msprop:Generator_ChildPropName="GetdeudaRows" msprop:Generator_UserRelationName="FK_deuda_empleados3" msprop:Generator_RelationVarName="relationFK_deuda_empleados3" msprop:Generator_UserParentTable="ImprimirEmpleados" msprop:Generator_ParentPropName="ImprimirEmpleadosRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
