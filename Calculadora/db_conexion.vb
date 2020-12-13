@@ -213,10 +213,10 @@ Public Class db_conexion
             miCommand.Parameters("@tell").Value = datos(5)
 
         End If
-        If executeSql(sql) > 0 Then
-            msg = "exito"
-        Else
+        If executeSql(sql) <= 0 Then
             msg = "error"
+        Else
+            msg = "exito"
         End If
         Return msg
     End Function
