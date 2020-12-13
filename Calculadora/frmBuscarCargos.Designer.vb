@@ -130,6 +130,7 @@ Partial Class frmBuscarCargos
         Me.Controls.Add(Me.grdBuscarCargo)
         Me.Controls.Add(Me.lblBuscarCargo)
         Me.Controls.Add(Me.txtBuscarCargo)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBuscarCargos"
         Me.Text = "Busqueda de Cargos"
         CType(Me.grdBuscarCargo, System.ComponentModel.ISupportInitialize).EndInit()

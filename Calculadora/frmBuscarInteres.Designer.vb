@@ -129,6 +129,7 @@ Partial Class frmBuscarInteres
         Me.Controls.Add(Me.grdBuscarInteres)
         Me.Controls.Add(Me.lblBuscarInteres)
         Me.Controls.Add(Me.txtBuscarInteres)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBuscarInteres"
         Me.Text = "Busqueda de Interes"
         CType(Me.grdBuscarInteres, System.ComponentModel.ISupportInitialize).EndInit()

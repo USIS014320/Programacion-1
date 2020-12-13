@@ -190,6 +190,7 @@ Partial Class frmBuscarProductofaltante
         Me.Controls.Add(Me.grdBuscarfaltante)
         Me.Controls.Add(Me.lblBuscarfaltante)
         Me.Controls.Add(Me.txtBuscarfaltante)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmBuscarProductofaltante"
         Me.Text = "Producto Faltante"

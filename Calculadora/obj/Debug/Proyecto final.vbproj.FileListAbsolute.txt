@@ -737,3 +737,4 @@ C:\Users\brand\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frm
 C:\Users\brand\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmImprimirProductos.resources
 C:\Users\brand\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmImprimirProductosFaltantes.resources
 C:\Users\brand\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmImprimirPagosVarios.resources
+C:\Users\brand\Source\Repos\Programacion-1\Calculadora\obj\Debug\Calculadora.frmBuscarRegistroPrestamos.resources

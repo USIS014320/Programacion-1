@@ -79,7 +79,7 @@ Public Class frmCrearprestamo
             CrearprestamoBindingSource.AddNew()
 
             IdClienteComboBox.SelectedValue = 1 'Cliente por default Prestamos a Publico
-            IdOcupacionComboBox.SelectedValue = 3 'Tipo de ocupacion por default cliente
+            IdOcupacionComboBox.SelectedValue = 3 'Tipo de ocupacion por default Cliente
             IdInteresComboBox.SelectedValue = 1 'Tarifa de interes por default prestamor final 
             FechaprestamoDateTimePicker.Value = Date.Now
         Else 'Guardar
@@ -196,6 +196,11 @@ Public Class frmCrearprestamo
     Private Sub bonImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
         Dim objClientes As New frmImprimirPrestamo
         objClientes.Show()
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Dim objPrest As New frmBuscarRegistroPrestamos
+        objPrest.Show()
     End Sub
 End Class
 

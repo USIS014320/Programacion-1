@@ -181,6 +181,12 @@
     <Compile Include="frmBuscarProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBuscarRegistroPrestamos.Designer.vb">
+      <DependentUpon>frmBuscarRegistroPrestamos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarRegistroPrestamos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBuscarUsuario.Designer.vb">
       <DependentUpon>frmBuscarUsuario.vb</DependentUpon>
     </Compile>
@@ -372,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarProveedores.resx">
       <DependentUpon>frmBuscarProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarRegistroPrestamos.resx">
+      <DependentUpon>frmBuscarRegistroPrestamos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarUsuario.resx">
       <DependentUpon>frmBuscarUsuario.vb</DependentUpon>

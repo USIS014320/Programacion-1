@@ -169,6 +169,7 @@ Partial Class frmBuscarvarios
         Me.Controls.Add(Me.grdBuscarvarios)
         Me.Controls.Add(Me.lblBuscarvarios)
         Me.Controls.Add(Me.txtBuscarvarios)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmBuscarvarios"
         Me.Text = "Buscar pagos varios"

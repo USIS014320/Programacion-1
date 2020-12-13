@@ -37,6 +37,7 @@ Partial Class frmProductosfaltantes
         Me.txtCodigofaltante = New System.Windows.Forms.TextBox()
         Me.lblCodigofaltante = New System.Windows.Forms.Label()
         Me.grbEdicion = New System.Windows.Forms.GroupBox()
+        Me.btnImprimir = New System.Windows.Forms.Button()
         Me.btnBuscarfaltante = New System.Windows.Forms.Button()
         Me.btnEliminarfaltante = New System.Windows.Forms.Button()
         Me.btnModificarfaltante = New System.Windows.Forms.Button()
@@ -47,7 +48,6 @@ Partial Class frmProductosfaltantes
         Me.btnSiguientefaltante = New System.Windows.Forms.Button()
         Me.btnAnteriorfaltante = New System.Windows.Forms.Button()
         Me.btnPrimerofaltante = New System.Windows.Forms.Button()
-        Me.btnImprimir = New System.Windows.Forms.Button()
         Me.grbfaltantes.SuspendLayout()
         Me.grbEdicion.SuspendLayout()
         Me.grbNavegacion.SuspendLayout()
@@ -208,6 +208,19 @@ Partial Class frmProductosfaltantes
         Me.grbEdicion.TabStop = False
         Me.grbEdicion.Text = "Edicion"
         '
+        'btnImprimir
+        '
+        Me.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImprimir.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnImprimir.Image = CType(resources.GetObject("btnImprimir.Image"), System.Drawing.Image)
+        Me.btnImprimir.Location = New System.Drawing.Point(301, 23)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(58, 48)
+        Me.btnImprimir.TabIndex = 13
+        Me.btnImprimir.UseVisualStyleBackColor = True
+        '
         'btnBuscarfaltante
         '
         Me.btnBuscarfaltante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -334,19 +347,6 @@ Partial Class frmProductosfaltantes
         Me.btnPrimerofaltante.TabIndex = 0
         Me.btnPrimerofaltante.UseVisualStyleBackColor = True
         '
-        'btnImprimir
-        '
-        Me.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnImprimir.ForeColor = System.Drawing.Color.OrangeRed
-        Me.btnImprimir.Image = CType(resources.GetObject("btnImprimir.Image"), System.Drawing.Image)
-        Me.btnImprimir.Location = New System.Drawing.Point(301, 23)
-        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnImprimir.Name = "btnImprimir"
-        Me.btnImprimir.Size = New System.Drawing.Size(58, 48)
-        Me.btnImprimir.TabIndex = 13
-        Me.btnImprimir.UseVisualStyleBackColor = True
-        '
         'frmProductosfaltantes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -356,6 +356,7 @@ Partial Class frmProductosfaltantes
         Me.Controls.Add(Me.grbEdicion)
         Me.Controls.Add(Me.grbNavegacion)
         Me.Controls.Add(Me.grbfaltantes)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmProductosfaltantes"
         Me.Text = "Productos Faltantes"

@@ -180,6 +180,7 @@ Partial Class frmBuscarPrestamo
         Me.Controls.Add(Me.grdBuscarPrestamo)
         Me.Controls.Add(Me.lblBuscarEmpleadoPrestamo)
         Me.Controls.Add(Me.txtBuscarEmpleadoPrestamo)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frmBuscarPrestamo"
         Me.Text = "Busqueda de Cuotas de Prestamo"

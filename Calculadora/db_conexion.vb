@@ -57,11 +57,12 @@ Public Class db_conexion
         miCommand.Parameters.Add("@dc", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@cap", SqlDbType.Char).Value = ""
 
+        miCommand.Parameters.Add("@codgo", SqlDbType.Char).Value = ""
+        miCommand.Parameters.Add("@name", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@dir", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@tel", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@ema", SqlDbType.Char).Value = ""
-        'miCommand.Parameters.Add("@telfn", SqlDbType.Char).Value = ""
-        'miCommand.Parameters.Add("@mail", SqlDbType.Char).Value = ""
+
 
     End Sub
 
@@ -424,16 +425,16 @@ Public Class db_conexion
         Dim sql, msg As String
         Select Case accion
             Case "nuevo"
-                sql = "INSERT INTO clientes (codigo,nombre,direccion) VALUES(@cod,@nom,@dir)"
+                sql = "INSERT INTO clientes (codigo,nombre,direccion) VALUES(@codgo,@name,@dir)"
             Case "modificar"
-                sql = "UPDATE clientes SET codigo=@cod,nombre=@nom,direccion=@dir WHERE idCliente=@id"
+                sql = "UPDATE clientes SET codigo=@codgo,nombre=@name,direccion=@dir WHERE idCliente=@id"
             Case "eliminar"
                 sql = "DELETE FROM clientes WHERE idCliente=@id"
         End Select
         miCommand.Parameters("@id").Value = datos(0)
         If accion IsNot "eliminar" Then
-            miCommand.Parameters("@cod").Value = datos(1)
-            miCommand.Parameters("@nom").Value = datos(2)
+            miCommand.Parameters("@codgo").Value = datos(1)
+            miCommand.Parameters("@name").Value = datos(2)
             miCommand.Parameters("@dir").Value = datos(3)
             miCommand.Parameters("@tel").Value = datos(4)
             miCommand.Parameters("@ema").Value = datos(5)

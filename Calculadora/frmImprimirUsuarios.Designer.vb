@@ -29,8 +29,11 @@ Partial Class frmImprimirUsuarios
         Me.bd_sigacDataSet = New Calculadora.bd_sigacDataSet()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ImprimirUsuarioTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.ImprimirUsuarioTableAdapter()
+        Me.ImprimirProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ImprimirProveedorTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.ImprimirProveedorTableAdapter()
         CType(Me.ImprimirUsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ImprimirProveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ImprimirUsuarioBindingSource
@@ -59,6 +62,15 @@ Partial Class frmImprimirUsuarios
         '
         Me.ImprimirUsuarioTableAdapter.ClearBeforeFill = True
         '
+        'ImprimirProveedorBindingSource
+        '
+        Me.ImprimirProveedorBindingSource.DataMember = "ImprimirProveedor"
+        Me.ImprimirProveedorBindingSource.DataSource = Me.bd_sigacDataSet
+        '
+        'ImprimirProveedorTableAdapter
+        '
+        Me.ImprimirProveedorTableAdapter.ClearBeforeFill = True
+        '
         'frmImprimirUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -70,6 +82,7 @@ Partial Class frmImprimirUsuarios
         Me.Text = " Reporte de Usuarios"
         CType(Me.ImprimirUsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ImprimirProveedorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -78,4 +91,6 @@ Partial Class frmImprimirUsuarios
     Friend WithEvents ImprimirUsuarioBindingSource As BindingSource
     Friend WithEvents bd_sigacDataSet As bd_sigacDataSet
     Friend WithEvents ImprimirUsuarioTableAdapter As bd_sigacDataSetTableAdapters.ImprimirUsuarioTableAdapter
+    Friend WithEvents ImprimirProveedorBindingSource As BindingSource
+    Friend WithEvents ImprimirProveedorTableAdapter As bd_sigacDataSetTableAdapters.ImprimirProveedorTableAdapter
 End Class

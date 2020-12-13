@@ -189,6 +189,7 @@ Partial Class frmBuscarProveedores
         Me.Controls.Add(Me.grdBuscarProveedor)
         Me.Controls.Add(Me.lblBuscarProveedor)
         Me.Controls.Add(Me.txtBuscarProveedor)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBuscarProveedores"
         Me.Text = "Busqueda de Proveedores"
         CType(Me.grdBuscarProveedor, System.ComponentModel.ISupportInitialize).EndInit()

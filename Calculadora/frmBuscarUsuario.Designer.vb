@@ -179,6 +179,7 @@ Partial Class frmBuscarUsuario
         Me.Controls.Add(Me.grdBuscarUsuario)
         Me.Controls.Add(Me.lblBuscarUsuario)
         Me.Controls.Add(Me.txtBuscarUsuario)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBuscarUsuario"
         Me.Text = "Busqueda de Usuario"
         CType(Me.grdBuscarUsuario, System.ComponentModel.ISupportInitialize).EndInit()

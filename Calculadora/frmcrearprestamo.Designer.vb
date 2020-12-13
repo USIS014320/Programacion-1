@@ -76,6 +76,7 @@ Partial Class frmCrearprestamo
         Me.lbltotal = New System.Windows.Forms.Label()
         Me.lblinteresCompuesto = New System.Windows.Forms.Label()
         Me.grbEdicion = New System.Windows.Forms.GroupBox()
+        Me.btnImprimir = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
@@ -86,7 +87,6 @@ Partial Class frmCrearprestamo
         Me.btnSiguiente = New System.Windows.Forms.Button()
         Me.btnAnterior = New System.Windows.Forms.Button()
         Me.btnPrimero = New System.Windows.Forms.Button()
-        Me.btnImprimir = New System.Windows.Forms.Button()
         Label1 = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
@@ -212,6 +212,8 @@ Partial Class frmCrearprestamo
         Me.TableAdapterManager.deudaTableAdapter = Nothing
         Me.TableAdapterManager.empleadosTableAdapter = Nothing
         Me.TableAdapterManager.faltanteproductoTableAdapter = Nothing
+        Me.TableAdapterManager.ImprimirPagosVariosTableAdapter = Nothing
+        Me.TableAdapterManager.ImprimirProveedorTableAdapter = Nothing
         Me.TableAdapterManager.interesesTableAdapter = Me.InteresesTableAdapter
         Me.TableAdapterManager.ocupacionTableAdapter = Me.OcupacionTableAdapter
         Me.TableAdapterManager.pagosTableAdapter = Nothing
@@ -566,6 +568,19 @@ Partial Class frmCrearprestamo
         Me.grbEdicion.TabStop = False
         Me.grbEdicion.Text = "Edicion"
         '
+        'btnImprimir
+        '
+        Me.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImprimir.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnImprimir.Image = CType(resources.GetObject("btnImprimir.Image"), System.Drawing.Image)
+        Me.btnImprimir.Location = New System.Drawing.Point(337, 23)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(58, 48)
+        Me.btnImprimir.TabIndex = 11
+        Me.btnImprimir.UseVisualStyleBackColor = True
+        '
         'btnModificar
         '
         Me.btnModificar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -694,19 +709,6 @@ Partial Class frmCrearprestamo
         Me.btnPrimero.Size = New System.Drawing.Size(55, 48)
         Me.btnPrimero.TabIndex = 0
         Me.btnPrimero.UseVisualStyleBackColor = True
-        '
-        'btnImprimir
-        '
-        Me.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnImprimir.ForeColor = System.Drawing.Color.OrangeRed
-        Me.btnImprimir.Image = CType(resources.GetObject("btnImprimir.Image"), System.Drawing.Image)
-        Me.btnImprimir.Location = New System.Drawing.Point(337, 23)
-        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnImprimir.Name = "btnImprimir"
-        Me.btnImprimir.Size = New System.Drawing.Size(58, 48)
-        Me.btnImprimir.TabIndex = 11
-        Me.btnImprimir.UseVisualStyleBackColor = True
         '
         'frmCrearprestamo
         '

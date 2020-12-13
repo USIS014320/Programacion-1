@@ -179,6 +179,7 @@ Partial Class frmBuscarProductosDeuda
         Me.Controls.Add(Me.grdBuscarProductoDeuda)
         Me.Controls.Add(Me.txtBuscarProuctos)
         Me.Controls.Add(Me.lblBuscarCliente)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmBuscarProductosDeuda"
         Me.Text = "Buscar Productos Deuda"

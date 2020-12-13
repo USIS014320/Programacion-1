@@ -169,6 +169,7 @@ Partial Class frmBuscarClientes
         Me.Controls.Add(Me.txtBuscarCliente)
         Me.Controls.Add(Me.btnCancelarCliente)
         Me.Controls.Add(Me.btnSeleccionarCliente)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBuscarClientes"
         Me.Text = "Busqueda de registros de clientes"
         CType(Me.grdBuscarCliente, System.ComponentModel.ISupportInitialize).EndInit()
