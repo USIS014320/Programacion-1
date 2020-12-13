@@ -133,4 +133,22 @@
         objImprimirPagosVarios.MdiParent = Me
         objImprimirPagosVarios.Show()
     End Sub
+
+    Private Sub ReporteDeDeudasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeDeudasToolStripMenuItem.Click
+        Dim objImprimirDeudas As New frmImprimirDeudas
+        objImprimirDeudas.MdiParent = Me
+        objImprimirDeudas.Show()
+    End Sub
+
+    Private Sub ReporteDeEmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeEmpleadosToolStripMenuItem.Click
+        Dim objImprimirEmpleados As New frmImprimirEmpleados
+        objImprimirEmpleados.MdiParent = Me
+        objImprimirEmpleados.Show()
+    End Sub
+
+    Private Sub ReporteDeSalariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeSalariosToolStripMenuItem.Click
+        Dim objImprimirSalarios As New frmImprimirSalarios
+        objImprimirSalarios.MdiParent = Me
+        objImprimirSalarios.Show()
+    End Sub
 End Class

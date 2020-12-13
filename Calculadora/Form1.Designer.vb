@@ -50,8 +50,11 @@ Partial Class Form1
         Me.ReporteDeCompraDeProdcutosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeudasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDePagosVariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeudasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDeDeudasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDeEmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDeSalariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -96,6 +99,7 @@ Partial Class Form1
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.EmpleadosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeEmpleadosToolStripMenuItem})
         Me.EmpleadosToolStripMenuItem.Image = CType(resources.GetObject("EmpleadosToolStripMenuItem.Image"), System.Drawing.Image)
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
         Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
@@ -146,6 +150,7 @@ Partial Class Form1
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeSalariosToolStripMenuItem})
         Me.ToolStripMenuItem3.Image = CType(resources.GetObject("ToolStripMenuItem3.Image"), System.Drawing.Image)
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
         Me.ToolStripMenuItem3.Size = New System.Drawing.Size(252, 26)
@@ -287,14 +292,6 @@ Partial Class Form1
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(224, 26)
         Me.ToolStripMenuItem2.Text = "Pagos varios"
         '
-        'DeudasToolStripMenuItem
-        '
-        Me.DeudasToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.DeudasToolStripMenuItem.Image = CType(resources.GetObject("DeudasToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.DeudasToolStripMenuItem.Name = "DeudasToolStripMenuItem"
-        Me.DeudasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.DeudasToolStripMenuItem.Text = "Deudas"
-        '
         'ReporteDePagosVariosToolStripMenuItem
         '
         Me.ReporteDePagosVariosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
@@ -302,6 +299,39 @@ Partial Class Form1
         Me.ReporteDePagosVariosToolStripMenuItem.Name = "ReporteDePagosVariosToolStripMenuItem"
         Me.ReporteDePagosVariosToolStripMenuItem.Size = New System.Drawing.Size(253, 26)
         Me.ReporteDePagosVariosToolStripMenuItem.Text = "Reporte de Pagos Varios"
+        '
+        'DeudasToolStripMenuItem
+        '
+        Me.DeudasToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.DeudasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeDeudasToolStripMenuItem})
+        Me.DeudasToolStripMenuItem.Image = CType(resources.GetObject("DeudasToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.DeudasToolStripMenuItem.Name = "DeudasToolStripMenuItem"
+        Me.DeudasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.DeudasToolStripMenuItem.Text = "Deudas"
+        '
+        'ReporteDeDeudasToolStripMenuItem
+        '
+        Me.ReporteDeDeudasToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ReporteDeDeudasToolStripMenuItem.Image = CType(resources.GetObject("ReporteDeDeudasToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ReporteDeDeudasToolStripMenuItem.Name = "ReporteDeDeudasToolStripMenuItem"
+        Me.ReporteDeDeudasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ReporteDeDeudasToolStripMenuItem.Text = "Reporte de Deudas"
+        '
+        'ReporteDeEmpleadosToolStripMenuItem
+        '
+        Me.ReporteDeEmpleadosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ReporteDeEmpleadosToolStripMenuItem.Image = CType(resources.GetObject("ReporteDeEmpleadosToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ReporteDeEmpleadosToolStripMenuItem.Name = "ReporteDeEmpleadosToolStripMenuItem"
+        Me.ReporteDeEmpleadosToolStripMenuItem.Size = New System.Drawing.Size(244, 26)
+        Me.ReporteDeEmpleadosToolStripMenuItem.Text = "Reporte de Empleados"
+        '
+        'ReporteDeSalariosToolStripMenuItem
+        '
+        Me.ReporteDeSalariosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ReporteDeSalariosToolStripMenuItem.Image = CType(resources.GetObject("ReporteDeSalariosToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ReporteDeSalariosToolStripMenuItem.Name = "ReporteDeSalariosToolStripMenuItem"
+        Me.ReporteDeSalariosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ReporteDeSalariosToolStripMenuItem.Text = "Reporte de Salarios"
         '
         'Form1
         '
@@ -355,4 +385,7 @@ Partial Class Form1
     Friend WithEvents ReporteDeProductosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteDeProductosFaltantesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteDePagosVariosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteDeDeudasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteDeEmpleadosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteDeSalariosToolStripMenuItem As ToolStripMenuItem
 End Class

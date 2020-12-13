@@ -24,13 +24,24 @@ Partial Class frmImprimirDeudas
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.bd_sigacDataSet = New Calculadora.bd_sigacDataSet()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmImprimirDeudas))
         Me.ImprimirDeudasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.bd_sigacDataSet = New Calculadora.bd_sigacDataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ImprimirDeudasTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.ImprimirDeudasTableAdapter()
-        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ImprimirDeudasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ImprimirDeudasBindingSource
+        '
+        Me.ImprimirDeudasBindingSource.DataMember = "ImprimirDeudas"
+        Me.ImprimirDeudasBindingSource.DataSource = Me.bd_sigacDataSet
+        '
+        'bd_sigacDataSet
+        '
+        Me.bd_sigacDataSet.DataSetName = "bd_sigacDataSet"
+        Me.bd_sigacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -38,21 +49,12 @@ Partial Class frmImprimirDeudas
         ReportDataSource1.Value = Me.ImprimirDeudasBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Calculadora.ImprimirDeudas.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(1, 3)
+        Me.ReportViewer1.Location = New System.Drawing.Point(1, 4)
+        Me.ReportViewer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(798, 435)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1063, 535)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'bd_sigacDataSet
-        '
-        Me.bd_sigacDataSet.DataSetName = "bd_sigacDataSet"
-        Me.bd_sigacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ImprimirDeudasBindingSource
-        '
-        Me.ImprimirDeudasBindingSource.DataMember = "ImprimirDeudas"
-        Me.ImprimirDeudasBindingSource.DataSource = Me.bd_sigacDataSet
         '
         'ImprimirDeudasTableAdapter
         '
@@ -60,14 +62,16 @@ Partial Class frmImprimirDeudas
         '
         'frmImprimirDeudas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmImprimirDeudas"
-        Me.Text = "frmImprimirDeudas"
-        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = " Reporte de Deudas"
         CType(Me.ImprimirDeudasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

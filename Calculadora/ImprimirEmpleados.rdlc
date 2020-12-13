@@ -11,10 +11,9 @@
               <TextRun>
                 <Value>REPORTE DE EMPLEADOS</Value>
                 <Style>
-                  <FontFamily>Arial Narrow</FontFamily>
-                  <FontSize>22pt</FontSize>
+                  <FontSize>30pt</FontSize>
                   <FontWeight>Bold</FontWeight>
-                  <Color>MidnightBlue</Color>
+                  <Color>Red</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -24,10 +23,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>2.00766cm</Top>
-        <Left>7.40516cm</Left>
+        <Top>1.35149cm</Top>
+        <Left>2.70383cm</Left>
         <Height>1.60542cm</Height>
-        <Width>10.06708cm</Width>
+        <Width>15cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -455,8 +454,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>ImprimirEmpleados</DataSetName>
-        <Top>5.28849cm</Top>
-        <Left>4.90516cm</Left>
+        <Top>4.63232cm</Top>
+        <Left>2.70383cm</Left>
         <Height>1.2cm</Height>
         <Width>15cm</Width>
         <ZIndex>1</ZIndex>
@@ -467,10 +466,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>3.90625in</Height>
+    <Height>3.24792in</Height>
     <Style />
   </Body>
-  <Width>9.71192in</Width>
+  <Width>8.22025in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

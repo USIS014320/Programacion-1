@@ -24,50 +24,67 @@ Partial Class frmImprimirEmpleados
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.bd_sigacDataSet = New Calculadora.bd_sigacDataSet()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmImprimirEmpleados))
         Me.ImprimirEmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.bd_sigacDataSet = New Calculadora.bd_sigacDataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ImprimirEmpleadosTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.ImprimirEmpleadosTableAdapter()
-        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ImprimirProductosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ImprimirProductosTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.ImprimirProductosTableAdapter()
         CType(Me.ImprimirEmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ImprimirProductosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ReportViewer1
-        '
-        ReportDataSource1.Name = "ImprimirEmpleados"
-        ReportDataSource1.Value = Me.ImprimirEmpleadosBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Calculadora.ImprimirEmpleadosrdlc.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(2, 1)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(795, 445)
-        Me.ReportViewer1.TabIndex = 0
-        '
-        'bd_sigacDataSet
-        '
-        Me.bd_sigacDataSet.DataSetName = "bd_sigacDataSet"
-        Me.bd_sigacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ImprimirEmpleadosBindingSource
         '
         Me.ImprimirEmpleadosBindingSource.DataMember = "ImprimirEmpleados"
         Me.ImprimirEmpleadosBindingSource.DataSource = Me.bd_sigacDataSet
         '
+        'bd_sigacDataSet
+        '
+        Me.bd_sigacDataSet.DataSetName = "bd_sigacDataSet"
+        Me.bd_sigacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ReportViewer1
+        '
+        ReportDataSource1.Name = "ImprimirEmpleados"
+        ReportDataSource1.Value = Me.ImprimirEmpleadosBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Calculadora.ImprimirEmpleados.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(3, 1)
+        Me.ReportViewer1.Margin = New System.Windows.Forms.Padding(4)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.Size = New System.Drawing.Size(1059, 547)
+        Me.ReportViewer1.TabIndex = 0
+        '
         'ImprimirEmpleadosTableAdapter
         '
         Me.ImprimirEmpleadosTableAdapter.ClearBeforeFill = True
         '
+        'ImprimirProductosBindingSource
+        '
+        Me.ImprimirProductosBindingSource.DataMember = "ImprimirProductos"
+        Me.ImprimirProductosBindingSource.DataSource = Me.bd_sigacDataSet
+        '
+        'ImprimirProductosTableAdapter
+        '
+        Me.ImprimirProductosTableAdapter.ClearBeforeFill = True
+        '
         'frmImprimirEmpleados
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmImprimirEmpleados"
-        Me.Text = "frmImprimirEmpleados"
-        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = " Reporte de Empleados"
         CType(Me.ImprimirEmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ImprimirProductosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -76,4 +93,6 @@ Partial Class frmImprimirEmpleados
     Friend WithEvents ImprimirEmpleadosBindingSource As BindingSource
     Friend WithEvents bd_sigacDataSet As bd_sigacDataSet
     Friend WithEvents ImprimirEmpleadosTableAdapter As bd_sigacDataSetTableAdapters.ImprimirEmpleadosTableAdapter
+    Friend WithEvents ImprimirProductosBindingSource As BindingSource
+    Friend WithEvents ImprimirProductosTableAdapter As bd_sigacDataSetTableAdapters.ImprimirProductosTableAdapter
 End Class

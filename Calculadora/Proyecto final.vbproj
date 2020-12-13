@@ -489,7 +489,7 @@
     <EmbeddedResource Include="impresionProveedores.rdlc" />
     <EmbeddedResource Include="impresionUsuarios.rdlc" />
     <EmbeddedResource Include="ImprimirDeudas.rdlc" />
-    <EmbeddedResource Include="ImprimirEmpleadosrdlc.rdlc" />
+    <EmbeddedResource Include="ImprimirEmpleados.rdlc" />
     <EmbeddedResource Include="ImprimirSalarios.rdlc" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

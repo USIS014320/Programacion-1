@@ -9,10 +9,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Reporte Deudas</Value>
+                <Value>REPORTE DE DEUDAS</Value>
                 <Style>
-                  <FontFamily>Arial Rounded MT Bold</FontFamily>
-                  <FontSize>22pt</FontSize>
+                  <FontSize>30pt</FontSize>
+                  <Color>Red</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -23,9 +23,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>1.87537cm</Top>
-        <Left>7.59037cm</Left>
+        <Left>2.7432cm</Left>
         <Height>1.47312cm</Height>
-        <Width>9.24687cm</Width>
+        <Width>15cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -453,8 +453,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>ImprimirDeudas</DataSetName>
-        <Top>5.31495cm</Top>
-        <Left>4.62703cm</Left>
+        <Top>4.51062cm</Top>
+        <Left>2.7432cm</Left>
         <Height>1.2cm</Height>
         <Width>15cm</Width>
         <ZIndex>1</ZIndex>
@@ -465,10 +465,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>4.42708in</Height>
+    <Height>3.27708in</Height>
     <Style />
   </Body>
-  <Width>9.66667in</Width>
+  <Width>8.075in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

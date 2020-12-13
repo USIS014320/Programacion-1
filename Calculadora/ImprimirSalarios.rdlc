@@ -9,10 +9,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Reporte Salarios</Value>
+                <Value>REPORTE DE SALARIOS</Value>
                 <Style>
-                  <FontFamily>Arial Narrow</FontFamily>
-                  <FontSize>22pt</FontSize>
+                  <FontSize>30pt</FontSize>
+                  <Color>Red</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -22,10 +22,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>2.00766cm</Top>
-        <Left>7.77558cm</Left>
-        <Height>1.65833cm</Height>
-        <Width>5.62208cm</Width>
+        <Top>1.66899cm</Top>
+        <Left>2.25466cm</Left>
+        <Height>2.46266cm</Height>
+        <Width>12.5cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -69,7 +69,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ID</Value>
+                              <Value>ID EMPLEADO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -99,7 +99,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nombre</Value>
+                              <Value>NOMBRE</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -129,7 +129,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Usuario</Value>
+                              <Value>USUARIO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -159,7 +159,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Clave</Value>
+                              <Value>CLAVE</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -189,7 +189,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Pago</Value>
+                              <Value>PAGO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -389,8 +389,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>ImprimirSalarios</DataSetName>
-        <Top>4.8387cm</Top>
-        <Left>3.39766cm</Left>
+        <Top>5.30437cm</Top>
+        <Left>2.25466cm</Left>
         <Height>1.2cm</Height>
         <Width>12.5cm</Width>
         <ZIndex>1</ZIndex>
@@ -404,7 +404,7 @@
     <Height>3.71875in</Height>
     <Style />
   </Body>
-  <Width>8.59375in</Width>
+  <Width>6.89375in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
