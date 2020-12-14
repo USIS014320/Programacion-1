@@ -23,41 +23,41 @@ Partial Class frmDeuda
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDeuda))
         Dim IdDeudaLabel As System.Windows.Forms.Label
         Dim IdEmpleadoLabel As System.Windows.Forms.Label
         Dim IdPrestamoLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDeuda))
         Me.Bd_sigacDataSet = New Calculadora.bd_sigacDataSet()
         Me.DeudaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DeudaTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.deudaTableAdapter()
         Me.TableAdapterManager = New Calculadora.bd_sigacDataSetTableAdapters.TableAdapterManager()
+        Me.EmpleadosTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.empleadosTableAdapter()
+        Me.PrestamosTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.prestamosTableAdapter()
         Me.DeudaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.DeudaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdDeudaComboBox = New System.Windows.Forms.ComboBox()
+        Me.DeudaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DeudaBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdEmpleadoComboBox = New System.Windows.Forms.ComboBox()
+        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmpleadosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdPrestamoComboBox = New System.Windows.Forms.ComboBox()
+        Me.PrestamosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PrestamosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DetallaPrestamoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DetallaPrestamoTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.DetallaPrestamoTableAdapter()
         Me.DetallaPrestamoDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DeudaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DeudaBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmpleadosTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.empleadosTableAdapter()
-        Me.EmpleadosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PrestamosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PrestamosTableAdapter = New Calculadora.bd_sigacDataSetTableAdapters.prestamosTableAdapter()
-        Me.PrestamosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -66,6 +66,7 @@ Partial Class frmDeuda
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnImprimir = New System.Windows.Forms.Button()
         IdDeudaLabel = New System.Windows.Forms.Label()
         IdEmpleadoLabel = New System.Windows.Forms.Label()
         IdPrestamoLabel = New System.Windows.Forms.Label()
@@ -73,15 +74,48 @@ Partial Class frmDeuda
         CType(Me.DeudaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DeudaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DeudaBindingNavigator.SuspendLayout()
-        CType(Me.DetallaPrestamoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DetallaPrestamoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DeudaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DeudaBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrestamosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrestamosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DetallaPrestamoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DetallaPrestamoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'IdDeudaLabel
+        '
+        IdDeudaLabel.AutoSize = True
+        IdDeudaLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        IdDeudaLabel.Location = New System.Drawing.Point(20, 46)
+        IdDeudaLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        IdDeudaLabel.Name = "IdDeudaLabel"
+        IdDeudaLabel.Size = New System.Drawing.Size(140, 17)
+        IdDeudaLabel.TabIndex = 1
+        IdDeudaLabel.Text = "Código de Prestamo:"
+        '
+        'IdEmpleadoLabel
+        '
+        IdEmpleadoLabel.AutoSize = True
+        IdEmpleadoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        IdEmpleadoLabel.Location = New System.Drawing.Point(362, 40)
+        IdEmpleadoLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        IdEmpleadoLabel.Name = "IdEmpleadoLabel"
+        IdEmpleadoLabel.Size = New System.Drawing.Size(75, 17)
+        IdEmpleadoLabel.TabIndex = 3
+        IdEmpleadoLabel.Text = "Empleado:"
+        '
+        'IdPrestamoLabel
+        '
+        IdPrestamoLabel.AutoSize = True
+        IdPrestamoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        IdPrestamoLabel.Location = New System.Drawing.Point(20, 93)
+        IdPrestamoLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        IdPrestamoLabel.Name = "IdPrestamoLabel"
+        IdPrestamoLabel.Size = New System.Drawing.Size(72, 17)
+        IdPrestamoLabel.TabIndex = 5
+        IdPrestamoLabel.Text = "Prestamo:"
         '
         'Bd_sigacDataSet
         '
@@ -112,6 +146,9 @@ Partial Class frmDeuda
         Me.TableAdapterManager.deudaTableAdapter = Me.DeudaTableAdapter
         Me.TableAdapterManager.empleadosTableAdapter = Me.EmpleadosTableAdapter
         Me.TableAdapterManager.faltanteproductoTableAdapter = Nothing
+        Me.TableAdapterManager.ImprimirEmpleadosTableAdapter = Nothing
+        Me.TableAdapterManager.ImprimirPagosVariosTableAdapter = Nothing
+        Me.TableAdapterManager.ImprimirProveedorTableAdapter = Nothing
         Me.TableAdapterManager.interesesTableAdapter = Nothing
         Me.TableAdapterManager.ocupacionTableAdapter = Nothing
         Me.TableAdapterManager.pagosTableAdapter = Nothing
@@ -124,6 +161,14 @@ Partial Class frmDeuda
         Me.TableAdapterManager.tipofacturaTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Calculadora.bd_sigacDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.usuariosTableAdapter = Nothing
+        '
+        'EmpleadosTableAdapter
+        '
+        Me.EmpleadosTableAdapter.ClearBeforeFill = True
+        '
+        'PrestamosTableAdapter
+        '
+        Me.PrestamosTableAdapter.ClearBeforeFill = True
         '
         'DeudaBindingNavigator
         '
@@ -140,9 +185,34 @@ Partial Class frmDeuda
         Me.DeudaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.DeudaBindingNavigator.Name = "DeudaBindingNavigator"
         Me.DeudaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.DeudaBindingNavigator.Size = New System.Drawing.Size(901, 27)
+        Me.DeudaBindingNavigator.Size = New System.Drawing.Size(676, 27)
         Me.DeudaBindingNavigator.TabIndex = 0
         Me.DeudaBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -150,7 +220,7 @@ Partial Class frmDeuda
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(29, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -159,34 +229,28 @@ Partial Class frmDeuda
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(29, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Posición"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 27)
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(38, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -194,7 +258,7 @@ Partial Class frmDeuda
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
         '
         'BindingNavigatorMoveLastItem
@@ -203,49 +267,21 @@ Partial Class frmDeuda
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveLastItem.Text = "Mover último"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(29, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'DeudaBindingNavigatorSaveItem
         '
         Me.DeudaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.DeudaBindingNavigatorSaveItem.Image = CType(resources.GetObject("DeudaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.DeudaBindingNavigatorSaveItem.Name = "DeudaBindingNavigatorSaveItem"
-        Me.DeudaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.DeudaBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.DeudaBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'IdDeudaLabel
-        '
-        IdDeudaLabel.AutoSize = True
-        IdDeudaLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        IdDeudaLabel.Location = New System.Drawing.Point(27, 56)
-        IdDeudaLabel.Name = "IdDeudaLabel"
-        IdDeudaLabel.Size = New System.Drawing.Size(166, 20)
-        IdDeudaLabel.TabIndex = 1
-        IdDeudaLabel.Text = "Código de Prestamo:"
         '
         'IdDeudaComboBox
         '
@@ -254,21 +290,22 @@ Partial Class frmDeuda
         Me.IdDeudaComboBox.DisplayMember = "Codigo"
         Me.IdDeudaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IdDeudaComboBox.FormattingEnabled = True
-        Me.IdDeudaComboBox.Location = New System.Drawing.Point(233, 52)
+        Me.IdDeudaComboBox.Location = New System.Drawing.Point(175, 42)
+        Me.IdDeudaComboBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.IdDeudaComboBox.Name = "IdDeudaComboBox"
-        Me.IdDeudaComboBox.Size = New System.Drawing.Size(157, 24)
+        Me.IdDeudaComboBox.Size = New System.Drawing.Size(119, 21)
         Me.IdDeudaComboBox.TabIndex = 2
         Me.IdDeudaComboBox.ValueMember = "IdDeuda"
         '
-        'IdEmpleadoLabel
+        'DeudaBindingSource1
         '
-        IdEmpleadoLabel.AutoSize = True
-        IdEmpleadoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        IdEmpleadoLabel.Location = New System.Drawing.Point(483, 49)
-        IdEmpleadoLabel.Name = "IdEmpleadoLabel"
-        IdEmpleadoLabel.Size = New System.Drawing.Size(88, 20)
-        IdEmpleadoLabel.TabIndex = 3
-        IdEmpleadoLabel.Text = "Empleado:"
+        Me.DeudaBindingSource1.DataMember = "deuda"
+        Me.DeudaBindingSource1.DataSource = Me.Bd_sigacDataSet
+        '
+        'DeudaBindingSource2
+        '
+        Me.DeudaBindingSource2.DataMember = "deuda"
+        Me.DeudaBindingSource2.DataSource = Me.Bd_sigacDataSet
         '
         'IdEmpleadoComboBox
         '
@@ -277,21 +314,22 @@ Partial Class frmDeuda
         Me.IdEmpleadoComboBox.DisplayMember = "nombre"
         Me.IdEmpleadoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IdEmpleadoComboBox.FormattingEnabled = True
-        Me.IdEmpleadoComboBox.Location = New System.Drawing.Point(621, 49)
+        Me.IdEmpleadoComboBox.Location = New System.Drawing.Point(466, 40)
+        Me.IdEmpleadoComboBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.IdEmpleadoComboBox.Name = "IdEmpleadoComboBox"
-        Me.IdEmpleadoComboBox.Size = New System.Drawing.Size(142, 24)
+        Me.IdEmpleadoComboBox.Size = New System.Drawing.Size(108, 21)
         Me.IdEmpleadoComboBox.TabIndex = 4
         Me.IdEmpleadoComboBox.ValueMember = "idEmpleado"
         '
-        'IdPrestamoLabel
+        'EmpleadosBindingSource
         '
-        IdPrestamoLabel.AutoSize = True
-        IdPrestamoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        IdPrestamoLabel.Location = New System.Drawing.Point(27, 114)
-        IdPrestamoLabel.Name = "IdPrestamoLabel"
-        IdPrestamoLabel.Size = New System.Drawing.Size(86, 20)
-        IdPrestamoLabel.TabIndex = 5
-        IdPrestamoLabel.Text = "Prestamo:"
+        Me.EmpleadosBindingSource.DataMember = "empleados"
+        Me.EmpleadosBindingSource.DataSource = Me.Bd_sigacDataSet
+        '
+        'EmpleadosBindingSource1
+        '
+        Me.EmpleadosBindingSource1.DataMember = "empleados"
+        Me.EmpleadosBindingSource1.DataSource = Me.Bd_sigacDataSet
         '
         'IdPrestamoComboBox
         '
@@ -300,11 +338,22 @@ Partial Class frmDeuda
         Me.IdPrestamoComboBox.DisplayMember = "capital"
         Me.IdPrestamoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IdPrestamoComboBox.FormattingEnabled = True
-        Me.IdPrestamoComboBox.Location = New System.Drawing.Point(233, 110)
+        Me.IdPrestamoComboBox.Location = New System.Drawing.Point(175, 89)
+        Me.IdPrestamoComboBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.IdPrestamoComboBox.Name = "IdPrestamoComboBox"
-        Me.IdPrestamoComboBox.Size = New System.Drawing.Size(157, 24)
+        Me.IdPrestamoComboBox.Size = New System.Drawing.Size(119, 21)
         Me.IdPrestamoComboBox.TabIndex = 6
         Me.IdPrestamoComboBox.ValueMember = "idPrestamo"
+        '
+        'PrestamosBindingSource
+        '
+        Me.PrestamosBindingSource.DataMember = "prestamos"
+        Me.PrestamosBindingSource.DataSource = Me.Bd_sigacDataSet
+        '
+        'PrestamosBindingSource1
+        '
+        Me.PrestamosBindingSource1.DataMember = "prestamos"
+        Me.PrestamosBindingSource1.DataSource = Me.Bd_sigacDataSet
         '
         'DetallaPrestamoBindingSource
         '
@@ -323,51 +372,14 @@ Partial Class frmDeuda
         Me.DetallaPrestamoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DetallaPrestamoDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn8})
         Me.DetallaPrestamoDataGridView.DataSource = Me.DetallaPrestamoBindingSource
-        Me.DetallaPrestamoDataGridView.Location = New System.Drawing.Point(31, 149)
+        Me.DetallaPrestamoDataGridView.Location = New System.Drawing.Point(23, 121)
+        Me.DetallaPrestamoDataGridView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DetallaPrestamoDataGridView.Name = "DetallaPrestamoDataGridView"
         Me.DetallaPrestamoDataGridView.ReadOnly = True
         Me.DetallaPrestamoDataGridView.RowHeadersWidth = 51
         Me.DetallaPrestamoDataGridView.RowTemplate.Height = 24
-        Me.DetallaPrestamoDataGridView.Size = New System.Drawing.Size(848, 220)
+        Me.DetallaPrestamoDataGridView.Size = New System.Drawing.Size(636, 179)
         Me.DetallaPrestamoDataGridView.TabIndex = 7
-        '
-        'DeudaBindingSource1
-        '
-        Me.DeudaBindingSource1.DataMember = "deuda"
-        Me.DeudaBindingSource1.DataSource = Me.Bd_sigacDataSet
-        '
-        'DeudaBindingSource2
-        '
-        Me.DeudaBindingSource2.DataMember = "deuda"
-        Me.DeudaBindingSource2.DataSource = Me.Bd_sigacDataSet
-        '
-        'EmpleadosBindingSource
-        '
-        Me.EmpleadosBindingSource.DataMember = "empleados"
-        Me.EmpleadosBindingSource.DataSource = Me.Bd_sigacDataSet
-        '
-        'EmpleadosTableAdapter
-        '
-        Me.EmpleadosTableAdapter.ClearBeforeFill = True
-        '
-        'EmpleadosBindingSource1
-        '
-        Me.EmpleadosBindingSource1.DataMember = "empleados"
-        Me.EmpleadosBindingSource1.DataSource = Me.Bd_sigacDataSet
-        '
-        'PrestamosBindingSource
-        '
-        Me.PrestamosBindingSource.DataMember = "prestamos"
-        Me.PrestamosBindingSource.DataSource = Me.Bd_sigacDataSet
-        '
-        'PrestamosTableAdapter
-        '
-        Me.PrestamosTableAdapter.ClearBeforeFill = True
-        '
-        'PrestamosBindingSource1
-        '
-        Me.PrestamosBindingSource1.DataMember = "prestamos"
-        Me.PrestamosBindingSource1.DataSource = Me.Bd_sigacDataSet
         '
         'DataGridViewTextBoxColumn1
         '
@@ -444,12 +456,26 @@ Partial Class frmDeuda
         Me.DataGridViewTextBoxColumn8.ReadOnly = True
         Me.DataGridViewTextBoxColumn8.Width = 125
         '
+        'btnImprimir
+        '
+        Me.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImprimir.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnImprimir.Image = CType(resources.GetObject("btnImprimir.Image"), System.Drawing.Image)
+        Me.btnImprimir.Location = New System.Drawing.Point(575, 321)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(44, 39)
+        Me.btnImprimir.TabIndex = 13
+        Me.btnImprimir.UseVisualStyleBackColor = True
+        '
         'frmDeuda
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.OrangeRed
-        Me.ClientSize = New System.Drawing.Size(901, 466)
+        Me.ClientSize = New System.Drawing.Size(676, 379)
+        Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.DetallaPrestamoDataGridView)
         Me.Controls.Add(IdDeudaLabel)
         Me.Controls.Add(Me.IdDeudaComboBox)
@@ -459,6 +485,7 @@ Partial Class frmDeuda
         Me.Controls.Add(Me.IdPrestamoComboBox)
         Me.Controls.Add(Me.DeudaBindingNavigator)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frmDeuda"
         Me.Text = " Regristro de Prestamos"
         CType(Me.Bd_sigacDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -466,14 +493,14 @@ Partial Class frmDeuda
         CType(Me.DeudaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DeudaBindingNavigator.ResumeLayout(False)
         Me.DeudaBindingNavigator.PerformLayout()
-        CType(Me.DetallaPrestamoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DetallaPrestamoDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DeudaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DeudaBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrestamosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrestamosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DetallaPrestamoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DetallaPrestamoDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -518,4 +545,5 @@ Partial Class frmDeuda
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents btnImprimir As Button
 End Class
