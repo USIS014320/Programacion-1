@@ -21,5 +21,6 @@
     Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
         Dim objImprimirDeudas As New frmImprimirDeudas
         objImprimirDeudas.ShowDialog()
+
     End Sub
 End Class
