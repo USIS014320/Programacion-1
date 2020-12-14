@@ -1593,6 +1593,54 @@ FROM     cargos INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ImprimirSalarioTableAdapter" GeneratorDataComponentClassName="ImprimirSalarioTableAdapter" Name="ImprimirSalario" UserDataComponentName="ImprimirSalarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_sigacConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillImprimirSalario" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillImprimirSalario" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="FillImprimirSalario">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        prestamos.pago, deuda.idEmpleado, deuda.Nombre, deuda.Codigo, empleados.usuario, empleados.clave
+FROM            deuda INNER JOIN
+                         prestamos ON deuda.idPrestamo = prestamos.idPrestamo INNER JOIN
+                         empleados ON deuda.idEmpleado = empleados.idEmpleado AND prestamos.idEmpleado = empleados.idEmpleado</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="pago" DataSetColumn="pago" />
+              <Mapping SourceColumn="idEmpleado" DataSetColumn="idEmpleado" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Codigo" DataSetColumn="Codigo" />
+              <Mapping SourceColumn="usuario" DataSetColumn="usuario" />
+              <Mapping SourceColumn="clave" DataSetColumn="clave" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ImprimirDeudaTableAdapter" GeneratorDataComponentClassName="ImprimirDeudaTableAdapter" Name="ImprimirDeuda" UserDataComponentName="ImprimirDeudaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_sigacConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillImprimirDeuda" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillImprimirDeuda" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="FillImprimirDeuda">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        deuda.IdDeuda, deuda.idPrestamo, deuda.Nombre, empleados.clave, deuda.Codigo, empleados.telefono, deuda.Subtotal
+FROM            deuda INNER JOIN
+                         empleados ON deuda.idEmpleado = empleados.idEmpleado</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdDeuda" DataSetColumn="IdDeuda" />
+              <Mapping SourceColumn="idPrestamo" DataSetColumn="idPrestamo" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="clave" DataSetColumn="clave" />
+              <Mapping SourceColumn="Codigo" DataSetColumn="Codigo" />
+              <Mapping SourceColumn="telefono" DataSetColumn="telefono" />
+              <Mapping SourceColumn="Subtotal" DataSetColumn="Subtotal" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -2539,6 +2587,91 @@ FROM     cargos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="ImprimirSalario" msprop:Generator_TableClassName="ImprimirSalarioDataTable" msprop:Generator_TableVarName="tableImprimirSalario" msprop:Generator_RowChangedName="ImprimirSalarioRowChanged" msprop:Generator_TablePropName="ImprimirSalario" msprop:Generator_RowDeletingName="ImprimirSalarioRowDeleting" msprop:Generator_RowChangingName="ImprimirSalarioRowChanging" msprop:Generator_RowEvHandlerName="ImprimirSalarioRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirSalarioRowDeleted" msprop:Generator_RowClassName="ImprimirSalarioRow" msprop:Generator_UserTableName="ImprimirSalario" msprop:Generator_RowEvArgName="ImprimirSalarioRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pago" msprop:Generator_ColumnVarNameInTable="columnpago" msprop:Generator_ColumnPropNameInRow="pago" msprop:Generator_ColumnPropNameInTable="pagoColumn" msprop:Generator_UserColumnName="pago">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_UserColumnName="idEmpleado" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Codigo" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_UserColumnName="usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clave" msprop:Generator_ColumnVarNameInTable="columnclave" msprop:Generator_ColumnPropNameInRow="clave" msprop:Generator_ColumnPropNameInTable="claveColumn" msprop:Generator_UserColumnName="clave">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ImprimirDeuda" msprop:Generator_TableClassName="ImprimirDeudaDataTable" msprop:Generator_TableVarName="tableImprimirDeuda" msprop:Generator_TablePropName="ImprimirDeuda" msprop:Generator_RowDeletingName="ImprimirDeudaRowDeleting" msprop:Generator_RowChangingName="ImprimirDeudaRowChanging" msprop:Generator_RowEvHandlerName="ImprimirDeudaRowChangeEventHandler" msprop:Generator_RowDeletedName="ImprimirDeudaRowDeleted" msprop:Generator_UserTableName="ImprimirDeuda" msprop:Generator_RowChangedName="ImprimirDeudaRowChanged" msprop:Generator_RowEvArgName="ImprimirDeudaRowChangeEvent" msprop:Generator_RowClassName="ImprimirDeudaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdDeuda" msprop:Generator_ColumnVarNameInTable="columnIdDeuda" msprop:Generator_ColumnPropNameInRow="IdDeuda" msprop:Generator_ColumnPropNameInTable="IdDeudaColumn" msprop:Generator_UserColumnName="IdDeuda" type="xs:int" />
+              <xs:element name="idPrestamo" msprop:Generator_ColumnVarNameInTable="columnidPrestamo" msprop:Generator_ColumnPropNameInRow="idPrestamo" msprop:Generator_ColumnPropNameInTable="idPrestamoColumn" msprop:Generator_UserColumnName="idPrestamo" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clave" msprop:Generator_ColumnVarNameInTable="columnclave" msprop:Generator_ColumnPropNameInRow="clave" msprop:Generator_ColumnPropNameInTable="claveColumn" msprop:Generator_UserColumnName="clave">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Codigo" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Subtotal" msprop:Generator_ColumnVarNameInTable="columnSubtotal" msprop:Generator_ColumnPropNameInRow="Subtotal" msprop:Generator_ColumnPropNameInTable="SubtotalColumn" msprop:Generator_UserColumnName="Subtotal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -2646,6 +2779,10 @@ FROM     cargos INNER JOIN
       <xs:field xpath="mstns:idUsuario" />
       <xs:field xpath="mstns:idCargo" />
     </xs:unique>
+    <xs:unique name="ImprimirDeuda_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ImprimirDeuda" />
+      <xs:field xpath="mstns:IdDeuda" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
@@ -2674,6 +2811,8 @@ FROM     cargos INNER JOIN
       <msdata:Relationship name="FK_crearprestamo_clientes2" msdata:parent="ImprimirPrestamo" msdata:child="crearprestamo" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="crearprestamo" msprop:Generator_ChildPropName="GetcrearprestamoRows" msprop:Generator_UserRelationName="FK_crearprestamo_clientes2" msprop:Generator_RelationVarName="relationFK_crearprestamo_clientes2" msprop:Generator_UserParentTable="ImprimirPrestamo" msprop:Generator_ParentPropName="ImprimirPrestamoRow" />
       <msdata:Relationship name="FK_compras_proveedores1" msdata:parent="ImprimirProveedor" msdata:child="compras" msdata:parentkey="idProveedor" msdata:childkey="idProveedor" msprop:Generator_UserChildTable="compras" msprop:Generator_ChildPropName="GetcomprasRows" msprop:Generator_UserRelationName="FK_compras_proveedores1" msprop:Generator_ParentPropName="ImprimirProveedorRow" msprop:Generator_RelationVarName="relationFK_compras_proveedores1" msprop:Generator_UserParentTable="ImprimirProveedor" />
       <msdata:Relationship name="FK_usuarios_cargos1" msdata:parent="ImprimirUsuario" msdata:child="usuarios" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserChildTable="usuarios" msprop:Generator_ChildPropName="GetusuariosRows" msprop:Generator_UserRelationName="FK_usuarios_cargos1" msprop:Generator_RelationVarName="relationFK_usuarios_cargos1" msprop:Generator_UserParentTable="ImprimirUsuario" msprop:Generator_ParentPropName="ImprimirUsuarioRow" />
+      <msdata:Relationship name="FK_deuda_empleados2" msdata:parent="empleados" msdata:child="ImprimirSalario" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserChildTable="ImprimirSalario" msprop:Generator_ChildPropName="GetImprimirSalarioRows" msprop:Generator_UserRelationName="FK_deuda_empleados2" msprop:Generator_RelationVarName="relationFK_deuda_empleados2" msprop:Generator_UserParentTable="empleados" msprop:Generator_ParentPropName="empleadosRow" />
+      <msdata:Relationship name="FK_deuda_prestamos2" msdata:parent="prestamos" msdata:child="ImprimirDeuda" msdata:parentkey="idPrestamo" msdata:childkey="idPrestamo" msprop:Generator_UserChildTable="ImprimirDeuda" msprop:Generator_ChildPropName="GetImprimirDeudaRows" msprop:Generator_UserRelationName="FK_deuda_prestamos2" msprop:Generator_ParentPropName="prestamosRow" msprop:Generator_RelationVarName="relationFK_deuda_prestamos2" msprop:Generator_UserParentTable="prestamos" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

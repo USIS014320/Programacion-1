@@ -17,4 +17,9 @@
         Me.DeudaTableAdapter.FillDeuda(Me.Bd_sigacDataSet.deuda)
 
     End Sub
+
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+        Dim objImprimirDeuda As New frmImprimirDeuda
+        objImprimirDeuda.ShowDialog()
+    End Sub
 End Class
